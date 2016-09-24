@@ -5,7 +5,7 @@
   <meta id="repository-name" content="github.com/meew0/discordcr">
   <link href="css/style.css" rel="stylesheet" type="text/css" />
   <script type="text/javascript" src="js/doc.js"></script>
-  <title>Discord - github.com/meew0/discordcr</title>
+  <title>README - github.com/meew0/discordcr</title>
 </head>
 <body>
 
@@ -15,12 +15,12 @@
   </div>
 
   <ul>
-    <li><a href="index.html">README</a></li>
+    <li class="current"><a href="index.html">README</a></li>
   </ul>
 
   <ul>
   
-  <li class="parent current" data-id="github.com/meew0/discordcr/Discord" data-name="discord">
+  <li class="parent " data-id="github.com/meew0/discordcr/Discord" data-name="discord">
       <a href="Discord.html">Discord</a>
       
         <ul>
@@ -365,130 +365,80 @@
 </div>
 
 <div id="main-content">
-<h1 class="type-name">
+<h1>discordcr</h1>
 
-  <span class="kind">module</span> Discord
+<p>(The "cr" stands for "creative name".)</p>
 
-</h1>
+<p>discordcr is a minimalist <a href="https://discordapp.com/" target="_blank">Discord</a> API library for
+<a href="https://crystal-lang.org/" target="_blank">Crystal</a>, designed to be a complement to
+<a href="https://github.com/meew0/discordrb" target="_blank">discordrb</a> for users who want more control
+and performance and who care less about ease-of-use.</p>
 
+<p>discordcr isn't designed for beginners to the Discord API - while experience
+with making bots isn't <em>required</em>, it's certainly recommended. If you feel
+overwhelmed by the complex documentation, try
+<a href="https://github.com/meew0/discordrb" target="_blank">discordrb</a> first and then check back.</p>
 
+<p>Unlike many other libs which handle a lot of stuff, like caching or resolving,
+themselves automatically, discordcr requires the user to do such things
+manually. It also doesn't provide any sort of abstractions for REST calls,
+the user has full control over them, but also full responsibility. discordcr
+does not support user accounts; it may work but likely doesn't.</p>
 
+<h2>Installation</h2>
 
+<p>Add this to your application's <code>shard.yml</code>:</p>
 
+<pre><code class='language-yaml'>dependencies:
+  discordcr:
+    github: meew0/discordcr</code></pre>
 
+<h2>Usage</h2>
 
+<p>An example bot can be found
+<a href="https://github.com/meew0/discordcr/blob/master/examples/ping.cr" target="_blank">here</a>. More
+examples will come in the future.</p>
 
+<p>A short overview of library structure: the <code>Client</code> class includes the <code>REST</code>
+module, which handles the REST parts of Discord's API; the <code>Client</code> itself
+handles the gateway, i. e. the interactive parts such as receiving messages. It
+is possible to use only the REST parts by never calling the <code>#run</code> method on a
+<code>Client</code>, which is what does the actual gateway connection.</p>
 
+<p>The example linked above has an example of an event (<code>on_message_create</code>) that
+is called through the gateway, and of a REST call (<code>client.create_message</code>).
+Other gateway events and REST calls work much in the same way - see the
+documentation for what specific events and REST calls do.</p>
 
+<p>Caching is done using a separate <code>Cache</code> class that needs to be added into
+clients manually:</p>
 
+<pre><code class='language-cr'>client = Discord::Client.new # ...
+cache = Discord::Cache.new(client)
+client.cache = cache</code></pre>
 
+<p>Resolution requests for objects can now be done on the <code>cache</code> object instead of
+directly over REST, this ensures that if an object is needed more than once
+there will still only be one request to Discord. (There may even be no request
+at all, if the requested data has already been obtained over the gateway.)
+An example of how to use the cache once it has been instantiated:</p>
 
+<pre><code class='language-cr'># Get the username of the user with ID 66237334693085184
+user = cache.resolve_user(66237334693085184_u64)
+user = cache.resolve_user(66237334693085184_u64) # won't do a request to Discord
+puts user.username</code></pre>
 
+<p>Apart from this, API documentation for the lib itself is available too but needs
+to be manually compiled locally. Download the repo and run <code>crystal doc</code> in its
+folder, then the <code>doc</code> folder will have the documentation to view.</p>
 
+<h2>Contributing</h2>
 
+<ol><li>Fork it (https://github.com/meew0/discordcr/fork)</li><li>Create your feature branch (<code>git checkout -b my-new-feature</code>)</li><li>Commit your changes (<code>git commit -am 'Add some feature'</code>)</li><li>Push to the branch (<code>git push origin my-new-feature</code>)</li><li>Create a new Pull Request</li></ol>
 
+<h2>Contributors</h2>
 
-  <h2>Defined in:</h2>
-  
-    
-      <a href="https://github.com/meew0/discordcr/blob/85f3500eb6aa17d5064cb9f177323268d59e2fa8/src/discordcr/mappings/converters.cr#L4" target="_blank">discordcr/mappings/converters.cr</a>
-    
-    <br/>
-  
-    
-      <a href="https://github.com/meew0/discordcr/blob/85f3500eb6aa17d5064cb9f177323268d59e2fa8/src/discordcr/mappings/channel.cr#L3" target="_blank">discordcr/mappings/channel.cr</a>
-    
-    <br/>
-  
-    
-      <a href="https://github.com/meew0/discordcr/blob/85f3500eb6aa17d5064cb9f177323268d59e2fa8/src/discordcr/mappings/user.cr#L3" target="_blank">discordcr/mappings/user.cr</a>
-    
-    <br/>
-  
-    
-      <a href="https://github.com/meew0/discordcr/blob/85f3500eb6aa17d5064cb9f177323268d59e2fa8/src/discordcr/mappings/voice.cr#L3" target="_blank">discordcr/mappings/voice.cr</a>
-    
-    <br/>
-  
-    
-      <a href="https://github.com/meew0/discordcr/blob/85f3500eb6aa17d5064cb9f177323268d59e2fa8/src/discordcr/mappings/guild.cr#L4" target="_blank">discordcr/mappings/guild.cr</a>
-    
-    <br/>
-  
-    
-      <a href="https://github.com/meew0/discordcr/blob/85f3500eb6aa17d5064cb9f177323268d59e2fa8/src/discordcr/mappings/gateway.cr#L6" target="_blank">discordcr/mappings/gateway.cr</a>
-    
-    <br/>
-  
-    
-      <a href="https://github.com/meew0/discordcr/blob/85f3500eb6aa17d5064cb9f177323268d59e2fa8/src/discordcr/mappings/invite.cr#L4" target="_blank">discordcr/mappings/invite.cr</a>
-    
-    <br/>
-  
-    
-      <a href="https://github.com/meew0/discordcr/blob/85f3500eb6aa17d5064cb9f177323268d59e2fa8/src/discordcr/mappings/rest.cr#L3" target="_blank">discordcr/mappings/rest.cr</a>
-    
-    <br/>
-  
-    
-      <a href="https://github.com/meew0/discordcr/blob/85f3500eb6aa17d5064cb9f177323268d59e2fa8/src/discordcr/cache.cr#L3" target="_blank">discordcr/cache.cr</a>
-    
-    <br/>
-  
-    
-      <a href="https://github.com/meew0/discordcr/blob/85f3500eb6aa17d5064cb9f177323268d59e2fa8/src/discordcr/version.cr#L1" target="_blank">discordcr/version.cr</a>
-    
-    <br/>
-  
-    
-      <a href="https://github.com/meew0/discordcr/blob/85f3500eb6aa17d5064cb9f177323268d59e2fa8/src/discordcr/rest.cr#L8" target="_blank">discordcr/rest.cr</a>
-    
-    <br/>
-  
-    
-      <a href="https://github.com/meew0/discordcr/blob/85f3500eb6aa17d5064cb9f177323268d59e2fa8/src/discordcr/client.cr#L7" target="_blank">discordcr/client.cr</a>
-    
-    <br/>
-  
-    
-      <a href="https://github.com/meew0/discordcr/blob/85f3500eb6aa17d5064cb9f177323268d59e2fa8/src/discordcr.cr#L3" target="_blank">discordcr.cr</a>
-    
-    <br/>
-  
-
-
-
-  
-    <h2>Constant Summary</h2>
-  
-  <dl>
-    
-      <dt class="entry-const" id="VERSION">
-        <strong>VERSION</strong> = <code><span class="s">&quot;0.1.0&quot;</span></code>
-      </dt>
-      
-    
-  </dl>
-
-
-
-
-
-
-
-
-
-<div class="methods-inherited">
-  
+<ul><li><a href="https://github.com/meew0" target="_blank">meew0</a> - creator, maintainer</li><li><a href="https://github.com/RX14" target="_blank">RX14</a> - Crystal expert, maintainer</li></ul>
 </div>
-
-
-
-
-
-
-
-</div>
-
 </body>
 </html>
