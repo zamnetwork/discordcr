@@ -5,7 +5,7 @@
   <meta id="repository-name" content="github.com/meew0/discordcr">
   <link href="css/style.css" rel="stylesheet" type="text/css" />
   <script type="text/javascript" src="js/doc.js"></script>
-  <title>Discord - github.com/meew0/discordcr</title>
+  <title>Logger - github.com/meew0/discordcr</title>
 </head>
 <body>
 
@@ -20,7 +20,7 @@
 
   <ul>
   
-  <li class="parent current" data-id="github.com/meew0/discordcr/Discord" data-name="discord">
+  <li class="parent " data-id="github.com/meew0/discordcr/Discord" data-name="discord">
       <a href="Discord.html">Discord</a>
       
         <ul>
@@ -360,7 +360,7 @@
       
     </li>
   
-  <li class=" " data-id="github.com/meew0/discordcr/Logger" data-name="logger">
+  <li class=" current" data-id="github.com/meew0/discordcr/Logger" data-name="logger">
       <a href="Logger.html">Logger</a>
       
     </li>
@@ -372,13 +372,48 @@
 <div id="main-content">
 <h1 class="type-name">
 
-  <span class="kind">module</span> Discord
+  <span class="kind">class</span> Logger
 
 </h1>
 
 
+  <ul class="superclass-hierarchy"><li class="superclass"><a href="Logger.html">Logger</a></li><li class="superclass">Reference</li><li class="superclass">Object</li></ul>
 
 
+
+
+  <h2>Overview</h2>
+
+  <p>The Logger class provides a simple but sophisticated logging utility that you can use to output messages.</p>
+
+<p>The messages have associated levels, such as INFO or ERROR that indicate their importance.
+You can then give the Logger a level, and only messages at that level of higher will be printed.</p>
+
+<p>For instance, in a production system, you may have your Logger set to INFO or even WARN.
+When you are developing the system, however, you probably want to know about the program’s internal state,
+and would set the Logger to DEBUG.</p>
+
+<h3>Example</h3>
+
+<pre><code class='language-crystal'><span class="k">require</span> <span class="s">&quot;logger&quot;</span>
+
+log <span class="o">=</span> <span class="t">Logger</span>.<span class="k">new</span>(<span class="t">STDOUT</span>)
+log.level <span class="o">=</span> <span class="t">Logger</span><span class="t">::</span><span class="t">WARN</span>
+
+log.debug(<span class="s">&quot;Created logger&quot;</span>)
+log.info(<span class="s">&quot;Program started&quot;</span>)
+log.warn(<span class="s">&quot;Nothing to do&#33;&quot;</span>)
+
+<span class="k">begin</span>
+  <span class="t">File</span>.each_line(path) <span class="k">do</span> <span class="o">|</span>line<span class="o">|</span>
+    <span class="k">unless</span> line <span class="o">=~</span> <span class="s">/^&#40;\w&#43;&#41; &#61; &#40;.*&#41;&#36;/</span>
+      log.error(<span class="s">&quot;Line in wrong format: </span><span class="i">#{</span></span>line<span class="s"><span class="i">}</span>&quot;</span>)
+    <span class="k">end</span>
+  <span class="k">end</span>
+<span class="k">rescue</span> err
+  log.fatal(<span class="s">&quot;Caught exception; exiting&quot;</span>)
+  log.fatal(err)
+<span class="k">end</span></code></pre>
 
 
 
@@ -396,102 +431,31 @@
   <h2>Defined in:</h2>
   
     
-      <a href="https://github.com/meew0/discordcr/blob/0cc031835938010e5c4c98980e0f92dcbb799c5e/src/discordcr/mappings/converters.cr#L4" target="_blank">discordcr/mappings/converters.cr</a>
-    
-    <br/>
-  
-    
-      <a href="https://github.com/meew0/discordcr/blob/0cc031835938010e5c4c98980e0f92dcbb799c5e/src/discordcr/mappings/channel.cr#L3" target="_blank">discordcr/mappings/channel.cr</a>
-    
-    <br/>
-  
-    
-      <a href="https://github.com/meew0/discordcr/blob/0cc031835938010e5c4c98980e0f92dcbb799c5e/src/discordcr/mappings/user.cr#L3" target="_blank">discordcr/mappings/user.cr</a>
-    
-    <br/>
-  
-    
-      <a href="https://github.com/meew0/discordcr/blob/0cc031835938010e5c4c98980e0f92dcbb799c5e/src/discordcr/mappings/voice.cr#L3" target="_blank">discordcr/mappings/voice.cr</a>
-    
-    <br/>
-  
-    
-      <a href="https://github.com/meew0/discordcr/blob/0cc031835938010e5c4c98980e0f92dcbb799c5e/src/discordcr/mappings/guild.cr#L4" target="_blank">discordcr/mappings/guild.cr</a>
-    
-    <br/>
-  
-    
-      <a href="https://github.com/meew0/discordcr/blob/0cc031835938010e5c4c98980e0f92dcbb799c5e/src/discordcr/mappings/gateway.cr#L6" target="_blank">discordcr/mappings/gateway.cr</a>
-    
-    <br/>
-  
-    
-      <a href="https://github.com/meew0/discordcr/blob/0cc031835938010e5c4c98980e0f92dcbb799c5e/src/discordcr/mappings/invite.cr#L4" target="_blank">discordcr/mappings/invite.cr</a>
-    
-    <br/>
-  
-    
-      <a href="https://github.com/meew0/discordcr/blob/0cc031835938010e5c4c98980e0f92dcbb799c5e/src/discordcr/mappings/rest.cr#L3" target="_blank">discordcr/mappings/rest.cr</a>
-    
-    <br/>
-  
-    
-      <a href="https://github.com/meew0/discordcr/blob/0cc031835938010e5c4c98980e0f92dcbb799c5e/src/discordcr/cache.cr#L3" target="_blank">discordcr/cache.cr</a>
-    
-    <br/>
-  
-    
-      <a href="https://github.com/meew0/discordcr/blob/0cc031835938010e5c4c98980e0f92dcbb799c5e/src/discordcr/logger.cr#L8" target="_blank">discordcr/logger.cr</a>
-    
-    <br/>
-  
-    
-      <a href="https://github.com/meew0/discordcr/blob/0cc031835938010e5c4c98980e0f92dcbb799c5e/src/discordcr/version.cr#L1" target="_blank">discordcr/version.cr</a>
-    
-    <br/>
-  
-    
-      <a href="https://github.com/meew0/discordcr/blob/0cc031835938010e5c4c98980e0f92dcbb799c5e/src/discordcr/rest.cr#L8" target="_blank">discordcr/rest.cr</a>
-    
-    <br/>
-  
-    
-      <a href="https://github.com/meew0/discordcr/blob/0cc031835938010e5c4c98980e0f92dcbb799c5e/src/discordcr/client.cr#L8" target="_blank">discordcr/client.cr</a>
-    
-    <br/>
-  
-    
-      <a href="https://github.com/meew0/discordcr/blob/0cc031835938010e5c4c98980e0f92dcbb799c5e/src/discordcr.cr#L3" target="_blank">discordcr.cr</a>
+      <a href="https://github.com/meew0/discordcr/blob/0cc031835938010e5c4c98980e0f92dcbb799c5e/src/discordcr/logger.cr#L4" target="_blank">discordcr/logger.cr</a>
     
     <br/>
   
 
 
 
-  
-    <h2>Constant Summary</h2>
-  
-  <dl>
+
+
+
+
+  <h2>Instance Method Summary</h2>
+  <ul class="list-summary">
     
-      <dt class="entry-const" id="LOGGER">
-        <strong>LOGGER</strong> = <code><span class="t">Logger</span>.<span class="k">new</span>(<span class="t">STDOUT</span>)</code>
-      </dt>
-      
-      <dd class="entry-const-doc">
-        <p>The built in logger.</p>
-      </dd>
-      
+      <li class="entry-summary">
+        <a href="#io%3AIO%7CNil-instance-method" class="signature"><strong>#io</strong> : IO | Nil</a>
+        
+      </li>
     
-      <dt class="entry-const" id="VERSION">
-        <strong>VERSION</strong> = <code><span class="s">&quot;0.1.1&quot;</span></code>
-      </dt>
-      
+      <li class="entry-summary">
+        <a href="#io%3D%28io%29-instance-method" class="signature"><strong>#io=</strong>(io)</a>
+        
+      </li>
     
-  </dl>
-
-
-
-
+  </ul>
 
 
 
@@ -499,10 +463,59 @@
 
 <div class="methods-inherited">
   
+    
+
+
+    
+
+
+  
+    
+
+
+    
+
+
+  
 </div>
 
 
 
+
+  <h2>Instance Method Detail</h2>
+  
+    <div class="entry-detail" id="io:IO|Nil-instance-method">
+      <div class="signature">
+        
+        def <strong>io</strong> : IO | Nil
+
+        <a class="method-permalink" href="#io%3AIO%7CNil-instance-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/meew0/discordcr/blob/0cc031835938010e5c4c98980e0f92dcbb799c5e/src/discordcr/logger.cr#L5" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="io&#61;&#40;io&#41;-instance-method">
+      <div class="signature">
+        
+        def <strong>io=</strong>(io)
+
+        <a class="method-permalink" href="#io%3D%28io%29-instance-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/meew0/discordcr/blob/0cc031835938010e5c4c98980e0f92dcbb799c5e/src/discordcr/logger.cr#L5" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
 
 
 
