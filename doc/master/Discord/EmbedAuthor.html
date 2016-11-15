@@ -5,7 +5,7 @@
   <meta id="repository-name" content="github.com/meew0/discordcr">
   <link href="../css/style.css" rel="stylesheet" type="text/css" />
   <script type="text/javascript" src="../js/doc.js"></script>
-  <title>Discord::UnavailableGuild - github.com/meew0/discordcr</title>
+  <title>Discord::EmbedAuthor - github.com/meew0/discordcr</title>
 </head>
 <body>
 
@@ -65,7 +65,7 @@
       
     </li>
   
-  <li class=" " data-id="github.com/meew0/discordcr/Discord/EmbedAuthor" data-name="discord::embedauthor">
+  <li class=" current" data-id="github.com/meew0/discordcr/Discord/EmbedAuthor" data-name="discord::embedauthor">
       <a href="../Discord/EmbedAuthor.html">EmbedAuthor</a>
       
     </li>
@@ -375,7 +375,7 @@
       
     </li>
   
-  <li class=" current" data-id="github.com/meew0/discordcr/Discord/UnavailableGuild" data-name="discord::unavailableguild">
+  <li class=" " data-id="github.com/meew0/discordcr/Discord/UnavailableGuild" data-name="discord::unavailableguild">
       <a href="../Discord/UnavailableGuild.html">UnavailableGuild</a>
       
     </li>
@@ -417,12 +417,12 @@
 <div id="main-content">
 <h1 class="type-name">
 
-  <span class="kind">struct</span> Discord::UnavailableGuild
+  <span class="kind">struct</span> Discord::EmbedAuthor
 
 </h1>
 
 
-  <ul class="superclass-hierarchy"><li class="superclass"><a href="../Discord/UnavailableGuild.html">Discord::UnavailableGuild</a></li><li class="superclass">Struct</li><li class="superclass">Value</li><li class="superclass">Object</li></ul>
+  <ul class="superclass-hierarchy"><li class="superclass"><a href="../Discord/EmbedAuthor.html">Discord::EmbedAuthor</a></li><li class="superclass">Struct</li><li class="superclass">Value</li><li class="superclass">Object</li></ul>
 
 
 
@@ -443,7 +443,7 @@
   <h2>Defined in:</h2>
   
     
-      <a href="https://github.com/meew0/discordcr/blob/30ceb5f9b66954c85378bf65c26119e1e28713f1/src/discordcr/mappings/guild.cr#L46" target="_blank">discordcr/mappings/guild.cr</a>
+      <a href="https://github.com/meew0/discordcr/blob/30ceb5f9b66954c85378bf65c26119e1e28713f1/src/discordcr/mappings/channel.cr#L134" target="_blank">discordcr/mappings/channel.cr</a>
     
     <br/>
   
@@ -456,7 +456,12 @@
   <ul class="list-summary">
     
       <li class="entry-summary">
-        <a href="#new%28__temp_278%3AJSON%3A%3APullParser%29-class-method" class="signature"><strong>.new</strong>(__temp_278 : JSON::PullParser)</a>
+        <a href="#new%28__temp_131%3AJSON%3A%3APullParser%29-class-method" class="signature"><strong>.new</strong>(__temp_131 : JSON::PullParser)</a>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#new%28name%3AString%7CNil%3Dnil%2Curl%3AString%7CNil%3Dnil%2Cicon_url%3AString%7CNil%3Dnil%29-class-method" class="signature"><strong>.new</strong>(name : String | Nil = <span class="n">nil</span>, url : String | Nil = <span class="n">nil</span>, icon_url : String | Nil = <span class="n">nil</span>)</a>
         
       </li>
     
@@ -468,12 +473,32 @@
   <ul class="list-summary">
     
       <li class="entry-summary">
-        <a href="#id%3AUInt64-instance-method" class="signature"><strong>#id</strong> : UInt64</a>
+        <a href="#icon_url%3ANil%7CString-instance-method" class="signature"><strong>#icon_url</strong> : Nil | String</a>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#id%3D%28_id%3AUInt64%29-instance-method" class="signature"><strong>#id=</strong>(_id : UInt64)</a>
+        <a href="#icon_url%3D%28_icon_url%3A%3A%3AUnion%28String%2CNil%29%29-instance-method" class="signature"><strong>#icon_url=</strong>(_icon_url : ::Union(String, Nil))</a>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#name%3ANil%7CString-instance-method" class="signature"><strong>#name</strong> : Nil | String</a>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#name%3D%28_name%3A%3A%3AUnion%28String%2CNil%29%29-instance-method" class="signature"><strong>#name=</strong>(_name : ::Union(String, Nil))</a>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#proxy_icon_url%3ANil%7CString-instance-method" class="signature"><strong>#proxy_icon_url</strong> : Nil | String</a>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#proxy_icon_url%3D%28_proxy_icon_url%3A%3A%3AUnion%28String%2CNil%29%29-instance-method" class="signature"><strong>#proxy_icon_url=</strong>(_proxy_icon_url : ::Union(String, Nil))</a>
         
       </li>
     
@@ -483,12 +508,12 @@
       </li>
     
       <li class="entry-summary">
-        <a href="#unavailable%3ABool-instance-method" class="signature"><strong>#unavailable</strong> : Bool</a>
+        <a href="#url%3ANil%7CString-instance-method" class="signature"><strong>#url</strong> : Nil | String</a>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#unavailable%3D%28_unavailable%3ABool%29-instance-method" class="signature"><strong>#unavailable=</strong>(_unavailable : Bool)</a>
+        <a href="#url%3D%28_url%3A%3A%3AUnion%28String%2CNil%29%29-instance-method" class="signature"><strong>#url=</strong>(_url : ::Union(String, Nil))</a>
         
       </li>
     
@@ -526,16 +551,32 @@
 
   <h2>Class Method Detail</h2>
   
-    <div class="entry-detail" id="new&#40;__temp_278:JSON::PullParser&#41;-class-method">
+    <div class="entry-detail" id="new&#40;__temp_131:JSON::PullParser&#41;-class-method">
       <div class="signature">
         
-        def self.<strong>new</strong>(__temp_278 : JSON::PullParser)
+        def self.<strong>new</strong>(__temp_131 : JSON::PullParser)
 
-        <a class="method-permalink" href="#new%28__temp_278%3AJSON%3A%3APullParser%29-class-method">#</a>
+        <a class="method-permalink" href="#new%28__temp_131%3AJSON%3A%3APullParser%29-class-method">#</a>
       </div>
       
       <br/>
       <div>
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="new&#40;name:String|Nil&#61;nil,url:String|Nil&#61;nil,icon_url:String|Nil&#61;nil&#41;-class-method">
+      <div class="signature">
+        
+        def self.<strong>new</strong>(name : String | Nil = <span class="n">nil</span>, url : String | Nil = <span class="n">nil</span>, icon_url : String | Nil = <span class="n">nil</span>)
+
+        <a class="method-permalink" href="#new%28name%3AString%7CNil%3Dnil%2Curl%3AString%7CNil%3Dnil%2Cicon_url%3AString%7CNil%3Dnil%29-class-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/meew0/discordcr/blob/30ceb5f9b66954c85378bf65c26119e1e28713f1/src/discordcr/mappings/channel.cr#L135" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -545,12 +586,12 @@
 
   <h2>Instance Method Detail</h2>
   
-    <div class="entry-detail" id="id:UInt64-instance-method">
+    <div class="entry-detail" id="icon_url:Nil|String-instance-method">
       <div class="signature">
         
-        def <strong>id</strong> : UInt64
+        def <strong>icon_url</strong> : Nil | String
 
-        <a class="method-permalink" href="#id%3AUInt64-instance-method">#</a>
+        <a class="method-permalink" href="#icon_url%3ANil%7CString-instance-method">#</a>
       </div>
       
       <br/>
@@ -559,12 +600,68 @@
       </div>
     </div>
   
-    <div class="entry-detail" id="id&#61;&#40;_id:UInt64&#41;-instance-method">
+    <div class="entry-detail" id="icon_url&#61;&#40;_icon_url:::Union&#40;String,Nil&#41;&#41;-instance-method">
       <div class="signature">
         
-        def <strong>id=</strong>(_id : UInt64)
+        def <strong>icon_url=</strong>(_icon_url : ::Union(String, Nil))
 
-        <a class="method-permalink" href="#id%3D%28_id%3AUInt64%29-instance-method">#</a>
+        <a class="method-permalink" href="#icon_url%3D%28_icon_url%3A%3A%3AUnion%28String%2CNil%29%29-instance-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="name:Nil|String-instance-method">
+      <div class="signature">
+        
+        def <strong>name</strong> : Nil | String
+
+        <a class="method-permalink" href="#name%3ANil%7CString-instance-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="name&#61;&#40;_name:::Union&#40;String,Nil&#41;&#41;-instance-method">
+      <div class="signature">
+        
+        def <strong>name=</strong>(_name : ::Union(String, Nil))
+
+        <a class="method-permalink" href="#name%3D%28_name%3A%3A%3AUnion%28String%2CNil%29%29-instance-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="proxy_icon_url:Nil|String-instance-method">
+      <div class="signature">
+        
+        def <strong>proxy_icon_url</strong> : Nil | String
+
+        <a class="method-permalink" href="#proxy_icon_url%3ANil%7CString-instance-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="proxy_icon_url&#61;&#40;_proxy_icon_url:::Union&#40;String,Nil&#41;&#41;-instance-method">
+      <div class="signature">
+        
+        def <strong>proxy_icon_url=</strong>(_proxy_icon_url : ::Union(String, Nil))
+
+        <a class="method-permalink" href="#proxy_icon_url%3D%28_proxy_icon_url%3A%3A%3AUnion%28String%2CNil%29%29-instance-method">#</a>
       </div>
       
       <br/>
@@ -587,12 +684,12 @@
       </div>
     </div>
   
-    <div class="entry-detail" id="unavailable:Bool-instance-method">
+    <div class="entry-detail" id="url:Nil|String-instance-method">
       <div class="signature">
         
-        def <strong>unavailable</strong> : Bool
+        def <strong>url</strong> : Nil | String
 
-        <a class="method-permalink" href="#unavailable%3ABool-instance-method">#</a>
+        <a class="method-permalink" href="#url%3ANil%7CString-instance-method">#</a>
       </div>
       
       <br/>
@@ -601,12 +698,12 @@
       </div>
     </div>
   
-    <div class="entry-detail" id="unavailable&#61;&#40;_unavailable:Bool&#41;-instance-method">
+    <div class="entry-detail" id="url&#61;&#40;_url:::Union&#40;String,Nil&#41;&#41;-instance-method">
       <div class="signature">
         
-        def <strong>unavailable=</strong>(_unavailable : Bool)
+        def <strong>url=</strong>(_url : ::Union(String, Nil))
 
-        <a class="method-permalink" href="#unavailable%3D%28_unavailable%3ABool%29-instance-method">#</a>
+        <a class="method-permalink" href="#url%3D%28_url%3A%3A%3AUnion%28String%2CNil%29%29-instance-method">#</a>
       </div>
       
       <br/>

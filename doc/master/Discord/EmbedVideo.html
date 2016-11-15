@@ -5,7 +5,7 @@
   <meta id="repository-name" content="github.com/meew0/discordcr">
   <link href="../css/style.css" rel="stylesheet" type="text/css" />
   <script type="text/javascript" src="../js/doc.js"></script>
-  <title>Discord::UnavailableGuild - github.com/meew0/discordcr</title>
+  <title>Discord::EmbedVideo - github.com/meew0/discordcr</title>
 </head>
 <body>
 
@@ -95,7 +95,7 @@
       
     </li>
   
-  <li class=" " data-id="github.com/meew0/discordcr/Discord/EmbedVideo" data-name="discord::embedvideo">
+  <li class=" current" data-id="github.com/meew0/discordcr/Discord/EmbedVideo" data-name="discord::embedvideo">
       <a href="../Discord/EmbedVideo.html">EmbedVideo</a>
       
     </li>
@@ -375,7 +375,7 @@
       
     </li>
   
-  <li class=" current" data-id="github.com/meew0/discordcr/Discord/UnavailableGuild" data-name="discord::unavailableguild">
+  <li class=" " data-id="github.com/meew0/discordcr/Discord/UnavailableGuild" data-name="discord::unavailableguild">
       <a href="../Discord/UnavailableGuild.html">UnavailableGuild</a>
       
     </li>
@@ -417,12 +417,12 @@
 <div id="main-content">
 <h1 class="type-name">
 
-  <span class="kind">struct</span> Discord::UnavailableGuild
+  <span class="kind">struct</span> Discord::EmbedVideo
 
 </h1>
 
 
-  <ul class="superclass-hierarchy"><li class="superclass"><a href="../Discord/UnavailableGuild.html">Discord::UnavailableGuild</a></li><li class="superclass">Struct</li><li class="superclass">Value</li><li class="superclass">Object</li></ul>
+  <ul class="superclass-hierarchy"><li class="superclass"><a href="../Discord/EmbedVideo.html">Discord::EmbedVideo</a></li><li class="superclass">Struct</li><li class="superclass">Value</li><li class="superclass">Object</li></ul>
 
 
 
@@ -443,7 +443,7 @@
   <h2>Defined in:</h2>
   
     
-      <a href="https://github.com/meew0/discordcr/blob/30ceb5f9b66954c85378bf65c26119e1e28713f1/src/discordcr/mappings/guild.cr#L46" target="_blank">discordcr/mappings/guild.cr</a>
+      <a href="https://github.com/meew0/discordcr/blob/30ceb5f9b66954c85378bf65c26119e1e28713f1/src/discordcr/mappings/channel.cr#L107" target="_blank">discordcr/mappings/channel.cr</a>
     
     <br/>
   
@@ -456,7 +456,7 @@
   <ul class="list-summary">
     
       <li class="entry-summary">
-        <a href="#new%28__temp_278%3AJSON%3A%3APullParser%29-class-method" class="signature"><strong>.new</strong>(__temp_278 : JSON::PullParser)</a>
+        <a href="#new%28__temp_110%3AJSON%3A%3APullParser%29-class-method" class="signature"><strong>.new</strong>(__temp_110 : JSON::PullParser)</a>
         
       </li>
     
@@ -468,12 +468,12 @@
   <ul class="list-summary">
     
       <li class="entry-summary">
-        <a href="#id%3AUInt64-instance-method" class="signature"><strong>#id</strong> : UInt64</a>
+        <a href="#height%3AUInt32-instance-method" class="signature"><strong>#height</strong> : UInt32</a>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#id%3D%28_id%3AUInt64%29-instance-method" class="signature"><strong>#id=</strong>(_id : UInt64)</a>
+        <a href="#height%3D%28_height%3AUInt32%29-instance-method" class="signature"><strong>#height=</strong>(_height : UInt32)</a>
         
       </li>
     
@@ -483,12 +483,22 @@
       </li>
     
       <li class="entry-summary">
-        <a href="#unavailable%3ABool-instance-method" class="signature"><strong>#unavailable</strong> : Bool</a>
+        <a href="#url%3AString-instance-method" class="signature"><strong>#url</strong> : String</a>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#unavailable%3D%28_unavailable%3ABool%29-instance-method" class="signature"><strong>#unavailable=</strong>(_unavailable : Bool)</a>
+        <a href="#url%3D%28_url%3AString%29-instance-method" class="signature"><strong>#url=</strong>(_url : String)</a>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#width%3AUInt32-instance-method" class="signature"><strong>#width</strong> : UInt32</a>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#width%3D%28_width%3AUInt32%29-instance-method" class="signature"><strong>#width=</strong>(_width : UInt32)</a>
         
       </li>
     
@@ -526,12 +536,12 @@
 
   <h2>Class Method Detail</h2>
   
-    <div class="entry-detail" id="new&#40;__temp_278:JSON::PullParser&#41;-class-method">
+    <div class="entry-detail" id="new&#40;__temp_110:JSON::PullParser&#41;-class-method">
       <div class="signature">
         
-        def self.<strong>new</strong>(__temp_278 : JSON::PullParser)
+        def self.<strong>new</strong>(__temp_110 : JSON::PullParser)
 
-        <a class="method-permalink" href="#new%28__temp_278%3AJSON%3A%3APullParser%29-class-method">#</a>
+        <a class="method-permalink" href="#new%28__temp_110%3AJSON%3A%3APullParser%29-class-method">#</a>
       </div>
       
       <br/>
@@ -545,12 +555,12 @@
 
   <h2>Instance Method Detail</h2>
   
-    <div class="entry-detail" id="id:UInt64-instance-method">
+    <div class="entry-detail" id="height:UInt32-instance-method">
       <div class="signature">
         
-        def <strong>id</strong> : UInt64
+        def <strong>height</strong> : UInt32
 
-        <a class="method-permalink" href="#id%3AUInt64-instance-method">#</a>
+        <a class="method-permalink" href="#height%3AUInt32-instance-method">#</a>
       </div>
       
       <br/>
@@ -559,12 +569,12 @@
       </div>
     </div>
   
-    <div class="entry-detail" id="id&#61;&#40;_id:UInt64&#41;-instance-method">
+    <div class="entry-detail" id="height&#61;&#40;_height:UInt32&#41;-instance-method">
       <div class="signature">
         
-        def <strong>id=</strong>(_id : UInt64)
+        def <strong>height=</strong>(_height : UInt32)
 
-        <a class="method-permalink" href="#id%3D%28_id%3AUInt64%29-instance-method">#</a>
+        <a class="method-permalink" href="#height%3D%28_height%3AUInt32%29-instance-method">#</a>
       </div>
       
       <br/>
@@ -587,12 +597,12 @@
       </div>
     </div>
   
-    <div class="entry-detail" id="unavailable:Bool-instance-method">
+    <div class="entry-detail" id="url:String-instance-method">
       <div class="signature">
         
-        def <strong>unavailable</strong> : Bool
+        def <strong>url</strong> : String
 
-        <a class="method-permalink" href="#unavailable%3ABool-instance-method">#</a>
+        <a class="method-permalink" href="#url%3AString-instance-method">#</a>
       </div>
       
       <br/>
@@ -601,12 +611,40 @@
       </div>
     </div>
   
-    <div class="entry-detail" id="unavailable&#61;&#40;_unavailable:Bool&#41;-instance-method">
+    <div class="entry-detail" id="url&#61;&#40;_url:String&#41;-instance-method">
       <div class="signature">
         
-        def <strong>unavailable=</strong>(_unavailable : Bool)
+        def <strong>url=</strong>(_url : String)
 
-        <a class="method-permalink" href="#unavailable%3D%28_unavailable%3ABool%29-instance-method">#</a>
+        <a class="method-permalink" href="#url%3D%28_url%3AString%29-instance-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="width:UInt32-instance-method">
+      <div class="signature">
+        
+        def <strong>width</strong> : UInt32
+
+        <a class="method-permalink" href="#width%3AUInt32-instance-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="width&#61;&#40;_width:UInt32&#41;-instance-method">
+      <div class="signature">
+        
+        def <strong>width=</strong>(_width : UInt32)
+
+        <a class="method-permalink" href="#width%3D%28_width%3AUInt32%29-instance-method">#</a>
       </div>
       
       <br/>
