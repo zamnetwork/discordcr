@@ -200,6 +200,16 @@
       
     </li>
   
+  <li class=" " data-id="github.com/meew0/discordcr/Discord/Gateway/MessageReactionPayload" data-name="discord::gateway::messagereactionpayload">
+      <a href="../Discord/Gateway/MessageReactionPayload.html">MessageReactionPayload</a>
+      
+    </li>
+  
+  <li class=" " data-id="github.com/meew0/discordcr/Discord/Gateway/MessageReactionRemoveAllPayload" data-name="discord::gateway::messagereactionremoveallpayload">
+      <a href="../Discord/Gateway/MessageReactionRemoveAllPayload.html">MessageReactionRemoveAllPayload</a>
+      
+    </li>
+  
   <li class=" " data-id="github.com/meew0/discordcr/Discord/Gateway/MessageUpdatePayload" data-name="discord::gateway::messageupdatepayload">
       <a href="../Discord/Gateway/MessageUpdatePayload.html">MessageUpdatePayload</a>
       
@@ -340,6 +350,11 @@
       
     </li>
   
+  <li class=" " data-id="github.com/meew0/discordcr/Discord/ReactionEmoji" data-name="discord::reactionemoji">
+      <a href="../Discord/ReactionEmoji.html">ReactionEmoji</a>
+      
+    </li>
+  
   <li class="parent current" data-id="github.com/meew0/discordcr/Discord/REST" data-name="discord::rest">
       <a href="../Discord/REST.html">REST</a>
       
@@ -448,12 +463,12 @@
   <h2>Defined in:</h2>
   
     
-      <a href="https://github.com/meew0/discordcr/blob/7b890a4b826ef772444141c9f5134875532965d3/src/discordcr/mappings/rest.cr#L4" target="_blank">discordcr/mappings/rest.cr</a>
+      <a href="https://github.com/meew0/discordcr/blob/1e6c2f41394f127595fea52cde193c753044f3fe/src/discordcr/mappings/rest.cr#L4" target="_blank">discordcr/mappings/rest.cr</a>
     
     <br/>
   
     
-      <a href="https://github.com/meew0/discordcr/blob/7b890a4b826ef772444141c9f5134875532965d3/src/discordcr/rest.cr#L10" target="_blank">discordcr/rest.cr</a>
+      <a href="https://github.com/meew0/discordcr/blob/1e6c2f41394f127595fea52cde193c753044f3fe/src/discordcr/rest.cr#L10" target="_blank">discordcr/rest.cr</a>
     
     <br/>
   
@@ -539,7 +554,7 @@
       </li>
     
       <li class="entry-summary">
-        <a href="#create_guild_channel%28guild_id%3AUInt64%2Cname%3AString%2Ctype%3AUInt8%2Cbitrate%3AUInt32%7CNil%2Cuser_limit%3AUInt32%7CNil%29-instance-method" class="signature"><strong>#create_guild_channel</strong>(guild_id : UInt64, name : String, type : UInt8, bitrate : UInt32 | Nil, user_limit : UInt32 | Nil)</a>
+        <a href="#create_guild_channel%28guild_id%3AUInt64%2Cname%3AString%2Ctype%3AUInt8%2Cbitrate%3AUInt32%3F%2Cuser_limit%3AUInt32%3F%29-instance-method" class="signature"><strong>#create_guild_channel</strong>(guild_id : UInt64, name : String, type : UInt8, bitrate : UInt32?, user_limit : UInt32?)</a>
         
           <div class="summary"><p>Creates a new channel on this guild.</p></div>
         
@@ -560,9 +575,23 @@
       </li>
     
       <li class="entry-summary">
-        <a href="#create_message%28channel_id%3AUInt64%2Ccontent%3AString%2Cembed%3AEmbed%7CNil%3Dnil%29-instance-method" class="signature"><strong>#create_message</strong>(channel_id : UInt64, content : String, embed : Embed | Nil = <span class="n">nil</span>)</a>
+        <a href="#create_message%28channel_id%3AUInt64%2Ccontent%3AString%2Cembed%3AEmbed%3F%3Dnil%29-instance-method" class="signature"><strong>#create_message</strong>(channel_id : UInt64, content : String, embed : Embed? = <span class="n">nil</span>)</a>
         
           <div class="summary"><p>Sends a message to the channel.</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#create_reaction%28channel_id%3AUInt64%2Cmessage_id%3AUInt64%2Cemoji%3AString%29-instance-method" class="signature"><strong>#create_reaction</strong>(channel_id : UInt64, message_id : UInt64, emoji : String)</a>
+        
+          <div class="summary"><p>Adds a reaction to a message.</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#delete_all_reactions%28channel_id%3AUInt64%2Cmessage_id%3AUInt64%29-instance-method" class="signature"><strong>#delete_all_reactions</strong>(channel_id : UInt64, message_id : UInt64)</a>
+        
+          <div class="summary"><p>Removes all reactions from a message.</p></div>
         
       </li>
     
@@ -616,9 +645,23 @@
       </li>
     
       <li class="entry-summary">
+        <a href="#delete_own_reaction%28channel_id%3AUInt64%2Cmessage_id%3AUInt64%2Cemoji%3AString%29-instance-method" class="signature"><strong>#delete_own_reaction</strong>(channel_id : UInt64, message_id : UInt64, emoji : String)</a>
+        
+          <div class="summary"><p>Removes the bot's own reaction from a message.</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
         <a href="#delete_pinned_channel_message%28channel_id%3AUInt64%2Cmessage_id%3AUInt64%29-instance-method" class="signature"><strong>#delete_pinned_channel_message</strong>(channel_id : UInt64, message_id : UInt64)</a>
         
           <div class="summary"><p>Unpins a message from this channel.</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#delete_user_reaction%28channel_id%3AUInt64%2Cmessage_id%3AUInt64%2Cemoji%3AString%2Cuser_id%3AUInt64%29-instance-method" class="signature"><strong>#delete_user_reaction</strong>(channel_id : UInt64, message_id : UInt64, emoji : String, user_id : UInt64)</a>
+        
+          <div class="summary"><p>Removes another user's reaction from a message.</p></div>
         
       </li>
     
@@ -658,7 +701,7 @@
       </li>
     
       <li class="entry-summary">
-        <a href="#get_channel_messages%28channel_id%3AUInt64%2Climit%3AUInt8%3D50%2Cbefore%3AUInt64%7CNil%3Dnil%2Cafter%3AUInt64%7CNil%3Dnil%2Caround%3AUInt64%7CNil%3Dnil%29-instance-method" class="signature"><strong>#get_channel_messages</strong>(channel_id : UInt64, limit : UInt8 = <span class="n">50</span>, before : UInt64 | Nil = <span class="n">nil</span>, after : UInt64 | Nil = <span class="n">nil</span>, around : UInt64 | Nil = <span class="n">nil</span>)</a>
+        <a href="#get_channel_messages%28channel_id%3AUInt64%2Climit%3AUInt8%3D50%2Cbefore%3AUInt64%3F%3Dnil%2Cafter%3AUInt64%3F%3Dnil%2Caround%3AUInt64%3F%3Dnil%29-instance-method" class="signature"><strong>#get_channel_messages</strong>(channel_id : UInt64, limit : UInt8 = <span class="n">50</span>, before : UInt64? = <span class="n">nil</span>, after : UInt64? = <span class="n">nil</span>, around : UInt64? = <span class="n">nil</span>)</a>
         
           <div class="summary"><p>Gets a list of messages from the channel's history.</p></div>
         
@@ -763,6 +806,13 @@
       </li>
     
       <li class="entry-summary">
+        <a href="#get_reactions%28channel_id%3AUInt64%2Cmessage_id%3AUInt64%2Cemoji%3AString%29-instance-method" class="signature"><strong>#get_reactions</strong>(channel_id : UInt64, message_id : UInt64, emoji : String)</a>
+        
+          <div class="summary"><p>Returns all users that have reacted with a specific emoji.</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
         <a href="#get_user%28user_id%3AUInt64%29-instance-method" class="signature"><strong>#get_user</strong>(user_id : UInt64)</a>
         
           <div class="summary"><p>Gets a specific user by ID.</p></div>
@@ -805,7 +855,7 @@
       </li>
     
       <li class="entry-summary">
-        <a href="#modify_channel%28channel_id%3AUInt64%2Cname%3AString%7CNil%2Cposition%3AUInt32%7CNil%2Ctopic%3AString%7CNil%2Cbitrate%3AUInt32%7CNil%2Cuser_limit%3AUInt32%7CNil%29-instance-method" class="signature"><strong>#modify_channel</strong>(channel_id : UInt64, name : String | Nil, position : UInt32 | Nil, topic : String | Nil, bitrate : UInt32 | Nil, user_limit : UInt32 | Nil)</a>
+        <a href="#modify_channel%28channel_id%3AUInt64%2Cname%3AString%3F%2Cposition%3AUInt32%3F%2Ctopic%3AString%3F%2Cbitrate%3AUInt32%3F%2Cuser_limit%3AUInt32%3F%29-instance-method" class="signature"><strong>#modify_channel</strong>(channel_id : UInt64, name : String?, position : UInt32?, topic : String?, bitrate : UInt32?, user_limit : UInt32?)</a>
         
           <div class="summary"><p>Modifies a channel with new properties.</p></div>
         
@@ -819,7 +869,7 @@
       </li>
     
       <li class="entry-summary">
-        <a href="#modify_guild%28guild_id%3AUInt64%2Cname%3AString%7CNil%2Cregion%3AString%7CNil%2Cverification_level%3AUInt8%7CNil%2Cafk_channel_id%3AUInt64%7CNil%2Cafk_timeout%3AInt32%7CNil%2Cicon%3AString%7CNil%2Cowner_id%3AUInt64%7CNil%2Csplash%3AString%7CNil%29-instance-method" class="signature"><strong>#modify_guild</strong>(guild_id : UInt64, name : String | Nil, region : String | Nil, verification_level : UInt8 | Nil, afk_channel_id : UInt64 | Nil, afk_timeout : Int32 | Nil, icon : String | Nil, owner_id : UInt64 | Nil, splash : String | Nil)</a>
+        <a href="#modify_guild%28guild_id%3AUInt64%2Cname%3AString%3F%2Cregion%3AString%3F%2Cverification_level%3AUInt8%3F%2Cafk_channel_id%3AUInt64%3F%2Cafk_timeout%3AInt32%3F%2Cicon%3AString%3F%2Cowner_id%3AUInt64%3F%2Csplash%3AString%3F%29-instance-method" class="signature"><strong>#modify_guild</strong>(guild_id : UInt64, name : String?, region : String?, verification_level : UInt8?, afk_channel_id : UInt64?, afk_timeout : Int32?, icon : String?, owner_id : UInt64?, splash : String?)</a>
         
           <div class="summary"><p>Modifies an existing guild with new properties.</p></div>
         
@@ -847,14 +897,14 @@
       </li>
     
       <li class="entry-summary">
-        <a href="#modify_guild_member%28guild_id%3AUInt64%2Cuser_id%3AUInt64%2Cnick%3AString%7CNil%2Croles%3AArray%28UInt64%29%7CNil%2Cmute%3ABool%7CNil%2Cdeaf%3ABool%7CNil%2Cchannel_id%3AUInt64%7CNil%29-instance-method" class="signature"><strong>#modify_guild_member</strong>(guild_id : UInt64, user_id : UInt64, nick : String | Nil, roles : Array(UInt64) | Nil, mute : Bool | Nil, deaf : Bool | Nil, channel_id : UInt64 | Nil)</a>
+        <a href="#modify_guild_member%28guild_id%3AUInt64%2Cuser_id%3AUInt64%2Cnick%3AString%3F%2Croles%3AArray%28UInt64%29%3F%2Cmute%3ABool%3F%2Cdeaf%3ABool%3F%2Cchannel_id%3AUInt64%3F%29-instance-method" class="signature"><strong>#modify_guild_member</strong>(guild_id : UInt64, user_id : UInt64, nick : String?, roles : Array(UInt64)?, mute : Bool?, deaf : Bool?, channel_id : UInt64?)</a>
         
           <div class="summary"><p>Changes a specific member's properties.</p></div>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#modify_guild_role%28guild_id%3AUInt64%2Crole_id%3AUInt64%2Cname%3AString%7CNil%2Cpermissions%3APermissions%2Ccolour%3AUInt32%7CNil%2Cposition%3AInt32%7CNil%2Choist%3ABool%7CNil%29-instance-method" class="signature"><strong>#modify_guild_role</strong>(guild_id : UInt64, role_id : UInt64, name : String | Nil, permissions : Permissions, colour : UInt32 | Nil, position : Int32 | Nil, hoist : Bool | Nil)</a>
+        <a href="#modify_guild_role%28guild_id%3AUInt64%2Crole_id%3AUInt64%2Cname%3AString%3F%2Cpermissions%3APermissions%2Ccolour%3AUInt32%3F%2Cposition%3AInt32%3F%2Choist%3ABool%3F%29-instance-method" class="signature"><strong>#modify_guild_role</strong>(guild_id : UInt64, role_id : UInt64, name : String?, permissions : Permissions, colour : UInt32?, position : Int32?, hoist : Bool?)</a>
         
           <div class="summary"><p>Changes a role's properties.</p></div>
         
@@ -868,9 +918,9 @@
       </li>
     
       <li class="entry-summary">
-        <a href="#raw_request%28route_key%3ASymbol%2Cmajor_parameter%3AUInt64%7CNil%2Cmethod%3AString%2Cpath%3AString%2Cheaders%3AHTTP%3A%3AHeaders%2Cbody%3AString%7CNil%29-instance-method" class="signature"><strong>#raw_request</strong>(route_key : Symbol, major_parameter : UInt64 | Nil, method : String, path : String, headers : HTTP::Headers, body : String | Nil)</a>
+        <a href="#raw_request%28route_key%3ASymbol%2Cmajor_parameter%3AUInt64%3F%2Cmethod%3AString%2Cpath%3AString%2Cheaders%3AHTTP%3A%3AHeaders%2Cbody%3AString%3F%29-instance-method" class="signature"><strong>#raw_request</strong>(route_key : Symbol, major_parameter : UInt64?, method : String, path : String, headers : HTTP::Headers, body : String?)</a>
         
-          <div class="summary"><p>Like <code><a href="../Discord/REST.html#request%28route_key%3ASymbol%2Cmajor_parameter%3AUInt64%7CNil%2Cmethod%3AString%2Cpath%3AString%2Cheaders%3AHTTP%3A%3AHeaders%2Cbody%3AString%7CNil%29-instance-method">#request</a></code>, but does not do error checking beyond 429.</p></div>
+          <div class="summary"><p>Like <code><a href="../Discord/REST.html#request%28route_key%3ASymbol%2Cmajor_parameter%3AUInt64%3F%2Cmethod%3AString%2Cpath%3AString%2Cheaders%3AHTTP%3A%3AHeaders%2Cbody%3AString%3F%29-instance-method">#request</a></code>, but does not do error checking beyond 429.</p></div>
         
       </li>
     
@@ -889,7 +939,7 @@
       </li>
     
       <li class="entry-summary">
-        <a href="#request%28route_key%3ASymbol%2Cmajor_parameter%3AUInt64%7CNil%2Cmethod%3AString%2Cpath%3AString%2Cheaders%3AHTTP%3A%3AHeaders%2Cbody%3AString%7CNil%29-instance-method" class="signature"><strong>#request</strong>(route_key : Symbol, major_parameter : UInt64 | Nil, method : String, path : String, headers : HTTP::Headers, body : String | Nil)</a>
+        <a href="#request%28route_key%3ASymbol%2Cmajor_parameter%3AUInt64%3F%2Cmethod%3AString%2Cpath%3AString%2Cheaders%3AHTTP%3A%3AHeaders%2Cbody%3AString%3F%29-instance-method" class="signature"><strong>#request</strong>(route_key : Symbol, major_parameter : UInt64?, method : String, path : String, headers : HTTP::Headers, body : String?)</a>
         
           <div class="summary"><p>Makes a REST request to Discord, with the given <em>method</em> to the given <em>path</em>, with the given <em>headers</em> set and with the given <em>body</em> being sent.</p></div>
         
@@ -939,7 +989,7 @@
       <br/>
       <div>
         
-          [<a href="https://github.com/meew0/discordcr/blob/7b890a4b826ef772444141c9f5134875532965d3/src/discordcr/rest.cr#L1136" target="_blank">View source</a>]
+          [<a href="https://github.com/meew0/discordcr/blob/1e6c2f41394f127595fea52cde193c753044f3fe/src/discordcr/rest.cr#L1216" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -960,7 +1010,7 @@ permission.</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/meew0/discordcr/blob/7b890a4b826ef772444141c9f5134875532965d3/src/discordcr/rest.cr#L417" target="_blank">View source</a>]
+          [<a href="https://github.com/meew0/discordcr/blob/1e6c2f41394f127595fea52cde193c753044f3fe/src/discordcr/rest.cr#L497" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -981,7 +1031,7 @@ permission.</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/meew0/discordcr/blob/7b890a4b826ef772444141c9f5134875532965d3/src/discordcr/rest.cr#L794" target="_blank">View source</a>]
+          [<a href="https://github.com/meew0/discordcr/blob/1e6c2f41394f127595fea52cde193c753044f3fe/src/discordcr/rest.cr#L874" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1002,7 +1052,7 @@ permission.</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/meew0/discordcr/blob/7b890a4b826ef772444141c9f5134875532965d3/src/discordcr/rest.cr#L291" target="_blank">View source</a>]
+          [<a href="https://github.com/meew0/discordcr/blob/1e6c2f41394f127595fea52cde193c753044f3fe/src/discordcr/rest.cr#L371" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1023,7 +1073,7 @@ permission.</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/meew0/discordcr/blob/7b890a4b826ef772444141c9f5134875532965d3/src/discordcr/rest.cr#L346" target="_blank">View source</a>]
+          [<a href="https://github.com/meew0/discordcr/blob/1e6c2f41394f127595fea52cde193c753044f3fe/src/discordcr/rest.cr#L426" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1044,7 +1094,7 @@ before, it will be reopened.</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/meew0/discordcr/blob/7b890a4b826ef772444141c9f5134875532965d3/src/discordcr/rest.cr#L1070" target="_blank">View source</a>]
+          [<a href="https://github.com/meew0/discordcr/blob/1e6c2f41394f127595fea52cde193c753044f3fe/src/discordcr/rest.cr#L1150" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1064,17 +1114,17 @@ before, it will be reopened.</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/meew0/discordcr/blob/7b890a4b826ef772444141c9f5134875532965d3/src/discordcr/rest.cr#L672" target="_blank">View source</a>]
+          [<a href="https://github.com/meew0/discordcr/blob/1e6c2f41394f127595fea52cde193c753044f3fe/src/discordcr/rest.cr#L752" target="_blank">View source</a>]
         
       </div>
     </div>
   
-    <div class="entry-detail" id="create_guild_channel&#40;guild_id:UInt64,name:String,type:UInt8,bitrate:UInt32|Nil,user_limit:UInt32|Nil&#41;-instance-method">
+    <div class="entry-detail" id="create_guild_channel&#40;guild_id:UInt64,name:String,type:UInt8,bitrate:UInt32?,user_limit:UInt32?&#41;-instance-method">
       <div class="signature">
         
-        def <strong>create_guild_channel</strong>(guild_id : UInt64, name : String, type : UInt8, bitrate : UInt32 | Nil, user_limit : UInt32 | Nil)
+        def <strong>create_guild_channel</strong>(guild_id : UInt64, name : String, type : UInt8, bitrate : UInt32?, user_limit : UInt32?)
 
-        <a class="method-permalink" href="#create_guild_channel%28guild_id%3AUInt64%2Cname%3AString%2Ctype%3AUInt8%2Cbitrate%3AUInt32%7CNil%2Cuser_limit%3AUInt32%7CNil%29-instance-method">#</a>
+        <a class="method-permalink" href="#create_guild_channel%28guild_id%3AUInt64%2Cname%3AString%2Ctype%3AUInt8%2Cbitrate%3AUInt32%3F%2Cuser_limit%3AUInt32%3F%29-instance-method">#</a>
       </div>
       
         <div class="doc"><p>Creates a new channel on this guild. Requires the "Manage Channels"
@@ -1085,7 +1135,7 @@ permission.</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/meew0/discordcr/blob/7b890a4b826ef772444141c9f5134875532965d3/src/discordcr/rest.cr#L526" target="_blank">View source</a>]
+          [<a href="https://github.com/meew0/discordcr/blob/1e6c2f41394f127595fea52cde193c753044f3fe/src/discordcr/rest.cr#L606" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1106,7 +1156,7 @@ permission.</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/meew0/discordcr/blob/7b890a4b826ef772444141c9f5134875532965d3/src/discordcr/rest.cr#L845" target="_blank">View source</a>]
+          [<a href="https://github.com/meew0/discordcr/blob/1e6c2f41394f127595fea52cde193c753044f3fe/src/discordcr/rest.cr#L925" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1126,17 +1176,17 @@ permission.</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/meew0/discordcr/blob/7b890a4b826ef772444141c9f5134875532965d3/src/discordcr/rest.cr#L716" target="_blank">View source</a>]
+          [<a href="https://github.com/meew0/discordcr/blob/1e6c2f41394f127595fea52cde193c753044f3fe/src/discordcr/rest.cr#L796" target="_blank">View source</a>]
         
       </div>
     </div>
   
-    <div class="entry-detail" id="create_message&#40;channel_id:UInt64,content:String,embed:Embed|Nil&#61;nil&#41;-instance-method">
+    <div class="entry-detail" id="create_message&#40;channel_id:UInt64,content:String,embed:Embed?&#61;nil&#41;-instance-method">
       <div class="signature">
         
-        def <strong>create_message</strong>(channel_id : UInt64, content : String, embed : <a href="../Discord/Embed.html">Embed</a> | Nil = <span class="n">nil</span>)
+        def <strong>create_message</strong>(channel_id : UInt64, content : String, embed : <a href="../Discord/Embed.html">Embed</a>? = <span class="n">nil</span>)
 
-        <a class="method-permalink" href="#create_message%28channel_id%3AUInt64%2Ccontent%3AString%2Cembed%3AEmbed%7CNil%3Dnil%29-instance-method">#</a>
+        <a class="method-permalink" href="#create_message%28channel_id%3AUInt64%2Ccontent%3AString%2Cembed%3AEmbed%3F%3Dnil%29-instance-method">#</a>
       </div>
       
         <div class="doc"><p>Sends a message to the channel. Requires the "Send Messages" permission.</p>
@@ -1171,7 +1221,50 @@ client.create_message(channel_id, <span class="s">&quot;The content of the messa
       <br/>
       <div>
         
-          [<a href="https://github.com/meew0/discordcr/blob/7b890a4b826ef772444141c9f5134875532965d3/src/discordcr/rest.cr#L239" target="_blank">View source</a>]
+          [<a href="https://github.com/meew0/discordcr/blob/1e6c2f41394f127595fea52cde193c753044f3fe/src/discordcr/rest.cr#L239" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="create_reaction&#40;channel_id:UInt64,message_id:UInt64,emoji:String&#41;-instance-method">
+      <div class="signature">
+        
+        def <strong>create_reaction</strong>(channel_id : UInt64, message_id : UInt64, emoji : String)
+
+        <a class="method-permalink" href="#create_reaction%28channel_id%3AUInt64%2Cmessage_id%3AUInt64%2Cemoji%3AString%29-instance-method">#</a>
+      </div>
+      
+        <div class="doc"><p>Adds a reaction to a message. The <code>emoji</code> property must be in the format
+<code>name:id</code> for custom emoji. For unicode emoji it can simply be the UTF-8
+encoded characters.</p>
+
+<p><a href="https://discordapp.com/developers/docs/resources/channel#create-reaction" target="_blank">API docs for this method</a></p></div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/meew0/discordcr/blob/1e6c2f41394f127595fea52cde193c753044f3fe/src/discordcr/rest.cr#L257" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="delete_all_reactions&#40;channel_id:UInt64,message_id:UInt64&#41;-instance-method">
+      <div class="signature">
+        
+        def <strong>delete_all_reactions</strong>(channel_id : UInt64, message_id : UInt64)
+
+        <a class="method-permalink" href="#delete_all_reactions%28channel_id%3AUInt64%2Cmessage_id%3AUInt64%29-instance-method">#</a>
+      </div>
+      
+        <div class="doc"><p>Removes all reactions from a message. Requires the "Manage Messages"
+permission.</p>
+
+<p><a href="https://discordapp.com/developers/docs/resources/channel#delete-all-reactions" target="_blank">API docs for this method</a></p></div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/meew0/discordcr/blob/1e6c2f41394f127595fea52cde193c753044f3fe/src/discordcr/rest.cr#L321" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1191,7 +1284,7 @@ client.create_message(channel_id, <span class="s">&quot;The content of the messa
       <br/>
       <div>
         
-          [<a href="https://github.com/meew0/discordcr/blob/7b890a4b826ef772444141c9f5134875532965d3/src/discordcr/rest.cr#L159" target="_blank">View source</a>]
+          [<a href="https://github.com/meew0/discordcr/blob/1e6c2f41394f127595fea52cde193c753044f3fe/src/discordcr/rest.cr#L159" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1212,7 +1305,7 @@ Permissions" permission.</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/meew0/discordcr/blob/7b890a4b826ef772444141c9f5134875532965d3/src/discordcr/rest.cr#L370" target="_blank">View source</a>]
+          [<a href="https://github.com/meew0/discordcr/blob/1e6c2f41394f127595fea52cde193c753044f3fe/src/discordcr/rest.cr#L450" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1232,7 +1325,7 @@ Permissions" permission.</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/meew0/discordcr/blob/7b890a4b826ef772444141c9f5134875532965d3/src/discordcr/rest.cr#L493" target="_blank">View source</a>]
+          [<a href="https://github.com/meew0/discordcr/blob/1e6c2f41394f127595fea52cde193c753044f3fe/src/discordcr/rest.cr#L573" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1252,7 +1345,7 @@ Permissions" permission.</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/meew0/discordcr/blob/7b890a4b826ef772444141c9f5134875532965d3/src/discordcr/rest.cr#L888" target="_blank">View source</a>]
+          [<a href="https://github.com/meew0/discordcr/blob/1e6c2f41394f127595fea52cde193c753044f3fe/src/discordcr/rest.cr#L968" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1273,7 +1366,7 @@ to be lower than the bot's highest role.</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/meew0/discordcr/blob/7b890a4b826ef772444141c9f5134875532965d3/src/discordcr/rest.cr#L760" target="_blank">View source</a>]
+          [<a href="https://github.com/meew0/discordcr/blob/1e6c2f41394f127595fea52cde193c753044f3fe/src/discordcr/rest.cr#L840" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1295,7 +1388,7 @@ server.</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/meew0/discordcr/blob/7b890a4b826ef772444141c9f5134875532965d3/src/discordcr/rest.cr#L1120" target="_blank">View source</a>]
+          [<a href="https://github.com/meew0/discordcr/blob/1e6c2f41394f127595fea52cde193c753044f3fe/src/discordcr/rest.cr#L1200" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1317,7 +1410,29 @@ permission.</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/meew0/discordcr/blob/7b890a4b826ef772444141c9f5134875532965d3/src/discordcr/rest.cr#L276" target="_blank">View source</a>]
+          [<a href="https://github.com/meew0/discordcr/blob/1e6c2f41394f127595fea52cde193c753044f3fe/src/discordcr/rest.cr#L356" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="delete_own_reaction&#40;channel_id:UInt64,message_id:UInt64,emoji:String&#41;-instance-method">
+      <div class="signature">
+        
+        def <strong>delete_own_reaction</strong>(channel_id : UInt64, message_id : UInt64, emoji : String)
+
+        <a class="method-permalink" href="#delete_own_reaction%28channel_id%3AUInt64%2Cmessage_id%3AUInt64%2Cemoji%3AString%29-instance-method">#</a>
+      </div>
+      
+        <div class="doc"><p>Removes the bot's own reaction from a message. The <code>emoji</code> property must
+be in the format <code>name:id</code> for custom emoji. For unicode emoji it can
+simply be the UTF-8 encoded characters.</p>
+
+<p><a href="https://discordapp.com/developers/docs/resources/channel#delete-own-reaction" target="_blank">API docs for this method</a></p></div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/meew0/discordcr/blob/1e6c2f41394f127595fea52cde193c753044f3fe/src/discordcr/rest.cr#L273" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1338,7 +1453,30 @@ permission.</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/meew0/discordcr/blob/7b890a4b826ef772444141c9f5134875532965d3/src/discordcr/rest.cr#L432" target="_blank">View source</a>]
+          [<a href="https://github.com/meew0/discordcr/blob/1e6c2f41394f127595fea52cde193c753044f3fe/src/discordcr/rest.cr#L512" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="delete_user_reaction&#40;channel_id:UInt64,message_id:UInt64,emoji:String,user_id:UInt64&#41;-instance-method">
+      <div class="signature">
+        
+        def <strong>delete_user_reaction</strong>(channel_id : UInt64, message_id : UInt64, emoji : String, user_id : UInt64)
+
+        <a class="method-permalink" href="#delete_user_reaction%28channel_id%3AUInt64%2Cmessage_id%3AUInt64%2Cemoji%3AString%2Cuser_id%3AUInt64%29-instance-method">#</a>
+      </div>
+      
+        <div class="doc"><p>Removes another user's reaction from a message. The <code>emoji</code> property must
+be in the format <code>name:id</code> for custom emoji. For unicode emoji it can
+simply be the UTF-8 encoded characters. Requires the "Manage Messages"
+permission.</p>
+
+<p><a href="https://discordapp.com/developers/docs/resources/channel#delete-user-reaction" target="_blank">API docs for this method</a></p></div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/meew0/discordcr/blob/1e6c2f41394f127595fea52cde193c753044f3fe/src/discordcr/rest.cr#L290" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1360,7 +1498,7 @@ ID. Requires the "Manage Permissions" permission.</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/meew0/discordcr/blob/7b890a4b826ef772444141c9f5134875532965d3/src/discordcr/rest.cr#L307" target="_blank">View source</a>]
+          [<a href="https://github.com/meew0/discordcr/blob/1e6c2f41394f127595fea52cde193c753044f3fe/src/discordcr/rest.cr#L387" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1381,7 +1519,7 @@ sent by the bot itself - you can't edit others' messages.</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/meew0/discordcr/blob/7b890a4b826ef772444141c9f5134875532965d3/src/discordcr/rest.cr#L258" target="_blank">View source</a>]
+          [<a href="https://github.com/meew0/discordcr/blob/1e6c2f41394f127595fea52cde193c753044f3fe/src/discordcr/rest.cr#L338" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1401,7 +1539,7 @@ sent by the bot itself - you can't edit others' messages.</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/meew0/discordcr/blob/7b890a4b826ef772444141c9f5134875532965d3/src/discordcr/rest.cr#L117" target="_blank">View source</a>]
+          [<a href="https://github.com/meew0/discordcr/blob/1e6c2f41394f127595fea52cde193c753044f3fe/src/discordcr/rest.cr#L117" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1422,7 +1560,7 @@ permission.</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/meew0/discordcr/blob/7b890a4b826ef772444141c9f5134875532965d3/src/discordcr/rest.cr#L329" target="_blank">View source</a>]
+          [<a href="https://github.com/meew0/discordcr/blob/1e6c2f41394f127595fea52cde193c753044f3fe/src/discordcr/rest.cr#L409" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1443,17 +1581,17 @@ Message History" permission.</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/meew0/discordcr/blob/7b890a4b826ef772444141c9f5134875532965d3/src/discordcr/rest.cr#L196" target="_blank">View source</a>]
+          [<a href="https://github.com/meew0/discordcr/blob/1e6c2f41394f127595fea52cde193c753044f3fe/src/discordcr/rest.cr#L196" target="_blank">View source</a>]
         
       </div>
     </div>
   
-    <div class="entry-detail" id="get_channel_messages&#40;channel_id:UInt64,limit:UInt8&#61;50,before:UInt64|Nil&#61;nil,after:UInt64|Nil&#61;nil,around:UInt64|Nil&#61;nil&#41;-instance-method">
+    <div class="entry-detail" id="get_channel_messages&#40;channel_id:UInt64,limit:UInt8&#61;50,before:UInt64?&#61;nil,after:UInt64?&#61;nil,around:UInt64?&#61;nil&#41;-instance-method">
       <div class="signature">
         
-        def <strong>get_channel_messages</strong>(channel_id : UInt64, limit : UInt8 = <span class="n">50</span>, before : UInt64 | Nil = <span class="n">nil</span>, after : UInt64 | Nil = <span class="n">nil</span>, around : UInt64 | Nil = <span class="n">nil</span>)
+        def <strong>get_channel_messages</strong>(channel_id : UInt64, limit : UInt8 = <span class="n">50</span>, before : UInt64? = <span class="n">nil</span>, after : UInt64? = <span class="n">nil</span>, around : UInt64? = <span class="n">nil</span>)
 
-        <a class="method-permalink" href="#get_channel_messages%28channel_id%3AUInt64%2Climit%3AUInt8%3D50%2Cbefore%3AUInt64%7CNil%3Dnil%2Cafter%3AUInt64%7CNil%3Dnil%2Caround%3AUInt64%7CNil%3Dnil%29-instance-method">#</a>
+        <a class="method-permalink" href="#get_channel_messages%28channel_id%3AUInt64%2Climit%3AUInt8%3D50%2Cbefore%3AUInt64%3F%3Dnil%2Cafter%3AUInt64%3F%3Dnil%2Caround%3AUInt64%3F%3Dnil%29-instance-method">#</a>
       </div>
       
         <div class="doc"><p>Gets a list of messages from the channel's history. Requires the "Read
@@ -1464,7 +1602,7 @@ Message History" permission.</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/meew0/discordcr/blob/7b890a4b826ef772444141c9f5134875532965d3/src/discordcr/rest.cr#L174" target="_blank">View source</a>]
+          [<a href="https://github.com/meew0/discordcr/blob/1e6c2f41394f127595fea52cde193c753044f3fe/src/discordcr/rest.cr#L174" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1484,7 +1622,7 @@ Message History" permission.</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/meew0/discordcr/blob/7b890a4b826ef772444141c9f5134875532965d3/src/discordcr/rest.cr#L986" target="_blank">View source</a>]
+          [<a href="https://github.com/meew0/discordcr/blob/1e6c2f41394f127595fea52cde193c753044f3fe/src/discordcr/rest.cr#L1066" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1504,7 +1642,7 @@ Message History" permission.</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/meew0/discordcr/blob/7b890a4b826ef772444141c9f5134875532965d3/src/discordcr/rest.cr#L1023" target="_blank">View source</a>]
+          [<a href="https://github.com/meew0/discordcr/blob/1e6c2f41394f127595fea52cde193c753044f3fe/src/discordcr/rest.cr#L1103" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1524,7 +1662,7 @@ Message History" permission.</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/meew0/discordcr/blob/7b890a4b826ef772444141c9f5134875532965d3/src/discordcr/rest.cr#L101" target="_blank">View source</a>]
+          [<a href="https://github.com/meew0/discordcr/blob/1e6c2f41394f127595fea52cde193c753044f3fe/src/discordcr/rest.cr#L101" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1544,7 +1682,7 @@ Message History" permission.</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/meew0/discordcr/blob/7b890a4b826ef772444141c9f5134875532965d3/src/discordcr/rest.cr#L446" target="_blank">View source</a>]
+          [<a href="https://github.com/meew0/discordcr/blob/1e6c2f41394f127595fea52cde193c753044f3fe/src/discordcr/rest.cr#L526" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1565,7 +1703,7 @@ permission.</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/meew0/discordcr/blob/7b890a4b826ef772444141c9f5134875532965d3/src/discordcr/rest.cr#L656" target="_blank">View source</a>]
+          [<a href="https://github.com/meew0/discordcr/blob/1e6c2f41394f127595fea52cde193c753044f3fe/src/discordcr/rest.cr#L736" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1585,7 +1723,7 @@ permission.</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/meew0/discordcr/blob/7b890a4b826ef772444141c9f5134875532965d3/src/discordcr/rest.cr#L509" target="_blank">View source</a>]
+          [<a href="https://github.com/meew0/discordcr/blob/1e6c2f41394f127595fea52cde193c753044f3fe/src/discordcr/rest.cr#L589" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1605,7 +1743,7 @@ permission.</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/meew0/discordcr/blob/7b890a4b826ef772444141c9f5134875532965d3/src/discordcr/rest.cr#L916" target="_blank">View source</a>]
+          [<a href="https://github.com/meew0/discordcr/blob/1e6c2f41394f127595fea52cde193c753044f3fe/src/discordcr/rest.cr#L996" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1626,7 +1764,7 @@ Requires the "Manage Guild" permission.</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/meew0/discordcr/blob/7b890a4b826ef772444141c9f5134875532965d3/src/discordcr/rest.cr#L828" target="_blank">View source</a>]
+          [<a href="https://github.com/meew0/discordcr/blob/1e6c2f41394f127595fea52cde193c753044f3fe/src/discordcr/rest.cr#L908" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1646,7 +1784,7 @@ Requires the "Manage Guild" permission.</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/meew0/discordcr/blob/7b890a4b826ef772444141c9f5134875532965d3/src/discordcr/rest.cr#L573" target="_blank">View source</a>]
+          [<a href="https://github.com/meew0/discordcr/blob/1e6c2f41394f127595fea52cde193c753044f3fe/src/discordcr/rest.cr#L653" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1667,7 +1805,7 @@ days. Requires the "Kick Members" permission.</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/meew0/discordcr/blob/7b890a4b826ef772444141c9f5134875532965d3/src/discordcr/rest.cr#L777" target="_blank">View source</a>]
+          [<a href="https://github.com/meew0/discordcr/blob/1e6c2f41394f127595fea52cde193c753044f3fe/src/discordcr/rest.cr#L857" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1687,7 +1825,7 @@ days. Requires the "Kick Members" permission.</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/meew0/discordcr/blob/7b890a4b826ef772444141c9f5134875532965d3/src/discordcr/rest.cr#L700" target="_blank">View source</a>]
+          [<a href="https://github.com/meew0/discordcr/blob/1e6c2f41394f127595fea52cde193c753044f3fe/src/discordcr/rest.cr#L780" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1708,7 +1846,7 @@ VIP regions for VIP servers.</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/meew0/discordcr/blob/7b890a4b826ef772444141c9f5134875532965d3/src/discordcr/rest.cr#L811" target="_blank">View source</a>]
+          [<a href="https://github.com/meew0/discordcr/blob/1e6c2f41394f127595fea52cde193c753044f3fe/src/discordcr/rest.cr#L891" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1728,7 +1866,7 @@ VIP regions for VIP servers.</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/meew0/discordcr/blob/7b890a4b826ef772444141c9f5134875532965d3/src/discordcr/rest.cr#L1102" target="_blank">View source</a>]
+          [<a href="https://github.com/meew0/discordcr/blob/1e6c2f41394f127595fea52cde193c753044f3fe/src/discordcr/rest.cr#L1182" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1748,7 +1886,27 @@ VIP regions for VIP servers.</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/meew0/discordcr/blob/7b890a4b826ef772444141c9f5134875532965d3/src/discordcr/rest.cr#L400" target="_blank">View source</a>]
+          [<a href="https://github.com/meew0/discordcr/blob/1e6c2f41394f127595fea52cde193c753044f3fe/src/discordcr/rest.cr#L480" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="get_reactions&#40;channel_id:UInt64,message_id:UInt64,emoji:String&#41;-instance-method">
+      <div class="signature">
+        
+        def <strong>get_reactions</strong>(channel_id : UInt64, message_id : UInt64, emoji : String)
+
+        <a class="method-permalink" href="#get_reactions%28channel_id%3AUInt64%2Cmessage_id%3AUInt64%2Cemoji%3AString%29-instance-method">#</a>
+      </div>
+      
+        <div class="doc"><p>Returns all users that have reacted with a specific emoji.</p>
+
+<p><a href="https://discordapp.com/developers/docs/resources/channel#get-reactions" target="_blank">API docs for this method</a></p></div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/meew0/discordcr/blob/1e6c2f41394f127595fea52cde193c753044f3fe/src/discordcr/rest.cr#L304" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1768,7 +1926,7 @@ VIP regions for VIP servers.</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/meew0/discordcr/blob/7b890a4b826ef772444141c9f5134875532965d3/src/discordcr/rest.cr#L954" target="_blank">View source</a>]
+          [<a href="https://github.com/meew0/discordcr/blob/1e6c2f41394f127595fea52cde193c753044f3fe/src/discordcr/rest.cr#L1034" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1788,7 +1946,7 @@ VIP regions for VIP servers.</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/meew0/discordcr/blob/7b890a4b826ef772444141c9f5134875532965d3/src/discordcr/rest.cr#L1053" target="_blank">View source</a>]
+          [<a href="https://github.com/meew0/discordcr/blob/1e6c2f41394f127595fea52cde193c753044f3fe/src/discordcr/rest.cr#L1133" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1808,7 +1966,7 @@ VIP regions for VIP servers.</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/meew0/discordcr/blob/7b890a4b826ef772444141c9f5134875532965d3/src/discordcr/rest.cr#L1086" target="_blank">View source</a>]
+          [<a href="https://github.com/meew0/discordcr/blob/1e6c2f41394f127595fea52cde193c753044f3fe/src/discordcr/rest.cr#L1166" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1828,7 +1986,7 @@ VIP regions for VIP servers.</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/meew0/discordcr/blob/7b890a4b826ef772444141c9f5134875532965d3/src/discordcr/rest.cr#L1039" target="_blank">View source</a>]
+          [<a href="https://github.com/meew0/discordcr/blob/1e6c2f41394f127595fea52cde193c753044f3fe/src/discordcr/rest.cr#L1119" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1850,7 +2008,7 @@ to specify what ID to start at.</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/meew0/discordcr/blob/7b890a4b826ef772444141c9f5134875532965d3/src/discordcr/rest.cr#L591" target="_blank">View source</a>]
+          [<a href="https://github.com/meew0/discordcr/blob/1e6c2f41394f127595fea52cde193c753044f3fe/src/discordcr/rest.cr#L671" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1870,17 +2028,17 @@ to specify what ID to start at.</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/meew0/discordcr/blob/7b890a4b826ef772444141c9f5134875532965d3/src/discordcr/rest.cr#L1152" target="_blank">View source</a>]
+          [<a href="https://github.com/meew0/discordcr/blob/1e6c2f41394f127595fea52cde193c753044f3fe/src/discordcr/rest.cr#L1232" target="_blank">View source</a>]
         
       </div>
     </div>
   
-    <div class="entry-detail" id="modify_channel&#40;channel_id:UInt64,name:String|Nil,position:UInt32|Nil,topic:String|Nil,bitrate:UInt32|Nil,user_limit:UInt32|Nil&#41;-instance-method">
+    <div class="entry-detail" id="modify_channel&#40;channel_id:UInt64,name:String?,position:UInt32?,topic:String?,bitrate:UInt32?,user_limit:UInt32?&#41;-instance-method">
       <div class="signature">
         
-        def <strong>modify_channel</strong>(channel_id : UInt64, name : String | Nil, position : UInt32 | Nil, topic : String | Nil, bitrate : UInt32 | Nil, user_limit : UInt32 | Nil)
+        def <strong>modify_channel</strong>(channel_id : UInt64, name : String?, position : UInt32?, topic : String?, bitrate : UInt32?, user_limit : UInt32?)
 
-        <a class="method-permalink" href="#modify_channel%28channel_id%3AUInt64%2Cname%3AString%7CNil%2Cposition%3AUInt32%7CNil%2Ctopic%3AString%7CNil%2Cbitrate%3AUInt32%7CNil%2Cuser_limit%3AUInt32%7CNil%29-instance-method">#</a>
+        <a class="method-permalink" href="#modify_channel%28channel_id%3AUInt64%2Cname%3AString%3F%2Cposition%3AUInt32%3F%2Ctopic%3AString%3F%2Cbitrate%3AUInt32%3F%2Cuser_limit%3AUInt32%3F%29-instance-method">#</a>
       </div>
       
         <div class="doc"><p>Modifies a channel with new properties. Requires the "Manage Channel"
@@ -1891,7 +2049,7 @@ permission.</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/meew0/discordcr/blob/7b890a4b826ef772444141c9f5134875532965d3/src/discordcr/rest.cr#L134" target="_blank">View source</a>]
+          [<a href="https://github.com/meew0/discordcr/blob/1e6c2f41394f127595fea52cde193c753044f3fe/src/discordcr/rest.cr#L134" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1911,17 +2069,17 @@ permission.</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/meew0/discordcr/blob/7b890a4b826ef772444141c9f5134875532965d3/src/discordcr/rest.cr#L1002" target="_blank">View source</a>]
+          [<a href="https://github.com/meew0/discordcr/blob/1e6c2f41394f127595fea52cde193c753044f3fe/src/discordcr/rest.cr#L1082" target="_blank">View source</a>]
         
       </div>
     </div>
   
-    <div class="entry-detail" id="modify_guild&#40;guild_id:UInt64,name:String|Nil,region:String|Nil,verification_level:UInt8|Nil,afk_channel_id:UInt64|Nil,afk_timeout:Int32|Nil,icon:String|Nil,owner_id:UInt64|Nil,splash:String|Nil&#41;-instance-method">
+    <div class="entry-detail" id="modify_guild&#40;guild_id:UInt64,name:String?,region:String?,verification_level:UInt8?,afk_channel_id:UInt64?,afk_timeout:Int32?,icon:String?,owner_id:UInt64?,splash:String?&#41;-instance-method">
       <div class="signature">
         
-        def <strong>modify_guild</strong>(guild_id : UInt64, name : String | Nil, region : String | Nil, verification_level : UInt8 | Nil, afk_channel_id : UInt64 | Nil, afk_timeout : Int32 | Nil, icon : String | Nil, owner_id : UInt64 | Nil, splash : String | Nil)
+        def <strong>modify_guild</strong>(guild_id : UInt64, name : String?, region : String?, verification_level : UInt8?, afk_channel_id : UInt64?, afk_timeout : Int32?, icon : String?, owner_id : UInt64?, splash : String?)
 
-        <a class="method-permalink" href="#modify_guild%28guild_id%3AUInt64%2Cname%3AString%7CNil%2Cregion%3AString%7CNil%2Cverification_level%3AUInt8%7CNil%2Cafk_channel_id%3AUInt64%7CNil%2Cafk_timeout%3AInt32%7CNil%2Cicon%3AString%7CNil%2Cowner_id%3AUInt64%7CNil%2Csplash%3AString%7CNil%29-instance-method">#</a>
+        <a class="method-permalink" href="#modify_guild%28guild_id%3AUInt64%2Cname%3AString%3F%2Cregion%3AString%3F%2Cverification_level%3AUInt8%3F%2Cafk_channel_id%3AUInt64%3F%2Cafk_timeout%3AInt32%3F%2Cicon%3AString%3F%2Cowner_id%3AUInt64%3F%2Csplash%3AString%3F%29-instance-method">#</a>
       </div>
       
         <div class="doc"><p>Modifies an existing guild with new properties. Requires the "Manage
@@ -1932,7 +2090,7 @@ Server" permission.</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/meew0/discordcr/blob/7b890a4b826ef772444141c9f5134875532965d3/src/discordcr/rest.cr#L463" target="_blank">View source</a>]
+          [<a href="https://github.com/meew0/discordcr/blob/1e6c2f41394f127595fea52cde193c753044f3fe/src/discordcr/rest.cr#L543" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1953,7 +2111,7 @@ permission.</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/meew0/discordcr/blob/7b890a4b826ef772444141c9f5134875532965d3/src/discordcr/rest.cr#L551" target="_blank">View source</a>]
+          [<a href="https://github.com/meew0/discordcr/blob/1e6c2f41394f127595fea52cde193c753044f3fe/src/discordcr/rest.cr#L631" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1973,7 +2131,7 @@ permission.</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/meew0/discordcr/blob/7b890a4b826ef772444141c9f5134875532965d3/src/discordcr/rest.cr#L932" target="_blank">View source</a>]
+          [<a href="https://github.com/meew0/discordcr/blob/1e6c2f41394f127595fea52cde193c753044f3fe/src/discordcr/rest.cr#L1012" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1994,45 +2152,41 @@ permission.</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/meew0/discordcr/blob/7b890a4b826ef772444141c9f5134875532965d3/src/discordcr/rest.cr#L865" target="_blank">View source</a>]
+          [<a href="https://github.com/meew0/discordcr/blob/1e6c2f41394f127595fea52cde193c753044f3fe/src/discordcr/rest.cr#L945" target="_blank">View source</a>]
         
       </div>
     </div>
   
-    <div class="entry-detail" id="modify_guild_member&#40;guild_id:UInt64,user_id:UInt64,nick:String|Nil,roles:Array&#40;UInt64&#41;|Nil,mute:Bool|Nil,deaf:Bool|Nil,channel_id:UInt64|Nil&#41;-instance-method">
+    <div class="entry-detail" id="modify_guild_member&#40;guild_id:UInt64,user_id:UInt64,nick:String?,roles:Array&#40;UInt64&#41;?,mute:Bool?,deaf:Bool?,channel_id:UInt64?&#41;-instance-method">
       <div class="signature">
         
-        def <strong>modify_guild_member</strong>(guild_id : UInt64, user_id : UInt64, nick : String | Nil, roles : Array(UInt64) | Nil, mute : Bool | Nil, deaf : Bool | Nil, channel_id : UInt64 | Nil)
+        def <strong>modify_guild_member</strong>(guild_id : UInt64, user_id : UInt64, nick : String?, roles : Array(UInt64)?, mute : Bool?, deaf : Bool?, channel_id : UInt64?)
 
-        <a class="method-permalink" href="#modify_guild_member%28guild_id%3AUInt64%2Cuser_id%3AUInt64%2Cnick%3AString%7CNil%2Croles%3AArray%28UInt64%29%7CNil%2Cmute%3ABool%7CNil%2Cdeaf%3ABool%7CNil%2Cchannel_id%3AUInt64%7CNil%29-instance-method">#</a>
+        <a class="method-permalink" href="#modify_guild_member%28guild_id%3AUInt64%2Cuser_id%3AUInt64%2Cnick%3AString%3F%2Croles%3AArray%28UInt64%29%3F%2Cmute%3ABool%3F%2Cdeaf%3ABool%3F%2Cchannel_id%3AUInt64%3F%29-instance-method">#</a>
       </div>
       
         <div class="doc"><p>Changes a specific member's properties. Requires:</p>
 
-<ul><li>the "Manage Roles" permission and the role to change to be lower</li></ul>
-
-<p>than the bot's highest role if changing the roles,</p>
-
-<ul><li>the "Manage Nicknames" permission when changing the nickname,</li><li>the "Mute Members" permission when changing mute status,</li><li>the "Deafen Members" permission when changing deaf status,</li><li>and the "Move Members" permission as well as the "Connect" permission</li></ul>
-
-<p>to the new channel when changing voice channel ID.</p>
+<ul><li>the "Manage Roles" permission and the role to change to be lower
+   than the bot's highest role if changing the roles,</li><li>the "Manage Nicknames" permission when changing the nickname,</li><li>the "Mute Members" permission when changing mute status,</li><li>the "Deafen Members" permission when changing deaf status,</li><li>and the "Move Members" permission as well as the "Connect" permission
+   to the new channel when changing voice channel ID.</li></ul>
 
 <p><a href="https://discordapp.com/developers/docs/resources/guild#modify-guild-member" target="_blank">API docs for this method</a></p></div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/meew0/discordcr/blob/7b890a4b826ef772444141c9f5134875532965d3/src/discordcr/rest.cr#L617" target="_blank">View source</a>]
+          [<a href="https://github.com/meew0/discordcr/blob/1e6c2f41394f127595fea52cde193c753044f3fe/src/discordcr/rest.cr#L697" target="_blank">View source</a>]
         
       </div>
     </div>
   
-    <div class="entry-detail" id="modify_guild_role&#40;guild_id:UInt64,role_id:UInt64,name:String|Nil,permissions:Permissions,colour:UInt32|Nil,position:Int32|Nil,hoist:Bool|Nil&#41;-instance-method">
+    <div class="entry-detail" id="modify_guild_role&#40;guild_id:UInt64,role_id:UInt64,name:String?,permissions:Permissions,colour:UInt32?,position:Int32?,hoist:Bool?&#41;-instance-method">
       <div class="signature">
         
-        def <strong>modify_guild_role</strong>(guild_id : UInt64, role_id : UInt64, name : String | Nil, permissions : <a href="../Discord/Permissions.html">Permissions</a>, colour : UInt32 | Nil, position : Int32 | Nil, hoist : Bool | Nil)
+        def <strong>modify_guild_role</strong>(guild_id : UInt64, role_id : UInt64, name : String?, permissions : <a href="../Discord/Permissions.html">Permissions</a>, colour : UInt32?, position : Int32?, hoist : Bool?)
 
-        <a class="method-permalink" href="#modify_guild_role%28guild_id%3AUInt64%2Crole_id%3AUInt64%2Cname%3AString%7CNil%2Cpermissions%3APermissions%2Ccolour%3AUInt32%7CNil%2Cposition%3AInt32%7CNil%2Choist%3ABool%7CNil%29-instance-method">#</a>
+        <a class="method-permalink" href="#modify_guild_role%28guild_id%3AUInt64%2Crole_id%3AUInt64%2Cname%3AString%3F%2Cpermissions%3APermissions%2Ccolour%3AUInt32%3F%2Cposition%3AInt32%3F%2Choist%3ABool%3F%29-instance-method">#</a>
       </div>
       
         <div class="doc"><p>Changes a role's properties. Requires the "Manage Roles" permission as
@@ -2043,7 +2197,7 @@ well as the role to be lower than the bot's highest role.</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/meew0/discordcr/blob/7b890a4b826ef772444141c9f5134875532965d3/src/discordcr/rest.cr#L733" target="_blank">View source</a>]
+          [<a href="https://github.com/meew0/discordcr/blob/1e6c2f41394f127595fea52cde193c753044f3fe/src/discordcr/rest.cr#L813" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -2063,25 +2217,25 @@ well as the role to be lower than the bot's highest role.</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/meew0/discordcr/blob/7b890a4b826ef772444141c9f5134875532965d3/src/discordcr/rest.cr#L970" target="_blank">View source</a>]
+          [<a href="https://github.com/meew0/discordcr/blob/1e6c2f41394f127595fea52cde193c753044f3fe/src/discordcr/rest.cr#L1050" target="_blank">View source</a>]
         
       </div>
     </div>
   
-    <div class="entry-detail" id="raw_request&#40;route_key:Symbol,major_parameter:UInt64|Nil,method:String,path:String,headers:HTTP::Headers,body:String|Nil&#41;-instance-method">
+    <div class="entry-detail" id="raw_request&#40;route_key:Symbol,major_parameter:UInt64?,method:String,path:String,headers:HTTP::Headers,body:String?&#41;-instance-method">
       <div class="signature">
         
-        def <strong>raw_request</strong>(route_key : Symbol, major_parameter : UInt64 | Nil, method : String, path : String, headers : HTTP::Headers, body : String | Nil)
+        def <strong>raw_request</strong>(route_key : Symbol, major_parameter : UInt64?, method : String, path : String, headers : HTTP::Headers, body : String?)
 
-        <a class="method-permalink" href="#raw_request%28route_key%3ASymbol%2Cmajor_parameter%3AUInt64%7CNil%2Cmethod%3AString%2Cpath%3AString%2Cheaders%3AHTTP%3A%3AHeaders%2Cbody%3AString%7CNil%29-instance-method">#</a>
+        <a class="method-permalink" href="#raw_request%28route_key%3ASymbol%2Cmajor_parameter%3AUInt64%3F%2Cmethod%3AString%2Cpath%3AString%2Cheaders%3AHTTP%3A%3AHeaders%2Cbody%3AString%3F%29-instance-method">#</a>
       </div>
       
-        <div class="doc"><p>Like <code><a href="../Discord/REST.html#request%28route_key%3ASymbol%2Cmajor_parameter%3AUInt64%7CNil%2Cmethod%3AString%2Cpath%3AString%2Cheaders%3AHTTP%3A%3AHeaders%2Cbody%3AString%7CNil%29-instance-method">#request</a></code>, but does not do error checking beyond 429.</p></div>
+        <div class="doc"><p>Like <code><a href="../Discord/REST.html#request%28route_key%3ASymbol%2Cmajor_parameter%3AUInt64%3F%2Cmethod%3AString%2Cpath%3AString%2Cheaders%3AHTTP%3A%3AHeaders%2Cbody%3AString%3F%29-instance-method">#request</a></code>, but does not do error checking beyond 429.</p></div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/meew0/discordcr/blob/7b890a4b826ef772444141c9f5134875532965d3/src/discordcr/rest.cr#L18" target="_blank">View source</a>]
+          [<a href="https://github.com/meew0/discordcr/blob/1e6c2f41394f127595fea52cde193c753044f3fe/src/discordcr/rest.cr#L18" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -2101,7 +2255,7 @@ well as the role to be lower than the bot's highest role.</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/meew0/discordcr/blob/7b890a4b826ef772444141c9f5134875532965d3/src/discordcr/rest.cr#L686" target="_blank">View source</a>]
+          [<a href="https://github.com/meew0/discordcr/blob/1e6c2f41394f127595fea52cde193c753044f3fe/src/discordcr/rest.cr#L766" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -2121,17 +2275,17 @@ well as the role to be lower than the bot's highest role.</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/meew0/discordcr/blob/7b890a4b826ef772444141c9f5134875532965d3/src/discordcr/rest.cr#L641" target="_blank">View source</a>]
+          [<a href="https://github.com/meew0/discordcr/blob/1e6c2f41394f127595fea52cde193c753044f3fe/src/discordcr/rest.cr#L721" target="_blank">View source</a>]
         
       </div>
     </div>
   
-    <div class="entry-detail" id="request&#40;route_key:Symbol,major_parameter:UInt64|Nil,method:String,path:String,headers:HTTP::Headers,body:String|Nil&#41;-instance-method">
+    <div class="entry-detail" id="request&#40;route_key:Symbol,major_parameter:UInt64?,method:String,path:String,headers:HTTP::Headers,body:String?&#41;-instance-method">
       <div class="signature">
         
-        def <strong>request</strong>(route_key : Symbol, major_parameter : UInt64 | Nil, method : String, path : String, headers : HTTP::Headers, body : String | Nil)
+        def <strong>request</strong>(route_key : Symbol, major_parameter : UInt64?, method : String, path : String, headers : HTTP::Headers, body : String?)
 
-        <a class="method-permalink" href="#request%28route_key%3ASymbol%2Cmajor_parameter%3AUInt64%7CNil%2Cmethod%3AString%2Cpath%3AString%2Cheaders%3AHTTP%3A%3AHeaders%2Cbody%3AString%7CNil%29-instance-method">#</a>
+        <a class="method-permalink" href="#request%28route_key%3ASymbol%2Cmajor_parameter%3AUInt64%3F%2Cmethod%3AString%2Cpath%3AString%2Cheaders%3AHTTP%3A%3AHeaders%2Cbody%3AString%3F%29-instance-method">#</a>
       </div>
       
         <div class="doc"><p>Makes a REST request to Discord, with the given <em>method</em> to the given
@@ -2149,7 +2303,7 @@ of error checking, so if a request fails (with a status code that is not
       <br/>
       <div>
         
-          [<a href="https://github.com/meew0/discordcr/blob/7b890a4b826ef772444141c9f5134875532965d3/src/discordcr/rest.cr#L81" target="_blank">View source</a>]
+          [<a href="https://github.com/meew0/discordcr/blob/1e6c2f41394f127595fea52cde193c753044f3fe/src/discordcr/rest.cr#L81" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -2169,7 +2323,7 @@ of error checking, so if a request fails (with a status code that is not
       <br/>
       <div>
         
-          [<a href="https://github.com/meew0/discordcr/blob/7b890a4b826ef772444141c9f5134875532965d3/src/discordcr/rest.cr#L902" target="_blank">View source</a>]
+          [<a href="https://github.com/meew0/discordcr/blob/1e6c2f41394f127595fea52cde193c753044f3fe/src/discordcr/rest.cr#L982" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -2191,7 +2345,7 @@ of error checking, so if a request fails (with a status code that is not
       <br/>
       <div>
         
-          [<a href="https://github.com/meew0/discordcr/blob/7b890a4b826ef772444141c9f5134875532965d3/src/discordcr/rest.cr#L386" target="_blank">View source</a>]
+          [<a href="https://github.com/meew0/discordcr/blob/1e6c2f41394f127595fea52cde193c753044f3fe/src/discordcr/rest.cr#L466" target="_blank">View source</a>]
         
       </div>
     </div>

@@ -5,7 +5,7 @@
   <meta id="repository-name" content="github.com/meew0/discordcr">
   <link href="../../css/style.css" rel="stylesheet" type="text/css" />
   <script type="text/javascript" src="../../js/doc.js"></script>
-  <title>Discord::Gateway::IdentifyProperties - github.com/meew0/discordcr</title>
+  <title>Discord::Gateway::MessageReactionRemoveAllPayload - github.com/meew0/discordcr</title>
 </head>
 <body>
 
@@ -185,7 +185,7 @@
       
     </li>
   
-  <li class=" current" data-id="github.com/meew0/discordcr/Discord/Gateway/IdentifyProperties" data-name="discord::gateway::identifyproperties">
+  <li class=" " data-id="github.com/meew0/discordcr/Discord/Gateway/IdentifyProperties" data-name="discord::gateway::identifyproperties">
       <a href="../../Discord/Gateway/IdentifyProperties.html">IdentifyProperties</a>
       
     </li>
@@ -205,7 +205,7 @@
       
     </li>
   
-  <li class=" " data-id="github.com/meew0/discordcr/Discord/Gateway/MessageReactionRemoveAllPayload" data-name="discord::gateway::messagereactionremoveallpayload">
+  <li class=" current" data-id="github.com/meew0/discordcr/Discord/Gateway/MessageReactionRemoveAllPayload" data-name="discord::gateway::messagereactionremoveallpayload">
       <a href="../../Discord/Gateway/MessageReactionRemoveAllPayload.html">MessageReactionRemoveAllPayload</a>
       
     </li>
@@ -432,12 +432,12 @@
 <div id="main-content">
 <h1 class="type-name">
 
-  <span class="kind">struct</span> Discord::Gateway::IdentifyProperties
+  <span class="kind">struct</span> Discord::Gateway::MessageReactionRemoveAllPayload
 
 </h1>
 
 
-  <ul class="superclass-hierarchy"><li class="superclass"><a href="../../Discord/Gateway/IdentifyProperties.html">Discord::Gateway::IdentifyProperties</a></li><li class="superclass">Struct</li><li class="superclass">Value</li><li class="superclass">Object</li></ul>
+  <ul class="superclass-hierarchy"><li class="superclass"><a href="../../Discord/Gateway/MessageReactionRemoveAllPayload.html">Discord::Gateway::MessageReactionRemoveAllPayload</a></li><li class="superclass">Struct</li><li class="superclass">Value</li><li class="superclass">Object</li></ul>
 
 
 
@@ -458,7 +458,7 @@
   <h2>Defined in:</h2>
   
     
-      <a href="https://github.com/meew0/discordcr/blob/1e6c2f41394f127595fea52cde193c753044f3fe/src/discordcr/mappings/gateway.cr#L49" target="_blank">discordcr/mappings/gateway.cr</a>
+      <a href="https://github.com/meew0/discordcr/blob/1e6c2f41394f127595fea52cde193c753044f3fe/src/discordcr/mappings/gateway.cr#L291" target="_blank">discordcr/mappings/gateway.cr</a>
     
     <br/>
   
@@ -471,12 +471,7 @@
   <ul class="list-summary">
     
       <li class="entry-summary">
-        <a href="#new%28os%2Cbrowser%2Cdevice%2Creferrer%2Creferring_domain%29-class-method" class="signature"><strong>.new</strong>(os, browser, device, referrer, referring_domain)</a>
-        
-      </li>
-    
-      <li class="entry-summary">
-        <a href="#new%28__temp_433%3AJSON%3A%3APullParser%29-class-method" class="signature"><strong>.new</strong>(__temp_433 : JSON::PullParser)</a>
+        <a href="#new%28__temp_613%3AJSON%3A%3APullParser%29-class-method" class="signature"><strong>.new</strong>(__temp_613 : JSON::PullParser)</a>
         
       </li>
     
@@ -488,52 +483,22 @@
   <ul class="list-summary">
     
       <li class="entry-summary">
-        <a href="#browser%3AString-instance-method" class="signature"><strong>#browser</strong> : String</a>
+        <a href="#channel_id%3AUInt64-instance-method" class="signature"><strong>#channel_id</strong> : UInt64</a>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#browser%3D%28_browser%3AString%29-instance-method" class="signature"><strong>#browser=</strong>(_browser : String)</a>
+        <a href="#channel_id%3D%28_channel_id%3AUInt64%29-instance-method" class="signature"><strong>#channel_id=</strong>(_channel_id : UInt64)</a>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#device%3AString-instance-method" class="signature"><strong>#device</strong> : String</a>
+        <a href="#message_id%3AUInt64-instance-method" class="signature"><strong>#message_id</strong> : UInt64</a>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#device%3D%28_device%3AString%29-instance-method" class="signature"><strong>#device=</strong>(_device : String)</a>
-        
-      </li>
-    
-      <li class="entry-summary">
-        <a href="#os%3AString-instance-method" class="signature"><strong>#os</strong> : String</a>
-        
-      </li>
-    
-      <li class="entry-summary">
-        <a href="#os%3D%28_os%3AString%29-instance-method" class="signature"><strong>#os=</strong>(_os : String)</a>
-        
-      </li>
-    
-      <li class="entry-summary">
-        <a href="#referrer%3AString-instance-method" class="signature"><strong>#referrer</strong> : String</a>
-        
-      </li>
-    
-      <li class="entry-summary">
-        <a href="#referrer%3D%28_referrer%3AString%29-instance-method" class="signature"><strong>#referrer=</strong>(_referrer : String)</a>
-        
-      </li>
-    
-      <li class="entry-summary">
-        <a href="#referring_domain%3AString-instance-method" class="signature"><strong>#referring_domain</strong> : String</a>
-        
-      </li>
-    
-      <li class="entry-summary">
-        <a href="#referring_domain%3D%28_referring_domain%3AString%29-instance-method" class="signature"><strong>#referring_domain=</strong>(_referring_domain : String)</a>
+        <a href="#message_id%3D%28_message_id%3AUInt64%29-instance-method" class="signature"><strong>#message_id=</strong>(_message_id : UInt64)</a>
         
       </li>
     
@@ -576,28 +541,12 @@
 
   <h2>Class Method Detail</h2>
   
-    <div class="entry-detail" id="new&#40;os,browser,device,referrer,referring_domain&#41;-class-method">
+    <div class="entry-detail" id="new&#40;__temp_613:JSON::PullParser&#41;-class-method">
       <div class="signature">
         
-        def self.<strong>new</strong>(os, browser, device, referrer, referring_domain)
+        def self.<strong>new</strong>(__temp_613 : JSON::PullParser)
 
-        <a class="method-permalink" href="#new%28os%2Cbrowser%2Cdevice%2Creferrer%2Creferring_domain%29-class-method">#</a>
-      </div>
-      
-      <br/>
-      <div>
-        
-          [<a href="https://github.com/meew0/discordcr/blob/1e6c2f41394f127595fea52cde193c753044f3fe/src/discordcr/mappings/gateway.cr#L50" target="_blank">View source</a>]
-        
-      </div>
-    </div>
-  
-    <div class="entry-detail" id="new&#40;__temp_433:JSON::PullParser&#41;-class-method">
-      <div class="signature">
-        
-        def self.<strong>new</strong>(__temp_433 : JSON::PullParser)
-
-        <a class="method-permalink" href="#new%28__temp_433%3AJSON%3A%3APullParser%29-class-method">#</a>
+        <a class="method-permalink" href="#new%28__temp_613%3AJSON%3A%3APullParser%29-class-method">#</a>
       </div>
       
       <br/>
@@ -611,12 +560,12 @@
 
   <h2>Instance Method Detail</h2>
   
-    <div class="entry-detail" id="browser:String-instance-method">
+    <div class="entry-detail" id="channel_id:UInt64-instance-method">
       <div class="signature">
         
-        def <strong>browser</strong> : String
+        def <strong>channel_id</strong> : UInt64
 
-        <a class="method-permalink" href="#browser%3AString-instance-method">#</a>
+        <a class="method-permalink" href="#channel_id%3AUInt64-instance-method">#</a>
       </div>
       
       <br/>
@@ -625,12 +574,12 @@
       </div>
     </div>
   
-    <div class="entry-detail" id="browser&#61;&#40;_browser:String&#41;-instance-method">
+    <div class="entry-detail" id="channel_id&#61;&#40;_channel_id:UInt64&#41;-instance-method">
       <div class="signature">
         
-        def <strong>browser=</strong>(_browser : String)
+        def <strong>channel_id=</strong>(_channel_id : UInt64)
 
-        <a class="method-permalink" href="#browser%3D%28_browser%3AString%29-instance-method">#</a>
+        <a class="method-permalink" href="#channel_id%3D%28_channel_id%3AUInt64%29-instance-method">#</a>
       </div>
       
       <br/>
@@ -639,12 +588,12 @@
       </div>
     </div>
   
-    <div class="entry-detail" id="device:String-instance-method">
+    <div class="entry-detail" id="message_id:UInt64-instance-method">
       <div class="signature">
         
-        def <strong>device</strong> : String
+        def <strong>message_id</strong> : UInt64
 
-        <a class="method-permalink" href="#device%3AString-instance-method">#</a>
+        <a class="method-permalink" href="#message_id%3AUInt64-instance-method">#</a>
       </div>
       
       <br/>
@@ -653,96 +602,12 @@
       </div>
     </div>
   
-    <div class="entry-detail" id="device&#61;&#40;_device:String&#41;-instance-method">
+    <div class="entry-detail" id="message_id&#61;&#40;_message_id:UInt64&#41;-instance-method">
       <div class="signature">
         
-        def <strong>device=</strong>(_device : String)
+        def <strong>message_id=</strong>(_message_id : UInt64)
 
-        <a class="method-permalink" href="#device%3D%28_device%3AString%29-instance-method">#</a>
-      </div>
-      
-      <br/>
-      <div>
-        
-      </div>
-    </div>
-  
-    <div class="entry-detail" id="os:String-instance-method">
-      <div class="signature">
-        
-        def <strong>os</strong> : String
-
-        <a class="method-permalink" href="#os%3AString-instance-method">#</a>
-      </div>
-      
-      <br/>
-      <div>
-        
-      </div>
-    </div>
-  
-    <div class="entry-detail" id="os&#61;&#40;_os:String&#41;-instance-method">
-      <div class="signature">
-        
-        def <strong>os=</strong>(_os : String)
-
-        <a class="method-permalink" href="#os%3D%28_os%3AString%29-instance-method">#</a>
-      </div>
-      
-      <br/>
-      <div>
-        
-      </div>
-    </div>
-  
-    <div class="entry-detail" id="referrer:String-instance-method">
-      <div class="signature">
-        
-        def <strong>referrer</strong> : String
-
-        <a class="method-permalink" href="#referrer%3AString-instance-method">#</a>
-      </div>
-      
-      <br/>
-      <div>
-        
-      </div>
-    </div>
-  
-    <div class="entry-detail" id="referrer&#61;&#40;_referrer:String&#41;-instance-method">
-      <div class="signature">
-        
-        def <strong>referrer=</strong>(_referrer : String)
-
-        <a class="method-permalink" href="#referrer%3D%28_referrer%3AString%29-instance-method">#</a>
-      </div>
-      
-      <br/>
-      <div>
-        
-      </div>
-    </div>
-  
-    <div class="entry-detail" id="referring_domain:String-instance-method">
-      <div class="signature">
-        
-        def <strong>referring_domain</strong> : String
-
-        <a class="method-permalink" href="#referring_domain%3AString-instance-method">#</a>
-      </div>
-      
-      <br/>
-      <div>
-        
-      </div>
-    </div>
-  
-    <div class="entry-detail" id="referring_domain&#61;&#40;_referring_domain:String&#41;-instance-method">
-      <div class="signature">
-        
-        def <strong>referring_domain=</strong>(_referring_domain : String)
-
-        <a class="method-permalink" href="#referring_domain%3D%28_referring_domain%3AString%29-instance-method">#</a>
+        <a class="method-permalink" href="#message_id%3D%28_message_id%3AUInt64%29-instance-method">#</a>
       </div>
       
       <br/>

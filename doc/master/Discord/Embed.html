@@ -200,6 +200,16 @@
       
     </li>
   
+  <li class=" " data-id="github.com/meew0/discordcr/Discord/Gateway/MessageReactionPayload" data-name="discord::gateway::messagereactionpayload">
+      <a href="../Discord/Gateway/MessageReactionPayload.html">MessageReactionPayload</a>
+      
+    </li>
+  
+  <li class=" " data-id="github.com/meew0/discordcr/Discord/Gateway/MessageReactionRemoveAllPayload" data-name="discord::gateway::messagereactionremoveallpayload">
+      <a href="../Discord/Gateway/MessageReactionRemoveAllPayload.html">MessageReactionRemoveAllPayload</a>
+      
+    </li>
+  
   <li class=" " data-id="github.com/meew0/discordcr/Discord/Gateway/MessageUpdatePayload" data-name="discord::gateway::messageupdatepayload">
       <a href="../Discord/Gateway/MessageUpdatePayload.html">MessageUpdatePayload</a>
       
@@ -340,6 +350,11 @@
       
     </li>
   
+  <li class=" " data-id="github.com/meew0/discordcr/Discord/ReactionEmoji" data-name="discord::reactionemoji">
+      <a href="../Discord/ReactionEmoji.html">ReactionEmoji</a>
+      
+    </li>
+  
   <li class="parent " data-id="github.com/meew0/discordcr/Discord/REST" data-name="discord::rest">
       <a href="../Discord/REST.html">REST</a>
       
@@ -443,7 +458,7 @@
   <h2>Defined in:</h2>
   
     
-      <a href="https://github.com/meew0/discordcr/blob/7b890a4b826ef772444141c9f5134875532965d3/src/discordcr/mappings/channel.cr#L64" target="_blank">discordcr/mappings/channel.cr</a>
+      <a href="https://github.com/meew0/discordcr/blob/1e6c2f41394f127595fea52cde193c753044f3fe/src/discordcr/mappings/channel.cr#L71" target="_blank">discordcr/mappings/channel.cr</a>
     
     <br/>
   
@@ -456,12 +471,12 @@
   <ul class="list-summary">
     
       <li class="entry-summary">
-        <a href="#new%28title%3AString%7CNil%3Dnil%2Ctype%3AString%3D%26quot%3Brich%26quot%3B%2Cdescription%3AString%7CNil%3Dnil%2Curl%3AString%7CNil%3Dnil%2Ctimestamp%3ATime%7CNil%3Dnil%2Ccolour%3AUInt32%7CNil%3Dnil%2Cfooter%3AEmbedFooter%7CNil%3Dnil%2Cimage%3AEmbedImage%3Dnil%2Cauthor%3AEmbedAuthor%7CNil%3Dnil%2Cfields%3AArray%28EmbedField%29%7CNil%3Dnil%29-class-method" class="signature"><strong>.new</strong>(title : String | Nil = <span class="n">nil</span>, type : String = <span class="s">&quot;rich&quot;</span>, description : String | Nil = <span class="n">nil</span>, url : String | Nil = <span class="n">nil</span>, timestamp : Time | Nil = <span class="n">nil</span>, colour : UInt32 | Nil = <span class="n">nil</span>, footer : EmbedFooter | Nil = <span class="n">nil</span>, image : EmbedImage = <span class="n">nil</span>, author : EmbedAuthor | Nil = <span class="n">nil</span>, fields : Array(EmbedField) | Nil = <span class="n">nil</span>)</a>
+        <a href="#new%28title%3AString%3F%3Dnil%2Ctype%3AString%3D%26quot%3Brich%26quot%3B%2Cdescription%3AString%3F%3Dnil%2Curl%3AString%3F%3Dnil%2Ctimestamp%3ATime%3F%3Dnil%2Ccolour%3AUInt32%3F%3Dnil%2Cfooter%3AEmbedFooter%3F%3Dnil%2Cimage%3AEmbedImage%3Dnil%2Cauthor%3AEmbedAuthor%3F%3Dnil%2Cfields%3AArray%28EmbedField%29%3F%3Dnil%29-class-method" class="signature"><strong>.new</strong>(title : String? = <span class="n">nil</span>, type : String = <span class="s">&quot;rich&quot;</span>, description : String? = <span class="n">nil</span>, url : String? = <span class="n">nil</span>, timestamp : Time? = <span class="n">nil</span>, colour : UInt32? = <span class="n">nil</span>, footer : EmbedFooter? = <span class="n">nil</span>, image : EmbedImage = <span class="n">nil</span>, author : EmbedAuthor? = <span class="n">nil</span>, fields : Array(EmbedField)? = <span class="n">nil</span>)</a>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#new%28__temp_101%3AJSON%3A%3APullParser%29-class-method" class="signature"><strong>.new</strong>(__temp_101 : JSON::PullParser)</a>
+        <a href="#new%28__temp_106%3AJSON%3A%3APullParser%29-class-method" class="signature"><strong>.new</strong>(__temp_106 : JSON::PullParser)</a>
         
       </li>
     
@@ -473,12 +488,12 @@
   <ul class="list-summary">
     
       <li class="entry-summary">
-        <a href="#author%3ADiscord%3A%3AEmbedAuthor%7CNil-instance-method" class="signature"><strong>#author</strong> : Discord::EmbedAuthor | Nil</a>
+        <a href="#author%3ADiscord%3A%3AEmbedAuthor%3F-instance-method" class="signature"><strong>#author</strong> : Discord::EmbedAuthor?</a>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#author%3D%28_author%3AEmbedAuthor%7CNil%29-instance-method" class="signature"><strong>#author=</strong>(_author : EmbedAuthor | Nil)</a>
+        <a href="#author%3D%28_author%3AEmbedAuthor%3F%29-instance-method" class="signature"><strong>#author=</strong>(_author : EmbedAuthor?)</a>
         
       </li>
     
@@ -488,92 +503,92 @@
       </li>
     
       <li class="entry-summary">
-        <a href="#colour%3AUInt32%7CNil-instance-method" class="signature"><strong>#colour</strong> : UInt32 | Nil</a>
+        <a href="#colour%3AUInt32%3F-instance-method" class="signature"><strong>#colour</strong> : UInt32?</a>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#colour%3D%28_colour%3AUInt32%7CNil%29-instance-method" class="signature"><strong>#colour=</strong>(_colour : UInt32 | Nil)</a>
+        <a href="#colour%3D%28_colour%3AUInt32%3F%29-instance-method" class="signature"><strong>#colour=</strong>(_colour : UInt32?)</a>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#description%3ANil%7CString-instance-method" class="signature"><strong>#description</strong> : Nil | String</a>
+        <a href="#description%3AString%3F-instance-method" class="signature"><strong>#description</strong> : String?</a>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#description%3D%28_description%3AString%7CNil%29-instance-method" class="signature"><strong>#description=</strong>(_description : String | Nil)</a>
+        <a href="#description%3D%28_description%3AString%3F%29-instance-method" class="signature"><strong>#description=</strong>(_description : String?)</a>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#fields%3ANil%7CArray%28Discord%3A%3AEmbedField%29-instance-method" class="signature"><strong>#fields</strong> : Nil | Array(Discord::EmbedField)</a>
+        <a href="#fields%3AArray%28Discord%3A%3AEmbedField%29%3F-instance-method" class="signature"><strong>#fields</strong> : Array(Discord::EmbedField)?</a>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#fields%3D%28_fields%3AArray%28EmbedField%29%7CNil%29-instance-method" class="signature"><strong>#fields=</strong>(_fields : Array(EmbedField) | Nil)</a>
+        <a href="#fields%3D%28_fields%3AArray%28EmbedField%29%3F%29-instance-method" class="signature"><strong>#fields=</strong>(_fields : Array(EmbedField)?)</a>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#footer%3ADiscord%3A%3AEmbedFooter%7CNil-instance-method" class="signature"><strong>#footer</strong> : Discord::EmbedFooter | Nil</a>
+        <a href="#footer%3ADiscord%3A%3AEmbedFooter%3F-instance-method" class="signature"><strong>#footer</strong> : Discord::EmbedFooter?</a>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#footer%3D%28_footer%3AEmbedFooter%7CNil%29-instance-method" class="signature"><strong>#footer=</strong>(_footer : EmbedFooter | Nil)</a>
+        <a href="#footer%3D%28_footer%3AEmbedFooter%3F%29-instance-method" class="signature"><strong>#footer=</strong>(_footer : EmbedFooter?)</a>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#image%3ADiscord%3A%3AEmbedImage%7CNil-instance-method" class="signature"><strong>#image</strong> : Discord::EmbedImage | Nil</a>
+        <a href="#image%3ADiscord%3A%3AEmbedImage%3F-instance-method" class="signature"><strong>#image</strong> : Discord::EmbedImage?</a>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#image%3D%28_image%3AEmbedImage%7CNil%29-instance-method" class="signature"><strong>#image=</strong>(_image : EmbedImage | Nil)</a>
+        <a href="#image%3D%28_image%3AEmbedImage%3F%29-instance-method" class="signature"><strong>#image=</strong>(_image : EmbedImage?)</a>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#provider%3ADiscord%3A%3AEmbedProvider%7CNil-instance-method" class="signature"><strong>#provider</strong> : Discord::EmbedProvider | Nil</a>
+        <a href="#provider%3ADiscord%3A%3AEmbedProvider%3F-instance-method" class="signature"><strong>#provider</strong> : Discord::EmbedProvider?</a>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#provider%3D%28_provider%3AEmbedProvider%7CNil%29-instance-method" class="signature"><strong>#provider=</strong>(_provider : EmbedProvider | Nil)</a>
+        <a href="#provider%3D%28_provider%3AEmbedProvider%3F%29-instance-method" class="signature"><strong>#provider=</strong>(_provider : EmbedProvider?)</a>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#thumbnail%3ADiscord%3A%3AEmbedThumbnail%7CNil-instance-method" class="signature"><strong>#thumbnail</strong> : Discord::EmbedThumbnail | Nil</a>
+        <a href="#thumbnail%3ADiscord%3A%3AEmbedThumbnail%3F-instance-method" class="signature"><strong>#thumbnail</strong> : Discord::EmbedThumbnail?</a>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#thumbnail%3D%28_thumbnail%3AEmbedThumbnail%7CNil%29-instance-method" class="signature"><strong>#thumbnail=</strong>(_thumbnail : EmbedThumbnail | Nil)</a>
+        <a href="#thumbnail%3D%28_thumbnail%3AEmbedThumbnail%3F%29-instance-method" class="signature"><strong>#thumbnail=</strong>(_thumbnail : EmbedThumbnail?)</a>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#timestamp%3ATime%7CNil-instance-method" class="signature"><strong>#timestamp</strong> : Time | Nil</a>
+        <a href="#timestamp%3ATime%3F-instance-method" class="signature"><strong>#timestamp</strong> : Time?</a>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#timestamp%3D%28_timestamp%3ATime%7CNil%29-instance-method" class="signature"><strong>#timestamp=</strong>(_timestamp : Time | Nil)</a>
+        <a href="#timestamp%3D%28_timestamp%3ATime%3F%29-instance-method" class="signature"><strong>#timestamp=</strong>(_timestamp : Time?)</a>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#title%3ANil%7CString-instance-method" class="signature"><strong>#title</strong> : Nil | String</a>
+        <a href="#title%3AString%3F-instance-method" class="signature"><strong>#title</strong> : String?</a>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#title%3D%28_title%3AString%7CNil%29-instance-method" class="signature"><strong>#title=</strong>(_title : String | Nil)</a>
+        <a href="#title%3D%28_title%3AString%3F%29-instance-method" class="signature"><strong>#title=</strong>(_title : String?)</a>
         
       </li>
     
@@ -593,7 +608,7 @@
       </li>
     
       <li class="entry-summary">
-        <a href="#url%3ANil%7CString-instance-method" class="signature"><strong>#url</strong> : Nil | String</a>
+        <a href="#url%3AString%3F-instance-method" class="signature"><strong>#url</strong> : String?</a>
         
       </li>
     
@@ -603,12 +618,12 @@
       </li>
     
       <li class="entry-summary">
-        <a href="#video%3ADiscord%3A%3AEmbedVideo%7CNil-instance-method" class="signature"><strong>#video</strong> : Discord::EmbedVideo | Nil</a>
+        <a href="#video%3ADiscord%3A%3AEmbedVideo%3F-instance-method" class="signature"><strong>#video</strong> : Discord::EmbedVideo?</a>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#video%3D%28_video%3AEmbedVideo%7CNil%29-instance-method" class="signature"><strong>#video=</strong>(_video : EmbedVideo | Nil)</a>
+        <a href="#video%3D%28_video%3AEmbedVideo%3F%29-instance-method" class="signature"><strong>#video=</strong>(_video : EmbedVideo?)</a>
         
       </li>
     
@@ -646,28 +661,28 @@
 
   <h2>Class Method Detail</h2>
   
-    <div class="entry-detail" id="new&#40;title:String|Nil&#61;nil,type:String&#61;&amp;quot;rich&amp;quot;,description:String|Nil&#61;nil,url:String|Nil&#61;nil,timestamp:Time|Nil&#61;nil,colour:UInt32|Nil&#61;nil,footer:EmbedFooter|Nil&#61;nil,image:EmbedImage&#61;nil,author:EmbedAuthor|Nil&#61;nil,fields:Array&#40;EmbedField&#41;|Nil&#61;nil&#41;-class-method">
+    <div class="entry-detail" id="new&#40;title:String?&#61;nil,type:String&#61;&amp;quot;rich&amp;quot;,description:String?&#61;nil,url:String?&#61;nil,timestamp:Time?&#61;nil,colour:UInt32?&#61;nil,footer:EmbedFooter?&#61;nil,image:EmbedImage&#61;nil,author:EmbedAuthor?&#61;nil,fields:Array&#40;EmbedField&#41;?&#61;nil&#41;-class-method">
       <div class="signature">
         
-        def self.<strong>new</strong>(title : String | Nil = <span class="n">nil</span>, type : String = <span class="s">&quot;rich&quot;</span>, description : String | Nil = <span class="n">nil</span>, url : String | Nil = <span class="n">nil</span>, timestamp : Time | Nil = <span class="n">nil</span>, colour : UInt32 | Nil = <span class="n">nil</span>, footer : <a href="../Discord/EmbedFooter.html">EmbedFooter</a> | Nil = <span class="n">nil</span>, image : <a href="../Discord/EmbedImage.html">EmbedImage</a> = <span class="n">nil</span>, author : <a href="../Discord/EmbedAuthor.html">EmbedAuthor</a> | Nil = <span class="n">nil</span>, fields : Array(<a href="../Discord/EmbedField.html">EmbedField</a>) | Nil = <span class="n">nil</span>)
+        def self.<strong>new</strong>(title : String? = <span class="n">nil</span>, type : String = <span class="s">&quot;rich&quot;</span>, description : String? = <span class="n">nil</span>, url : String? = <span class="n">nil</span>, timestamp : Time? = <span class="n">nil</span>, colour : UInt32? = <span class="n">nil</span>, footer : <a href="../Discord/EmbedFooter.html">EmbedFooter</a>? = <span class="n">nil</span>, image : <a href="../Discord/EmbedImage.html">EmbedImage</a> = <span class="n">nil</span>, author : <a href="../Discord/EmbedAuthor.html">EmbedAuthor</a>? = <span class="n">nil</span>, fields : Array(<a href="../Discord/EmbedField.html">EmbedField</a>)? = <span class="n">nil</span>)
 
-        <a class="method-permalink" href="#new%28title%3AString%7CNil%3Dnil%2Ctype%3AString%3D%26quot%3Brich%26quot%3B%2Cdescription%3AString%7CNil%3Dnil%2Curl%3AString%7CNil%3Dnil%2Ctimestamp%3ATime%7CNil%3Dnil%2Ccolour%3AUInt32%7CNil%3Dnil%2Cfooter%3AEmbedFooter%7CNil%3Dnil%2Cimage%3AEmbedImage%3Dnil%2Cauthor%3AEmbedAuthor%7CNil%3Dnil%2Cfields%3AArray%28EmbedField%29%7CNil%3Dnil%29-class-method">#</a>
+        <a class="method-permalink" href="#new%28title%3AString%3F%3Dnil%2Ctype%3AString%3D%26quot%3Brich%26quot%3B%2Cdescription%3AString%3F%3Dnil%2Curl%3AString%3F%3Dnil%2Ctimestamp%3ATime%3F%3Dnil%2Ccolour%3AUInt32%3F%3Dnil%2Cfooter%3AEmbedFooter%3F%3Dnil%2Cimage%3AEmbedImage%3Dnil%2Cauthor%3AEmbedAuthor%3F%3Dnil%2Cfields%3AArray%28EmbedField%29%3F%3Dnil%29-class-method">#</a>
       </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/meew0/discordcr/blob/7b890a4b826ef772444141c9f5134875532965d3/src/discordcr/mappings/channel.cr#L65" target="_blank">View source</a>]
+          [<a href="https://github.com/meew0/discordcr/blob/1e6c2f41394f127595fea52cde193c753044f3fe/src/discordcr/mappings/channel.cr#L72" target="_blank">View source</a>]
         
       </div>
     </div>
   
-    <div class="entry-detail" id="new&#40;__temp_101:JSON::PullParser&#41;-class-method">
+    <div class="entry-detail" id="new&#40;__temp_106:JSON::PullParser&#41;-class-method">
       <div class="signature">
         
-        def self.<strong>new</strong>(__temp_101 : JSON::PullParser)
+        def self.<strong>new</strong>(__temp_106 : JSON::PullParser)
 
-        <a class="method-permalink" href="#new%28__temp_101%3AJSON%3A%3APullParser%29-class-method">#</a>
+        <a class="method-permalink" href="#new%28__temp_106%3AJSON%3A%3APullParser%29-class-method">#</a>
       </div>
       
       <br/>
@@ -681,12 +696,12 @@
 
   <h2>Instance Method Detail</h2>
   
-    <div class="entry-detail" id="author:Discord::EmbedAuthor|Nil-instance-method">
+    <div class="entry-detail" id="author:Discord::EmbedAuthor?-instance-method">
       <div class="signature">
         
-        def <strong>author</strong> : <a href="../Discord/EmbedAuthor.html">Discord::EmbedAuthor</a> | Nil
+        def <strong>author</strong> : <a href="../Discord/EmbedAuthor.html">Discord::EmbedAuthor</a>?
 
-        <a class="method-permalink" href="#author%3ADiscord%3A%3AEmbedAuthor%7CNil-instance-method">#</a>
+        <a class="method-permalink" href="#author%3ADiscord%3A%3AEmbedAuthor%3F-instance-method">#</a>
       </div>
       
       <br/>
@@ -695,12 +710,12 @@
       </div>
     </div>
   
-    <div class="entry-detail" id="author&#61;&#40;_author:EmbedAuthor|Nil&#41;-instance-method">
+    <div class="entry-detail" id="author&#61;&#40;_author:EmbedAuthor?&#41;-instance-method">
       <div class="signature">
         
-        def <strong>author=</strong>(_author : <a href="../Discord/EmbedAuthor.html">EmbedAuthor</a> | Nil)
+        def <strong>author=</strong>(_author : <a href="../Discord/EmbedAuthor.html">EmbedAuthor</a>?)
 
-        <a class="method-permalink" href="#author%3D%28_author%3AEmbedAuthor%7CNil%29-instance-method">#</a>
+        <a class="method-permalink" href="#author%3D%28_author%3AEmbedAuthor%3F%29-instance-method">#</a>
       </div>
       
       <br/>
@@ -720,17 +735,17 @@
       <br/>
       <div>
         
-          [<a href="https://github.com/meew0/discordcr/blob/7b890a4b826ef772444141c9f5134875532965d3/src/discordcr/mappings/channel.cr#L88" target="_blank">View source</a>]
+          [<a href="https://github.com/meew0/discordcr/blob/1e6c2f41394f127595fea52cde193c753044f3fe/src/discordcr/mappings/channel.cr#L95" target="_blank">View source</a>]
         
       </div>
     </div>
   
-    <div class="entry-detail" id="colour:UInt32|Nil-instance-method">
+    <div class="entry-detail" id="colour:UInt32?-instance-method">
       <div class="signature">
         
-        def <strong>colour</strong> : UInt32 | Nil
+        def <strong>colour</strong> : UInt32?
 
-        <a class="method-permalink" href="#colour%3AUInt32%7CNil-instance-method">#</a>
+        <a class="method-permalink" href="#colour%3AUInt32%3F-instance-method">#</a>
       </div>
       
       <br/>
@@ -739,12 +754,12 @@
       </div>
     </div>
   
-    <div class="entry-detail" id="colour&#61;&#40;_colour:UInt32|Nil&#41;-instance-method">
+    <div class="entry-detail" id="colour&#61;&#40;_colour:UInt32?&#41;-instance-method">
       <div class="signature">
         
-        def <strong>colour=</strong>(_colour : UInt32 | Nil)
+        def <strong>colour=</strong>(_colour : UInt32?)
 
-        <a class="method-permalink" href="#colour%3D%28_colour%3AUInt32%7CNil%29-instance-method">#</a>
+        <a class="method-permalink" href="#colour%3D%28_colour%3AUInt32%3F%29-instance-method">#</a>
       </div>
       
       <br/>
@@ -753,12 +768,12 @@
       </div>
     </div>
   
-    <div class="entry-detail" id="description:Nil|String-instance-method">
+    <div class="entry-detail" id="description:String?-instance-method">
       <div class="signature">
         
-        def <strong>description</strong> : Nil | String
+        def <strong>description</strong> : String?
 
-        <a class="method-permalink" href="#description%3ANil%7CString-instance-method">#</a>
+        <a class="method-permalink" href="#description%3AString%3F-instance-method">#</a>
       </div>
       
       <br/>
@@ -767,12 +782,12 @@
       </div>
     </div>
   
-    <div class="entry-detail" id="description&#61;&#40;_description:String|Nil&#41;-instance-method">
+    <div class="entry-detail" id="description&#61;&#40;_description:String?&#41;-instance-method">
       <div class="signature">
         
-        def <strong>description=</strong>(_description : String | Nil)
+        def <strong>description=</strong>(_description : String?)
 
-        <a class="method-permalink" href="#description%3D%28_description%3AString%7CNil%29-instance-method">#</a>
+        <a class="method-permalink" href="#description%3D%28_description%3AString%3F%29-instance-method">#</a>
       </div>
       
       <br/>
@@ -781,12 +796,12 @@
       </div>
     </div>
   
-    <div class="entry-detail" id="fields:Nil|Array&#40;Discord::EmbedField&#41;-instance-method">
+    <div class="entry-detail" id="fields:Array&#40;Discord::EmbedField&#41;?-instance-method">
       <div class="signature">
         
-        def <strong>fields</strong> : Nil | Array(<a href="../Discord/EmbedField.html">Discord::EmbedField</a>)
+        def <strong>fields</strong> : Array(<a href="../Discord/EmbedField.html">Discord::EmbedField</a>)?
 
-        <a class="method-permalink" href="#fields%3ANil%7CArray%28Discord%3A%3AEmbedField%29-instance-method">#</a>
+        <a class="method-permalink" href="#fields%3AArray%28Discord%3A%3AEmbedField%29%3F-instance-method">#</a>
       </div>
       
       <br/>
@@ -795,12 +810,12 @@
       </div>
     </div>
   
-    <div class="entry-detail" id="fields&#61;&#40;_fields:Array&#40;EmbedField&#41;|Nil&#41;-instance-method">
+    <div class="entry-detail" id="fields&#61;&#40;_fields:Array&#40;EmbedField&#41;?&#41;-instance-method">
       <div class="signature">
         
-        def <strong>fields=</strong>(_fields : Array(<a href="../Discord/EmbedField.html">EmbedField</a>) | Nil)
+        def <strong>fields=</strong>(_fields : Array(<a href="../Discord/EmbedField.html">EmbedField</a>)?)
 
-        <a class="method-permalink" href="#fields%3D%28_fields%3AArray%28EmbedField%29%7CNil%29-instance-method">#</a>
+        <a class="method-permalink" href="#fields%3D%28_fields%3AArray%28EmbedField%29%3F%29-instance-method">#</a>
       </div>
       
       <br/>
@@ -809,12 +824,12 @@
       </div>
     </div>
   
-    <div class="entry-detail" id="footer:Discord::EmbedFooter|Nil-instance-method">
+    <div class="entry-detail" id="footer:Discord::EmbedFooter?-instance-method">
       <div class="signature">
         
-        def <strong>footer</strong> : <a href="../Discord/EmbedFooter.html">Discord::EmbedFooter</a> | Nil
+        def <strong>footer</strong> : <a href="../Discord/EmbedFooter.html">Discord::EmbedFooter</a>?
 
-        <a class="method-permalink" href="#footer%3ADiscord%3A%3AEmbedFooter%7CNil-instance-method">#</a>
+        <a class="method-permalink" href="#footer%3ADiscord%3A%3AEmbedFooter%3F-instance-method">#</a>
       </div>
       
       <br/>
@@ -823,12 +838,12 @@
       </div>
     </div>
   
-    <div class="entry-detail" id="footer&#61;&#40;_footer:EmbedFooter|Nil&#41;-instance-method">
+    <div class="entry-detail" id="footer&#61;&#40;_footer:EmbedFooter?&#41;-instance-method">
       <div class="signature">
         
-        def <strong>footer=</strong>(_footer : <a href="../Discord/EmbedFooter.html">EmbedFooter</a> | Nil)
+        def <strong>footer=</strong>(_footer : <a href="../Discord/EmbedFooter.html">EmbedFooter</a>?)
 
-        <a class="method-permalink" href="#footer%3D%28_footer%3AEmbedFooter%7CNil%29-instance-method">#</a>
+        <a class="method-permalink" href="#footer%3D%28_footer%3AEmbedFooter%3F%29-instance-method">#</a>
       </div>
       
       <br/>
@@ -837,12 +852,12 @@
       </div>
     </div>
   
-    <div class="entry-detail" id="image:Discord::EmbedImage|Nil-instance-method">
+    <div class="entry-detail" id="image:Discord::EmbedImage?-instance-method">
       <div class="signature">
         
-        def <strong>image</strong> : <a href="../Discord/EmbedImage.html">Discord::EmbedImage</a> | Nil
+        def <strong>image</strong> : <a href="../Discord/EmbedImage.html">Discord::EmbedImage</a>?
 
-        <a class="method-permalink" href="#image%3ADiscord%3A%3AEmbedImage%7CNil-instance-method">#</a>
+        <a class="method-permalink" href="#image%3ADiscord%3A%3AEmbedImage%3F-instance-method">#</a>
       </div>
       
       <br/>
@@ -851,12 +866,12 @@
       </div>
     </div>
   
-    <div class="entry-detail" id="image&#61;&#40;_image:EmbedImage|Nil&#41;-instance-method">
+    <div class="entry-detail" id="image&#61;&#40;_image:EmbedImage?&#41;-instance-method">
       <div class="signature">
         
-        def <strong>image=</strong>(_image : <a href="../Discord/EmbedImage.html">EmbedImage</a> | Nil)
+        def <strong>image=</strong>(_image : <a href="../Discord/EmbedImage.html">EmbedImage</a>?)
 
-        <a class="method-permalink" href="#image%3D%28_image%3AEmbedImage%7CNil%29-instance-method">#</a>
+        <a class="method-permalink" href="#image%3D%28_image%3AEmbedImage%3F%29-instance-method">#</a>
       </div>
       
       <br/>
@@ -865,12 +880,12 @@
       </div>
     </div>
   
-    <div class="entry-detail" id="provider:Discord::EmbedProvider|Nil-instance-method">
+    <div class="entry-detail" id="provider:Discord::EmbedProvider?-instance-method">
       <div class="signature">
         
-        def <strong>provider</strong> : <a href="../Discord/EmbedProvider.html">Discord::EmbedProvider</a> | Nil
+        def <strong>provider</strong> : <a href="../Discord/EmbedProvider.html">Discord::EmbedProvider</a>?
 
-        <a class="method-permalink" href="#provider%3ADiscord%3A%3AEmbedProvider%7CNil-instance-method">#</a>
+        <a class="method-permalink" href="#provider%3ADiscord%3A%3AEmbedProvider%3F-instance-method">#</a>
       </div>
       
       <br/>
@@ -879,12 +894,12 @@
       </div>
     </div>
   
-    <div class="entry-detail" id="provider&#61;&#40;_provider:EmbedProvider|Nil&#41;-instance-method">
+    <div class="entry-detail" id="provider&#61;&#40;_provider:EmbedProvider?&#41;-instance-method">
       <div class="signature">
         
-        def <strong>provider=</strong>(_provider : <a href="../Discord/EmbedProvider.html">EmbedProvider</a> | Nil)
+        def <strong>provider=</strong>(_provider : <a href="../Discord/EmbedProvider.html">EmbedProvider</a>?)
 
-        <a class="method-permalink" href="#provider%3D%28_provider%3AEmbedProvider%7CNil%29-instance-method">#</a>
+        <a class="method-permalink" href="#provider%3D%28_provider%3AEmbedProvider%3F%29-instance-method">#</a>
       </div>
       
       <br/>
@@ -893,12 +908,12 @@
       </div>
     </div>
   
-    <div class="entry-detail" id="thumbnail:Discord::EmbedThumbnail|Nil-instance-method">
+    <div class="entry-detail" id="thumbnail:Discord::EmbedThumbnail?-instance-method">
       <div class="signature">
         
-        def <strong>thumbnail</strong> : <a href="../Discord/EmbedThumbnail.html">Discord::EmbedThumbnail</a> | Nil
+        def <strong>thumbnail</strong> : <a href="../Discord/EmbedThumbnail.html">Discord::EmbedThumbnail</a>?
 
-        <a class="method-permalink" href="#thumbnail%3ADiscord%3A%3AEmbedThumbnail%7CNil-instance-method">#</a>
+        <a class="method-permalink" href="#thumbnail%3ADiscord%3A%3AEmbedThumbnail%3F-instance-method">#</a>
       </div>
       
       <br/>
@@ -907,12 +922,12 @@
       </div>
     </div>
   
-    <div class="entry-detail" id="thumbnail&#61;&#40;_thumbnail:EmbedThumbnail|Nil&#41;-instance-method">
+    <div class="entry-detail" id="thumbnail&#61;&#40;_thumbnail:EmbedThumbnail?&#41;-instance-method">
       <div class="signature">
         
-        def <strong>thumbnail=</strong>(_thumbnail : <a href="../Discord/EmbedThumbnail.html">EmbedThumbnail</a> | Nil)
+        def <strong>thumbnail=</strong>(_thumbnail : <a href="../Discord/EmbedThumbnail.html">EmbedThumbnail</a>?)
 
-        <a class="method-permalink" href="#thumbnail%3D%28_thumbnail%3AEmbedThumbnail%7CNil%29-instance-method">#</a>
+        <a class="method-permalink" href="#thumbnail%3D%28_thumbnail%3AEmbedThumbnail%3F%29-instance-method">#</a>
       </div>
       
       <br/>
@@ -921,12 +936,12 @@
       </div>
     </div>
   
-    <div class="entry-detail" id="timestamp:Time|Nil-instance-method">
+    <div class="entry-detail" id="timestamp:Time?-instance-method">
       <div class="signature">
         
-        def <strong>timestamp</strong> : Time | Nil
+        def <strong>timestamp</strong> : Time?
 
-        <a class="method-permalink" href="#timestamp%3ATime%7CNil-instance-method">#</a>
+        <a class="method-permalink" href="#timestamp%3ATime%3F-instance-method">#</a>
       </div>
       
       <br/>
@@ -935,12 +950,12 @@
       </div>
     </div>
   
-    <div class="entry-detail" id="timestamp&#61;&#40;_timestamp:Time|Nil&#41;-instance-method">
+    <div class="entry-detail" id="timestamp&#61;&#40;_timestamp:Time?&#41;-instance-method">
       <div class="signature">
         
-        def <strong>timestamp=</strong>(_timestamp : Time | Nil)
+        def <strong>timestamp=</strong>(_timestamp : Time?)
 
-        <a class="method-permalink" href="#timestamp%3D%28_timestamp%3ATime%7CNil%29-instance-method">#</a>
+        <a class="method-permalink" href="#timestamp%3D%28_timestamp%3ATime%3F%29-instance-method">#</a>
       </div>
       
       <br/>
@@ -949,12 +964,12 @@
       </div>
     </div>
   
-    <div class="entry-detail" id="title:Nil|String-instance-method">
+    <div class="entry-detail" id="title:String?-instance-method">
       <div class="signature">
         
-        def <strong>title</strong> : Nil | String
+        def <strong>title</strong> : String?
 
-        <a class="method-permalink" href="#title%3ANil%7CString-instance-method">#</a>
+        <a class="method-permalink" href="#title%3AString%3F-instance-method">#</a>
       </div>
       
       <br/>
@@ -963,12 +978,12 @@
       </div>
     </div>
   
-    <div class="entry-detail" id="title&#61;&#40;_title:String|Nil&#41;-instance-method">
+    <div class="entry-detail" id="title&#61;&#40;_title:String?&#41;-instance-method">
       <div class="signature">
         
-        def <strong>title=</strong>(_title : String | Nil)
+        def <strong>title=</strong>(_title : String?)
 
-        <a class="method-permalink" href="#title%3D%28_title%3AString%7CNil%29-instance-method">#</a>
+        <a class="method-permalink" href="#title%3D%28_title%3AString%3F%29-instance-method">#</a>
       </div>
       
       <br/>
@@ -1019,12 +1034,12 @@
       </div>
     </div>
   
-    <div class="entry-detail" id="url:Nil|String-instance-method">
+    <div class="entry-detail" id="url:String?-instance-method">
       <div class="signature">
         
-        def <strong>url</strong> : Nil | String
+        def <strong>url</strong> : String?
 
-        <a class="method-permalink" href="#url%3ANil%7CString-instance-method">#</a>
+        <a class="method-permalink" href="#url%3AString%3F-instance-method">#</a>
       </div>
       
       <br/>
@@ -1047,12 +1062,12 @@
       </div>
     </div>
   
-    <div class="entry-detail" id="video:Discord::EmbedVideo|Nil-instance-method">
+    <div class="entry-detail" id="video:Discord::EmbedVideo?-instance-method">
       <div class="signature">
         
-        def <strong>video</strong> : <a href="../Discord/EmbedVideo.html">Discord::EmbedVideo</a> | Nil
+        def <strong>video</strong> : <a href="../Discord/EmbedVideo.html">Discord::EmbedVideo</a>?
 
-        <a class="method-permalink" href="#video%3ADiscord%3A%3AEmbedVideo%7CNil-instance-method">#</a>
+        <a class="method-permalink" href="#video%3ADiscord%3A%3AEmbedVideo%3F-instance-method">#</a>
       </div>
       
       <br/>
@@ -1061,12 +1076,12 @@
       </div>
     </div>
   
-    <div class="entry-detail" id="video&#61;&#40;_video:EmbedVideo|Nil&#41;-instance-method">
+    <div class="entry-detail" id="video&#61;&#40;_video:EmbedVideo?&#41;-instance-method">
       <div class="signature">
         
-        def <strong>video=</strong>(_video : <a href="../Discord/EmbedVideo.html">EmbedVideo</a> | Nil)
+        def <strong>video=</strong>(_video : <a href="../Discord/EmbedVideo.html">EmbedVideo</a>?)
 
-        <a class="method-permalink" href="#video%3D%28_video%3AEmbedVideo%7CNil%29-instance-method">#</a>
+        <a class="method-permalink" href="#video%3D%28_video%3AEmbedVideo%3F%29-instance-method">#</a>
       </div>
       
       <br/>
