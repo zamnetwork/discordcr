@@ -478,7 +478,7 @@ module.) A gateway connection can also be started using the <code><a href="../Di
   <h2>Defined in:</h2>
   
     
-      <a href="https://github.com/meew0/discordcr/blob/372c4a5f01dcec0323c250e668356d0457b8b0df/src/discordcr/client.cr#L20" target="_blank">discordcr/client.cr</a>
+      <a href="https://github.com/meew0/discordcr/blob/30cfc7d92ad19049a7f7127f165b9ded303fd97b/src/discordcr/client.cr#L20" target="_blank">discordcr/client.cr</a>
     
     <br/>
   
@@ -619,6 +619,13 @@ module.) A gateway connection can also be started using the <code><a href="../Di
         <a href="#on_channel_update%28%26handler%3AChannel-%3E%29-instance-method" class="signature"><strong>#on_channel_update</strong>(&handler : Channel -> )</a>
         
           <div class="summary"><p>Called when a channel's properties are updated, like the name or permission overwrites.</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#on_dispatch%28%26handler%3A%3A%3ATuple%28String%2CIO%3A%3AMemory%29-%3E%29-instance-method" class="signature"><strong>#on_dispatch</strong>(&handler : ::Tuple(String, IO::Memory) -> )</a>
+        
+          <div class="summary"><p>Called when the bot receives any kind of dispatch at all, even one that is otherwise unsupported.</p></div>
         
       </li>
     
@@ -1260,7 +1267,7 @@ but if you desire to do so, you can.</p></div>
       <br/>
       <div>
         
-          [<a href="https://github.com/meew0/discordcr/blob/372c4a5f01dcec0323c250e668356d0457b8b0df/src/discordcr/client.cr#L63" target="_blank">View source</a>]
+          [<a href="https://github.com/meew0/discordcr/blob/30cfc7d92ad19049a7f7127f165b9ded303fd97b/src/discordcr/client.cr#L63" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1284,7 +1291,7 @@ the client receives the corresponding gateway dispatches.</p></div>
       <br/>
       <div>
         
-          [<a href="https://github.com/meew0/discordcr/blob/372c4a5f01dcec0323c250e668356d0457b8b0df/src/discordcr/client.cr#L25" target="_blank">View source</a>]
+          [<a href="https://github.com/meew0/discordcr/blob/30cfc7d92ad19049a7f7127f165b9ded303fd97b/src/discordcr/client.cr#L25" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1303,7 +1310,7 @@ the client receives the corresponding gateway dispatches.</p></div>
       <br/>
       <div>
         
-          [<a href="https://github.com/meew0/discordcr/blob/372c4a5f01dcec0323c250e668356d0457b8b0df/src/discordcr/client.cr#L25" target="_blank">View source</a>]
+          [<a href="https://github.com/meew0/discordcr/blob/30cfc7d92ad19049a7f7127f165b9ded303fd97b/src/discordcr/client.cr#L25" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1322,7 +1329,7 @@ packet, including opcode, sequence and type.</p></div>
       <br/>
       <div>
         
-          [<a href="https://github.com/meew0/discordcr/blob/372c4a5f01dcec0323c250e668356d0457b8b0df/src/discordcr/client.cr#L189" target="_blank">View source</a>]
+          [<a href="https://github.com/meew0/discordcr/blob/30cfc7d92ad19049a7f7127f165b9ded303fd97b/src/discordcr/client.cr#L189" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1343,7 +1350,7 @@ or when somebody has started a DM channel with the bot.</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/meew0/discordcr/blob/372c4a5f01dcec0323c250e668356d0457b8b0df/src/discordcr/client.cr#L561" target="_blank">View source</a>]
+          [<a href="https://github.com/meew0/discordcr/blob/30cfc7d92ad19049a7f7127f165b9ded303fd97b/src/discordcr/client.cr#L573" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1365,7 +1372,7 @@ closing the DM channel with a user.</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/meew0/discordcr/blob/372c4a5f01dcec0323c250e668356d0457b8b0df/src/discordcr/client.cr#L574" target="_blank">View source</a>]
+          [<a href="https://github.com/meew0/discordcr/blob/30cfc7d92ad19049a7f7127f165b9ded303fd97b/src/discordcr/client.cr#L586" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1386,7 +1393,32 @@ permission overwrites.</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/meew0/discordcr/blob/372c4a5f01dcec0323c250e668356d0457b8b0df/src/discordcr/client.cr#L567" target="_blank">View source</a>]
+          [<a href="https://github.com/meew0/discordcr/blob/30cfc7d92ad19049a7f7127f165b9ded303fd97b/src/discordcr/client.cr#L579" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="on_dispatch&#40;&amp;handler:::Tuple&#40;String,IO::Memory&#41;-&gt;&#41;-instance-method">
+      <div class="signature">
+        
+        def <strong>on_dispatch</strong>(&handler : ::Tuple(String, IO::Memory) -> )
+
+        <a class="method-permalink" href="#on_dispatch%28%26handler%3A%3A%3ATuple%28String%2CIO%3A%3AMemory%29-%3E%29-instance-method">#</a>
+      </div>
+      
+        <div class="doc"><p>Called when the bot receives any kind of dispatch at all, even one that
+is otherwise unsupported. This can be useful for statistics, e. g. how
+many gateway events are received per second. It can also be useful to
+handle new API changes not yet supported by the lib.</p>
+
+<p>The parameter passed to the event will be a tuple of <code>{type, data}</code>, where
+<code>type</code> is the event type (e.g. "MESSAGE_CREATE") and <code>data</code> is the
+unprocessed JSON event data.</p></div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/meew0/discordcr/blob/30cfc7d92ad19049a7f7127f165b9ded303fd97b/src/discordcr/client.cr#L551" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1407,7 +1439,7 @@ event is also called.</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/meew0/discordcr/blob/372c4a5f01dcec0323c250e668356d0457b8b0df/src/discordcr/client.cr#L601" target="_blank">View source</a>]
+          [<a href="https://github.com/meew0/discordcr/blob/30cfc7d92ad19049a7f7127f165b9ded303fd97b/src/discordcr/client.cr#L613" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1427,7 +1459,7 @@ event is also called.</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/meew0/discordcr/blob/372c4a5f01dcec0323c250e668356d0457b8b0df/src/discordcr/client.cr#L606" target="_blank">View source</a>]
+          [<a href="https://github.com/meew0/discordcr/blob/30cfc7d92ad19049a7f7127f165b9ded303fd97b/src/discordcr/client.cr#L618" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1450,7 +1482,7 @@ property in <code><a href="../Discord/Gateway/GuildCreatePayload.html">Gateway::
       <br/>
       <div>
         
-          [<a href="https://github.com/meew0/discordcr/blob/372c4a5f01dcec0323c250e668356d0457b8b0df/src/discordcr/client.cr#L582" target="_blank">View source</a>]
+          [<a href="https://github.com/meew0/discordcr/blob/30cfc7d92ad19049a7f7127f165b9ded303fd97b/src/discordcr/client.cr#L594" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1472,7 +1504,7 @@ an outage. To verify that it is the former case, you can check the
       <br/>
       <div>
         
-          [<a href="https://github.com/meew0/discordcr/blob/372c4a5f01dcec0323c250e668356d0457b8b0df/src/discordcr/client.cr#L595" target="_blank">View source</a>]
+          [<a href="https://github.com/meew0/discordcr/blob/30cfc7d92ad19049a7f7127f165b9ded303fd97b/src/discordcr/client.cr#L607" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1492,7 +1524,7 @@ an outage. To verify that it is the former case, you can check the
       <br/>
       <div>
         
-          [<a href="https://github.com/meew0/discordcr/blob/372c4a5f01dcec0323c250e668356d0457b8b0df/src/discordcr/client.cr#L611" target="_blank">View source</a>]
+          [<a href="https://github.com/meew0/discordcr/blob/30cfc7d92ad19049a7f7127f165b9ded303fd97b/src/discordcr/client.cr#L623" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1512,7 +1544,7 @@ an outage. To verify that it is the former case, you can check the
       <br/>
       <div>
         
-          [<a href="https://github.com/meew0/discordcr/blob/372c4a5f01dcec0323c250e668356d0457b8b0df/src/discordcr/client.cr#L616" target="_blank">View source</a>]
+          [<a href="https://github.com/meew0/discordcr/blob/30cfc7d92ad19049a7f7127f165b9ded303fd97b/src/discordcr/client.cr#L628" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1532,7 +1564,7 @@ an outage. To verify that it is the former case, you can check the
       <br/>
       <div>
         
-          [<a href="https://github.com/meew0/discordcr/blob/372c4a5f01dcec0323c250e668356d0457b8b0df/src/discordcr/client.cr#L621" target="_blank">View source</a>]
+          [<a href="https://github.com/meew0/discordcr/blob/30cfc7d92ad19049a7f7127f165b9ded303fd97b/src/discordcr/client.cr#L633" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1552,7 +1584,7 @@ an outage. To verify that it is the former case, you can check the
       <br/>
       <div>
         
-          [<a href="https://github.com/meew0/discordcr/blob/372c4a5f01dcec0323c250e668356d0457b8b0df/src/discordcr/client.cr#L632" target="_blank">View source</a>]
+          [<a href="https://github.com/meew0/discordcr/blob/30cfc7d92ad19049a7f7127f165b9ded303fd97b/src/discordcr/client.cr#L644" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1573,7 +1605,7 @@ changes their nickname or has their roles changed.</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/meew0/discordcr/blob/372c4a5f01dcec0323c250e668356d0457b8b0df/src/discordcr/client.cr#L627" target="_blank">View source</a>]
+          [<a href="https://github.com/meew0/discordcr/blob/30cfc7d92ad19049a7f7127f165b9ded303fd97b/src/discordcr/client.cr#L639" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1595,7 +1627,7 @@ automatically.</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/meew0/discordcr/blob/372c4a5f01dcec0323c250e668356d0457b8b0df/src/discordcr/client.cr#L639" target="_blank">View source</a>]
+          [<a href="https://github.com/meew0/discordcr/blob/30cfc7d92ad19049a7f7127f165b9ded303fd97b/src/discordcr/client.cr#L651" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1615,7 +1647,7 @@ automatically.</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/meew0/discordcr/blob/372c4a5f01dcec0323c250e668356d0457b8b0df/src/discordcr/client.cr#L644" target="_blank">View source</a>]
+          [<a href="https://github.com/meew0/discordcr/blob/30cfc7d92ad19049a7f7127f165b9ded303fd97b/src/discordcr/client.cr#L656" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1635,7 +1667,7 @@ automatically.</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/meew0/discordcr/blob/372c4a5f01dcec0323c250e668356d0457b8b0df/src/discordcr/client.cr#L654" target="_blank">View source</a>]
+          [<a href="https://github.com/meew0/discordcr/blob/30cfc7d92ad19049a7f7127f165b9ded303fd97b/src/discordcr/client.cr#L666" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1655,7 +1687,7 @@ automatically.</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/meew0/discordcr/blob/372c4a5f01dcec0323c250e668356d0457b8b0df/src/discordcr/client.cr#L649" target="_blank">View source</a>]
+          [<a href="https://github.com/meew0/discordcr/blob/30cfc7d92ad19049a7f7127f165b9ded303fd97b/src/discordcr/client.cr#L661" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1676,7 +1708,7 @@ updated.</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/meew0/discordcr/blob/372c4a5f01dcec0323c250e668356d0457b8b0df/src/discordcr/client.cr#L588" target="_blank">View source</a>]
+          [<a href="https://github.com/meew0/discordcr/blob/30cfc7d92ad19049a7f7127f165b9ded303fd97b/src/discordcr/client.cr#L600" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1697,7 +1729,7 @@ may be any sort of text channel, no matter private or guild.</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/meew0/discordcr/blob/372c4a5f01dcec0323c250e668356d0457b8b0df/src/discordcr/client.cr#L660" target="_blank">View source</a>]
+          [<a href="https://github.com/meew0/discordcr/blob/30cfc7d92ad19049a7f7127f165b9ded303fd97b/src/discordcr/client.cr#L672" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1717,7 +1749,7 @@ may be any sort of text channel, no matter private or guild.</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/meew0/discordcr/blob/372c4a5f01dcec0323c250e668356d0457b8b0df/src/discordcr/client.cr#L681" target="_blank">View source</a>]
+          [<a href="https://github.com/meew0/discordcr/blob/30cfc7d92ad19049a7f7127f165b9ded303fd97b/src/discordcr/client.cr#L693" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1738,7 +1770,7 @@ bulk_delete endpoint.</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/meew0/discordcr/blob/372c4a5f01dcec0323c250e668356d0457b8b0df/src/discordcr/client.cr#L687" target="_blank">View source</a>]
+          [<a href="https://github.com/meew0/discordcr/blob/30cfc7d92ad19049a7f7127f165b9ded303fd97b/src/discordcr/client.cr#L699" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1756,7 +1788,7 @@ bulk_delete endpoint.</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/meew0/discordcr/blob/372c4a5f01dcec0323c250e668356d0457b8b0df/src/discordcr/client.cr#L663" target="_blank">View source</a>]
+          [<a href="https://github.com/meew0/discordcr/blob/30cfc7d92ad19049a7f7127f165b9ded303fd97b/src/discordcr/client.cr#L675" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1774,7 +1806,7 @@ bulk_delete endpoint.</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/meew0/discordcr/blob/372c4a5f01dcec0323c250e668356d0457b8b0df/src/discordcr/client.cr#L666" target="_blank">View source</a>]
+          [<a href="https://github.com/meew0/discordcr/blob/30cfc7d92ad19049a7f7127f165b9ded303fd97b/src/discordcr/client.cr#L678" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1792,7 +1824,7 @@ bulk_delete endpoint.</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/meew0/discordcr/blob/372c4a5f01dcec0323c250e668356d0457b8b0df/src/discordcr/client.cr#L669" target="_blank">View source</a>]
+          [<a href="https://github.com/meew0/discordcr/blob/30cfc7d92ad19049a7f7127f165b9ded303fd97b/src/discordcr/client.cr#L681" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1814,7 +1846,7 @@ existing message is updated.</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/meew0/discordcr/blob/372c4a5f01dcec0323c250e668356d0457b8b0df/src/discordcr/client.cr#L676" target="_blank">View source</a>]
+          [<a href="https://github.com/meew0/discordcr/blob/30cfc7d92ad19049a7f7127f165b9ded303fd97b/src/discordcr/client.cr#L688" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1836,7 +1868,7 @@ properties (user/avatar/discriminator) are changed.</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/meew0/discordcr/blob/372c4a5f01dcec0323c250e668356d0457b8b0df/src/discordcr/client.cr#L694" target="_blank">View source</a>]
+          [<a href="https://github.com/meew0/discordcr/blob/30cfc7d92ad19049a7f7127f165b9ded303fd97b/src/discordcr/client.cr#L706" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1861,7 +1893,7 @@ session.</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/meew0/discordcr/blob/372c4a5f01dcec0323c250e668356d0457b8b0df/src/discordcr/client.cr#L549" target="_blank">View source</a>]
+          [<a href="https://github.com/meew0/discordcr/blob/30cfc7d92ad19049a7f7127f165b9ded303fd97b/src/discordcr/client.cr#L561" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1882,7 +1914,7 @@ after reconnecting.</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/meew0/discordcr/blob/372c4a5f01dcec0323c250e668356d0457b8b0df/src/discordcr/client.cr#L555" target="_blank">View source</a>]
+          [<a href="https://github.com/meew0/discordcr/blob/30cfc7d92ad19049a7f7127f165b9ded303fd97b/src/discordcr/client.cr#L567" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1902,7 +1934,7 @@ after reconnecting.</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/meew0/discordcr/blob/372c4a5f01dcec0323c250e668356d0457b8b0df/src/discordcr/client.cr#L699" target="_blank">View source</a>]
+          [<a href="https://github.com/meew0/discordcr/blob/30cfc7d92ad19049a7f7127f165b9ded303fd97b/src/discordcr/client.cr#L711" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1922,7 +1954,7 @@ after reconnecting.</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/meew0/discordcr/blob/372c4a5f01dcec0323c250e668356d0457b8b0df/src/discordcr/client.cr#L704" target="_blank">View source</a>]
+          [<a href="https://github.com/meew0/discordcr/blob/30cfc7d92ad19049a7f7127f165b9ded303fd97b/src/discordcr/client.cr#L716" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1945,7 +1977,7 @@ to a new one, or when the guild's voice region changes.</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/meew0/discordcr/blob/372c4a5f01dcec0323c250e668356d0457b8b0df/src/discordcr/client.cr#L718" target="_blank">View source</a>]
+          [<a href="https://github.com/meew0/discordcr/blob/30cfc7d92ad19049a7f7127f165b9ded303fd97b/src/discordcr/client.cr#L730" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1966,7 +1998,7 @@ one, or is muted/unmuted/deafened/undeafened.</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/meew0/discordcr/blob/372c4a5f01dcec0323c250e668356d0457b8b0df/src/discordcr/client.cr#L710" target="_blank">View source</a>]
+          [<a href="https://github.com/meew0/discordcr/blob/30cfc7d92ad19049a7f7127f165b9ded303fd97b/src/discordcr/client.cr#L722" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1991,7 +2023,7 @@ is set up, arriving members will be cached automatically.</p></div>
       <br/>
       <div>
         
-          [<a href="https://github.com/meew0/discordcr/blob/372c4a5f01dcec0323c250e668356d0457b8b0df/src/discordcr/client.cr#L299" target="_blank">View source</a>]
+          [<a href="https://github.com/meew0/discordcr/blob/30cfc7d92ad19049a7f7127f165b9ded303fd97b/src/discordcr/client.cr#L299" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -2011,7 +2043,7 @@ make Discord replay all events since that sequence.</p></div>
       <br/>
       <div>
         
-          [<a href="https://github.com/meew0/discordcr/blob/372c4a5f01dcec0323c250e668356d0457b8b0df/src/discordcr/client.cr#L262" target="_blank">View source</a>]
+          [<a href="https://github.com/meew0/discordcr/blob/30cfc7d92ad19049a7f7127f165b9ded303fd97b/src/discordcr/client.cr#L262" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -2031,7 +2063,7 @@ execution until the bot is forcibly stopped.</p></div>
       <br/>
       <div>
         
-          [<a href="https://github.com/meew0/discordcr/blob/372c4a5f01dcec0323c250e668356d0457b8b0df/src/discordcr/client.cr#L75" target="_blank">View source</a>]
+          [<a href="https://github.com/meew0/discordcr/blob/30cfc7d92ad19049a7f7127f165b9ded303fd97b/src/discordcr/client.cr#L75" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -2052,7 +2084,7 @@ playing or streaming a game.</p></div>
       <br/>
       <div>
         
-          [<a href="https://github.com/meew0/discordcr/blob/372c4a5f01dcec0323c250e668356d0457b8b0df/src/discordcr/client.cr#L274" target="_blank">View source</a>]
+          [<a href="https://github.com/meew0/discordcr/blob/30cfc7d92ad19049a7f7127f165b9ded303fd97b/src/discordcr/client.cr#L274" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -2076,7 +2108,7 @@ connections yet - this will have to be done externally until that happens.</p></
       <br/>
       <div>
         
-          [<a href="https://github.com/meew0/discordcr/blob/372c4a5f01dcec0323c250e668356d0457b8b0df/src/discordcr/client.cr#L286" target="_blank">View source</a>]
+          [<a href="https://github.com/meew0/discordcr/blob/30cfc7d92ad19049a7f7127f165b9ded303fd97b/src/discordcr/client.cr#L286" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -2095,7 +2127,7 @@ unexpected way</p></div>
       <br/>
       <div>
         
-          [<a href="https://github.com/meew0/discordcr/blob/372c4a5f01dcec0323c250e668356d0457b8b0df/src/discordcr/client.cr#L95" target="_blank">View source</a>]
+          [<a href="https://github.com/meew0/discordcr/blob/30cfc7d92ad19049a7f7127f165b9ded303fd97b/src/discordcr/client.cr#L95" target="_blank">View source</a>]
         
       </div>
     </div>
