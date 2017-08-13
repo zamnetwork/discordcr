@@ -5,7 +5,7 @@
   <meta id="repository-name" content="github.com/meew0/discordcr">
   <link href="../css/style.css" rel="stylesheet" type="text/css" />
   <script type="text/javascript" src="../js/doc.js"></script>
-  <title>Discord::PrivateChannel - github.com/meew0/discordcr</title>
+  <title>Discord::DCAParser - github.com/meew0/discordcr</title>
 </head>
 <body>
 
@@ -100,7 +100,7 @@
       
     </li>
   
-  <li class=" " data-id="github.com/meew0/discordcr/Discord/DCAParser" data-name="discord::dcaparser">
+  <li class=" current" data-id="github.com/meew0/discordcr/Discord/DCAParser" data-name="discord::dcaparser">
       <a href="../Discord/DCAParser.html">DCAParser</a>
       
     </li>
@@ -390,7 +390,7 @@
       
     </li>
   
-  <li class=" current" data-id="github.com/meew0/discordcr/Discord/PrivateChannel" data-name="discord::privatechannel">
+  <li class=" " data-id="github.com/meew0/discordcr/Discord/PrivateChannel" data-name="discord::privatechannel">
       <a href="../Discord/PrivateChannel.html">PrivateChannel</a>
       
     </li>
@@ -492,15 +492,20 @@
 <div id="main-content">
 <h1 class="type-name">
 
-  <span class="kind">struct</span> Discord::PrivateChannel
+  <span class="kind">class</span> Discord::DCAParser
 
 </h1>
 
 
-  <ul class="superclass-hierarchy"><li class="superclass"><a href="../Discord/PrivateChannel.html">Discord::PrivateChannel</a></li><li class="superclass">Struct</li><li class="superclass">Value</li><li class="superclass">Object</li></ul>
+  <ul class="superclass-hierarchy"><li class="superclass"><a href="../Discord/DCAParser.html">Discord::DCAParser</a></li><li class="superclass">Reference</li><li class="superclass">Object</li></ul>
 
 
 
+
+  <h2>Overview</h2>
+
+  <p>Parser for the DCA file format, a simple wrapper around Opus made
+specifically for Discord bots.</p>
 
 
 
@@ -518,12 +523,28 @@
   <h2>Defined in:</h2>
   
     
-      <a href="https://github.com/meew0/discordcr/blob/33efc275a3255561345eb4b7052ce5f73d8efd3a/src/discordcr/mappings/channel.cr#L46" target="_blank">discordcr/mappings/channel.cr</a>
+      <a href="https://github.com/meew0/discordcr/blob/33efc275a3255561345eb4b7052ce5f73d8efd3a/src/discordcr/dca.cr#L6" target="_blank">discordcr/dca.cr</a>
     
     <br/>
   
 
 
+
+  
+    <h2>Constant Summary</h2>
+  
+  <dl>
+    
+      <dt class="entry-const" id="DCA1_MAGIC">
+        <strong>DCA1_MAGIC</strong> = <code><span class="s">&quot;DCA1&quot;</span></code>
+      </dt>
+      
+      <dd class="entry-const-doc">
+        <p>Magic string that identifies a DCA1 file</p>
+      </dd>
+      
+    
+  </dl>
 
 
 
@@ -531,7 +552,9 @@
   <ul class="list-summary">
     
       <li class="entry-summary">
-        <a href="#new%28__temp_85%3AJSON%3A%3APullParser%29-class-method" class="signature"><strong>.new</strong>(__temp_85 : JSON::PullParser)</a>
+        <a href="#new%28io%3AIO%2Craw%3Dfalse%2Cstrict_metadata%3Dtrue%29-class-method" class="signature"><strong>.new</strong>(io : IO, raw = <span class="n">false</span>, strict_metadata = <span class="n">true</span>)</a>
+        
+          <div class="summary"><p>Create a new parser.</p></div>
         
       </li>
     
@@ -545,47 +568,23 @@
   <ul class="list-summary">
     
       <li class="entry-summary">
-        <a href="#id%3AUInt64-instance-method" class="signature"><strong>#id</strong> : UInt64</a>
+        <a href="#metadata%3ADCA1Mappings%3A%3AMetadata%3F-instance-method" class="signature"><strong>#metadata</strong> : DCA1Mappings::Metadata?</a>
+        
+          <div class="summary"><p>The parsed metadata, or nil if it could not be parsed.</p></div>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#id%3D%28_id%3AUInt64%29-instance-method" class="signature"><strong>#id=</strong>(_id : UInt64)</a>
+        <a href="#next_frame%28reuse_buffer%3Dfalse%29%3ABytes%3F-instance-method" class="signature"><strong>#next_frame</strong>(reuse_buffer = <span class="n">false</span>) : Bytes?</a>
+        
+          <div class="summary"><p>Reads the next frame from the IO.</p></div>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#last_message_id%3AUInt64%3F-instance-method" class="signature"><strong>#last_message_id</strong> : UInt64?</a>
+        <a href="#parse%28%26block%3ABytes-%3E%29-instance-method" class="signature"><strong>#parse</strong>(&block : Bytes -> )</a>
         
-      </li>
-    
-      <li class="entry-summary">
-        <a href="#last_message_id%3D%28_last_message_id%3A%3A%3AUnion%28UInt64%2CNil%29%29-instance-method" class="signature"><strong>#last_message_id=</strong>(_last_message_id : ::Union(UInt64, Nil))</a>
-        
-      </li>
-    
-      <li class="entry-summary">
-        <a href="#recipients%3AArray%28Discord%3A%3AUser%29-instance-method" class="signature"><strong>#recipients</strong> : Array(Discord::User)</a>
-        
-      </li>
-    
-      <li class="entry-summary">
-        <a href="#recipients%3D%28_recipients%3AArray%28User%29%29-instance-method" class="signature"><strong>#recipients=</strong>(_recipients : Array(User))</a>
-        
-      </li>
-    
-      <li class="entry-summary">
-        <a href="#to_json%28json%3AJSON%3A%3ABuilder%29-instance-method" class="signature"><strong>#to_json</strong>(json : JSON::Builder)</a>
-        
-      </li>
-    
-      <li class="entry-summary">
-        <a href="#type%3AUInt8-instance-method" class="signature"><strong>#type</strong> : UInt8</a>
-        
-      </li>
-    
-      <li class="entry-summary">
-        <a href="#type%3D%28_type%3AUInt8%29-instance-method" class="signature"><strong>#type=</strong>(_type : UInt8)</a>
+          <div class="summary"><p>Continually reads frames from the IO until there are none left.</p></div>
         
       </li>
     
@@ -617,31 +616,29 @@
 
 
   
-    
-
-
-    
-
-
-    
-
-
-  
 </div>
 
 
   <h2>Constructor Detail</h2>
   
-    <div class="entry-detail" id="new&#40;__temp_85:JSON::PullParser&#41;-class-method">
+    <div class="entry-detail" id="new&#40;io:IO,raw&#61;false,strict_metadata&#61;true&#41;-class-method">
       <div class="signature">
         
-        def self.<strong>new</strong>(__temp_85 : JSON::PullParser)
+        def self.<strong>new</strong>(io : IO, raw = <span class="n">false</span>, strict_metadata = <span class="n">true</span>)
 
-        <a class="method-permalink" href="#new%28__temp_85%3AJSON%3A%3APullParser%29-class-method">#</a>
+        <a class="method-permalink" href="#new%28io%3AIO%2Craw%3Dfalse%2Cstrict_metadata%3Dtrue%29-class-method">#</a>
       </div>
+      
+        <div class="doc"><p>Create a new parser. It will read from the given <em>io</em>. If <em>raw</em> is set,
+the file is assumed to be a DCA0 file, without any metadata. If the file's
+metadata doesn't conform to the DCA1 specification and <em>strict_metadata</em>
+is set, then the parsing will fail with an error; if it is not set then
+the metadata will silently be <code>nil</code>.</p></div>
       
       <br/>
       <div>
+        
+          [<a href="https://github.com/meew0/discordcr/blob/33efc275a3255561345eb4b7052ce5f73d8efd3a/src/discordcr/dca.cr#L18" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -653,128 +650,65 @@
 
   <h2>Instance Method Detail</h2>
   
-    <div class="entry-detail" id="id:UInt64-instance-method">
+    <div class="entry-detail" id="metadata:DCA1Mappings::Metadata?-instance-method">
       <div class="signature">
         
-        def <strong>id</strong> : UInt64
+        def <strong>metadata</strong> : <a href="../Discord/DCA1Mappings/Metadata.html">DCA1Mappings::Metadata</a>?
 
-        <a class="method-permalink" href="#id%3AUInt64-instance-method">#</a>
+        <a class="method-permalink" href="#metadata%3ADCA1Mappings%3A%3AMetadata%3F-instance-method">#</a>
       </div>
+      
+        <div class="doc"><p>The parsed metadata, or nil if it could not be parsed.</p></div>
       
       <br/>
       <div>
+        
+          [<a href="https://github.com/meew0/discordcr/blob/33efc275a3255561345eb4b7052ce5f73d8efd3a/src/discordcr/dca.cr#L11" target="_blank">View source</a>]
         
       </div>
     </div>
   
-    <div class="entry-detail" id="id&#61;&#40;_id:UInt64&#41;-instance-method">
+    <div class="entry-detail" id="next_frame&#40;reuse_buffer&#61;false&#41;:Bytes?-instance-method">
       <div class="signature">
         
-        def <strong>id=</strong>(_id : UInt64)
+        def <strong>next_frame</strong>(reuse_buffer = <span class="n">false</span>) : Bytes?
 
-        <a class="method-permalink" href="#id%3D%28_id%3AUInt64%29-instance-method">#</a>
+        <a class="method-permalink" href="#next_frame%28reuse_buffer%3Dfalse%29%3ABytes%3F-instance-method">#</a>
       </div>
+      
+        <div class="doc"><p>Reads the next frame from the IO. If there is nothing left to read, it
+will return <code>nil</code>.</p>
+
+<p>If <em>reuse_buffer</em> is true, a large buffer will be allocated once and
+reused for future calls of this method, reducing the load on the GC and
+potentially reusing memory use overall; if it is false, a new buffer of
+just the correct size will be allocated every time. Note that if the
+buffer is reused, the returned data is only valid until the next call to
+<code><a href="../Discord/DCAParser.html#next_frame%28reuse_buffer%3Dfalse%29%3ABytes%3F-instance-method">#next_frame</a></code>.</p></div>
       
       <br/>
       <div>
+        
+          [<a href="https://github.com/meew0/discordcr/blob/33efc275a3255561345eb4b7052ce5f73d8efd3a/src/discordcr/dca.cr#L34" target="_blank">View source</a>]
         
       </div>
     </div>
   
-    <div class="entry-detail" id="last_message_id:UInt64?-instance-method">
+    <div class="entry-detail" id="parse&#40;&amp;block:Bytes-&gt;&#41;-instance-method">
       <div class="signature">
         
-        def <strong>last_message_id</strong> : UInt64?
+        def <strong>parse</strong>(&block : Bytes -> )
 
-        <a class="method-permalink" href="#last_message_id%3AUInt64%3F-instance-method">#</a>
+        <a class="method-permalink" href="#parse%28%26block%3ABytes-%3E%29-instance-method">#</a>
       </div>
+      
+        <div class="doc"><p>Continually reads frames from the IO until there are none left. Each frame
+is passed to the given <em>block</em>.</p></div>
       
       <br/>
       <div>
         
-      </div>
-    </div>
-  
-    <div class="entry-detail" id="last_message_id&#61;&#40;_last_message_id:::Union&#40;UInt64,Nil&#41;&#41;-instance-method">
-      <div class="signature">
-        
-        def <strong>last_message_id=</strong>(_last_message_id : ::Union(UInt64, Nil))
-
-        <a class="method-permalink" href="#last_message_id%3D%28_last_message_id%3A%3A%3AUnion%28UInt64%2CNil%29%29-instance-method">#</a>
-      </div>
-      
-      <br/>
-      <div>
-        
-      </div>
-    </div>
-  
-    <div class="entry-detail" id="recipients:Array&#40;Discord::User&#41;-instance-method">
-      <div class="signature">
-        
-        def <strong>recipients</strong> : Array(<a href="../Discord/User.html">Discord::User</a>)
-
-        <a class="method-permalink" href="#recipients%3AArray%28Discord%3A%3AUser%29-instance-method">#</a>
-      </div>
-      
-      <br/>
-      <div>
-        
-      </div>
-    </div>
-  
-    <div class="entry-detail" id="recipients&#61;&#40;_recipients:Array&#40;User&#41;&#41;-instance-method">
-      <div class="signature">
-        
-        def <strong>recipients=</strong>(_recipients : Array(<a href="../Discord/User.html">User</a>))
-
-        <a class="method-permalink" href="#recipients%3D%28_recipients%3AArray%28User%29%29-instance-method">#</a>
-      </div>
-      
-      <br/>
-      <div>
-        
-      </div>
-    </div>
-  
-    <div class="entry-detail" id="to_json&#40;json:JSON::Builder&#41;-instance-method">
-      <div class="signature">
-        
-        def <strong>to_json</strong>(json : JSON::Builder)
-
-        <a class="method-permalink" href="#to_json%28json%3AJSON%3A%3ABuilder%29-instance-method">#</a>
-      </div>
-      
-      <br/>
-      <div>
-        
-      </div>
-    </div>
-  
-    <div class="entry-detail" id="type:UInt8-instance-method">
-      <div class="signature">
-        
-        def <strong>type</strong> : UInt8
-
-        <a class="method-permalink" href="#type%3AUInt8-instance-method">#</a>
-      </div>
-      
-      <br/>
-      <div>
-        
-      </div>
-    </div>
-  
-    <div class="entry-detail" id="type&#61;&#40;_type:UInt8&#41;-instance-method">
-      <div class="signature">
-        
-        def <strong>type=</strong>(_type : UInt8)
-
-        <a class="method-permalink" href="#type%3D%28_type%3AUInt8%29-instance-method">#</a>
-      </div>
-      
-      <br/>
-      <div>
+          [<a href="https://github.com/meew0/discordcr/blob/33efc275a3255561345eb4b7052ce5f73d8efd3a/src/discordcr/dca.cr#L55" target="_blank">View source</a>]
         
       </div>
     </div>
