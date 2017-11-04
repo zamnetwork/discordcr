@@ -5,7 +5,7 @@
   <meta id="repository-name" content="github.com/meew0/discordcr">
   <link href="../css/style.css" rel="stylesheet" type="text/css" />
   <script type="text/javascript" src="../js/doc.js"></script>
-  <title>Discord::Message - github.com/meew0/discordcr</title>
+  <title>Discord::OAuth2Application - github.com/meew0/discordcr</title>
 </head>
 <body>
 
@@ -365,12 +365,12 @@
       
     </li>
   
-  <li class=" current" data-id="github.com/meew0/discordcr/Discord/Message" data-name="discord::message">
+  <li class=" " data-id="github.com/meew0/discordcr/Discord/Message" data-name="discord::message">
       <a href="../Discord/Message.html">Message</a>
       
     </li>
   
-  <li class=" " data-id="github.com/meew0/discordcr/Discord/OAuth2Application" data-name="discord::oauth2application">
+  <li class=" current" data-id="github.com/meew0/discordcr/Discord/OAuth2Application" data-name="discord::oauth2application">
       <a href="../Discord/OAuth2Application.html">OAuth2Application</a>
       
     </li>
@@ -502,15 +502,21 @@
 <div id="main-content">
 <h1 class="type-name">
 
-  <span class="kind">struct</span> Discord::Message
+  <span class="kind">struct</span> Discord::OAuth2Application
 
 </h1>
 
 
-  <ul class="superclass-hierarchy"><li class="superclass"><a href="../Discord/Message.html">Discord::Message</a></li><li class="superclass">Struct</li><li class="superclass">Value</li><li class="superclass">Object</li></ul>
+  <ul class="superclass-hierarchy"><li class="superclass"><a href="../Discord/OAuth2Application.html">Discord::OAuth2Application</a></li><li class="superclass">Struct</li><li class="superclass">Value</li><li class="superclass">Object</li></ul>
 
 
 
+
+  <h2>Overview</h2>
+
+  <p>An OAuth2 application, as registered with Discord, that can hold
+information about a <code><a href="../Discord/Client.html">Client</a></code>'s associated bot user account and owner,
+among other OAuth2 properties.</p>
 
 
 
@@ -528,7 +534,7 @@
   <h2>Defined in:</h2>
   
     
-      <a href="https://github.com/meew0/discordcr/blob/992d26a852c07fb8b4c9301b2ed0740f57c90eef/src/discordcr/mappings/channel.cr#L4" target="_blank">discordcr/mappings/channel.cr</a>
+      <a href="https://github.com/meew0/discordcr/blob/992d26a852c07fb8b4c9301b2ed0740f57c90eef/src/discordcr/mappings/oauth2.cr#L8" target="_blank">discordcr/mappings/oauth2.cr</a>
     
     <br/>
   
@@ -541,7 +547,7 @@
   <ul class="list-summary">
     
       <li class="entry-summary">
-        <a href="#new%28__temp_35%3AJSON%3A%3APullParser%29-class-method" class="signature"><strong>.new</strong>(__temp_35 : JSON::PullParser)</a>
+        <a href="#new%28__temp_748%3AJSON%3A%3APullParser%29-class-method" class="signature"><strong>.new</strong>(__temp_748 : JSON::PullParser)</a>
         
       </li>
     
@@ -555,52 +561,42 @@
   <ul class="list-summary">
     
       <li class="entry-summary">
-        <a href="#attachments%3AArray%28Discord%3A%3AAttachment%29-instance-method" class="signature"><strong>#attachments</strong> : Array(Discord::Attachment)</a>
+        <a href="#bot_public%3ABool-instance-method" class="signature"><strong>#bot_public</strong> : Bool</a>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#attachments%3D%28_attachments%3AArray%28Attachment%29%29-instance-method" class="signature"><strong>#attachments=</strong>(_attachments : Array(Attachment))</a>
+        <a href="#bot_public%3D%28_bot_public%3ABool%29-instance-method" class="signature"><strong>#bot_public=</strong>(_bot_public : Bool)</a>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#author%3ADiscord%3A%3AUser-instance-method" class="signature"><strong>#author</strong> : Discord::User</a>
+        <a href="#bot_require_code_grant%3ABool-instance-method" class="signature"><strong>#bot_require_code_grant</strong> : Bool</a>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#author%3D%28_author%3AUser%29-instance-method" class="signature"><strong>#author=</strong>(_author : User)</a>
+        <a href="#bot_require_code_grant%3D%28_bot_require_code_grant%3ABool%29-instance-method" class="signature"><strong>#bot_require_code_grant=</strong>(_bot_require_code_grant : Bool)</a>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#channel_id%3AUInt64-instance-method" class="signature"><strong>#channel_id</strong> : UInt64</a>
+        <a href="#description%3AString%3F-instance-method" class="signature"><strong>#description</strong> : String?</a>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#channel_id%3D%28_channel_id%3AUInt64%29-instance-method" class="signature"><strong>#channel_id=</strong>(_channel_id : UInt64)</a>
+        <a href="#description%3D%28_description%3A%3A%3AUnion%28String%2CNil%29%29-instance-method" class="signature"><strong>#description=</strong>(_description : ::Union(String, Nil))</a>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#content%3AString-instance-method" class="signature"><strong>#content</strong> : String</a>
+        <a href="#icon%3AString%3F-instance-method" class="signature"><strong>#icon</strong> : String?</a>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#content%3D%28_content%3AString%29-instance-method" class="signature"><strong>#content=</strong>(_content : String)</a>
-        
-      </li>
-    
-      <li class="entry-summary">
-        <a href="#embeds%3AArray%28Discord%3A%3AEmbed%29-instance-method" class="signature"><strong>#embeds</strong> : Array(Discord::Embed)</a>
-        
-      </li>
-    
-      <li class="entry-summary">
-        <a href="#embeds%3D%28_embeds%3AArray%28Embed%29%29-instance-method" class="signature"><strong>#embeds=</strong>(_embeds : Array(Embed))</a>
+        <a href="#icon%3D%28_icon%3A%3A%3AUnion%28String%2CNil%29%29-instance-method" class="signature"><strong>#icon=</strong>(_icon : ::Union(String, Nil))</a>
         
       </li>
     
@@ -615,77 +611,37 @@
       </li>
     
       <li class="entry-summary">
-        <a href="#mention_everyone%3ABool-instance-method" class="signature"><strong>#mention_everyone</strong> : Bool</a>
+        <a href="#name%3AString-instance-method" class="signature"><strong>#name</strong> : String</a>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#mention_everyone%3D%28_mention_everyone%3ABool%29-instance-method" class="signature"><strong>#mention_everyone=</strong>(_mention_everyone : Bool)</a>
+        <a href="#name%3D%28_name%3AString%29-instance-method" class="signature"><strong>#name=</strong>(_name : String)</a>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#mention_roles%3AArray%28UInt64%29-instance-method" class="signature"><strong>#mention_roles</strong> : Array(UInt64)</a>
+        <a href="#owner%3ADiscord%3A%3AUser-instance-method" class="signature"><strong>#owner</strong> : Discord::User</a>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#mention_roles%3D%28_mention_roles%3AArray%28UInt64%29%29-instance-method" class="signature"><strong>#mention_roles=</strong>(_mention_roles : Array(UInt64))</a>
+        <a href="#owner%3D%28_owner%3AUser%29-instance-method" class="signature"><strong>#owner=</strong>(_owner : User)</a>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#mentions%3AArray%28Discord%3A%3AUser%29-instance-method" class="signature"><strong>#mentions</strong> : Array(Discord::User)</a>
+        <a href="#rpc_origins%3AArray%28String%29%3F-instance-method" class="signature"><strong>#rpc_origins</strong> : Array(String)?</a>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#mentions%3D%28_mentions%3AArray%28User%29%29-instance-method" class="signature"><strong>#mentions=</strong>(_mentions : Array(User))</a>
-        
-      </li>
-    
-      <li class="entry-summary">
-        <a href="#pinned%3ABool%3F-instance-method" class="signature"><strong>#pinned</strong> : Bool?</a>
-        
-      </li>
-    
-      <li class="entry-summary">
-        <a href="#pinned%3D%28_pinned%3A%3A%3AUnion%28Bool%2CNil%29%29-instance-method" class="signature"><strong>#pinned=</strong>(_pinned : ::Union(Bool, Nil))</a>
-        
-      </li>
-    
-      <li class="entry-summary">
-        <a href="#timestamp%3ATime-instance-method" class="signature"><strong>#timestamp</strong> : Time</a>
-        
-      </li>
-    
-      <li class="entry-summary">
-        <a href="#timestamp%3D%28_timestamp%3ATime%29-instance-method" class="signature"><strong>#timestamp=</strong>(_timestamp : Time)</a>
+        <a href="#rpc_origins%3D%28_rpc_origins%3A%3A%3AUnion%28Array%28String%29%2CNil%29%29-instance-method" class="signature"><strong>#rpc_origins=</strong>(_rpc_origins : ::Union(Array(String), Nil))</a>
         
       </li>
     
       <li class="entry-summary">
         <a href="#to_json%28json%3AJSON%3A%3ABuilder%29-instance-method" class="signature"><strong>#to_json</strong>(json : JSON::Builder)</a>
-        
-      </li>
-    
-      <li class="entry-summary">
-        <a href="#tts%3ABool-instance-method" class="signature"><strong>#tts</strong> : Bool</a>
-        
-      </li>
-    
-      <li class="entry-summary">
-        <a href="#tts%3D%28_tts%3ABool%29-instance-method" class="signature"><strong>#tts=</strong>(_tts : Bool)</a>
-        
-      </li>
-    
-      <li class="entry-summary">
-        <a href="#type%3AUInt8%3F-instance-method" class="signature"><strong>#type</strong> : UInt8?</a>
-        
-      </li>
-    
-      <li class="entry-summary">
-        <a href="#type%3D%28_type%3A%3A%3AUnion%28UInt8%2CNil%29%29-instance-method" class="signature"><strong>#type=</strong>(_type : ::Union(UInt8, Nil))</a>
         
       </li>
     
@@ -732,16 +688,18 @@
 
   <h2>Constructor Detail</h2>
   
-    <div class="entry-detail" id="new&#40;__temp_35:JSON::PullParser&#41;-class-method">
+    <div class="entry-detail" id="new&#40;__temp_748:JSON::PullParser&#41;-class-method">
       <div class="signature">
         
-        def self.<strong>new</strong>(__temp_35 : JSON::PullParser)
+        def self.<strong>new</strong>(__temp_748 : JSON::PullParser)
 
-        <a class="method-permalink" href="#new%28__temp_35%3AJSON%3A%3APullParser%29-class-method">#</a>
+        <a class="method-permalink" href="#new%28__temp_748%3AJSON%3A%3APullParser%29-class-method">#</a>
       </div>
       
       <br/>
       <div>
+        
+          [<a href="https://github.com/meew0/discordcr/blob/992d26a852c07fb8b4c9301b2ed0740f57c90eef/src/discordcr/mappings/oauth2.cr#L9" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -753,142 +711,130 @@
 
   <h2>Instance Method Detail</h2>
   
-    <div class="entry-detail" id="attachments:Array&#40;Discord::Attachment&#41;-instance-method">
+    <div class="entry-detail" id="bot_public:Bool-instance-method">
       <div class="signature">
         
-        def <strong>attachments</strong> : Array(<a href="../Discord/Attachment.html">Discord::Attachment</a>)
+        def <strong>bot_public</strong> : Bool
 
-        <a class="method-permalink" href="#attachments%3AArray%28Discord%3A%3AAttachment%29-instance-method">#</a>
+        <a class="method-permalink" href="#bot_public%3ABool-instance-method">#</a>
       </div>
       
       <br/>
       <div>
+        
+          [<a href="https://github.com/meew0/discordcr/blob/992d26a852c07fb8b4c9301b2ed0740f57c90eef/src/discordcr/mappings/oauth2.cr#L9" target="_blank">View source</a>]
         
       </div>
     </div>
   
-    <div class="entry-detail" id="attachments&#61;&#40;_attachments:Array&#40;Attachment&#41;&#41;-instance-method">
+    <div class="entry-detail" id="bot_public&#61;&#40;_bot_public:Bool&#41;-instance-method">
       <div class="signature">
         
-        def <strong>attachments=</strong>(_attachments : Array(<a href="../Discord/Attachment.html">Attachment</a>))
+        def <strong>bot_public=</strong>(_bot_public : Bool)
 
-        <a class="method-permalink" href="#attachments%3D%28_attachments%3AArray%28Attachment%29%29-instance-method">#</a>
+        <a class="method-permalink" href="#bot_public%3D%28_bot_public%3ABool%29-instance-method">#</a>
       </div>
       
       <br/>
       <div>
+        
+          [<a href="https://github.com/meew0/discordcr/blob/992d26a852c07fb8b4c9301b2ed0740f57c90eef/src/discordcr/mappings/oauth2.cr#L9" target="_blank">View source</a>]
         
       </div>
     </div>
   
-    <div class="entry-detail" id="author:Discord::User-instance-method">
+    <div class="entry-detail" id="bot_require_code_grant:Bool-instance-method">
       <div class="signature">
         
-        def <strong>author</strong> : <a href="../Discord/User.html">Discord::User</a>
+        def <strong>bot_require_code_grant</strong> : Bool
 
-        <a class="method-permalink" href="#author%3ADiscord%3A%3AUser-instance-method">#</a>
+        <a class="method-permalink" href="#bot_require_code_grant%3ABool-instance-method">#</a>
       </div>
       
       <br/>
       <div>
+        
+          [<a href="https://github.com/meew0/discordcr/blob/992d26a852c07fb8b4c9301b2ed0740f57c90eef/src/discordcr/mappings/oauth2.cr#L9" target="_blank">View source</a>]
         
       </div>
     </div>
   
-    <div class="entry-detail" id="author&#61;&#40;_author:User&#41;-instance-method">
+    <div class="entry-detail" id="bot_require_code_grant&#61;&#40;_bot_require_code_grant:Bool&#41;-instance-method">
       <div class="signature">
         
-        def <strong>author=</strong>(_author : <a href="../Discord/User.html">User</a>)
+        def <strong>bot_require_code_grant=</strong>(_bot_require_code_grant : Bool)
 
-        <a class="method-permalink" href="#author%3D%28_author%3AUser%29-instance-method">#</a>
+        <a class="method-permalink" href="#bot_require_code_grant%3D%28_bot_require_code_grant%3ABool%29-instance-method">#</a>
       </div>
       
       <br/>
       <div>
+        
+          [<a href="https://github.com/meew0/discordcr/blob/992d26a852c07fb8b4c9301b2ed0740f57c90eef/src/discordcr/mappings/oauth2.cr#L9" target="_blank">View source</a>]
         
       </div>
     </div>
   
-    <div class="entry-detail" id="channel_id:UInt64-instance-method">
+    <div class="entry-detail" id="description:String?-instance-method">
       <div class="signature">
         
-        def <strong>channel_id</strong> : UInt64
+        def <strong>description</strong> : String?
 
-        <a class="method-permalink" href="#channel_id%3AUInt64-instance-method">#</a>
+        <a class="method-permalink" href="#description%3AString%3F-instance-method">#</a>
       </div>
       
       <br/>
       <div>
+        
+          [<a href="https://github.com/meew0/discordcr/blob/992d26a852c07fb8b4c9301b2ed0740f57c90eef/src/discordcr/mappings/oauth2.cr#L9" target="_blank">View source</a>]
         
       </div>
     </div>
   
-    <div class="entry-detail" id="channel_id&#61;&#40;_channel_id:UInt64&#41;-instance-method">
+    <div class="entry-detail" id="description&#61;&#40;_description:::Union&#40;String,Nil&#41;&#41;-instance-method">
       <div class="signature">
         
-        def <strong>channel_id=</strong>(_channel_id : UInt64)
+        def <strong>description=</strong>(_description : ::Union(String, Nil))
 
-        <a class="method-permalink" href="#channel_id%3D%28_channel_id%3AUInt64%29-instance-method">#</a>
+        <a class="method-permalink" href="#description%3D%28_description%3A%3A%3AUnion%28String%2CNil%29%29-instance-method">#</a>
       </div>
       
       <br/>
       <div>
+        
+          [<a href="https://github.com/meew0/discordcr/blob/992d26a852c07fb8b4c9301b2ed0740f57c90eef/src/discordcr/mappings/oauth2.cr#L9" target="_blank">View source</a>]
         
       </div>
     </div>
   
-    <div class="entry-detail" id="content:String-instance-method">
+    <div class="entry-detail" id="icon:String?-instance-method">
       <div class="signature">
         
-        def <strong>content</strong> : String
+        def <strong>icon</strong> : String?
 
-        <a class="method-permalink" href="#content%3AString-instance-method">#</a>
+        <a class="method-permalink" href="#icon%3AString%3F-instance-method">#</a>
       </div>
       
       <br/>
       <div>
+        
+          [<a href="https://github.com/meew0/discordcr/blob/992d26a852c07fb8b4c9301b2ed0740f57c90eef/src/discordcr/mappings/oauth2.cr#L9" target="_blank">View source</a>]
         
       </div>
     </div>
   
-    <div class="entry-detail" id="content&#61;&#40;_content:String&#41;-instance-method">
+    <div class="entry-detail" id="icon&#61;&#40;_icon:::Union&#40;String,Nil&#41;&#41;-instance-method">
       <div class="signature">
         
-        def <strong>content=</strong>(_content : String)
+        def <strong>icon=</strong>(_icon : ::Union(String, Nil))
 
-        <a class="method-permalink" href="#content%3D%28_content%3AString%29-instance-method">#</a>
+        <a class="method-permalink" href="#icon%3D%28_icon%3A%3A%3AUnion%28String%2CNil%29%29-instance-method">#</a>
       </div>
       
       <br/>
       <div>
         
-      </div>
-    </div>
-  
-    <div class="entry-detail" id="embeds:Array&#40;Discord::Embed&#41;-instance-method">
-      <div class="signature">
-        
-        def <strong>embeds</strong> : Array(<a href="../Discord/Embed.html">Discord::Embed</a>)
-
-        <a class="method-permalink" href="#embeds%3AArray%28Discord%3A%3AEmbed%29-instance-method">#</a>
-      </div>
-      
-      <br/>
-      <div>
-        
-      </div>
-    </div>
-  
-    <div class="entry-detail" id="embeds&#61;&#40;_embeds:Array&#40;Embed&#41;&#41;-instance-method">
-      <div class="signature">
-        
-        def <strong>embeds=</strong>(_embeds : Array(<a href="../Discord/Embed.html">Embed</a>))
-
-        <a class="method-permalink" href="#embeds%3D%28_embeds%3AArray%28Embed%29%29-instance-method">#</a>
-      </div>
-      
-      <br/>
-      <div>
+          [<a href="https://github.com/meew0/discordcr/blob/992d26a852c07fb8b4c9301b2ed0740f57c90eef/src/discordcr/mappings/oauth2.cr#L9" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -904,6 +850,8 @@
       <br/>
       <div>
         
+          [<a href="https://github.com/meew0/discordcr/blob/992d26a852c07fb8b4c9301b2ed0740f57c90eef/src/discordcr/mappings/oauth2.cr#L9" target="_blank">View source</a>]
+        
       </div>
     </div>
   
@@ -918,145 +866,103 @@
       <br/>
       <div>
         
+          [<a href="https://github.com/meew0/discordcr/blob/992d26a852c07fb8b4c9301b2ed0740f57c90eef/src/discordcr/mappings/oauth2.cr#L9" target="_blank">View source</a>]
+        
       </div>
     </div>
   
-    <div class="entry-detail" id="mention_everyone:Bool-instance-method">
+    <div class="entry-detail" id="name:String-instance-method">
       <div class="signature">
         
-        def <strong>mention_everyone</strong> : Bool
+        def <strong>name</strong> : String
 
-        <a class="method-permalink" href="#mention_everyone%3ABool-instance-method">#</a>
+        <a class="method-permalink" href="#name%3AString-instance-method">#</a>
       </div>
       
       <br/>
       <div>
         
+          [<a href="https://github.com/meew0/discordcr/blob/992d26a852c07fb8b4c9301b2ed0740f57c90eef/src/discordcr/mappings/oauth2.cr#L9" target="_blank">View source</a>]
+        
       </div>
     </div>
   
-    <div class="entry-detail" id="mention_everyone&#61;&#40;_mention_everyone:Bool&#41;-instance-method">
+    <div class="entry-detail" id="name&#61;&#40;_name:String&#41;-instance-method">
       <div class="signature">
         
-        def <strong>mention_everyone=</strong>(_mention_everyone : Bool)
+        def <strong>name=</strong>(_name : String)
 
-        <a class="method-permalink" href="#mention_everyone%3D%28_mention_everyone%3ABool%29-instance-method">#</a>
+        <a class="method-permalink" href="#name%3D%28_name%3AString%29-instance-method">#</a>
       </div>
       
       <br/>
       <div>
         
+          [<a href="https://github.com/meew0/discordcr/blob/992d26a852c07fb8b4c9301b2ed0740f57c90eef/src/discordcr/mappings/oauth2.cr#L9" target="_blank">View source</a>]
+        
       </div>
     </div>
   
-    <div class="entry-detail" id="mention_roles:Array&#40;UInt64&#41;-instance-method">
+    <div class="entry-detail" id="owner:Discord::User-instance-method">
       <div class="signature">
         
-        def <strong>mention_roles</strong> : Array(UInt64)
+        def <strong>owner</strong> : <a href="../Discord/User.html">Discord::User</a>
 
-        <a class="method-permalink" href="#mention_roles%3AArray%28UInt64%29-instance-method">#</a>
+        <a class="method-permalink" href="#owner%3ADiscord%3A%3AUser-instance-method">#</a>
       </div>
       
       <br/>
       <div>
         
+          [<a href="https://github.com/meew0/discordcr/blob/992d26a852c07fb8b4c9301b2ed0740f57c90eef/src/discordcr/mappings/oauth2.cr#L9" target="_blank">View source</a>]
+        
       </div>
     </div>
   
-    <div class="entry-detail" id="mention_roles&#61;&#40;_mention_roles:Array&#40;UInt64&#41;&#41;-instance-method">
+    <div class="entry-detail" id="owner&#61;&#40;_owner:User&#41;-instance-method">
       <div class="signature">
         
-        def <strong>mention_roles=</strong>(_mention_roles : Array(UInt64))
+        def <strong>owner=</strong>(_owner : <a href="../Discord/User.html">User</a>)
 
-        <a class="method-permalink" href="#mention_roles%3D%28_mention_roles%3AArray%28UInt64%29%29-instance-method">#</a>
+        <a class="method-permalink" href="#owner%3D%28_owner%3AUser%29-instance-method">#</a>
       </div>
       
       <br/>
       <div>
         
+          [<a href="https://github.com/meew0/discordcr/blob/992d26a852c07fb8b4c9301b2ed0740f57c90eef/src/discordcr/mappings/oauth2.cr#L9" target="_blank">View source</a>]
+        
       </div>
     </div>
   
-    <div class="entry-detail" id="mentions:Array&#40;Discord::User&#41;-instance-method">
+    <div class="entry-detail" id="rpc_origins:Array&#40;String&#41;?-instance-method">
       <div class="signature">
         
-        def <strong>mentions</strong> : Array(<a href="../Discord/User.html">Discord::User</a>)
+        def <strong>rpc_origins</strong> : Array(String)?
 
-        <a class="method-permalink" href="#mentions%3AArray%28Discord%3A%3AUser%29-instance-method">#</a>
+        <a class="method-permalink" href="#rpc_origins%3AArray%28String%29%3F-instance-method">#</a>
       </div>
       
       <br/>
       <div>
         
+          [<a href="https://github.com/meew0/discordcr/blob/992d26a852c07fb8b4c9301b2ed0740f57c90eef/src/discordcr/mappings/oauth2.cr#L9" target="_blank">View source</a>]
+        
       </div>
     </div>
   
-    <div class="entry-detail" id="mentions&#61;&#40;_mentions:Array&#40;User&#41;&#41;-instance-method">
+    <div class="entry-detail" id="rpc_origins&#61;&#40;_rpc_origins:::Union&#40;Array&#40;String&#41;,Nil&#41;&#41;-instance-method">
       <div class="signature">
         
-        def <strong>mentions=</strong>(_mentions : Array(<a href="../Discord/User.html">User</a>))
+        def <strong>rpc_origins=</strong>(_rpc_origins : ::Union(Array(String), Nil))
 
-        <a class="method-permalink" href="#mentions%3D%28_mentions%3AArray%28User%29%29-instance-method">#</a>
+        <a class="method-permalink" href="#rpc_origins%3D%28_rpc_origins%3A%3A%3AUnion%28Array%28String%29%2CNil%29%29-instance-method">#</a>
       </div>
       
       <br/>
       <div>
         
-      </div>
-    </div>
-  
-    <div class="entry-detail" id="pinned:Bool?-instance-method">
-      <div class="signature">
-        
-        def <strong>pinned</strong> : Bool?
-
-        <a class="method-permalink" href="#pinned%3ABool%3F-instance-method">#</a>
-      </div>
-      
-      <br/>
-      <div>
-        
-      </div>
-    </div>
-  
-    <div class="entry-detail" id="pinned&#61;&#40;_pinned:::Union&#40;Bool,Nil&#41;&#41;-instance-method">
-      <div class="signature">
-        
-        def <strong>pinned=</strong>(_pinned : ::Union(Bool, Nil))
-
-        <a class="method-permalink" href="#pinned%3D%28_pinned%3A%3A%3AUnion%28Bool%2CNil%29%29-instance-method">#</a>
-      </div>
-      
-      <br/>
-      <div>
-        
-      </div>
-    </div>
-  
-    <div class="entry-detail" id="timestamp:Time-instance-method">
-      <div class="signature">
-        
-        def <strong>timestamp</strong> : Time
-
-        <a class="method-permalink" href="#timestamp%3ATime-instance-method">#</a>
-      </div>
-      
-      <br/>
-      <div>
-        
-      </div>
-    </div>
-  
-    <div class="entry-detail" id="timestamp&#61;&#40;_timestamp:Time&#41;-instance-method">
-      <div class="signature">
-        
-        def <strong>timestamp=</strong>(_timestamp : Time)
-
-        <a class="method-permalink" href="#timestamp%3D%28_timestamp%3ATime%29-instance-method">#</a>
-      </div>
-      
-      <br/>
-      <div>
+          [<a href="https://github.com/meew0/discordcr/blob/992d26a852c07fb8b4c9301b2ed0740f57c90eef/src/discordcr/mappings/oauth2.cr#L9" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1072,61 +978,7 @@
       <br/>
       <div>
         
-      </div>
-    </div>
-  
-    <div class="entry-detail" id="tts:Bool-instance-method">
-      <div class="signature">
-        
-        def <strong>tts</strong> : Bool
-
-        <a class="method-permalink" href="#tts%3ABool-instance-method">#</a>
-      </div>
-      
-      <br/>
-      <div>
-        
-      </div>
-    </div>
-  
-    <div class="entry-detail" id="tts&#61;&#40;_tts:Bool&#41;-instance-method">
-      <div class="signature">
-        
-        def <strong>tts=</strong>(_tts : Bool)
-
-        <a class="method-permalink" href="#tts%3D%28_tts%3ABool%29-instance-method">#</a>
-      </div>
-      
-      <br/>
-      <div>
-        
-      </div>
-    </div>
-  
-    <div class="entry-detail" id="type:UInt8?-instance-method">
-      <div class="signature">
-        
-        def <strong>type</strong> : UInt8?
-
-        <a class="method-permalink" href="#type%3AUInt8%3F-instance-method">#</a>
-      </div>
-      
-      <br/>
-      <div>
-        
-      </div>
-    </div>
-  
-    <div class="entry-detail" id="type&#61;&#40;_type:::Union&#40;UInt8,Nil&#41;&#41;-instance-method">
-      <div class="signature">
-        
-        def <strong>type=</strong>(_type : ::Union(UInt8, Nil))
-
-        <a class="method-permalink" href="#type%3D%28_type%3A%3A%3AUnion%28UInt8%2CNil%29%29-instance-method">#</a>
-      </div>
-      
-      <br/>
-      <div>
+          [<a href="https://github.com/meew0/discordcr/blob/992d26a852c07fb8b4c9301b2ed0740f57c90eef/src/discordcr/mappings/oauth2.cr#L9" target="_blank">View source</a>]
         
       </div>
     </div>
