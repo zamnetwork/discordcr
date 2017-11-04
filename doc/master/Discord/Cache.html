@@ -565,7 +565,7 @@ refrain from caching at all.</p>
   <h2>Defined in:</h2>
   
     
-      <a href="https://github.com/meew0/discordcr/blob/66a6144860da1ddacb603139d473175eab2d68bb/src/discordcr/cache.cr#L35" target="_blank">discordcr/cache.cr</a>
+      <a href="https://github.com/meew0/discordcr/blob/39cc6ca7131a2d2ff0c7f2e71a1a4772ca80e172/src/discordcr/cache.cr#L35" target="_blank">discordcr/cache.cr</a>
     
     <br/>
   
@@ -615,9 +615,9 @@ refrain from caching at all.</p>
       </li>
     
       <li class="entry-summary">
-        <a href="#cache%28user%3AUser%29-instance-method" class="signature"><strong>#cache</strong>(user : User)</a>
+        <a href="#cache%28guild%3AGuild%29-instance-method" class="signature"><strong>#cache</strong>(guild : Guild)</a>
         
-          <div class="summary"><p>Adds a specific <em>user</em> to the cache.</p></div>
+          <div class="summary"><p>Adds a specific <em>guild</em> to the cache.</p></div>
         
       </li>
     
@@ -629,9 +629,9 @@ refrain from caching at all.</p>
       </li>
     
       <li class="entry-summary">
-        <a href="#cache%28guild%3AGuild%29-instance-method" class="signature"><strong>#cache</strong>(guild : Guild)</a>
+        <a href="#cache%28user%3AUser%29-instance-method" class="signature"><strong>#cache</strong>(user : User)</a>
         
-          <div class="summary"><p>Adds a specific <em>guild</em> to the cache.</p></div>
+          <div class="summary"><p>Adds a specific <em>user</em> to the cache.</p></div>
         
       </li>
     
@@ -660,13 +660,6 @@ refrain from caching at all.</p>
         <a href="#cache_multiple_members%28members%3AArray%28GuildMember%29%2Cguild_id%3AUInt64%29-instance-method" class="signature"><strong>#cache_multiple_members</strong>(members : Array(GuildMember), guild_id : UInt64)</a>
         
           <div class="summary"><p>Adds multiple <em>members</em> at once to the cache, given the <em>guild_id</em> they all share.</p></div>
-        
-      </li>
-    
-      <li class="entry-summary">
-        <a href="#channels%3AHash%28UInt64%2CDiscord%3A%3AChannel%29-instance-method" class="signature"><strong>#channels</strong> : Hash(UInt64, Discord::Channel)</a>
-        
-          <div class="summary"><p>A map of cached channels, i.</p></div>
         
       </li>
     
@@ -720,13 +713,6 @@ refrain from caching at all.</p>
       </li>
     
       <li class="entry-summary">
-        <a href="#dm_channels%3AHash%28UInt64%2CUInt64%29-instance-method" class="signature"><strong>#dm_channels</strong> : Hash(UInt64, UInt64)</a>
-        
-          <div class="summary"><p>Mapping of users to the respective DM channels the bot has open with them, represented as {user ID => channel ID}.</p></div>
-        
-      </li>
-    
-      <li class="entry-summary">
         <a href="#guild_channels%28guild_id%3AUInt64%29%3AArray%28UInt64%29-instance-method" class="signature"><strong>#guild_channels</strong>(guild_id : UInt64) : Array(UInt64)</a>
         
           <div class="summary"><p>Returns all channels of a guild, identified by its <em>guild_id</em>.</p></div>
@@ -734,37 +720,9 @@ refrain from caching at all.</p>
       </li>
     
       <li class="entry-summary">
-        <a href="#guild_channels%3AHash%28UInt64%2CArray%28UInt64%29%29-instance-method" class="signature"><strong>#guild_channels</strong> : Hash(UInt64, Array(UInt64))</a>
-        
-          <div class="summary"><p>Mapping of guilds to the channels on them, represented as {guild ID => [channel IDs]}.</p></div>
-        
-      </li>
-    
-      <li class="entry-summary">
         <a href="#guild_roles%28guild_id%3AUInt64%29%3AArray%28UInt64%29-instance-method" class="signature"><strong>#guild_roles</strong>(guild_id : UInt64) : Array(UInt64)</a>
         
           <div class="summary"><p>Returns all roles of a guild, identified by its <em>guild_id</em>.</p></div>
-        
-      </li>
-    
-      <li class="entry-summary">
-        <a href="#guild_roles%3AHash%28UInt64%2CArray%28UInt64%29%29-instance-method" class="signature"><strong>#guild_roles</strong> : Hash(UInt64, Array(UInt64))</a>
-        
-          <div class="summary"><p>Mapping of guilds to the roles on them, represented as {guild ID => [role IDs]}.</p></div>
-        
-      </li>
-    
-      <li class="entry-summary">
-        <a href="#guilds%3AHash%28UInt64%2CDiscord%3A%3AGuild%29-instance-method" class="signature"><strong>#guilds</strong> : Hash(UInt64, Discord::Guild)</a>
-        
-          <div class="summary"><p>A map of guilds (servers) the bot is on.</p></div>
-        
-      </li>
-    
-      <li class="entry-summary">
-        <a href="#members%3AHash%28UInt64%2CHash%28UInt64%2CDiscord%3A%3AGuildMember%29%29-instance-method" class="signature"><strong>#members</strong> : Hash(UInt64, Hash(UInt64, Discord::GuildMember))</a>
-        
-          <div class="summary"><p>A double map of members on servers, represented as {guild ID => {user ID => member}}.</p></div>
         
       </li>
     
@@ -831,20 +789,6 @@ refrain from caching at all.</p>
         
       </li>
     
-      <li class="entry-summary">
-        <a href="#roles%3AHash%28UInt64%2CDiscord%3A%3ARole%29-instance-method" class="signature"><strong>#roles</strong> : Hash(UInt64, Discord::Role)</a>
-        
-          <div class="summary"><p>A map of all roles on servers the bot is on.</p></div>
-        
-      </li>
-    
-      <li class="entry-summary">
-        <a href="#users%3AHash%28UInt64%2CDiscord%3A%3AUser%29-instance-method" class="signature"><strong>#users</strong> : Hash(UInt64, Discord::User)</a>
-        
-          <div class="summary"><p>A map of cached users.</p></div>
-        
-      </li>
-    
   </ul>
 
 
@@ -892,7 +836,7 @@ misses) should be done on.</p></div>
       <br/>
       <div>
         
-          [<a href="https://github.com/meew0/discordcr/blob/66a6144860da1ddacb603139d473175eab2d68bb/src/discordcr/cache.cr#L74" target="_blank">View source</a>]
+          [<a href="https://github.com/meew0/discordcr/blob/39cc6ca7131a2d2ff0c7f2e71a1a4772ca80e172/src/discordcr/cache.cr#L38" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -918,7 +862,7 @@ guild, identified by the <em>guild_id</em>.</p></div>
       <br/>
       <div>
         
-          [<a href="https://github.com/meew0/discordcr/blob/66a6144860da1ddacb603139d473175eab2d68bb/src/discordcr/cache.cr#L242" target="_blank">View source</a>]
+          [<a href="https://github.com/meew0/discordcr/blob/39cc6ca7131a2d2ff0c7f2e71a1a4772ca80e172/src/discordcr/cache.cr#L206" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -937,7 +881,7 @@ guild, identified by the <em>guild_id</em>.</p></div>
       <br/>
       <div>
         
-          [<a href="https://github.com/meew0/discordcr/blob/66a6144860da1ddacb603139d473175eab2d68bb/src/discordcr/cache.cr#L225" target="_blank">View source</a>]
+          [<a href="https://github.com/meew0/discordcr/blob/39cc6ca7131a2d2ff0c7f2e71a1a4772ca80e172/src/discordcr/cache.cr#L189" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -955,43 +899,7 @@ guild, identified by the <em>guild_id</em>.</p></div>
       <br/>
       <div>
         
-          [<a href="https://github.com/meew0/discordcr/blob/66a6144860da1ddacb603139d473175eab2d68bb/src/discordcr/cache.cr#L189" target="_blank">View source</a>]
-        
-      </div>
-    </div>
-  
-    <div class="entry-detail" id="cache&#40;user:User&#41;-instance-method">
-      <div class="signature">
-        
-        def <strong>cache</strong>(user : <a href="../Discord/User.html">User</a>)
-
-        <a class="method-permalink" href="#cache%28user%3AUser%29-instance-method">#</a>
-      </div>
-      
-        <div class="doc"><p>Adds a specific <em>user</em> to the cache.</p></div>
-      
-      <br/>
-      <div>
-        
-          [<a href="https://github.com/meew0/discordcr/blob/66a6144860da1ddacb603139d473175eab2d68bb/src/discordcr/cache.cr#L174" target="_blank">View source</a>]
-        
-      </div>
-    </div>
-  
-    <div class="entry-detail" id="cache&#40;channel:Channel&#41;-instance-method">
-      <div class="signature">
-        
-        def <strong>cache</strong>(channel : <a href="../Discord/Channel.html">Channel</a>)
-
-        <a class="method-permalink" href="#cache%28channel%3AChannel%29-instance-method">#</a>
-      </div>
-      
-        <div class="doc"><p>Adds a specific <em>channel</em> to the cache.</p></div>
-      
-      <br/>
-      <div>
-        
-          [<a href="https://github.com/meew0/discordcr/blob/66a6144860da1ddacb603139d473175eab2d68bb/src/discordcr/cache.cr#L179" target="_blank">View source</a>]
+          [<a href="https://github.com/meew0/discordcr/blob/39cc6ca7131a2d2ff0c7f2e71a1a4772ca80e172/src/discordcr/cache.cr#L153" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1009,7 +917,43 @@ guild, identified by the <em>guild_id</em>.</p></div>
       <br/>
       <div>
         
-          [<a href="https://github.com/meew0/discordcr/blob/66a6144860da1ddacb603139d473175eab2d68bb/src/discordcr/cache.cr#L184" target="_blank">View source</a>]
+          [<a href="https://github.com/meew0/discordcr/blob/39cc6ca7131a2d2ff0c7f2e71a1a4772ca80e172/src/discordcr/cache.cr#L148" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="cache&#40;channel:Channel&#41;-instance-method">
+      <div class="signature">
+        
+        def <strong>cache</strong>(channel : <a href="../Discord/Channel.html">Channel</a>)
+
+        <a class="method-permalink" href="#cache%28channel%3AChannel%29-instance-method">#</a>
+      </div>
+      
+        <div class="doc"><p>Adds a specific <em>channel</em> to the cache.</p></div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/meew0/discordcr/blob/39cc6ca7131a2d2ff0c7f2e71a1a4772ca80e172/src/discordcr/cache.cr#L143" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="cache&#40;user:User&#41;-instance-method">
+      <div class="signature">
+        
+        def <strong>cache</strong>(user : <a href="../Discord/User.html">User</a>)
+
+        <a class="method-permalink" href="#cache%28user%3AUser%29-instance-method">#</a>
+      </div>
+      
+        <div class="doc"><p>Adds a specific <em>user</em> to the cache.</p></div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/meew0/discordcr/blob/39cc6ca7131a2d2ff0c7f2e71a1a4772ca80e172/src/discordcr/cache.cr#L138" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1027,7 +971,7 @@ guild, identified by the <em>guild_id</em>.</p></div>
       <br/>
       <div>
         
-          [<a href="https://github.com/meew0/discordcr/blob/66a6144860da1ddacb603139d473175eab2d68bb/src/discordcr/cache.cr#L195" target="_blank">View source</a>]
+          [<a href="https://github.com/meew0/discordcr/blob/39cc6ca7131a2d2ff0c7f2e71a1a4772ca80e172/src/discordcr/cache.cr#L159" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1045,7 +989,7 @@ guild, identified by the <em>guild_id</em>.</p></div>
       <br/>
       <div>
         
-          [<a href="https://github.com/meew0/discordcr/blob/66a6144860da1ddacb603139d473175eab2d68bb/src/discordcr/cache.cr#L206" target="_blank">View source</a>]
+          [<a href="https://github.com/meew0/discordcr/blob/39cc6ca7131a2d2ff0c7f2e71a1a4772ca80e172/src/discordcr/cache.cr#L170" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1064,7 +1008,7 @@ guild, identified by the <em>guild_id</em>.</p></div>
       <br/>
       <div>
         
-          [<a href="https://github.com/meew0/discordcr/blob/66a6144860da1ddacb603139d473175eab2d68bb/src/discordcr/cache.cr#L201" target="_blank">View source</a>]
+          [<a href="https://github.com/meew0/discordcr/blob/39cc6ca7131a2d2ff0c7f2e71a1a4772ca80e172/src/discordcr/cache.cr#L165" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1084,26 +1028,7 @@ processing chunks; outside of that it is likely not of much use.</p></div>
       <br/>
       <div>
         
-          [<a href="https://github.com/meew0/discordcr/blob/66a6144860da1ddacb603139d473175eab2d68bb/src/discordcr/cache.cr#L211" target="_blank">View source</a>]
-        
-      </div>
-    </div>
-  
-    <div class="entry-detail" id="channels:Hash&#40;UInt64,Discord::Channel&#41;-instance-method">
-      <div class="signature">
-        
-        def <strong>channels</strong> : Hash(UInt64, <a href="../Discord/Channel.html">Discord::Channel</a>)
-
-        <a class="method-permalink" href="#channels%3AHash%28UInt64%2CDiscord%3A%3AChannel%29-instance-method">#</a>
-      </div>
-      
-        <div class="doc"><p>A map of cached channels, i. e. all channels on all servers the bot is on,
-as well as all DM channels.</p></div>
-      
-      <br/>
-      <div>
-        
-          [<a href="https://github.com/meew0/discordcr/blob/66a6144860da1ddacb603139d473175eab2d68bb/src/discordcr/cache.cr#L43" target="_blank">View source</a>]
+          [<a href="https://github.com/meew0/discordcr/blob/39cc6ca7131a2d2ff0c7f2e71a1a4772ca80e172/src/discordcr/cache.cr#L175" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1121,7 +1046,7 @@ as well as all DM channels.</p></div>
       <br/>
       <div>
         
-          [<a href="https://github.com/meew0/discordcr/blob/66a6144860da1ddacb603139d473175eab2d68bb/src/discordcr/cache.cr#L143" target="_blank">View source</a>]
+          [<a href="https://github.com/meew0/discordcr/blob/39cc6ca7131a2d2ff0c7f2e71a1a4772ca80e172/src/discordcr/cache.cr#L107" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1139,7 +1064,7 @@ as well as all DM channels.</p></div>
       <br/>
       <div>
         
-          [<a href="https://github.com/meew0/discordcr/blob/66a6144860da1ddacb603139d473175eab2d68bb/src/discordcr/cache.cr#L169" target="_blank">View source</a>]
+          [<a href="https://github.com/meew0/discordcr/blob/39cc6ca7131a2d2ff0c7f2e71a1a4772ca80e172/src/discordcr/cache.cr#L133" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1157,7 +1082,7 @@ as well as all DM channels.</p></div>
       <br/>
       <div>
         
-          [<a href="https://github.com/meew0/discordcr/blob/66a6144860da1ddacb603139d473175eab2d68bb/src/discordcr/cache.cr#L164" target="_blank">View source</a>]
+          [<a href="https://github.com/meew0/discordcr/blob/39cc6ca7131a2d2ff0c7f2e71a1a4772ca80e172/src/discordcr/cache.cr#L128" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1175,7 +1100,7 @@ as well as all DM channels.</p></div>
       <br/>
       <div>
         
-          [<a href="https://github.com/meew0/discordcr/blob/66a6144860da1ddacb603139d473175eab2d68bb/src/discordcr/cache.cr#L148" target="_blank">View source</a>]
+          [<a href="https://github.com/meew0/discordcr/blob/39cc6ca7131a2d2ff0c7f2e71a1a4772ca80e172/src/discordcr/cache.cr#L112" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1194,7 +1119,7 @@ is on.</p></div>
       <br/>
       <div>
         
-          [<a href="https://github.com/meew0/discordcr/blob/66a6144860da1ddacb603139d473175eab2d68bb/src/discordcr/cache.cr#L154" target="_blank">View source</a>]
+          [<a href="https://github.com/meew0/discordcr/blob/39cc6ca7131a2d2ff0c7f2e71a1a4772ca80e172/src/discordcr/cache.cr#L118" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1212,7 +1137,7 @@ is on.</p></div>
       <br/>
       <div>
         
-          [<a href="https://github.com/meew0/discordcr/blob/66a6144860da1ddacb603139d473175eab2d68bb/src/discordcr/cache.cr#L159" target="_blank">View source</a>]
+          [<a href="https://github.com/meew0/discordcr/blob/39cc6ca7131a2d2ff0c7f2e71a1a4772ca80e172/src/discordcr/cache.cr#L123" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1230,26 +1155,7 @@ is on.</p></div>
       <br/>
       <div>
         
-          [<a href="https://github.com/meew0/discordcr/blob/66a6144860da1ddacb603139d473175eab2d68bb/src/discordcr/cache.cr#L138" target="_blank">View source</a>]
-        
-      </div>
-    </div>
-  
-    <div class="entry-detail" id="dm_channels:Hash&#40;UInt64,UInt64&#41;-instance-method">
-      <div class="signature">
-        
-        def <strong>dm_channels</strong> : Hash(UInt64, UInt64)
-
-        <a class="method-permalink" href="#dm_channels%3AHash%28UInt64%2CUInt64%29-instance-method">#</a>
-      </div>
-      
-        <div class="doc"><p>Mapping of users to the respective DM channels the bot has open with them,
-represented as {user ID => channel ID}.</p></div>
-      
-      <br/>
-      <div>
-        
-          [<a href="https://github.com/meew0/discordcr/blob/66a6144860da1ddacb603139d473175eab2d68bb/src/discordcr/cache.cr#L62" target="_blank">View source</a>]
+          [<a href="https://github.com/meew0/discordcr/blob/39cc6ca7131a2d2ff0c7f2e71a1a4772ca80e172/src/discordcr/cache.cr#L102" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1267,26 +1173,7 @@ represented as {user ID => channel ID}.</p></div>
       <br/>
       <div>
         
-          [<a href="https://github.com/meew0/discordcr/blob/66a6144860da1ddacb603139d473175eab2d68bb/src/discordcr/cache.cr#L236" target="_blank">View source</a>]
-        
-      </div>
-    </div>
-  
-    <div class="entry-detail" id="guild_channels:Hash&#40;UInt64,Array&#40;UInt64&#41;&#41;-instance-method">
-      <div class="signature">
-        
-        def <strong>guild_channels</strong> : Hash(UInt64, Array(UInt64))
-
-        <a class="method-permalink" href="#guild_channels%3AHash%28UInt64%2CArray%28UInt64%29%29-instance-method">#</a>
-      </div>
-      
-        <div class="doc"><p>Mapping of guilds to the channels on them, represented as {guild ID =>
-[channel IDs]}.</p></div>
-      
-      <br/>
-      <div>
-        
-          [<a href="https://github.com/meew0/discordcr/blob/66a6144860da1ddacb603139d473175eab2d68bb/src/discordcr/cache.cr#L70" target="_blank">View source</a>]
+          [<a href="https://github.com/meew0/discordcr/blob/39cc6ca7131a2d2ff0c7f2e71a1a4772ca80e172/src/discordcr/cache.cr#L200" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1304,67 +1191,7 @@ represented as {user ID => channel ID}.</p></div>
       <br/>
       <div>
         
-          [<a href="https://github.com/meew0/discordcr/blob/66a6144860da1ddacb603139d473175eab2d68bb/src/discordcr/cache.cr#L219" target="_blank">View source</a>]
-        
-      </div>
-    </div>
-  
-    <div class="entry-detail" id="guild_roles:Hash&#40;UInt64,Array&#40;UInt64&#41;&#41;-instance-method">
-      <div class="signature">
-        
-        def <strong>guild_roles</strong> : Hash(UInt64, Array(UInt64))
-
-        <a class="method-permalink" href="#guild_roles%3AHash%28UInt64%2CArray%28UInt64%29%29-instance-method">#</a>
-      </div>
-      
-        <div class="doc"><p>Mapping of guilds to the roles on them, represented as {guild ID =>
-[role IDs]}.</p></div>
-      
-      <br/>
-      <div>
-        
-          [<a href="https://github.com/meew0/discordcr/blob/66a6144860da1ddacb603139d473175eab2d68bb/src/discordcr/cache.cr#L66" target="_blank">View source</a>]
-        
-      </div>
-    </div>
-  
-    <div class="entry-detail" id="guilds:Hash&#40;UInt64,Discord::Guild&#41;-instance-method">
-      <div class="signature">
-        
-        def <strong>guilds</strong> : Hash(UInt64, <a href="../Discord/Guild.html">Discord::Guild</a>)
-
-        <a class="method-permalink" href="#guilds%3AHash%28UInt64%2CDiscord%3A%3AGuild%29-instance-method">#</a>
-      </div>
-      
-        <div class="doc"><p>A map of guilds (servers) the bot is on. Doesn't ignore guilds temporarily
-deleted due to an outage; so if an outage is going on right now the
-affected guilds would be missing here too.</p></div>
-      
-      <br/>
-      <div>
-        
-          [<a href="https://github.com/meew0/discordcr/blob/66a6144860da1ddacb603139d473175eab2d68bb/src/discordcr/cache.cr#L48" target="_blank">View source</a>]
-        
-      </div>
-    </div>
-  
-    <div class="entry-detail" id="members:Hash&#40;UInt64,Hash&#40;UInt64,Discord::GuildMember&#41;&#41;-instance-method">
-      <div class="signature">
-        
-        def <strong>members</strong> : Hash(UInt64, Hash(UInt64, <a href="../Discord/GuildMember.html">Discord::GuildMember</a>))
-
-        <a class="method-permalink" href="#members%3AHash%28UInt64%2CHash%28UInt64%2CDiscord%3A%3AGuildMember%29%29-instance-method">#</a>
-      </div>
-      
-        <div class="doc"><p>A double map of members on servers, represented as {guild ID => {user ID
-=> member}}. Will only contain previously and currently online members as
-well as all members that have been chunked (see
-<code><a href="../Discord/Client.html#request_guild_members%28guild_id%3AUInt64%2Cquery%3AString%3D%26quot%3B%26quot%3B%2Climit%3AInt32%3D0%29-instance-method">Client#request_guild_members</a></code>).</p></div>
-      
-      <br/>
-      <div>
-        
-          [<a href="https://github.com/meew0/discordcr/blob/66a6144860da1ddacb603139d473175eab2d68bb/src/discordcr/cache.cr#L54" target="_blank">View source</a>]
+          [<a href="https://github.com/meew0/discordcr/blob/39cc6ca7131a2d2ff0c7f2e71a1a4772ca80e172/src/discordcr/cache.cr#L183" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1382,7 +1209,7 @@ well as all members that have been chunked (see
       <br/>
       <div>
         
-          [<a href="https://github.com/meew0/discordcr/blob/66a6144860da1ddacb603139d473175eab2d68bb/src/discordcr/cache.cr#L248" target="_blank">View source</a>]
+          [<a href="https://github.com/meew0/discordcr/blob/39cc6ca7131a2d2ff0c7f2e71a1a4772ca80e172/src/discordcr/cache.cr#L212" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1400,7 +1227,7 @@ well as all members that have been chunked (see
       <br/>
       <div>
         
-          [<a href="https://github.com/meew0/discordcr/blob/66a6144860da1ddacb603139d473175eab2d68bb/src/discordcr/cache.cr#L231" target="_blank">View source</a>]
+          [<a href="https://github.com/meew0/discordcr/blob/39cc6ca7131a2d2ff0c7f2e71a1a4772ca80e172/src/discordcr/cache.cr#L195" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1419,7 +1246,7 @@ will do an API call.</p></div>
       <br/>
       <div>
         
-          [<a href="https://github.com/meew0/discordcr/blob/66a6144860da1ddacb603139d473175eab2d68bb/src/discordcr/cache.cr#L95" target="_blank">View source</a>]
+          [<a href="https://github.com/meew0/discordcr/blob/39cc6ca7131a2d2ff0c7f2e71a1a4772ca80e172/src/discordcr/cache.cr#L59" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1439,7 +1266,7 @@ always be cached.</p></div>
       <br/>
       <div>
         
-          [<a href="https://github.com/meew0/discordcr/blob/66a6144860da1ddacb603139d473175eab2d68bb/src/discordcr/cache.cr#L133" target="_blank">View source</a>]
+          [<a href="https://github.com/meew0/discordcr/blob/39cc6ca7131a2d2ff0c7f2e71a1a4772ca80e172/src/discordcr/cache.cr#L97" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1458,7 +1285,7 @@ always be cached.</p></div>
       <br/>
       <div>
         
-          [<a href="https://github.com/meew0/discordcr/blob/66a6144860da1ddacb603139d473175eab2d68bb/src/discordcr/cache.cr#L122" target="_blank">View source</a>]
+          [<a href="https://github.com/meew0/discordcr/blob/39cc6ca7131a2d2ff0c7f2e71a1a4772ca80e172/src/discordcr/cache.cr#L86" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1477,7 +1304,7 @@ will do an API call.</p></div>
       <br/>
       <div>
         
-          [<a href="https://github.com/meew0/discordcr/blob/66a6144860da1ddacb603139d473175eab2d68bb/src/discordcr/cache.cr#L101" target="_blank">View source</a>]
+          [<a href="https://github.com/meew0/discordcr/blob/39cc6ca7131a2d2ff0c7f2e71a1a4772ca80e172/src/discordcr/cache.cr#L65" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1497,7 +1324,7 @@ object is not cached.</p></div>
       <br/>
       <div>
         
-          [<a href="https://github.com/meew0/discordcr/blob/66a6144860da1ddacb603139d473175eab2d68bb/src/discordcr/cache.cr#L108" target="_blank">View source</a>]
+          [<a href="https://github.com/meew0/discordcr/blob/39cc6ca7131a2d2ff0c7f2e71a1a4772ca80e172/src/discordcr/cache.cr#L72" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1517,7 +1344,7 @@ all roles should be cached at all times so it won't be a problem.</p></div>
       <br/>
       <div>
         
-          [<a href="https://github.com/meew0/discordcr/blob/66a6144860da1ddacb603139d473175eab2d68bb/src/discordcr/cache.cr#L116" target="_blank">View source</a>]
+          [<a href="https://github.com/meew0/discordcr/blob/39cc6ca7131a2d2ff0c7f2e71a1a4772ca80e172/src/discordcr/cache.cr#L80" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1536,46 +1363,7 @@ will do an API call.</p></div>
       <br/>
       <div>
         
-          [<a href="https://github.com/meew0/discordcr/blob/66a6144860da1ddacb603139d473175eab2d68bb/src/discordcr/cache.cr#L89" target="_blank">View source</a>]
-        
-      </div>
-    </div>
-  
-    <div class="entry-detail" id="roles:Hash&#40;UInt64,Discord::Role&#41;-instance-method">
-      <div class="signature">
-        
-        def <strong>roles</strong> : Hash(UInt64, <a href="../Discord/Role.html">Discord::Role</a>)
-
-        <a class="method-permalink" href="#roles%3AHash%28UInt64%2CDiscord%3A%3ARole%29-instance-method">#</a>
-      </div>
-      
-        <div class="doc"><p>A map of all roles on servers the bot is on. Does not discriminate by
-guild, as role IDs are unique even across guilds.</p></div>
-      
-      <br/>
-      <div>
-        
-          [<a href="https://github.com/meew0/discordcr/blob/66a6144860da1ddacb603139d473175eab2d68bb/src/discordcr/cache.cr#L58" target="_blank">View source</a>]
-        
-      </div>
-    </div>
-  
-    <div class="entry-detail" id="users:Hash&#40;UInt64,Discord::User&#41;-instance-method">
-      <div class="signature">
-        
-        def <strong>users</strong> : Hash(UInt64, <a href="../Discord/User.html">Discord::User</a>)
-
-        <a class="method-permalink" href="#users%3AHash%28UInt64%2CDiscord%3A%3AUser%29-instance-method">#</a>
-      </div>
-      
-        <div class="doc"><p>A map of cached users. These aren't necessarily all the users in servers
-the bot has access to, but rather all the users that have been seen by
-the bot in the past (and haven't been deleted by means of <code><a href="../Discord/Cache.html#delete_user%28id%3AUInt64%29-instance-method">#delete_user</a></code>).</p></div>
-      
-      <br/>
-      <div>
-        
-          [<a href="https://github.com/meew0/discordcr/blob/66a6144860da1ddacb603139d473175eab2d68bb/src/discordcr/cache.cr#L39" target="_blank">View source</a>]
+          [<a href="https://github.com/meew0/discordcr/blob/39cc6ca7131a2d2ff0c7f2e71a1a4772ca80e172/src/discordcr/cache.cr#L53" target="_blank">View source</a>]
         
       </div>
     </div>
