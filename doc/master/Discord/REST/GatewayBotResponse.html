@@ -5,7 +5,7 @@
   <meta id="repository-name" content="github.com/meew0/discordcr">
   <link href="../../css/style.css" rel="stylesheet" type="text/css" />
   <script type="text/javascript" src="../../js/doc.js"></script>
-  <title>Discord::Gateway::TypingStartPayload - github.com/meew0/discordcr</title>
+  <title>Discord::REST::GatewayBotResponse - github.com/meew0/discordcr</title>
 </head>
 <body>
 
@@ -170,7 +170,7 @@
       
     </li>
   
-  <li class="parent open current" data-id="github.com/meew0/discordcr/Discord/Gateway" data-name="discord::gateway">
+  <li class="parent " data-id="github.com/meew0/discordcr/Discord/Gateway" data-name="discord::gateway">
       <a href="../../Discord/Gateway.html">Gateway</a>
       
         <ul>
@@ -320,7 +320,7 @@
       
     </li>
   
-  <li class=" current" data-id="github.com/meew0/discordcr/Discord/Gateway/TypingStartPayload" data-name="discord::gateway::typingstartpayload">
+  <li class=" " data-id="github.com/meew0/discordcr/Discord/Gateway/TypingStartPayload" data-name="discord::gateway::typingstartpayload">
       <a href="../../Discord/Gateway/TypingStartPayload.html">TypingStartPayload</a>
       
     </li>
@@ -490,7 +490,7 @@
       
     </li>
   
-  <li class="parent " data-id="github.com/meew0/discordcr/Discord/REST" data-name="discord::rest">
+  <li class="parent open current" data-id="github.com/meew0/discordcr/Discord/REST" data-name="discord::rest">
       <a href="../../Discord/REST.html">REST</a>
       
         <ul>
@@ -500,7 +500,7 @@
       
     </li>
   
-  <li class=" " data-id="github.com/meew0/discordcr/Discord/REST/GatewayBotResponse" data-name="discord::rest::gatewaybotresponse">
+  <li class=" current" data-id="github.com/meew0/discordcr/Discord/REST/GatewayBotResponse" data-name="discord::rest::gatewaybotresponse">
       <a href="../../Discord/REST/GatewayBotResponse.html">GatewayBotResponse</a>
       
     </li>
@@ -607,15 +607,19 @@
 <div id="main-content">
 <h1 class="type-name">
 
-  <span class="kind">struct</span> Discord::Gateway::TypingStartPayload
+  <span class="kind">struct</span> Discord::REST::GatewayBotResponse
 
 </h1>
 
 
-  <ul class="superclass-hierarchy"><li class="superclass"><a href="../../Discord/Gateway/TypingStartPayload.html">Discord::Gateway::TypingStartPayload</a></li><li class="superclass">Struct</li><li class="superclass">Value</li><li class="superclass">Object</li></ul>
+  <ul class="superclass-hierarchy"><li class="superclass"><a href="../../Discord/REST/GatewayBotResponse.html">Discord::REST::GatewayBotResponse</a></li><li class="superclass">Struct</li><li class="superclass">Value</li><li class="superclass">Object</li></ul>
 
 
 
+
+  <h2>Overview</h2>
+
+  <p>A response to the Get Gateway Bot REST API call.</p>
 
 
 
@@ -633,7 +637,7 @@
   <h2>Defined in:</h2>
   
     
-      <a href="https://github.com/meew0/discordcr/blob/d28639a302c1525af59842b656c8fb7e0985911d/src/discordcr/mappings/gateway.cr#L344" target="_blank">discordcr/mappings/gateway.cr</a>
+      <a href="https://github.com/meew0/discordcr/blob/d28639a302c1525af59842b656c8fb7e0985911d/src/discordcr/mappings/rest.cr#L13" target="_blank">discordcr/mappings/rest.cr</a>
     
     <br/>
   
@@ -646,7 +650,7 @@
   <ul class="list-summary">
     
       <li class="entry-summary">
-        <a href="#new%28__temp_847%3AJSON%3A%3APullParser%29-class-method" class="signature"><strong>.new</strong>(__temp_847 : JSON::PullParser)</a>
+        <a href="#new%28__temp_953%3AJSON%3A%3APullParser%29-class-method" class="signature"><strong>.new</strong>(__temp_953 : JSON::PullParser)</a>
         
       </li>
     
@@ -660,22 +664,12 @@
   <ul class="list-summary">
     
       <li class="entry-summary">
-        <a href="#channel_id%3AUInt64-instance-method" class="signature"><strong>#channel_id</strong> : UInt64</a>
+        <a href="#shards%3AInt32-instance-method" class="signature"><strong>#shards</strong> : Int32</a>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#channel_id%3D%28_channel_id%3AUInt64%29-instance-method" class="signature"><strong>#channel_id=</strong>(_channel_id : UInt64)</a>
-        
-      </li>
-    
-      <li class="entry-summary">
-        <a href="#timestamp%3ATime-instance-method" class="signature"><strong>#timestamp</strong> : Time</a>
-        
-      </li>
-    
-      <li class="entry-summary">
-        <a href="#timestamp%3D%28_timestamp%3ATime%29-instance-method" class="signature"><strong>#timestamp=</strong>(_timestamp : Time)</a>
+        <a href="#shards%3D%28_shards%3AInt32%29-instance-method" class="signature"><strong>#shards=</strong>(_shards : Int32)</a>
         
       </li>
     
@@ -685,12 +679,12 @@
       </li>
     
       <li class="entry-summary">
-        <a href="#user_id%3AUInt64-instance-method" class="signature"><strong>#user_id</strong> : UInt64</a>
+        <a href="#url%3AString-instance-method" class="signature"><strong>#url</strong> : String</a>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#user_id%3D%28_user_id%3AUInt64%29-instance-method" class="signature"><strong>#user_id=</strong>(_user_id : UInt64)</a>
+        <a href="#url%3D%28_url%3AString%29-instance-method" class="signature"><strong>#url=</strong>(_url : String)</a>
         
       </li>
     
@@ -737,12 +731,12 @@
 
   <h2>Constructor Detail</h2>
   
-    <div class="entry-detail" id="new(__temp_847:JSON::PullParser)-class-method">
+    <div class="entry-detail" id="new(__temp_953:JSON::PullParser)-class-method">
       <div class="signature">
         
-        def self.<strong>new</strong>(__temp_847 : JSON::PullParser)
+        def self.<strong>new</strong>(__temp_953 : JSON::PullParser)
 
-        <a class="method-permalink" href="#new%28__temp_847%3AJSON%3A%3APullParser%29-class-method">#</a>
+        <a class="method-permalink" href="#new%28__temp_953%3AJSON%3A%3APullParser%29-class-method">#</a>
       </div>
       
       <br/>
@@ -758,12 +752,12 @@
 
   <h2>Instance Method Detail</h2>
   
-    <div class="entry-detail" id="channel_id:UInt64-instance-method">
+    <div class="entry-detail" id="shards:Int32-instance-method">
       <div class="signature">
         
-        def <strong>channel_id</strong> : UInt64
+        def <strong>shards</strong> : Int32
 
-        <a class="method-permalink" href="#channel_id%3AUInt64-instance-method">#</a>
+        <a class="method-permalink" href="#shards%3AInt32-instance-method">#</a>
       </div>
       
       <br/>
@@ -772,40 +766,12 @@
       </div>
     </div>
   
-    <div class="entry-detail" id="channel_id=(_channel_id:UInt64)-instance-method">
+    <div class="entry-detail" id="shards=(_shards:Int32)-instance-method">
       <div class="signature">
         
-        def <strong>channel_id=</strong>(_channel_id : UInt64)
+        def <strong>shards=</strong>(_shards : Int32)
 
-        <a class="method-permalink" href="#channel_id%3D%28_channel_id%3AUInt64%29-instance-method">#</a>
-      </div>
-      
-      <br/>
-      <div>
-        
-      </div>
-    </div>
-  
-    <div class="entry-detail" id="timestamp:Time-instance-method">
-      <div class="signature">
-        
-        def <strong>timestamp</strong> : Time
-
-        <a class="method-permalink" href="#timestamp%3ATime-instance-method">#</a>
-      </div>
-      
-      <br/>
-      <div>
-        
-      </div>
-    </div>
-  
-    <div class="entry-detail" id="timestamp=(_timestamp:Time)-instance-method">
-      <div class="signature">
-        
-        def <strong>timestamp=</strong>(_timestamp : Time)
-
-        <a class="method-permalink" href="#timestamp%3D%28_timestamp%3ATime%29-instance-method">#</a>
+        <a class="method-permalink" href="#shards%3D%28_shards%3AInt32%29-instance-method">#</a>
       </div>
       
       <br/>
@@ -828,12 +794,12 @@
       </div>
     </div>
   
-    <div class="entry-detail" id="user_id:UInt64-instance-method">
+    <div class="entry-detail" id="url:String-instance-method">
       <div class="signature">
         
-        def <strong>user_id</strong> : UInt64
+        def <strong>url</strong> : String
 
-        <a class="method-permalink" href="#user_id%3AUInt64-instance-method">#</a>
+        <a class="method-permalink" href="#url%3AString-instance-method">#</a>
       </div>
       
       <br/>
@@ -842,12 +808,12 @@
       </div>
     </div>
   
-    <div class="entry-detail" id="user_id=(_user_id:UInt64)-instance-method">
+    <div class="entry-detail" id="url=(_url:String)-instance-method">
       <div class="signature">
         
-        def <strong>user_id=</strong>(_user_id : UInt64)
+        def <strong>url=</strong>(_url : String)
 
-        <a class="method-permalink" href="#user_id%3D%28_user_id%3AUInt64%29-instance-method">#</a>
+        <a class="method-permalink" href="#url%3D%28_url%3AString%29-instance-method">#</a>
       </div>
       
       <br/>
