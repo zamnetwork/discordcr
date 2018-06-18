@@ -1,24 +1,40 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
+  <meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="generator" content="Crystal Docs 0.25.0">
+
+
+<link href="../css/style.css" rel="stylesheet" type="text/css">
+
+<script type="text/javascript" src="../js/doc.js"></script>
+<script type="text/javascript">
+  CrystalDoc.base_path = "../";
+</script>
+
   <meta id="repository-name" content="github.com/meew0/discordcr">
-  <link href="../css/style.css" rel="stylesheet" type="text/css" />
-  <script type="text/javascript" src="../js/doc.js"></script>
   <title>Discord::GuildMember - github.com/meew0/discordcr</title>
 </head>
 <body>
 
-<div id="types-list">
-  <div id="search-box">
-    <input type="search" id="search-input" placeholder="Search...">
+<div class="sidebar">
+  <div class="sidebar-header">
+    <div class="search-box">
+      <input type="search" class="search-input" placeholder="Search..." spellcheck="false">
+    </div>
+
+    <div class="repository-links">
+      <a href="../index.html">README</a>
+    </div>
   </div>
 
-  <ul>
-    <li><a href="../index.html">README</a></li>
-  </ul>
+  <div class="search-results" class="hidden">
+    <ul class="search-list"></ul>
+  </div>
 
-  <ul>
+  <div class="types-list">
+    <ul>
   
   <li class="parent open current" data-id="github.com/meew0/discordcr/Discord" data-name="discord">
       <a href="../Discord.html">Discord</a>
@@ -602,9 +618,11 @@
   
 </ul>
 
+  </div>
 </div>
 
-<div id="main-content">
+
+<div class="main-content">
 <h1 class="type-name">
 
   <span class="kind">struct</span> Discord::GuildMember
@@ -633,7 +651,7 @@
   <h2>Defined in:</h2>
   
     
-      <a href="https://github.com/meew0/discordcr/blob/6f8a8f0d3ea7c768e384a6b3c7ef72b251ff4195/src/discordcr/mappings/guild.cr#L69" target="_blank">discordcr/mappings/guild.cr</a>
+      <a href="https://github.com/meew0/discordcr/blob/27e400cace78b2d70605c6784fa3630ac797a794/src/discordcr/mappings/guild.cr#L69" target="_blank">discordcr/mappings/guild.cr</a>
     
     <br/>
   
@@ -646,7 +664,7 @@
   <ul class="list-summary">
     
       <li class="entry-summary">
-        <a href="#new%28__temp_410%3AJSON%3A%3APullParser%29-class-method" class="signature"><strong>.new</strong>(__temp_410 : JSON::PullParser)</a>
+        <a href="#new%28__temp_413%3AJSON%3A%3APullParser%29-class-method" class="signature"><strong>.new</strong>(__temp_413 : JSON::PullParser)</a>
         
       </li>
     
@@ -660,7 +678,7 @@
   <ul class="list-summary">
     
       <li class="entry-summary">
-        <a href="#deaf%3ABool%3F-instance-method" class="signature"><strong>#deaf</strong> : Bool?</a>
+        <a href="#deaf%3A%3A%3AUnion%28Bool%2CNil%29-instance-method" class="signature"><strong>#deaf</strong> : ::Union(Bool, Nil)</a>
         
       </li>
     
@@ -670,7 +688,7 @@
       </li>
     
       <li class="entry-summary">
-        <a href="#joined_at%3ATime%3F-instance-method" class="signature"><strong>#joined_at</strong> : Time?</a>
+        <a href="#joined_at%3A%3A%3AUnion%28Time%2CNil%29-instance-method" class="signature"><strong>#joined_at</strong> : ::Union(Time, Nil)</a>
         
       </li>
     
@@ -680,7 +698,7 @@
       </li>
     
       <li class="entry-summary">
-        <a href="#mute%3ABool%3F-instance-method" class="signature"><strong>#mute</strong> : Bool?</a>
+        <a href="#mute%3A%3A%3AUnion%28Bool%2CNil%29-instance-method" class="signature"><strong>#mute</strong> : ::Union(Bool, Nil)</a>
         
       </li>
     
@@ -690,7 +708,7 @@
       </li>
     
       <li class="entry-summary">
-        <a href="#nick%3AString%3F-instance-method" class="signature"><strong>#nick</strong> : String?</a>
+        <a href="#nick%3A%3A%3AUnion%28String%2CNil%29-instance-method" class="signature"><strong>#nick</strong> : ::Union(String, Nil)</a>
         
       </li>
     
@@ -715,7 +733,7 @@
       </li>
     
       <li class="entry-summary">
-        <a href="#user%3ADiscord%3A%3AUser-instance-method" class="signature"><strong>#user</strong> : Discord::User</a>
+        <a href="#user%3AUser-instance-method" class="signature"><strong>#user</strong> : User</a>
         
       </li>
     
@@ -767,12 +785,12 @@
 
   <h2>Constructor Detail</h2>
   
-    <div class="entry-detail" id="new(__temp_410:JSON::PullParser)-class-method">
+    <div class="entry-detail" id="new(__temp_413:JSON::PullParser)-class-method">
       <div class="signature">
         
-        def self.<strong>new</strong>(__temp_410 : JSON::PullParser)
+        def self.<strong>new</strong>(__temp_413 : JSON::PullParser)
 
-        <a class="method-permalink" href="#new%28__temp_410%3AJSON%3A%3APullParser%29-class-method">#</a>
+        <a class="method-permalink" href="#new%28__temp_413%3AJSON%3A%3APullParser%29-class-method">#</a>
       </div>
       
       <br/>
@@ -788,12 +806,12 @@
 
   <h2>Instance Method Detail</h2>
   
-    <div class="entry-detail" id="deaf:Bool?-instance-method">
+    <div class="entry-detail" id="deaf:::Union(Bool,Nil)-instance-method">
       <div class="signature">
         
-        def <strong>deaf</strong> : Bool?
+        def <strong>deaf</strong> : ::Union(Bool, Nil)
 
-        <a class="method-permalink" href="#deaf%3ABool%3F-instance-method">#</a>
+        <a class="method-permalink" href="#deaf%3A%3A%3AUnion%28Bool%2CNil%29-instance-method">#</a>
       </div>
       
       <br/>
@@ -816,12 +834,12 @@
       </div>
     </div>
   
-    <div class="entry-detail" id="joined_at:Time?-instance-method">
+    <div class="entry-detail" id="joined_at:::Union(Time,Nil)-instance-method">
       <div class="signature">
         
-        def <strong>joined_at</strong> : Time?
+        def <strong>joined_at</strong> : ::Union(Time, Nil)
 
-        <a class="method-permalink" href="#joined_at%3ATime%3F-instance-method">#</a>
+        <a class="method-permalink" href="#joined_at%3A%3A%3AUnion%28Time%2CNil%29-instance-method">#</a>
       </div>
       
       <br/>
@@ -844,12 +862,12 @@
       </div>
     </div>
   
-    <div class="entry-detail" id="mute:Bool?-instance-method">
+    <div class="entry-detail" id="mute:::Union(Bool,Nil)-instance-method">
       <div class="signature">
         
-        def <strong>mute</strong> : Bool?
+        def <strong>mute</strong> : ::Union(Bool, Nil)
 
-        <a class="method-permalink" href="#mute%3ABool%3F-instance-method">#</a>
+        <a class="method-permalink" href="#mute%3A%3A%3AUnion%28Bool%2CNil%29-instance-method">#</a>
       </div>
       
       <br/>
@@ -872,12 +890,12 @@
       </div>
     </div>
   
-    <div class="entry-detail" id="nick:String?-instance-method">
+    <div class="entry-detail" id="nick:::Union(String,Nil)-instance-method">
       <div class="signature">
         
-        def <strong>nick</strong> : String?
+        def <strong>nick</strong> : ::Union(String, Nil)
 
-        <a class="method-permalink" href="#nick%3AString%3F-instance-method">#</a>
+        <a class="method-permalink" href="#nick%3A%3A%3AUnion%28String%2CNil%29-instance-method">#</a>
       </div>
       
       <br/>
@@ -942,12 +960,12 @@
       </div>
     </div>
   
-    <div class="entry-detail" id="user:Discord::User-instance-method">
+    <div class="entry-detail" id="user:User-instance-method">
       <div class="signature">
         
-        def <strong>user</strong> : <a href="../Discord/User.html">Discord::User</a>
+        def <strong>user</strong> : <a href="../Discord/User.html">User</a>
 
-        <a class="method-permalink" href="#user%3ADiscord%3A%3AUser-instance-method">#</a>
+        <a class="method-permalink" href="#user%3AUser-instance-method">#</a>
       </div>
       
       <br/>

@@ -1,24 +1,40 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
+  <meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="generator" content="Crystal Docs 0.25.0">
+
+
+<link href="../css/style.css" rel="stylesheet" type="text/css">
+
+<script type="text/javascript" src="../js/doc.js"></script>
+<script type="text/javascript">
+  CrystalDoc.base_path = "../";
+</script>
+
   <meta id="repository-name" content="github.com/meew0/discordcr">
-  <link href="../css/style.css" rel="stylesheet" type="text/css" />
-  <script type="text/javascript" src="../js/doc.js"></script>
   <title>Discord::Guild - github.com/meew0/discordcr</title>
 </head>
 <body>
 
-<div id="types-list">
-  <div id="search-box">
-    <input type="search" id="search-input" placeholder="Search...">
+<div class="sidebar">
+  <div class="sidebar-header">
+    <div class="search-box">
+      <input type="search" class="search-input" placeholder="Search..." spellcheck="false">
+    </div>
+
+    <div class="repository-links">
+      <a href="../index.html">README</a>
+    </div>
   </div>
 
-  <ul>
-    <li><a href="../index.html">README</a></li>
-  </ul>
+  <div class="search-results" class="hidden">
+    <ul class="search-list"></ul>
+  </div>
 
-  <ul>
+  <div class="types-list">
+    <ul>
   
   <li class="parent open current" data-id="github.com/meew0/discordcr/Discord" data-name="discord">
       <a href="../Discord.html">Discord</a>
@@ -602,9 +618,11 @@
   
 </ul>
 
+  </div>
 </div>
 
-<div id="main-content">
+
+<div class="main-content">
 <h1 class="type-name">
 
   <span class="kind">struct</span> Discord::Guild
@@ -633,7 +651,7 @@
   <h2>Defined in:</h2>
   
     
-      <a href="https://github.com/meew0/discordcr/blob/6f8a8f0d3ea7c768e384a6b3c7ef72b251ff4195/src/discordcr/mappings/guild.cr#L5" target="_blank">discordcr/mappings/guild.cr</a>
+      <a href="https://github.com/meew0/discordcr/blob/27e400cace78b2d70605c6784fa3630ac797a794/src/discordcr/mappings/guild.cr#L5" target="_blank">discordcr/mappings/guild.cr</a>
     
     <br/>
   
@@ -646,7 +664,7 @@
   <ul class="list-summary">
     
       <li class="entry-summary">
-        <a href="#new%28__temp_355%3AJSON%3A%3APullParser%29-class-method" class="signature"><strong>.new</strong>(__temp_355 : JSON::PullParser)</a>
+        <a href="#new%28__temp_358%3AJSON%3A%3APullParser%29-class-method" class="signature"><strong>.new</strong>(__temp_358 : JSON::PullParser)</a>
         
       </li>
     
@@ -660,7 +678,7 @@
   <ul class="list-summary">
     
       <li class="entry-summary">
-        <a href="#afk_channel_id%3AUInt64%3F-instance-method" class="signature"><strong>#afk_channel_id</strong> : UInt64?</a>
+        <a href="#afk_channel_id%3A%3A%3AUnion%28UInt64%2CNil%29-instance-method" class="signature"><strong>#afk_channel_id</strong> : ::Union(UInt64, Nil)</a>
         
       </li>
     
@@ -670,7 +688,7 @@
       </li>
     
       <li class="entry-summary">
-        <a href="#afk_timeout%3AInt32%3F-instance-method" class="signature"><strong>#afk_timeout</strong> : Int32?</a>
+        <a href="#afk_timeout%3A%3A%3AUnion%28Int32%2CNil%29-instance-method" class="signature"><strong>#afk_timeout</strong> : ::Union(Int32, Nil)</a>
         
       </li>
     
@@ -690,7 +708,7 @@
       </li>
     
       <li class="entry-summary">
-        <a href="#embed_channel_id%3AUInt64%3F-instance-method" class="signature"><strong>#embed_channel_id</strong> : UInt64?</a>
+        <a href="#embed_channel_id%3A%3A%3AUnion%28UInt64%2CNil%29-instance-method" class="signature"><strong>#embed_channel_id</strong> : ::Union(UInt64, Nil)</a>
         
       </li>
     
@@ -700,7 +718,7 @@
       </li>
     
       <li class="entry-summary">
-        <a href="#embed_enabled%3ABool%3F-instance-method" class="signature"><strong>#embed_enabled</strong> : Bool?</a>
+        <a href="#embed_enabled%3A%3A%3AUnion%28Bool%2CNil%29-instance-method" class="signature"><strong>#embed_enabled</strong> : ::Union(Bool, Nil)</a>
         
       </li>
     
@@ -710,7 +728,7 @@
       </li>
     
       <li class="entry-summary">
-        <a href="#emoji%3AArray%28Discord%3A%3AEmoji%29-instance-method" class="signature"><strong>#emoji</strong> : Array(Discord::Emoji)</a>
+        <a href="#emoji%3AArray%28Emoji%29-instance-method" class="signature"><strong>#emoji</strong> : Array(Emoji)</a>
         
       </li>
     
@@ -745,7 +763,7 @@
       </li>
     
       <li class="entry-summary">
-        <a href="#icon%3AString%3F-instance-method" class="signature"><strong>#icon</strong> : String?</a>
+        <a href="#icon%3A%3A%3AUnion%28String%2CNil%29-instance-method" class="signature"><strong>#icon</strong> : ::Union(String, Nil)</a>
         
       </li>
     
@@ -795,7 +813,7 @@
       </li>
     
       <li class="entry-summary">
-        <a href="#roles%3AArray%28Discord%3A%3ARole%29-instance-method" class="signature"><strong>#roles</strong> : Array(Discord::Role)</a>
+        <a href="#roles%3AArray%28Role%29-instance-method" class="signature"><strong>#roles</strong> : Array(Role)</a>
         
       </li>
     
@@ -805,7 +823,7 @@
       </li>
     
       <li class="entry-summary">
-        <a href="#splash%3AString%3F-instance-method" class="signature"><strong>#splash</strong> : String?</a>
+        <a href="#splash%3A%3A%3AUnion%28String%2CNil%29-instance-method" class="signature"><strong>#splash</strong> : ::Union(String, Nil)</a>
         
       </li>
     
@@ -815,7 +833,7 @@
       </li>
     
       <li class="entry-summary">
-        <a href="#system_channel_id%3AUInt64%3F-instance-method" class="signature"><strong>#system_channel_id</strong> : UInt64?</a>
+        <a href="#system_channel_id%3A%3A%3AUnion%28UInt64%2CNil%29-instance-method" class="signature"><strong>#system_channel_id</strong> : ::Union(UInt64, Nil)</a>
         
       </li>
     
@@ -840,7 +858,7 @@
       </li>
     
       <li class="entry-summary">
-        <a href="#widget_channel_id%3AUInt64%3F-instance-method" class="signature"><strong>#widget_channel_id</strong> : UInt64?</a>
+        <a href="#widget_channel_id%3A%3A%3AUnion%28UInt64%2CNil%29-instance-method" class="signature"><strong>#widget_channel_id</strong> : ::Union(UInt64, Nil)</a>
         
       </li>
     
@@ -902,12 +920,12 @@
 
   <h2>Constructor Detail</h2>
   
-    <div class="entry-detail" id="new(__temp_355:JSON::PullParser)-class-method">
+    <div class="entry-detail" id="new(__temp_358:JSON::PullParser)-class-method">
       <div class="signature">
         
-        def self.<strong>new</strong>(__temp_355 : JSON::PullParser)
+        def self.<strong>new</strong>(__temp_358 : JSON::PullParser)
 
-        <a class="method-permalink" href="#new%28__temp_355%3AJSON%3A%3APullParser%29-class-method">#</a>
+        <a class="method-permalink" href="#new%28__temp_358%3AJSON%3A%3APullParser%29-class-method">#</a>
       </div>
       
       <br/>
@@ -923,12 +941,12 @@
 
   <h2>Instance Method Detail</h2>
   
-    <div class="entry-detail" id="afk_channel_id:UInt64?-instance-method">
+    <div class="entry-detail" id="afk_channel_id:::Union(UInt64,Nil)-instance-method">
       <div class="signature">
         
-        def <strong>afk_channel_id</strong> : UInt64?
+        def <strong>afk_channel_id</strong> : ::Union(UInt64, Nil)
 
-        <a class="method-permalink" href="#afk_channel_id%3AUInt64%3F-instance-method">#</a>
+        <a class="method-permalink" href="#afk_channel_id%3A%3A%3AUnion%28UInt64%2CNil%29-instance-method">#</a>
       </div>
       
       <br/>
@@ -951,12 +969,12 @@
       </div>
     </div>
   
-    <div class="entry-detail" id="afk_timeout:Int32?-instance-method">
+    <div class="entry-detail" id="afk_timeout:::Union(Int32,Nil)-instance-method">
       <div class="signature">
         
-        def <strong>afk_timeout</strong> : Int32?
+        def <strong>afk_timeout</strong> : ::Union(Int32, Nil)
 
-        <a class="method-permalink" href="#afk_timeout%3AInt32%3F-instance-method">#</a>
+        <a class="method-permalink" href="#afk_timeout%3A%3A%3AUnion%28Int32%2CNil%29-instance-method">#</a>
       </div>
       
       <br/>
@@ -1007,12 +1025,12 @@
       </div>
     </div>
   
-    <div class="entry-detail" id="embed_channel_id:UInt64?-instance-method">
+    <div class="entry-detail" id="embed_channel_id:::Union(UInt64,Nil)-instance-method">
       <div class="signature">
         
-        def <strong>embed_channel_id</strong> : UInt64?
+        def <strong>embed_channel_id</strong> : ::Union(UInt64, Nil)
 
-        <a class="method-permalink" href="#embed_channel_id%3AUInt64%3F-instance-method">#</a>
+        <a class="method-permalink" href="#embed_channel_id%3A%3A%3AUnion%28UInt64%2CNil%29-instance-method">#</a>
       </div>
       
       <br/>
@@ -1035,12 +1053,12 @@
       </div>
     </div>
   
-    <div class="entry-detail" id="embed_enabled:Bool?-instance-method">
+    <div class="entry-detail" id="embed_enabled:::Union(Bool,Nil)-instance-method">
       <div class="signature">
         
-        def <strong>embed_enabled</strong> : Bool?
+        def <strong>embed_enabled</strong> : ::Union(Bool, Nil)
 
-        <a class="method-permalink" href="#embed_enabled%3ABool%3F-instance-method">#</a>
+        <a class="method-permalink" href="#embed_enabled%3A%3A%3AUnion%28Bool%2CNil%29-instance-method">#</a>
       </div>
       
       <br/>
@@ -1063,12 +1081,12 @@
       </div>
     </div>
   
-    <div class="entry-detail" id="emoji:Array(Discord::Emoji)-instance-method">
+    <div class="entry-detail" id="emoji:Array(Emoji)-instance-method">
       <div class="signature">
         
-        def <strong>emoji</strong> : Array(<a href="../Discord/Emoji.html">Discord::Emoji</a>)
+        def <strong>emoji</strong> : Array(<a href="../Discord/Emoji.html">Emoji</a>)
 
-        <a class="method-permalink" href="#emoji%3AArray%28Discord%3A%3AEmoji%29-instance-method">#</a>
+        <a class="method-permalink" href="#emoji%3AArray%28Emoji%29-instance-method">#</a>
       </div>
       
       <br/>
@@ -1102,7 +1120,7 @@
       <br/>
       <div>
         
-          [<a href="https://github.com/meew0/discordcr/blob/6f8a8f0d3ea7c768e384a6b3c7ef72b251ff4195/src/discordcr/mappings/guild.cr#L48" target="_blank">View source</a>]
+          [<a href="https://github.com/meew0/discordcr/blob/27e400cace78b2d70605c6784fa3630ac797a794/src/discordcr/mappings/guild.cr#L48" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1163,12 +1181,12 @@
       </div>
     </div>
   
-    <div class="entry-detail" id="icon:String?-instance-method">
+    <div class="entry-detail" id="icon:::Union(String,Nil)-instance-method">
       <div class="signature">
         
-        def <strong>icon</strong> : String?
+        def <strong>icon</strong> : ::Union(String, Nil)
 
-        <a class="method-permalink" href="#icon%3AString%3F-instance-method">#</a>
+        <a class="method-permalink" href="#icon%3A%3A%3AUnion%28String%2CNil%29-instance-method">#</a>
       </div>
       
       <br/>
@@ -1303,12 +1321,12 @@
       </div>
     </div>
   
-    <div class="entry-detail" id="roles:Array(Discord::Role)-instance-method">
+    <div class="entry-detail" id="roles:Array(Role)-instance-method">
       <div class="signature">
         
-        def <strong>roles</strong> : Array(<a href="../Discord/Role.html">Discord::Role</a>)
+        def <strong>roles</strong> : Array(<a href="../Discord/Role.html">Role</a>)
 
-        <a class="method-permalink" href="#roles%3AArray%28Discord%3A%3ARole%29-instance-method">#</a>
+        <a class="method-permalink" href="#roles%3AArray%28Role%29-instance-method">#</a>
       </div>
       
       <br/>
@@ -1331,12 +1349,12 @@
       </div>
     </div>
   
-    <div class="entry-detail" id="splash:String?-instance-method">
+    <div class="entry-detail" id="splash:::Union(String,Nil)-instance-method">
       <div class="signature">
         
-        def <strong>splash</strong> : String?
+        def <strong>splash</strong> : ::Union(String, Nil)
 
-        <a class="method-permalink" href="#splash%3AString%3F-instance-method">#</a>
+        <a class="method-permalink" href="#splash%3A%3A%3AUnion%28String%2CNil%29-instance-method">#</a>
       </div>
       
       <br/>
@@ -1359,12 +1377,12 @@
       </div>
     </div>
   
-    <div class="entry-detail" id="system_channel_id:UInt64?-instance-method">
+    <div class="entry-detail" id="system_channel_id:::Union(UInt64,Nil)-instance-method">
       <div class="signature">
         
-        def <strong>system_channel_id</strong> : UInt64?
+        def <strong>system_channel_id</strong> : ::Union(UInt64, Nil)
 
-        <a class="method-permalink" href="#system_channel_id%3AUInt64%3F-instance-method">#</a>
+        <a class="method-permalink" href="#system_channel_id%3A%3A%3AUnion%28UInt64%2CNil%29-instance-method">#</a>
       </div>
       
       <br/>
@@ -1429,12 +1447,12 @@
       </div>
     </div>
   
-    <div class="entry-detail" id="widget_channel_id:UInt64?-instance-method">
+    <div class="entry-detail" id="widget_channel_id:::Union(UInt64,Nil)-instance-method">
       <div class="signature">
         
-        def <strong>widget_channel_id</strong> : UInt64?
+        def <strong>widget_channel_id</strong> : ::Union(UInt64, Nil)
 
-        <a class="method-permalink" href="#widget_channel_id%3AUInt64%3F-instance-method">#</a>
+        <a class="method-permalink" href="#widget_channel_id%3A%3A%3AUnion%28UInt64%2CNil%29-instance-method">#</a>
       </div>
       
       <br/>

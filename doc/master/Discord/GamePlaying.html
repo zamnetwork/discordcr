@@ -1,24 +1,40 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
+  <meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="generator" content="Crystal Docs 0.25.0">
+
+
+<link href="../css/style.css" rel="stylesheet" type="text/css">
+
+<script type="text/javascript" src="../js/doc.js"></script>
+<script type="text/javascript">
+  CrystalDoc.base_path = "../";
+</script>
+
   <meta id="repository-name" content="github.com/meew0/discordcr">
-  <link href="../css/style.css" rel="stylesheet" type="text/css" />
-  <script type="text/javascript" src="../js/doc.js"></script>
   <title>Discord::GamePlaying - github.com/meew0/discordcr</title>
 </head>
 <body>
 
-<div id="types-list">
-  <div id="search-box">
-    <input type="search" id="search-input" placeholder="Search...">
+<div class="sidebar">
+  <div class="sidebar-header">
+    <div class="search-box">
+      <input type="search" class="search-input" placeholder="Search..." spellcheck="false">
+    </div>
+
+    <div class="repository-links">
+      <a href="../index.html">README</a>
+    </div>
   </div>
 
-  <ul>
-    <li><a href="../index.html">README</a></li>
-  </ul>
+  <div class="search-results" class="hidden">
+    <ul class="search-list"></ul>
+  </div>
 
-  <ul>
+  <div class="types-list">
+    <ul>
   
   <li class="parent open current" data-id="github.com/meew0/discordcr/Discord" data-name="discord">
       <a href="../Discord.html">Discord</a>
@@ -602,9 +618,11 @@
   
 </ul>
 
+  </div>
 </div>
 
-<div id="main-content">
+
+<div class="main-content">
 <h1 class="type-name">
 
   <span class="kind">struct</span> Discord::GamePlaying
@@ -633,7 +651,7 @@
   <h2>Defined in:</h2>
   
     
-      <a href="https://github.com/meew0/discordcr/blob/6f8a8f0d3ea7c768e384a6b3c7ef72b251ff4195/src/discordcr/mappings/guild.cr#L170" target="_blank">discordcr/mappings/guild.cr</a>
+      <a href="https://github.com/meew0/discordcr/blob/27e400cace78b2d70605c6784fa3630ac797a794/src/discordcr/mappings/guild.cr#L170" target="_blank">discordcr/mappings/guild.cr</a>
     
     <br/>
   
@@ -646,7 +664,7 @@
   <ul class="list-summary">
     
       <li class="entry-summary">
-        <a href="#new%28__temp_496%3AJSON%3A%3APullParser%29-class-method" class="signature"><strong>.new</strong>(__temp_496 : JSON::PullParser)</a>
+        <a href="#new%28__temp_499%3AJSON%3A%3APullParser%29-class-method" class="signature"><strong>.new</strong>(__temp_499 : JSON::PullParser)</a>
         
       </li>
     
@@ -665,7 +683,7 @@
   <ul class="list-summary">
     
       <li class="entry-summary">
-        <a href="#name%3AString%3F-instance-method" class="signature"><strong>#name</strong> : String?</a>
+        <a href="#name%3A%3A%3AUnion%28String%2CNil%29-instance-method" class="signature"><strong>#name</strong> : ::Union(String, Nil)</a>
         
       </li>
     
@@ -680,7 +698,7 @@
       </li>
     
       <li class="entry-summary">
-        <a href="#type%3AInt64%7CString%7CNil-instance-method" class="signature"><strong>#type</strong> : Int64 | String | Nil</a>
+        <a href="#type%3A%3A%3AUnion%28Int64%2CNil%29%7C%3A%3AUnion%28String%2CNil%29-instance-method" class="signature"><strong>#type</strong> : ::Union(Int64, Nil) | ::Union(String, Nil)</a>
         
       </li>
     
@@ -690,7 +708,7 @@
       </li>
     
       <li class="entry-summary">
-        <a href="#url%3AString%3F-instance-method" class="signature"><strong>#url</strong> : String?</a>
+        <a href="#url%3A%3A%3AUnion%28String%2CNil%29-instance-method" class="signature"><strong>#url</strong> : ::Union(String, Nil)</a>
         
       </li>
     
@@ -742,12 +760,12 @@
 
   <h2>Constructor Detail</h2>
   
-    <div class="entry-detail" id="new(__temp_496:JSON::PullParser)-class-method">
+    <div class="entry-detail" id="new(__temp_499:JSON::PullParser)-class-method">
       <div class="signature">
         
-        def self.<strong>new</strong>(__temp_496 : JSON::PullParser)
+        def self.<strong>new</strong>(__temp_499 : JSON::PullParser)
 
-        <a class="method-permalink" href="#new%28__temp_496%3AJSON%3A%3APullParser%29-class-method">#</a>
+        <a class="method-permalink" href="#new%28__temp_499%3AJSON%3A%3APullParser%29-class-method">#</a>
       </div>
       
       <br/>
@@ -767,7 +785,7 @@
       <br/>
       <div>
         
-          [<a href="https://github.com/meew0/discordcr/blob/6f8a8f0d3ea7c768e384a6b3c7ef72b251ff4195/src/discordcr/mappings/guild.cr#L171" target="_blank">View source</a>]
+          [<a href="https://github.com/meew0/discordcr/blob/27e400cace78b2d70605c6784fa3630ac797a794/src/discordcr/mappings/guild.cr#L171" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -779,12 +797,12 @@
 
   <h2>Instance Method Detail</h2>
   
-    <div class="entry-detail" id="name:String?-instance-method">
+    <div class="entry-detail" id="name:::Union(String,Nil)-instance-method">
       <div class="signature">
         
-        def <strong>name</strong> : String?
+        def <strong>name</strong> : ::Union(String, Nil)
 
-        <a class="method-permalink" href="#name%3AString%3F-instance-method">#</a>
+        <a class="method-permalink" href="#name%3A%3A%3AUnion%28String%2CNil%29-instance-method">#</a>
       </div>
       
       <br/>
@@ -821,12 +839,12 @@
       </div>
     </div>
   
-    <div class="entry-detail" id="type:Int64|String|Nil-instance-method">
+    <div class="entry-detail" id="type:::Union(Int64,Nil)|::Union(String,Nil)-instance-method">
       <div class="signature">
         
-        def <strong>type</strong> : Int64 | String | Nil
+        def <strong>type</strong> : ::Union(Int64, Nil) | ::Union(String, Nil)
 
-        <a class="method-permalink" href="#type%3AInt64%7CString%7CNil-instance-method">#</a>
+        <a class="method-permalink" href="#type%3A%3A%3AUnion%28Int64%2CNil%29%7C%3A%3AUnion%28String%2CNil%29-instance-method">#</a>
       </div>
       
       <br/>
@@ -849,12 +867,12 @@
       </div>
     </div>
   
-    <div class="entry-detail" id="url:String?-instance-method">
+    <div class="entry-detail" id="url:::Union(String,Nil)-instance-method">
       <div class="signature">
         
-        def <strong>url</strong> : String?
+        def <strong>url</strong> : ::Union(String, Nil)
 
-        <a class="method-permalink" href="#url%3AString%3F-instance-method">#</a>
+        <a class="method-permalink" href="#url%3A%3A%3AUnion%28String%2CNil%29-instance-method">#</a>
       </div>
       
       <br/>

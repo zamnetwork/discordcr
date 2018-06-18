@@ -1,24 +1,40 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
+  <meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="generator" content="Crystal Docs 0.25.0">
+
+
+<link href="../css/style.css" rel="stylesheet" type="text/css">
+
+<script type="text/javascript" src="../js/doc.js"></script>
+<script type="text/javascript">
+  CrystalDoc.base_path = "../";
+</script>
+
   <meta id="repository-name" content="github.com/meew0/discordcr">
-  <link href="../css/style.css" rel="stylesheet" type="text/css" />
-  <script type="text/javascript" src="../js/doc.js"></script>
   <title>Discord::Message - github.com/meew0/discordcr</title>
 </head>
 <body>
 
-<div id="types-list">
-  <div id="search-box">
-    <input type="search" id="search-input" placeholder="Search...">
+<div class="sidebar">
+  <div class="sidebar-header">
+    <div class="search-box">
+      <input type="search" class="search-input" placeholder="Search..." spellcheck="false">
+    </div>
+
+    <div class="repository-links">
+      <a href="../index.html">README</a>
+    </div>
   </div>
 
-  <ul>
-    <li><a href="../index.html">README</a></li>
-  </ul>
+  <div class="search-results" class="hidden">
+    <ul class="search-list"></ul>
+  </div>
 
-  <ul>
+  <div class="types-list">
+    <ul>
   
   <li class="parent open current" data-id="github.com/meew0/discordcr/Discord" data-name="discord">
       <a href="../Discord.html">Discord</a>
@@ -602,9 +618,11 @@
   
 </ul>
 
+  </div>
 </div>
 
-<div id="main-content">
+
+<div class="main-content">
 <h1 class="type-name">
 
   <span class="kind">struct</span> Discord::Message
@@ -633,7 +651,7 @@
   <h2>Defined in:</h2>
   
     
-      <a href="https://github.com/meew0/discordcr/blob/6f8a8f0d3ea7c768e384a6b3c7ef72b251ff4195/src/discordcr/mappings/channel.cr#L15" target="_blank">discordcr/mappings/channel.cr</a>
+      <a href="https://github.com/meew0/discordcr/blob/27e400cace78b2d70605c6784fa3630ac797a794/src/discordcr/mappings/channel.cr#L15" target="_blank">discordcr/mappings/channel.cr</a>
     
     <br/>
   
@@ -646,7 +664,7 @@
   <ul class="list-summary">
     
       <li class="entry-summary">
-        <a href="#new%28__temp_33%3AJSON%3A%3APullParser%29-class-method" class="signature"><strong>.new</strong>(__temp_33 : JSON::PullParser)</a>
+        <a href="#new%28__temp_36%3AJSON%3A%3APullParser%29-class-method" class="signature"><strong>.new</strong>(__temp_36 : JSON::PullParser)</a>
         
       </li>
     
@@ -660,7 +678,7 @@
   <ul class="list-summary">
     
       <li class="entry-summary">
-        <a href="#activity%3ADiscord%3A%3AActivity%3F-instance-method" class="signature"><strong>#activity</strong> : Discord::Activity?</a>
+        <a href="#activity%3A%3A%3AUnion%28Activity%2CNil%29-instance-method" class="signature"><strong>#activity</strong> : ::Union(Activity, Nil)</a>
         
       </li>
     
@@ -670,7 +688,7 @@
       </li>
     
       <li class="entry-summary">
-        <a href="#attachments%3AArray%28Discord%3A%3AAttachment%29-instance-method" class="signature"><strong>#attachments</strong> : Array(Discord::Attachment)</a>
+        <a href="#attachments%3AArray%28Attachment%29-instance-method" class="signature"><strong>#attachments</strong> : Array(Attachment)</a>
         
       </li>
     
@@ -680,7 +698,7 @@
       </li>
     
       <li class="entry-summary">
-        <a href="#author%3ADiscord%3A%3AUser-instance-method" class="signature"><strong>#author</strong> : Discord::User</a>
+        <a href="#author%3AUser-instance-method" class="signature"><strong>#author</strong> : User</a>
         
       </li>
     
@@ -710,7 +728,7 @@
       </li>
     
       <li class="entry-summary">
-        <a href="#embeds%3AArray%28Discord%3A%3AEmbed%29-instance-method" class="signature"><strong>#embeds</strong> : Array(Discord::Embed)</a>
+        <a href="#embeds%3AArray%28Embed%29-instance-method" class="signature"><strong>#embeds</strong> : Array(Embed)</a>
         
       </li>
     
@@ -750,7 +768,7 @@
       </li>
     
       <li class="entry-summary">
-        <a href="#mentions%3AArray%28Discord%3A%3AUser%29-instance-method" class="signature"><strong>#mentions</strong> : Array(Discord::User)</a>
+        <a href="#mentions%3AArray%28User%29-instance-method" class="signature"><strong>#mentions</strong> : Array(User)</a>
         
       </li>
     
@@ -760,7 +778,7 @@
       </li>
     
       <li class="entry-summary">
-        <a href="#pinned%3ABool%3F-instance-method" class="signature"><strong>#pinned</strong> : Bool?</a>
+        <a href="#pinned%3A%3A%3AUnion%28Bool%2CNil%29-instance-method" class="signature"><strong>#pinned</strong> : ::Union(Bool, Nil)</a>
         
       </li>
     
@@ -770,7 +788,7 @@
       </li>
     
       <li class="entry-summary">
-        <a href="#reactions%3AArray%28Discord%3A%3AReaction%29%3F-instance-method" class="signature"><strong>#reactions</strong> : Array(Discord::Reaction)?</a>
+        <a href="#reactions%3A%3A%3AUnion%28Array%28Reaction%29%2CNil%29-instance-method" class="signature"><strong>#reactions</strong> : ::Union(Array(Reaction), Nil)</a>
         
       </li>
     
@@ -805,7 +823,7 @@
       </li>
     
       <li class="entry-summary">
-        <a href="#type%3ADiscord%3A%3AMessageType-instance-method" class="signature"><strong>#type</strong> : Discord::MessageType</a>
+        <a href="#type%3AMessageType-instance-method" class="signature"><strong>#type</strong> : MessageType</a>
         
       </li>
     
@@ -857,12 +875,12 @@
 
   <h2>Constructor Detail</h2>
   
-    <div class="entry-detail" id="new(__temp_33:JSON::PullParser)-class-method">
+    <div class="entry-detail" id="new(__temp_36:JSON::PullParser)-class-method">
       <div class="signature">
         
-        def self.<strong>new</strong>(__temp_33 : JSON::PullParser)
+        def self.<strong>new</strong>(__temp_36 : JSON::PullParser)
 
-        <a class="method-permalink" href="#new%28__temp_33%3AJSON%3A%3APullParser%29-class-method">#</a>
+        <a class="method-permalink" href="#new%28__temp_36%3AJSON%3A%3APullParser%29-class-method">#</a>
       </div>
       
       <br/>
@@ -878,12 +896,12 @@
 
   <h2>Instance Method Detail</h2>
   
-    <div class="entry-detail" id="activity:Discord::Activity?-instance-method">
+    <div class="entry-detail" id="activity:::Union(Activity,Nil)-instance-method">
       <div class="signature">
         
-        def <strong>activity</strong> : <a href="../Discord/Activity.html">Discord::Activity</a>?
+        def <strong>activity</strong> : ::Union(<a href="../Discord/Activity.html">Activity</a>, Nil)
 
-        <a class="method-permalink" href="#activity%3ADiscord%3A%3AActivity%3F-instance-method">#</a>
+        <a class="method-permalink" href="#activity%3A%3A%3AUnion%28Activity%2CNil%29-instance-method">#</a>
       </div>
       
       <br/>
@@ -906,12 +924,12 @@
       </div>
     </div>
   
-    <div class="entry-detail" id="attachments:Array(Discord::Attachment)-instance-method">
+    <div class="entry-detail" id="attachments:Array(Attachment)-instance-method">
       <div class="signature">
         
-        def <strong>attachments</strong> : Array(<a href="../Discord/Attachment.html">Discord::Attachment</a>)
+        def <strong>attachments</strong> : Array(<a href="../Discord/Attachment.html">Attachment</a>)
 
-        <a class="method-permalink" href="#attachments%3AArray%28Discord%3A%3AAttachment%29-instance-method">#</a>
+        <a class="method-permalink" href="#attachments%3AArray%28Attachment%29-instance-method">#</a>
       </div>
       
       <br/>
@@ -934,12 +952,12 @@
       </div>
     </div>
   
-    <div class="entry-detail" id="author:Discord::User-instance-method">
+    <div class="entry-detail" id="author:User-instance-method">
       <div class="signature">
         
-        def <strong>author</strong> : <a href="../Discord/User.html">Discord::User</a>
+        def <strong>author</strong> : <a href="../Discord/User.html">User</a>
 
-        <a class="method-permalink" href="#author%3ADiscord%3A%3AUser-instance-method">#</a>
+        <a class="method-permalink" href="#author%3AUser-instance-method">#</a>
       </div>
       
       <br/>
@@ -1018,12 +1036,12 @@
       </div>
     </div>
   
-    <div class="entry-detail" id="embeds:Array(Discord::Embed)-instance-method">
+    <div class="entry-detail" id="embeds:Array(Embed)-instance-method">
       <div class="signature">
         
-        def <strong>embeds</strong> : Array(<a href="../Discord/Embed.html">Discord::Embed</a>)
+        def <strong>embeds</strong> : Array(<a href="../Discord/Embed.html">Embed</a>)
 
-        <a class="method-permalink" href="#embeds%3AArray%28Discord%3A%3AEmbed%29-instance-method">#</a>
+        <a class="method-permalink" href="#embeds%3AArray%28Embed%29-instance-method">#</a>
       </div>
       
       <br/>
@@ -1130,12 +1148,12 @@
       </div>
     </div>
   
-    <div class="entry-detail" id="mentions:Array(Discord::User)-instance-method">
+    <div class="entry-detail" id="mentions:Array(User)-instance-method">
       <div class="signature">
         
-        def <strong>mentions</strong> : Array(<a href="../Discord/User.html">Discord::User</a>)
+        def <strong>mentions</strong> : Array(<a href="../Discord/User.html">User</a>)
 
-        <a class="method-permalink" href="#mentions%3AArray%28Discord%3A%3AUser%29-instance-method">#</a>
+        <a class="method-permalink" href="#mentions%3AArray%28User%29-instance-method">#</a>
       </div>
       
       <br/>
@@ -1158,12 +1176,12 @@
       </div>
     </div>
   
-    <div class="entry-detail" id="pinned:Bool?-instance-method">
+    <div class="entry-detail" id="pinned:::Union(Bool,Nil)-instance-method">
       <div class="signature">
         
-        def <strong>pinned</strong> : Bool?
+        def <strong>pinned</strong> : ::Union(Bool, Nil)
 
-        <a class="method-permalink" href="#pinned%3ABool%3F-instance-method">#</a>
+        <a class="method-permalink" href="#pinned%3A%3A%3AUnion%28Bool%2CNil%29-instance-method">#</a>
       </div>
       
       <br/>
@@ -1186,12 +1204,12 @@
       </div>
     </div>
   
-    <div class="entry-detail" id="reactions:Array(Discord::Reaction)?-instance-method">
+    <div class="entry-detail" id="reactions:::Union(Array(Reaction),Nil)-instance-method">
       <div class="signature">
         
-        def <strong>reactions</strong> : Array(<a href="../Discord/Reaction.html">Discord::Reaction</a>)?
+        def <strong>reactions</strong> : ::Union(Array(<a href="../Discord/Reaction.html">Reaction</a>), Nil)
 
-        <a class="method-permalink" href="#reactions%3AArray%28Discord%3A%3AReaction%29%3F-instance-method">#</a>
+        <a class="method-permalink" href="#reactions%3A%3A%3AUnion%28Array%28Reaction%29%2CNil%29-instance-method">#</a>
       </div>
       
       <br/>
@@ -1284,12 +1302,12 @@
       </div>
     </div>
   
-    <div class="entry-detail" id="type:Discord::MessageType-instance-method">
+    <div class="entry-detail" id="type:MessageType-instance-method">
       <div class="signature">
         
-        def <strong>type</strong> : <a href="../Discord/MessageType.html">Discord::MessageType</a>
+        def <strong>type</strong> : <a href="../Discord/MessageType.html">MessageType</a>
 
-        <a class="method-permalink" href="#type%3ADiscord%3A%3AMessageType-instance-method">#</a>
+        <a class="method-permalink" href="#type%3AMessageType-instance-method">#</a>
       </div>
       
       <br/>

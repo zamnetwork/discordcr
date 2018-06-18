@@ -1,24 +1,40 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
+  <meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="generator" content="Crystal Docs 0.25.0">
+
+
+<link href="../css/style.css" rel="stylesheet" type="text/css">
+
+<script type="text/javascript" src="../js/doc.js"></script>
+<script type="text/javascript">
+  CrystalDoc.base_path = "../";
+</script>
+
   <meta id="repository-name" content="github.com/meew0/discordcr">
-  <link href="../css/style.css" rel="stylesheet" type="text/css" />
-  <script type="text/javascript" src="../js/doc.js"></script>
   <title>Discord::Embed - github.com/meew0/discordcr</title>
 </head>
 <body>
 
-<div id="types-list">
-  <div id="search-box">
-    <input type="search" id="search-input" placeholder="Search...">
+<div class="sidebar">
+  <div class="sidebar-header">
+    <div class="search-box">
+      <input type="search" class="search-input" placeholder="Search..." spellcheck="false">
+    </div>
+
+    <div class="repository-links">
+      <a href="../index.html">README</a>
+    </div>
   </div>
 
-  <ul>
-    <li><a href="../index.html">README</a></li>
-  </ul>
+  <div class="search-results" class="hidden">
+    <ul class="search-list"></ul>
+  </div>
 
-  <ul>
+  <div class="types-list">
+    <ul>
   
   <li class="parent open current" data-id="github.com/meew0/discordcr/Discord" data-name="discord">
       <a href="../Discord.html">Discord</a>
@@ -602,9 +618,11 @@
   
 </ul>
 
+  </div>
 </div>
 
-<div id="main-content">
+
+<div class="main-content">
 <h1 class="type-name">
 
   <span class="kind">struct</span> Discord::Embed
@@ -633,7 +651,7 @@
   <h2>Defined in:</h2>
   
     
-      <a href="https://github.com/meew0/discordcr/blob/6f8a8f0d3ea7c768e384a6b3c7ef72b251ff4195/src/discordcr/mappings/channel.cr#L118" target="_blank">discordcr/mappings/channel.cr</a>
+      <a href="https://github.com/meew0/discordcr/blob/27e400cace78b2d70605c6784fa3630ac797a794/src/discordcr/mappings/channel.cr#L118" target="_blank">discordcr/mappings/channel.cr</a>
     
     <br/>
   
@@ -651,7 +669,7 @@
       </li>
     
       <li class="entry-summary">
-        <a href="#new%28__temp_146%3AJSON%3A%3APullParser%29-class-method" class="signature"><strong>.new</strong>(__temp_146 : JSON::PullParser)</a>
+        <a href="#new%28__temp_149%3AJSON%3A%3APullParser%29-class-method" class="signature"><strong>.new</strong>(__temp_149 : JSON::PullParser)</a>
         
       </li>
     
@@ -665,7 +683,7 @@
   <ul class="list-summary">
     
       <li class="entry-summary">
-        <a href="#author%3ADiscord%3A%3AEmbedAuthor%3F-instance-method" class="signature"><strong>#author</strong> : Discord::EmbedAuthor?</a>
+        <a href="#author%3A%3A%3AUnion%28EmbedAuthor%2CNil%29-instance-method" class="signature"><strong>#author</strong> : ::Union(EmbedAuthor, Nil)</a>
         
       </li>
     
@@ -680,7 +698,7 @@
       </li>
     
       <li class="entry-summary">
-        <a href="#colour%3AUInt32%3F-instance-method" class="signature"><strong>#colour</strong> : UInt32?</a>
+        <a href="#colour%3A%3A%3AUnion%28UInt32%2CNil%29-instance-method" class="signature"><strong>#colour</strong> : ::Union(UInt32, Nil)</a>
         
       </li>
     
@@ -690,7 +708,7 @@
       </li>
     
       <li class="entry-summary">
-        <a href="#description%3AString%3F-instance-method" class="signature"><strong>#description</strong> : String?</a>
+        <a href="#description%3A%3A%3AUnion%28String%2CNil%29-instance-method" class="signature"><strong>#description</strong> : ::Union(String, Nil)</a>
         
       </li>
     
@@ -700,7 +718,7 @@
       </li>
     
       <li class="entry-summary">
-        <a href="#fields%3AArray%28Discord%3A%3AEmbedField%29%3F-instance-method" class="signature"><strong>#fields</strong> : Array(Discord::EmbedField)?</a>
+        <a href="#fields%3A%3A%3AUnion%28Array%28EmbedField%29%2CNil%29-instance-method" class="signature"><strong>#fields</strong> : ::Union(Array(EmbedField), Nil)</a>
         
       </li>
     
@@ -710,7 +728,7 @@
       </li>
     
       <li class="entry-summary">
-        <a href="#footer%3ADiscord%3A%3AEmbedFooter%3F-instance-method" class="signature"><strong>#footer</strong> : Discord::EmbedFooter?</a>
+        <a href="#footer%3A%3A%3AUnion%28EmbedFooter%2CNil%29-instance-method" class="signature"><strong>#footer</strong> : ::Union(EmbedFooter, Nil)</a>
         
       </li>
     
@@ -720,7 +738,7 @@
       </li>
     
       <li class="entry-summary">
-        <a href="#image%3ADiscord%3A%3AEmbedImage%3F-instance-method" class="signature"><strong>#image</strong> : Discord::EmbedImage?</a>
+        <a href="#image%3A%3A%3AUnion%28EmbedImage%2CNil%29-instance-method" class="signature"><strong>#image</strong> : ::Union(EmbedImage, Nil)</a>
         
       </li>
     
@@ -730,7 +748,7 @@
       </li>
     
       <li class="entry-summary">
-        <a href="#provider%3ADiscord%3A%3AEmbedProvider%3F-instance-method" class="signature"><strong>#provider</strong> : Discord::EmbedProvider?</a>
+        <a href="#provider%3A%3A%3AUnion%28EmbedProvider%2CNil%29-instance-method" class="signature"><strong>#provider</strong> : ::Union(EmbedProvider, Nil)</a>
         
       </li>
     
@@ -740,7 +758,7 @@
       </li>
     
       <li class="entry-summary">
-        <a href="#thumbnail%3ADiscord%3A%3AEmbedThumbnail%3F-instance-method" class="signature"><strong>#thumbnail</strong> : Discord::EmbedThumbnail?</a>
+        <a href="#thumbnail%3A%3A%3AUnion%28EmbedThumbnail%2CNil%29-instance-method" class="signature"><strong>#thumbnail</strong> : ::Union(EmbedThumbnail, Nil)</a>
         
       </li>
     
@@ -750,7 +768,7 @@
       </li>
     
       <li class="entry-summary">
-        <a href="#timestamp%3ATime%3F-instance-method" class="signature"><strong>#timestamp</strong> : Time?</a>
+        <a href="#timestamp%3A%3A%3AUnion%28Time%2CNil%29-instance-method" class="signature"><strong>#timestamp</strong> : ::Union(Time, Nil)</a>
         
       </li>
     
@@ -760,7 +778,7 @@
       </li>
     
       <li class="entry-summary">
-        <a href="#title%3AString%3F-instance-method" class="signature"><strong>#title</strong> : String?</a>
+        <a href="#title%3A%3A%3AUnion%28String%2CNil%29-instance-method" class="signature"><strong>#title</strong> : ::Union(String, Nil)</a>
         
       </li>
     
@@ -785,7 +803,7 @@
       </li>
     
       <li class="entry-summary">
-        <a href="#url%3AString%3F-instance-method" class="signature"><strong>#url</strong> : String?</a>
+        <a href="#url%3A%3A%3AUnion%28String%2CNil%29-instance-method" class="signature"><strong>#url</strong> : ::Union(String, Nil)</a>
         
       </li>
     
@@ -795,7 +813,7 @@
       </li>
     
       <li class="entry-summary">
-        <a href="#video%3ADiscord%3A%3AEmbedVideo%3F-instance-method" class="signature"><strong>#video</strong> : Discord::EmbedVideo?</a>
+        <a href="#video%3A%3A%3AUnion%28EmbedVideo%2CNil%29-instance-method" class="signature"><strong>#video</strong> : ::Union(EmbedVideo, Nil)</a>
         
       </li>
     
@@ -858,17 +876,17 @@
       <br/>
       <div>
         
-          [<a href="https://github.com/meew0/discordcr/blob/6f8a8f0d3ea7c768e384a6b3c7ef72b251ff4195/src/discordcr/mappings/channel.cr#L119" target="_blank">View source</a>]
+          [<a href="https://github.com/meew0/discordcr/blob/27e400cace78b2d70605c6784fa3630ac797a794/src/discordcr/mappings/channel.cr#L119" target="_blank">View source</a>]
         
       </div>
     </div>
   
-    <div class="entry-detail" id="new(__temp_146:JSON::PullParser)-class-method">
+    <div class="entry-detail" id="new(__temp_149:JSON::PullParser)-class-method">
       <div class="signature">
         
-        def self.<strong>new</strong>(__temp_146 : JSON::PullParser)
+        def self.<strong>new</strong>(__temp_149 : JSON::PullParser)
 
-        <a class="method-permalink" href="#new%28__temp_146%3AJSON%3A%3APullParser%29-class-method">#</a>
+        <a class="method-permalink" href="#new%28__temp_149%3AJSON%3A%3APullParser%29-class-method">#</a>
       </div>
       
       <br/>
@@ -884,12 +902,12 @@
 
   <h2>Instance Method Detail</h2>
   
-    <div class="entry-detail" id="author:Discord::EmbedAuthor?-instance-method">
+    <div class="entry-detail" id="author:::Union(EmbedAuthor,Nil)-instance-method">
       <div class="signature">
         
-        def <strong>author</strong> : <a href="../Discord/EmbedAuthor.html">Discord::EmbedAuthor</a>?
+        def <strong>author</strong> : ::Union(<a href="../Discord/EmbedAuthor.html">EmbedAuthor</a>, Nil)
 
-        <a class="method-permalink" href="#author%3ADiscord%3A%3AEmbedAuthor%3F-instance-method">#</a>
+        <a class="method-permalink" href="#author%3A%3A%3AUnion%28EmbedAuthor%2CNil%29-instance-method">#</a>
       </div>
       
       <br/>
@@ -923,17 +941,17 @@
       <br/>
       <div>
         
-          [<a href="https://github.com/meew0/discordcr/blob/6f8a8f0d3ea7c768e384a6b3c7ef72b251ff4195/src/discordcr/mappings/channel.cr#L143" target="_blank">View source</a>]
+          [<a href="https://github.com/meew0/discordcr/blob/27e400cace78b2d70605c6784fa3630ac797a794/src/discordcr/mappings/channel.cr#L143" target="_blank">View source</a>]
         
       </div>
     </div>
   
-    <div class="entry-detail" id="colour:UInt32?-instance-method">
+    <div class="entry-detail" id="colour:::Union(UInt32,Nil)-instance-method">
       <div class="signature">
         
-        def <strong>colour</strong> : UInt32?
+        def <strong>colour</strong> : ::Union(UInt32, Nil)
 
-        <a class="method-permalink" href="#colour%3AUInt32%3F-instance-method">#</a>
+        <a class="method-permalink" href="#colour%3A%3A%3AUnion%28UInt32%2CNil%29-instance-method">#</a>
       </div>
       
       <br/>
@@ -956,12 +974,12 @@
       </div>
     </div>
   
-    <div class="entry-detail" id="description:String?-instance-method">
+    <div class="entry-detail" id="description:::Union(String,Nil)-instance-method">
       <div class="signature">
         
-        def <strong>description</strong> : String?
+        def <strong>description</strong> : ::Union(String, Nil)
 
-        <a class="method-permalink" href="#description%3AString%3F-instance-method">#</a>
+        <a class="method-permalink" href="#description%3A%3A%3AUnion%28String%2CNil%29-instance-method">#</a>
       </div>
       
       <br/>
@@ -984,12 +1002,12 @@
       </div>
     </div>
   
-    <div class="entry-detail" id="fields:Array(Discord::EmbedField)?-instance-method">
+    <div class="entry-detail" id="fields:::Union(Array(EmbedField),Nil)-instance-method">
       <div class="signature">
         
-        def <strong>fields</strong> : Array(<a href="../Discord/EmbedField.html">Discord::EmbedField</a>)?
+        def <strong>fields</strong> : ::Union(Array(<a href="../Discord/EmbedField.html">EmbedField</a>), Nil)
 
-        <a class="method-permalink" href="#fields%3AArray%28Discord%3A%3AEmbedField%29%3F-instance-method">#</a>
+        <a class="method-permalink" href="#fields%3A%3A%3AUnion%28Array%28EmbedField%29%2CNil%29-instance-method">#</a>
       </div>
       
       <br/>
@@ -1012,12 +1030,12 @@
       </div>
     </div>
   
-    <div class="entry-detail" id="footer:Discord::EmbedFooter?-instance-method">
+    <div class="entry-detail" id="footer:::Union(EmbedFooter,Nil)-instance-method">
       <div class="signature">
         
-        def <strong>footer</strong> : <a href="../Discord/EmbedFooter.html">Discord::EmbedFooter</a>?
+        def <strong>footer</strong> : ::Union(<a href="../Discord/EmbedFooter.html">EmbedFooter</a>, Nil)
 
-        <a class="method-permalink" href="#footer%3ADiscord%3A%3AEmbedFooter%3F-instance-method">#</a>
+        <a class="method-permalink" href="#footer%3A%3A%3AUnion%28EmbedFooter%2CNil%29-instance-method">#</a>
       </div>
       
       <br/>
@@ -1040,12 +1058,12 @@
       </div>
     </div>
   
-    <div class="entry-detail" id="image:Discord::EmbedImage?-instance-method">
+    <div class="entry-detail" id="image:::Union(EmbedImage,Nil)-instance-method">
       <div class="signature">
         
-        def <strong>image</strong> : <a href="../Discord/EmbedImage.html">Discord::EmbedImage</a>?
+        def <strong>image</strong> : ::Union(<a href="../Discord/EmbedImage.html">EmbedImage</a>, Nil)
 
-        <a class="method-permalink" href="#image%3ADiscord%3A%3AEmbedImage%3F-instance-method">#</a>
+        <a class="method-permalink" href="#image%3A%3A%3AUnion%28EmbedImage%2CNil%29-instance-method">#</a>
       </div>
       
       <br/>
@@ -1068,12 +1086,12 @@
       </div>
     </div>
   
-    <div class="entry-detail" id="provider:Discord::EmbedProvider?-instance-method">
+    <div class="entry-detail" id="provider:::Union(EmbedProvider,Nil)-instance-method">
       <div class="signature">
         
-        def <strong>provider</strong> : <a href="../Discord/EmbedProvider.html">Discord::EmbedProvider</a>?
+        def <strong>provider</strong> : ::Union(<a href="../Discord/EmbedProvider.html">EmbedProvider</a>, Nil)
 
-        <a class="method-permalink" href="#provider%3ADiscord%3A%3AEmbedProvider%3F-instance-method">#</a>
+        <a class="method-permalink" href="#provider%3A%3A%3AUnion%28EmbedProvider%2CNil%29-instance-method">#</a>
       </div>
       
       <br/>
@@ -1096,12 +1114,12 @@
       </div>
     </div>
   
-    <div class="entry-detail" id="thumbnail:Discord::EmbedThumbnail?-instance-method">
+    <div class="entry-detail" id="thumbnail:::Union(EmbedThumbnail,Nil)-instance-method">
       <div class="signature">
         
-        def <strong>thumbnail</strong> : <a href="../Discord/EmbedThumbnail.html">Discord::EmbedThumbnail</a>?
+        def <strong>thumbnail</strong> : ::Union(<a href="../Discord/EmbedThumbnail.html">EmbedThumbnail</a>, Nil)
 
-        <a class="method-permalink" href="#thumbnail%3ADiscord%3A%3AEmbedThumbnail%3F-instance-method">#</a>
+        <a class="method-permalink" href="#thumbnail%3A%3A%3AUnion%28EmbedThumbnail%2CNil%29-instance-method">#</a>
       </div>
       
       <br/>
@@ -1124,12 +1142,12 @@
       </div>
     </div>
   
-    <div class="entry-detail" id="timestamp:Time?-instance-method">
+    <div class="entry-detail" id="timestamp:::Union(Time,Nil)-instance-method">
       <div class="signature">
         
-        def <strong>timestamp</strong> : Time?
+        def <strong>timestamp</strong> : ::Union(Time, Nil)
 
-        <a class="method-permalink" href="#timestamp%3ATime%3F-instance-method">#</a>
+        <a class="method-permalink" href="#timestamp%3A%3A%3AUnion%28Time%2CNil%29-instance-method">#</a>
       </div>
       
       <br/>
@@ -1152,12 +1170,12 @@
       </div>
     </div>
   
-    <div class="entry-detail" id="title:String?-instance-method">
+    <div class="entry-detail" id="title:::Union(String,Nil)-instance-method">
       <div class="signature">
         
-        def <strong>title</strong> : String?
+        def <strong>title</strong> : ::Union(String, Nil)
 
-        <a class="method-permalink" href="#title%3AString%3F-instance-method">#</a>
+        <a class="method-permalink" href="#title%3A%3A%3AUnion%28String%2CNil%29-instance-method">#</a>
       </div>
       
       <br/>
@@ -1222,12 +1240,12 @@
       </div>
     </div>
   
-    <div class="entry-detail" id="url:String?-instance-method">
+    <div class="entry-detail" id="url:::Union(String,Nil)-instance-method">
       <div class="signature">
         
-        def <strong>url</strong> : String?
+        def <strong>url</strong> : ::Union(String, Nil)
 
-        <a class="method-permalink" href="#url%3AString%3F-instance-method">#</a>
+        <a class="method-permalink" href="#url%3A%3A%3AUnion%28String%2CNil%29-instance-method">#</a>
       </div>
       
       <br/>
@@ -1250,12 +1268,12 @@
       </div>
     </div>
   
-    <div class="entry-detail" id="video:Discord::EmbedVideo?-instance-method">
+    <div class="entry-detail" id="video:::Union(EmbedVideo,Nil)-instance-method">
       <div class="signature">
         
-        def <strong>video</strong> : <a href="../Discord/EmbedVideo.html">Discord::EmbedVideo</a>?
+        def <strong>video</strong> : ::Union(<a href="../Discord/EmbedVideo.html">EmbedVideo</a>, Nil)
 
-        <a class="method-permalink" href="#video%3ADiscord%3A%3AEmbedVideo%3F-instance-method">#</a>
+        <a class="method-permalink" href="#video%3A%3A%3AUnion%28EmbedVideo%2CNil%29-instance-method">#</a>
       </div>
       
       <br/>

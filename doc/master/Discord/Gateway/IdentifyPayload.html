@@ -1,24 +1,40 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
+  <meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="generator" content="Crystal Docs 0.25.0">
+
+
+<link href="../../css/style.css" rel="stylesheet" type="text/css">
+
+<script type="text/javascript" src="../../js/doc.js"></script>
+<script type="text/javascript">
+  CrystalDoc.base_path = "../../";
+</script>
+
   <meta id="repository-name" content="github.com/meew0/discordcr">
-  <link href="../../css/style.css" rel="stylesheet" type="text/css" />
-  <script type="text/javascript" src="../../js/doc.js"></script>
   <title>Discord::Gateway::IdentifyPayload - github.com/meew0/discordcr</title>
 </head>
 <body>
 
-<div id="types-list">
-  <div id="search-box">
-    <input type="search" id="search-input" placeholder="Search...">
+<div class="sidebar">
+  <div class="sidebar-header">
+    <div class="search-box">
+      <input type="search" class="search-input" placeholder="Search..." spellcheck="false">
+    </div>
+
+    <div class="repository-links">
+      <a href="../../index.html">README</a>
+    </div>
   </div>
 
-  <ul>
-    <li><a href="../../index.html">README</a></li>
-  </ul>
+  <div class="search-results" class="hidden">
+    <ul class="search-list"></ul>
+  </div>
 
-  <ul>
+  <div class="types-list">
+    <ul>
   
   <li class="parent open current" data-id="github.com/meew0/discordcr/Discord" data-name="discord">
       <a href="../../Discord.html">Discord</a>
@@ -602,9 +618,11 @@
   
 </ul>
 
+  </div>
 </div>
 
-<div id="main-content">
+
+<div class="main-content">
 <h1 class="type-name">
 
   <span class="kind">struct</span> Discord::Gateway::IdentifyPayload
@@ -633,7 +651,7 @@
   <h2>Defined in:</h2>
   
     
-      <a href="https://github.com/meew0/discordcr/blob/6f8a8f0d3ea7c768e384a6b3c7ef72b251ff4195/src/discordcr/mappings/gateway.cr#L36" target="_blank">discordcr/mappings/gateway.cr</a>
+      <a href="https://github.com/meew0/discordcr/blob/27e400cace78b2d70605c6784fa3630ac797a794/src/discordcr/mappings/gateway.cr#L36" target="_blank">discordcr/mappings/gateway.cr</a>
     
     <br/>
   
@@ -651,7 +669,7 @@
       </li>
     
       <li class="entry-summary">
-        <a href="#new%28__temp_539%3AJSON%3A%3APullParser%29-class-method" class="signature"><strong>.new</strong>(__temp_539 : JSON::PullParser)</a>
+        <a href="#new%28__temp_542%3AJSON%3A%3APullParser%29-class-method" class="signature"><strong>.new</strong>(__temp_542 : JSON::PullParser)</a>
         
       </li>
     
@@ -685,7 +703,7 @@
       </li>
     
       <li class="entry-summary">
-        <a href="#properties%3ADiscord%3A%3AGateway%3A%3AIdentifyProperties-instance-method" class="signature"><strong>#properties</strong> : Discord::Gateway::IdentifyProperties</a>
+        <a href="#properties%3AIdentifyProperties-instance-method" class="signature"><strong>#properties</strong> : IdentifyProperties</a>
         
       </li>
     
@@ -695,7 +713,7 @@
       </li>
     
       <li class="entry-summary">
-        <a href="#shard%3A%7BInt32%2CInt32%7D%3F-instance-method" class="signature"><strong>#shard</strong> : {Int32, Int32}?</a>
+        <a href="#shard%3A%3A%3AUnion%28Tuple%28Int32%2CInt32%29%2CNil%29-instance-method" class="signature"><strong>#shard</strong> : ::Union(Tuple(Int32, Int32), Nil)</a>
         
       </li>
     
@@ -773,23 +791,23 @@
       <br/>
       <div>
         
-          [<a href="https://github.com/meew0/discordcr/blob/6f8a8f0d3ea7c768e384a6b3c7ef72b251ff4195/src/discordcr/mappings/gateway.cr#L37" target="_blank">View source</a>]
+          [<a href="https://github.com/meew0/discordcr/blob/27e400cace78b2d70605c6784fa3630ac797a794/src/discordcr/mappings/gateway.cr#L37" target="_blank">View source</a>]
         
       </div>
     </div>
   
-    <div class="entry-detail" id="new(__temp_539:JSON::PullParser)-class-method">
+    <div class="entry-detail" id="new(__temp_542:JSON::PullParser)-class-method">
       <div class="signature">
         
-        def self.<strong>new</strong>(__temp_539 : JSON::PullParser)
+        def self.<strong>new</strong>(__temp_542 : JSON::PullParser)
 
-        <a class="method-permalink" href="#new%28__temp_539%3AJSON%3A%3APullParser%29-class-method">#</a>
+        <a class="method-permalink" href="#new%28__temp_542%3AJSON%3A%3APullParser%29-class-method">#</a>
       </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/meew0/discordcr/blob/6f8a8f0d3ea7c768e384a6b3c7ef72b251ff4195/src/discordcr/mappings/gateway.cr#L40" target="_blank">View source</a>]
+          [<a href="https://github.com/meew0/discordcr/blob/27e400cace78b2d70605c6784fa3630ac797a794/src/discordcr/mappings/gateway.cr#L40" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -812,7 +830,7 @@
       <br/>
       <div>
         
-          [<a href="https://github.com/meew0/discordcr/blob/6f8a8f0d3ea7c768e384a6b3c7ef72b251ff4195/src/discordcr/mappings/gateway.cr#L40" target="_blank">View source</a>]
+          [<a href="https://github.com/meew0/discordcr/blob/27e400cace78b2d70605c6784fa3630ac797a794/src/discordcr/mappings/gateway.cr#L40" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -828,7 +846,7 @@
       <br/>
       <div>
         
-          [<a href="https://github.com/meew0/discordcr/blob/6f8a8f0d3ea7c768e384a6b3c7ef72b251ff4195/src/discordcr/mappings/gateway.cr#L40" target="_blank">View source</a>]
+          [<a href="https://github.com/meew0/discordcr/blob/27e400cace78b2d70605c6784fa3630ac797a794/src/discordcr/mappings/gateway.cr#L40" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -844,7 +862,7 @@
       <br/>
       <div>
         
-          [<a href="https://github.com/meew0/discordcr/blob/6f8a8f0d3ea7c768e384a6b3c7ef72b251ff4195/src/discordcr/mappings/gateway.cr#L40" target="_blank">View source</a>]
+          [<a href="https://github.com/meew0/discordcr/blob/27e400cace78b2d70605c6784fa3630ac797a794/src/discordcr/mappings/gateway.cr#L40" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -860,23 +878,23 @@
       <br/>
       <div>
         
-          [<a href="https://github.com/meew0/discordcr/blob/6f8a8f0d3ea7c768e384a6b3c7ef72b251ff4195/src/discordcr/mappings/gateway.cr#L40" target="_blank">View source</a>]
+          [<a href="https://github.com/meew0/discordcr/blob/27e400cace78b2d70605c6784fa3630ac797a794/src/discordcr/mappings/gateway.cr#L40" target="_blank">View source</a>]
         
       </div>
     </div>
   
-    <div class="entry-detail" id="properties:Discord::Gateway::IdentifyProperties-instance-method">
+    <div class="entry-detail" id="properties:IdentifyProperties-instance-method">
       <div class="signature">
         
-        def <strong>properties</strong> : <a href="../../Discord/Gateway/IdentifyProperties.html">Discord::Gateway::IdentifyProperties</a>
+        def <strong>properties</strong> : <a href="../../Discord/Gateway/IdentifyProperties.html">IdentifyProperties</a>
 
-        <a class="method-permalink" href="#properties%3ADiscord%3A%3AGateway%3A%3AIdentifyProperties-instance-method">#</a>
+        <a class="method-permalink" href="#properties%3AIdentifyProperties-instance-method">#</a>
       </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/meew0/discordcr/blob/6f8a8f0d3ea7c768e384a6b3c7ef72b251ff4195/src/discordcr/mappings/gateway.cr#L40" target="_blank">View source</a>]
+          [<a href="https://github.com/meew0/discordcr/blob/27e400cace78b2d70605c6784fa3630ac797a794/src/discordcr/mappings/gateway.cr#L40" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -892,23 +910,23 @@
       <br/>
       <div>
         
-          [<a href="https://github.com/meew0/discordcr/blob/6f8a8f0d3ea7c768e384a6b3c7ef72b251ff4195/src/discordcr/mappings/gateway.cr#L40" target="_blank">View source</a>]
+          [<a href="https://github.com/meew0/discordcr/blob/27e400cace78b2d70605c6784fa3630ac797a794/src/discordcr/mappings/gateway.cr#L40" target="_blank">View source</a>]
         
       </div>
     </div>
   
-    <div class="entry-detail" id="shard:{Int32,Int32}?-instance-method">
+    <div class="entry-detail" id="shard:::Union(Tuple(Int32,Int32),Nil)-instance-method">
       <div class="signature">
         
-        def <strong>shard</strong> : {Int32, Int32}?
+        def <strong>shard</strong> : ::Union(Tuple(Int32, Int32), Nil)
 
-        <a class="method-permalink" href="#shard%3A%7BInt32%2CInt32%7D%3F-instance-method">#</a>
+        <a class="method-permalink" href="#shard%3A%3A%3AUnion%28Tuple%28Int32%2CInt32%29%2CNil%29-instance-method">#</a>
       </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/meew0/discordcr/blob/6f8a8f0d3ea7c768e384a6b3c7ef72b251ff4195/src/discordcr/mappings/gateway.cr#L40" target="_blank">View source</a>]
+          [<a href="https://github.com/meew0/discordcr/blob/27e400cace78b2d70605c6784fa3630ac797a794/src/discordcr/mappings/gateway.cr#L40" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -924,7 +942,7 @@
       <br/>
       <div>
         
-          [<a href="https://github.com/meew0/discordcr/blob/6f8a8f0d3ea7c768e384a6b3c7ef72b251ff4195/src/discordcr/mappings/gateway.cr#L40" target="_blank">View source</a>]
+          [<a href="https://github.com/meew0/discordcr/blob/27e400cace78b2d70605c6784fa3630ac797a794/src/discordcr/mappings/gateway.cr#L40" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -940,7 +958,7 @@
       <br/>
       <div>
         
-          [<a href="https://github.com/meew0/discordcr/blob/6f8a8f0d3ea7c768e384a6b3c7ef72b251ff4195/src/discordcr/mappings/gateway.cr#L40" target="_blank">View source</a>]
+          [<a href="https://github.com/meew0/discordcr/blob/27e400cace78b2d70605c6784fa3630ac797a794/src/discordcr/mappings/gateway.cr#L40" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -956,7 +974,7 @@
       <br/>
       <div>
         
-          [<a href="https://github.com/meew0/discordcr/blob/6f8a8f0d3ea7c768e384a6b3c7ef72b251ff4195/src/discordcr/mappings/gateway.cr#L40" target="_blank">View source</a>]
+          [<a href="https://github.com/meew0/discordcr/blob/27e400cace78b2d70605c6784fa3630ac797a794/src/discordcr/mappings/gateway.cr#L40" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -972,7 +990,7 @@
       <br/>
       <div>
         
-          [<a href="https://github.com/meew0/discordcr/blob/6f8a8f0d3ea7c768e384a6b3c7ef72b251ff4195/src/discordcr/mappings/gateway.cr#L40" target="_blank">View source</a>]
+          [<a href="https://github.com/meew0/discordcr/blob/27e400cace78b2d70605c6784fa3630ac797a794/src/discordcr/mappings/gateway.cr#L40" target="_blank">View source</a>]
         
       </div>
     </div>

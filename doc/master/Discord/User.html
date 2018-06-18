@@ -1,24 +1,40 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
+  <meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="generator" content="Crystal Docs 0.25.0">
+
+
+<link href="../css/style.css" rel="stylesheet" type="text/css">
+
+<script type="text/javascript" src="../js/doc.js"></script>
+<script type="text/javascript">
+  CrystalDoc.base_path = "../";
+</script>
+
   <meta id="repository-name" content="github.com/meew0/discordcr">
-  <link href="../css/style.css" rel="stylesheet" type="text/css" />
-  <script type="text/javascript" src="../js/doc.js"></script>
   <title>Discord::User - github.com/meew0/discordcr</title>
 </head>
 <body>
 
-<div id="types-list">
-  <div id="search-box">
-    <input type="search" id="search-input" placeholder="Search...">
+<div class="sidebar">
+  <div class="sidebar-header">
+    <div class="search-box">
+      <input type="search" class="search-input" placeholder="Search..." spellcheck="false">
+    </div>
+
+    <div class="repository-links">
+      <a href="../index.html">README</a>
+    </div>
   </div>
 
-  <ul>
-    <li><a href="../index.html">README</a></li>
-  </ul>
+  <div class="search-results" class="hidden">
+    <ul class="search-list"></ul>
+  </div>
 
-  <ul>
+  <div class="types-list">
+    <ul>
   
   <li class="parent open current" data-id="github.com/meew0/discordcr/Discord" data-name="discord">
       <a href="../Discord.html">Discord</a>
@@ -602,9 +618,11 @@
   
 </ul>
 
+  </div>
 </div>
 
-<div id="main-content">
+
+<div class="main-content">
 <h1 class="type-name">
 
   <span class="kind">struct</span> Discord::User
@@ -633,7 +651,7 @@
   <h2>Defined in:</h2>
   
     
-      <a href="https://github.com/meew0/discordcr/blob/6f8a8f0d3ea7c768e384a6b3c7ef72b251ff4195/src/discordcr/mappings/user.cr#L4" target="_blank">discordcr/mappings/user.cr</a>
+      <a href="https://github.com/meew0/discordcr/blob/27e400cace78b2d70605c6784fa3630ac797a794/src/discordcr/mappings/user.cr#L4" target="_blank">discordcr/mappings/user.cr</a>
     
     <br/>
   
@@ -646,7 +664,7 @@
   <ul class="list-summary">
     
       <li class="entry-summary">
-        <a href="#new%28__temp_259%3AJSON%3A%3APullParser%29-class-method" class="signature"><strong>.new</strong>(__temp_259 : JSON::PullParser)</a>
+        <a href="#new%28__temp_262%3AJSON%3A%3APullParser%29-class-method" class="signature"><strong>.new</strong>(__temp_262 : JSON::PullParser)</a>
         
       </li>
     
@@ -660,7 +678,7 @@
   <ul class="list-summary">
     
       <li class="entry-summary">
-        <a href="#avatar%3AString%3F-instance-method" class="signature"><strong>#avatar</strong> : String?</a>
+        <a href="#avatar%3A%3A%3AUnion%28String%2CNil%29-instance-method" class="signature"><strong>#avatar</strong> : ::Union(String, Nil)</a>
         
       </li>
     
@@ -670,7 +688,7 @@
       </li>
     
       <li class="entry-summary">
-        <a href="#bot%3ABool%3F-instance-method" class="signature"><strong>#bot</strong> : Bool?</a>
+        <a href="#bot%3A%3A%3AUnion%28Bool%2CNil%29-instance-method" class="signature"><strong>#bot</strong> : ::Union(Bool, Nil)</a>
         
       </li>
     
@@ -690,7 +708,7 @@
       </li>
     
       <li class="entry-summary">
-        <a href="#email%3AString%3F-instance-method" class="signature"><strong>#email</strong> : String?</a>
+        <a href="#email%3A%3A%3AUnion%28String%2CNil%29-instance-method" class="signature"><strong>#email</strong> : ::Union(String, Nil)</a>
         
       </li>
     
@@ -710,7 +728,7 @@
       </li>
     
       <li class="entry-summary">
-        <a href="#mfa_enabled%3ABool%3F-instance-method" class="signature"><strong>#mfa_enabled</strong> : Bool?</a>
+        <a href="#mfa_enabled%3A%3A%3AUnion%28Bool%2CNil%29-instance-method" class="signature"><strong>#mfa_enabled</strong> : ::Union(Bool, Nil)</a>
         
       </li>
     
@@ -735,7 +753,7 @@
       </li>
     
       <li class="entry-summary">
-        <a href="#verified%3ABool%3F-instance-method" class="signature"><strong>#verified</strong> : Bool?</a>
+        <a href="#verified%3A%3A%3AUnion%28Bool%2CNil%29-instance-method" class="signature"><strong>#verified</strong> : ::Union(Bool, Nil)</a>
         
       </li>
     
@@ -787,12 +805,12 @@
 
   <h2>Constructor Detail</h2>
   
-    <div class="entry-detail" id="new(__temp_259:JSON::PullParser)-class-method">
+    <div class="entry-detail" id="new(__temp_262:JSON::PullParser)-class-method">
       <div class="signature">
         
-        def self.<strong>new</strong>(__temp_259 : JSON::PullParser)
+        def self.<strong>new</strong>(__temp_262 : JSON::PullParser)
 
-        <a class="method-permalink" href="#new%28__temp_259%3AJSON%3A%3APullParser%29-class-method">#</a>
+        <a class="method-permalink" href="#new%28__temp_262%3AJSON%3A%3APullParser%29-class-method">#</a>
       </div>
       
       <br/>
@@ -808,12 +826,12 @@
 
   <h2>Instance Method Detail</h2>
   
-    <div class="entry-detail" id="avatar:String?-instance-method">
+    <div class="entry-detail" id="avatar:::Union(String,Nil)-instance-method">
       <div class="signature">
         
-        def <strong>avatar</strong> : String?
+        def <strong>avatar</strong> : ::Union(String, Nil)
 
-        <a class="method-permalink" href="#avatar%3AString%3F-instance-method">#</a>
+        <a class="method-permalink" href="#avatar%3A%3A%3AUnion%28String%2CNil%29-instance-method">#</a>
       </div>
       
       <br/>
@@ -836,12 +854,12 @@
       </div>
     </div>
   
-    <div class="entry-detail" id="bot:Bool?-instance-method">
+    <div class="entry-detail" id="bot:::Union(Bool,Nil)-instance-method">
       <div class="signature">
         
-        def <strong>bot</strong> : Bool?
+        def <strong>bot</strong> : ::Union(Bool, Nil)
 
-        <a class="method-permalink" href="#bot%3ABool%3F-instance-method">#</a>
+        <a class="method-permalink" href="#bot%3A%3A%3AUnion%28Bool%2CNil%29-instance-method">#</a>
       </div>
       
       <br/>
@@ -892,12 +910,12 @@
       </div>
     </div>
   
-    <div class="entry-detail" id="email:String?-instance-method">
+    <div class="entry-detail" id="email:::Union(String,Nil)-instance-method">
       <div class="signature">
         
-        def <strong>email</strong> : String?
+        def <strong>email</strong> : ::Union(String, Nil)
 
-        <a class="method-permalink" href="#email%3AString%3F-instance-method">#</a>
+        <a class="method-permalink" href="#email%3A%3A%3AUnion%28String%2CNil%29-instance-method">#</a>
       </div>
       
       <br/>
@@ -948,12 +966,12 @@
       </div>
     </div>
   
-    <div class="entry-detail" id="mfa_enabled:Bool?-instance-method">
+    <div class="entry-detail" id="mfa_enabled:::Union(Bool,Nil)-instance-method">
       <div class="signature">
         
-        def <strong>mfa_enabled</strong> : Bool?
+        def <strong>mfa_enabled</strong> : ::Union(Bool, Nil)
 
-        <a class="method-permalink" href="#mfa_enabled%3ABool%3F-instance-method">#</a>
+        <a class="method-permalink" href="#mfa_enabled%3A%3A%3AUnion%28Bool%2CNil%29-instance-method">#</a>
       </div>
       
       <br/>
@@ -1018,12 +1036,12 @@
       </div>
     </div>
   
-    <div class="entry-detail" id="verified:Bool?-instance-method">
+    <div class="entry-detail" id="verified:::Union(Bool,Nil)-instance-method">
       <div class="signature">
         
-        def <strong>verified</strong> : Bool?
+        def <strong>verified</strong> : ::Union(Bool, Nil)
 
-        <a class="method-permalink" href="#verified%3ABool%3F-instance-method">#</a>
+        <a class="method-permalink" href="#verified%3A%3A%3AUnion%28Bool%2CNil%29-instance-method">#</a>
       </div>
       
       <br/>

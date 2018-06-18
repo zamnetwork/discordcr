@@ -1,24 +1,40 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
+  <meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="generator" content="Crystal Docs 0.25.0">
+
+
+<link href="css/style.css" rel="stylesheet" type="text/css">
+
+<script type="text/javascript" src="js/doc.js"></script>
+<script type="text/javascript">
+  CrystalDoc.base_path = "";
+</script>
+
   <meta id="repository-name" content="github.com/meew0/discordcr">
-  <link href="css/style.css" rel="stylesheet" type="text/css" />
-  <script type="text/javascript" src="js/doc.js"></script>
   <title>README - github.com/meew0/discordcr</title>
 </head>
 <body>
 
-<div id="types-list">
-  <div id="search-box">
-    <input type="search" id="search-input" placeholder="Search...">
+<div class="sidebar">
+  <div class="sidebar-header">
+    <div class="search-box">
+      <input type="search" class="search-input" placeholder="Search..." spellcheck="false">
+    </div>
+
+    <div class="repository-links">
+      <a href="index.html">README</a>
+    </div>
   </div>
 
-  <ul>
-    <li class="current"><a href="index.html">README</a></li>
-  </ul>
+  <div class="search-results" class="hidden">
+    <ul class="search-list"></ul>
+  </div>
 
-  <ul>
+  <div class="types-list">
+    <ul>
   
   <li class="parent " data-id="github.com/meew0/discordcr/Discord" data-name="discord">
       <a href="Discord.html">Discord</a>
@@ -602,9 +618,11 @@
   
 </ul>
 
+  </div>
 </div>
 
-<div id="main-content">
+
+<div class="main-content">
 <p><a href="https://meew0.github.io/discordcr/doc/v0.1.0/" target="_blank"><img src="https://img.shields.io/badge/docs-latest-green.svg?style=flat-square" alt="docs"/></a></p>
 
 <h1>discordcr</h1>
@@ -633,7 +651,7 @@ likely doesn't.</p>
 
 <p>Add this to your application's <code>shard.yml</code>:</p>
 
-<pre><code class='language-yaml'>dependencies:
+<pre><code class="language-yaml">dependencies:
   discordcr:
     github: meew0/discordcr</code></pre>
 
@@ -657,7 +675,7 @@ documentation for what specific events and REST calls do.</p>
 <p>Caching is done using a separate <code>Cache</code> class that needs to be added into
 clients manually:</p>
 
-<pre><code class='language-cr'>client = Discord::Client.new # ...
+<pre><code class="language-cr">client = Discord::Client.new # ...
 cache = Discord::Cache.new(client)
 client.cache = cache</code></pre>
 
@@ -667,7 +685,7 @@ there will still only be one request to Discord. (There may even be no request
 at all, if the requested data has already been obtained over the gateway.)
 An example of how to use the cache once it has been instantiated:</p>
 
-<pre><code class='language-cr'># Get the username of the user with ID 66237334693085184
+<pre><code class="language-cr"># Get the username of the user with ID 66237334693085184
 user = cache.resolve_user(66237334693085184_u64)
 user = cache.resolve_user(66237334693085184_u64) # won't do a request to Discord
 puts user.username</code></pre>
