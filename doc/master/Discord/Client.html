@@ -556,6 +556,11 @@
       
     </li>
   
+  <li class=" " data-id="github.com/meew0/discordcr/Discord/Snowflake" data-name="discord::snowflake">
+      <a href="../Discord/Snowflake.html">Snowflake</a>
+      
+    </li>
+  
   <li class=" " data-id="github.com/meew0/discordcr/Discord/StatusException" data-name="discord::statusexception">
       <a href="../Discord/StatusException.html">StatusException</a>
       
@@ -671,7 +676,7 @@ module.) A gateway connection can also be started using the <code><a href="../Di
   <h2>Defined in:</h2>
   
     
-      <a href="https://github.com/meew0/discordcr/blob/27e400cace78b2d70605c6784fa3630ac797a794/src/discordcr/client.cr#L19" target="_blank">discordcr/client.cr</a>
+      <a href="https://github.com/meew0/discordcr/blob/0e38695de0247bf680adc45ad635490175a7197c/src/discordcr/client.cr#L19" target="_blank">discordcr/client.cr</a>
     
     <br/>
   
@@ -1139,98 +1144,98 @@ module.) A gateway connection can also be started using the <code><a href="../Di
     add_guild_member_role</a>, 
     
   
-    <a href="../Discord/REST.html#add_pinned_channel_message%28channel_id%3AUInt64%2Cmessage_id%3AUInt64%29-instance-method" class="tooltip">
-      <span>add_pinned_channel_message(channel_id : UInt64, message_id : UInt64)</span>
+    <a href="../Discord/REST.html#add_pinned_channel_message%28channel_id%3AUInt64%7CSnowflake%2Cmessage_id%3AUInt64%7CSnowflake%29-instance-method" class="tooltip">
+      <span>add_pinned_channel_message(channel_id : UInt64 | Snowflake, message_id : UInt64 | Snowflake)</span>
     add_pinned_channel_message</a>, 
     
   
-    <a href="../Discord/REST.html#begin_guild_prune%28guild_id%3AUInt64%2Cdays%3AUInt32%29-instance-method" class="tooltip">
-      <span>begin_guild_prune(guild_id : UInt64, days : UInt32)</span>
+    <a href="../Discord/REST.html#begin_guild_prune%28guild_id%3AUInt64%7CSnowflake%2Cdays%3AUInt32%29-instance-method" class="tooltip">
+      <span>begin_guild_prune(guild_id : UInt64 | Snowflake, days : UInt32)</span>
     begin_guild_prune</a>, 
     
   
-    <a href="../Discord/REST.html#bulk_delete_messages%28channel_id%3AUInt64%2Cmessage_ids%3AArray%28UInt64%29%29-instance-method" class="tooltip">
-      <span>bulk_delete_messages(channel_id : UInt64, message_ids : Array(UInt64))</span>
+    <a href="../Discord/REST.html#bulk_delete_messages%28channel_id%3AUInt64%7CSnowflake%2Cmessage_ids%3AArray%28UInt64%7CSnowflake%29%29-instance-method" class="tooltip">
+      <span>bulk_delete_messages(channel_id : UInt64 | Snowflake, message_ids : Array(UInt64 | Snowflake))</span>
     bulk_delete_messages</a>, 
     
   
-    <a href="../Discord/REST.html#create_channel_invite%28channel_id%3AUInt64%2Cmax_age%3AUInt32%3D0_u32%2Cmax_uses%3AUInt32%3D0_u32%2Ctemporary%3ABool%3Dfalse%29-instance-method" class="tooltip">
-      <span>create_channel_invite(channel_id : UInt64, max_age : UInt32 = <span class="n">0_u32</span>, max_uses : UInt32 = <span class="n">0_u32</span>, temporary : Bool = <span class="n">false</span>)</span>
+    <a href="../Discord/REST.html#create_channel_invite%28channel_id%3AUInt64%7CSnowflake%2Cmax_age%3AUInt32%3D0_u32%2Cmax_uses%3AUInt32%3D0_u32%2Ctemporary%3ABool%3Dfalse%29-instance-method" class="tooltip">
+      <span>create_channel_invite(channel_id : UInt64 | Snowflake, max_age : UInt32 = <span class="n">0_u32</span>, max_uses : UInt32 = <span class="n">0_u32</span>, temporary : Bool = <span class="n">false</span>)</span>
     create_channel_invite</a>, 
     
   
-    <a href="../Discord/REST.html#create_channel_webhook%28channel_id%3AUInt64%2Cname%3AString%2Cavatar%3AString%29-instance-method" class="tooltip">
-      <span>create_channel_webhook(channel_id : UInt64, name : String, avatar : String)</span>
+    <a href="../Discord/REST.html#create_channel_webhook%28channel_id%3AUInt64%7CSnowflake%2Cname%3AString%2Cavatar%3AString%29-instance-method" class="tooltip">
+      <span>create_channel_webhook(channel_id : UInt64 | Snowflake, name : String, avatar : String)</span>
     create_channel_webhook</a>, 
     
   
-    <a href="../Discord/REST.html#create_dm%28recipient_id%3AUInt64%29-instance-method" class="tooltip">
-      <span>create_dm(recipient_id : UInt64)</span>
+    <a href="../Discord/REST.html#create_dm%28recipient_id%3AUInt64%7CSnowflake%29-instance-method" class="tooltip">
+      <span>create_dm(recipient_id : UInt64 | Snowflake)</span>
     create_dm</a>, 
     
   
-    <a href="../Discord/REST.html#create_guild_ban%28guild_id%3AUInt64%2Cuser_id%3AUInt64%29-instance-method" class="tooltip">
-      <span>create_guild_ban(guild_id : UInt64, user_id : UInt64)</span>
+    <a href="../Discord/REST.html#create_guild_ban%28guild_id%3AUInt64%7CSnowflake%2Cuser_id%3AUInt64%7CSnowflake%29-instance-method" class="tooltip">
+      <span>create_guild_ban(guild_id : UInt64 | Snowflake, user_id : UInt64 | Snowflake)</span>
     create_guild_ban</a>, 
     
   
-    <a href="../Discord/REST.html#create_guild_channel%28guild_id%3AUInt64%2Cname%3AString%2Ctype%3AChannelType%2Cbitrate%3AUInt32%3F%2Cuser_limit%3AUInt32%3F%29-instance-method" class="tooltip">
-      <span>create_guild_channel(guild_id : UInt64, name : String, type : ChannelType, bitrate : UInt32?, user_limit : UInt32?)</span>
+    <a href="../Discord/REST.html#create_guild_channel%28guild_id%3AUInt64%7CSnowflake%2Cname%3AString%2Ctype%3AChannelType%2Cbitrate%3AUInt32%3F%2Cuser_limit%3AUInt32%3F%29-instance-method" class="tooltip">
+      <span>create_guild_channel(guild_id : UInt64 | Snowflake, name : String, type : ChannelType, bitrate : UInt32?, user_limit : UInt32?)</span>
     create_guild_channel</a>, 
     
   
-    <a href="../Discord/REST.html#create_guild_emoji%28guild_id%3AUInt64%2Cname%3AString%2Cimage%3AString%29-instance-method" class="tooltip">
-      <span>create_guild_emoji(guild_id : UInt64, name : String, image : String)</span>
+    <a href="../Discord/REST.html#create_guild_emoji%28guild_id%3AUInt64%7CSnowflake%2Cname%3AString%2Cimage%3AString%29-instance-method" class="tooltip">
+      <span>create_guild_emoji(guild_id : UInt64 | Snowflake, name : String, image : String)</span>
     create_guild_emoji</a>, 
     
   
-    <a href="../Discord/REST.html#create_guild_integration%28guild_id%3AUInt64%2Ctype%3AString%2Cid%3AUInt64%29-instance-method" class="tooltip">
-      <span>create_guild_integration(guild_id : UInt64, type : String, id : UInt64)</span>
+    <a href="../Discord/REST.html#create_guild_integration%28guild_id%3AUInt64%7CSnowflake%2Ctype%3AString%2Cid%3AUInt64%7CSnowflake%29-instance-method" class="tooltip">
+      <span>create_guild_integration(guild_id : UInt64 | Snowflake, type : String, id : UInt64 | Snowflake)</span>
     create_guild_integration</a>, 
     
   
-    <a href="../Discord/REST.html#create_guild_role%28guild_id%3AUInt64%2Cname%3AString%3F%3Dnil%2Cpermissions%3APermissions%3F%3Dnil%2Ccolour%3AUInt32%3D0_u32%2Choist%3ABool%3Dfalse%2Cmentionable%3ABool%3Dfalse%29-instance-method" class="tooltip">
-      <span>create_guild_role(guild_id : UInt64, name : String? = <span class="n">nil</span>, permissions : Permissions? = <span class="n">nil</span>, colour : UInt32 = <span class="n">0_u32</span>, hoist : Bool = <span class="n">false</span>, mentionable : Bool = <span class="n">false</span>)</span>
+    <a href="../Discord/REST.html#create_guild_role%28guild_id%3AUInt64%7CSnowflake%2Cname%3AString%3F%3Dnil%2Cpermissions%3APermissions%3F%3Dnil%2Ccolour%3AUInt32%3D0_u32%2Choist%3ABool%3Dfalse%2Cmentionable%3ABool%3Dfalse%29-instance-method" class="tooltip">
+      <span>create_guild_role(guild_id : UInt64 | Snowflake, name : String? = <span class="n">nil</span>, permissions : Permissions? = <span class="n">nil</span>, colour : UInt32 = <span class="n">0_u32</span>, hoist : Bool = <span class="n">false</span>, mentionable : Bool = <span class="n">false</span>)</span>
     create_guild_role</a>, 
     
   
-    <a href="../Discord/REST.html#create_message%28channel_id%3AUInt64%2Ccontent%3AString%2Cembed%3AEmbed%3F%3Dnil%2Ctts%3ABool%3Dfalse%29-instance-method" class="tooltip">
-      <span>create_message(channel_id : UInt64, content : String, embed : Embed? = <span class="n">nil</span>, tts : Bool = <span class="n">false</span>)</span>
+    <a href="../Discord/REST.html#create_message%28channel_id%3AUInt64%7CSnowflake%2Ccontent%3AString%2Cembed%3AEmbed%3F%3Dnil%2Ctts%3ABool%3Dfalse%29-instance-method" class="tooltip">
+      <span>create_message(channel_id : UInt64 | Snowflake, content : String, embed : Embed? = <span class="n">nil</span>, tts : Bool = <span class="n">false</span>)</span>
     create_message</a>, 
     
   
-    <a href="../Discord/REST.html#create_reaction%28channel_id%3AUInt64%2Cmessage_id%3AUInt64%2Cemoji%3AString%29-instance-method" class="tooltip">
-      <span>create_reaction(channel_id : UInt64, message_id : UInt64, emoji : String)</span>
+    <a href="../Discord/REST.html#create_reaction%28channel_id%3AUInt64%7CSnowflake%2Cmessage_id%3AUInt64%7CSnowflake%2Cemoji%3AString%29-instance-method" class="tooltip">
+      <span>create_reaction(channel_id : UInt64 | Snowflake, message_id : UInt64 | Snowflake, emoji : String)</span>
     create_reaction</a>, 
     
   
-    <a href="../Discord/REST.html#delete_all_reactions%28channel_id%3AUInt64%2Cmessage_id%3AUInt64%29-instance-method" class="tooltip">
-      <span>delete_all_reactions(channel_id : UInt64, message_id : UInt64)</span>
+    <a href="../Discord/REST.html#delete_all_reactions%28channel_id%3AUInt64%7CSnowflake%2Cmessage_id%3AUInt64%7CSnowflake%29-instance-method" class="tooltip">
+      <span>delete_all_reactions(channel_id : UInt64 | Snowflake, message_id : UInt64 | Snowflake)</span>
     delete_all_reactions</a>, 
     
   
-    <a href="../Discord/REST.html#delete_channel%28channel_id%3AUInt64%29-instance-method" class="tooltip">
-      <span>delete_channel(channel_id : UInt64)</span>
+    <a href="../Discord/REST.html#delete_channel%28channel_id%3AUInt64%7CSnowflake%29-instance-method" class="tooltip">
+      <span>delete_channel(channel_id : UInt64 | Snowflake)</span>
     delete_channel</a>, 
     
   
-    <a href="../Discord/REST.html#delete_channel_permission%28channel_id%3AUInt64%2Coverwrite_id%3AUInt64%29-instance-method" class="tooltip">
-      <span>delete_channel_permission(channel_id : UInt64, overwrite_id : UInt64)</span>
+    <a href="../Discord/REST.html#delete_channel_permission%28channel_id%3AUInt64%7CSnowflake%2Coverwrite_id%3AUInt64%7CSnowflake%29-instance-method" class="tooltip">
+      <span>delete_channel_permission(channel_id : UInt64 | Snowflake, overwrite_id : UInt64 | Snowflake)</span>
     delete_channel_permission</a>, 
     
   
-    <a href="../Discord/REST.html#delete_guild%28guild_id%3AUInt64%29-instance-method" class="tooltip">
-      <span>delete_guild(guild_id : UInt64)</span>
+    <a href="../Discord/REST.html#delete_guild%28guild_id%3AUInt64%7CSnowflake%29-instance-method" class="tooltip">
+      <span>delete_guild(guild_id : UInt64 | Snowflake)</span>
     delete_guild</a>, 
     
   
-    <a href="../Discord/REST.html#delete_guild_integration%28guild_id%3AUInt64%2Cintegration_id%3AUInt64%29-instance-method" class="tooltip">
-      <span>delete_guild_integration(guild_id : UInt64, integration_id : UInt64)</span>
+    <a href="../Discord/REST.html#delete_guild_integration%28guild_id%3AUInt64%7CSnowflake%2Cintegration_id%3AUInt64%7CSnowflake%29-instance-method" class="tooltip">
+      <span>delete_guild_integration(guild_id : UInt64 | Snowflake, integration_id : UInt64 | Snowflake)</span>
     delete_guild_integration</a>, 
     
   
-    <a href="../Discord/REST.html#delete_guild_role%28guild_id%3AUInt64%2Crole_id%3AUInt64%29-instance-method" class="tooltip">
-      <span>delete_guild_role(guild_id : UInt64, role_id : UInt64)</span>
+    <a href="../Discord/REST.html#delete_guild_role%28guild_id%3AUInt64%7CSnowflake%2Crole_id%3AUInt64%7CSnowflake%29-instance-method" class="tooltip">
+      <span>delete_guild_role(guild_id : UInt64 | Snowflake, role_id : UInt64 | Snowflake)</span>
     delete_guild_role</a>, 
     
   
@@ -1239,68 +1244,68 @@ module.) A gateway connection can also be started using the <code><a href="../Di
     delete_invite</a>, 
     
   
-    <a href="../Discord/REST.html#delete_message%28channel_id%3AUInt64%2Cmessage_id%3AUInt64%29-instance-method" class="tooltip">
-      <span>delete_message(channel_id : UInt64, message_id : UInt64)</span>
+    <a href="../Discord/REST.html#delete_message%28channel_id%3AUInt64%7CSnowflake%2Cmessage_id%3AUInt64%7CSnowflake%29-instance-method" class="tooltip">
+      <span>delete_message(channel_id : UInt64 | Snowflake, message_id : UInt64 | Snowflake)</span>
     delete_message</a>, 
     
   
-    <a href="../Discord/REST.html#delete_own_reaction%28channel_id%3AUInt64%2Cmessage_id%3AUInt64%2Cemoji%3AString%29-instance-method" class="tooltip">
-      <span>delete_own_reaction(channel_id : UInt64, message_id : UInt64, emoji : String)</span>
+    <a href="../Discord/REST.html#delete_own_reaction%28channel_id%3AUInt64%7CSnowflake%2Cmessage_id%3AUInt64%7CSnowflake%2Cemoji%3AString%29-instance-method" class="tooltip">
+      <span>delete_own_reaction(channel_id : UInt64 | Snowflake, message_id : UInt64 | Snowflake, emoji : String)</span>
     delete_own_reaction</a>, 
     
   
-    <a href="../Discord/REST.html#delete_pinned_channel_message%28channel_id%3AUInt64%2Cmessage_id%3AUInt64%29-instance-method" class="tooltip">
-      <span>delete_pinned_channel_message(channel_id : UInt64, message_id : UInt64)</span>
+    <a href="../Discord/REST.html#delete_pinned_channel_message%28channel_id%3AUInt64%7CSnowflake%2Cmessage_id%3AUInt64%7CSnowflake%29-instance-method" class="tooltip">
+      <span>delete_pinned_channel_message(channel_id : UInt64 | Snowflake, message_id : UInt64 | Snowflake)</span>
     delete_pinned_channel_message</a>, 
     
   
-    <a href="../Discord/REST.html#delete_user_reaction%28channel_id%3AUInt64%2Cmessage_id%3AUInt64%2Cemoji%3AString%2Cuser_id%3AUInt64%29-instance-method" class="tooltip">
-      <span>delete_user_reaction(channel_id : UInt64, message_id : UInt64, emoji : String, user_id : UInt64)</span>
+    <a href="../Discord/REST.html#delete_user_reaction%28channel_id%3AUInt64%7CSnowflake%2Cmessage_id%3AUInt64%7CSnowflake%2Cemoji%3AString%2Cuser_id%3AUInt64%7CSnowflake%29-instance-method" class="tooltip">
+      <span>delete_user_reaction(channel_id : UInt64 | Snowflake, message_id : UInt64 | Snowflake, emoji : String, user_id : UInt64 | Snowflake)</span>
     delete_user_reaction</a>, 
     
   
-    <a href="../Discord/REST.html#delete_webhook%28webhook_id%3AUInt64%2Ctoken%3AString%29-instance-method" class="tooltip">
-      <span>delete_webhook(webhook_id : UInt64, token : String)<br/>delete_webhook(webhook_id : UInt64)</span>
+    <a href="../Discord/REST.html#delete_webhook%28webhook_id%3AUInt64%7CSnowflake%2Ctoken%3AString%29-instance-method" class="tooltip">
+      <span>delete_webhook(webhook_id : UInt64 | Snowflake, token : String)<br/>delete_webhook(webhook_id : UInt64 | Snowflake)</span>
     delete_webhook</a>, 
     
   
-    <a href="../Discord/REST.html#edit_channel_permissions%28channel_id%3AUInt64%2Coverwrite_id%3AUInt64%2Ctype%3AString%2Callow%3APermissions%2Cdeny%3APermissions%29-instance-method" class="tooltip">
-      <span>edit_channel_permissions(channel_id : UInt64, overwrite_id : UInt64, type : String, allow : Permissions, deny : Permissions)</span>
+    <a href="../Discord/REST.html#edit_channel_permissions%28channel_id%3AUInt64%7CSnowflake%2Coverwrite_id%3AUInt64%7CSnowflake%2Ctype%3AString%2Callow%3APermissions%2Cdeny%3APermissions%29-instance-method" class="tooltip">
+      <span>edit_channel_permissions(channel_id : UInt64 | Snowflake, overwrite_id : UInt64 | Snowflake, type : String, allow : Permissions, deny : Permissions)</span>
     edit_channel_permissions</a>, 
     
   
-    <a href="../Discord/REST.html#edit_message%28channel_id%3AUInt64%2Cmessage_id%3AUInt64%2Ccontent%3AString%2Cembed%3AEmbed%3F%3Dnil%29-instance-method" class="tooltip">
-      <span>edit_message(channel_id : UInt64, message_id : UInt64, content : String, embed : Embed? = <span class="n">nil</span>)</span>
+    <a href="../Discord/REST.html#edit_message%28channel_id%3AUInt64%7CSnowflake%2Cmessage_id%3AUInt64%7CSnowflake%2Ccontent%3AString%2Cembed%3AEmbed%3F%3Dnil%29-instance-method" class="tooltip">
+      <span>edit_message(channel_id : UInt64 | Snowflake, message_id : UInt64 | Snowflake, content : String, embed : Embed? = <span class="n">nil</span>)</span>
     edit_message</a>, 
     
   
-    <a href="../Discord/REST.html#execute_webhook%28webhook_id%3AUInt64%2Ctoken%3AString%2Ccontent%3AString%3F%3Dnil%2Cfile%3AString%3F%3Dnil%2Cembeds%3AArray%28Embed%29%3F%3Dnil%2Ctts%3ABool%3F%3Dnil%2Cavatar_url%3AString%3F%3Dnil%2Cusername%3AString%3F%3Dnil%2Cwait%3ABool%3F%3Dfalse%29-instance-method" class="tooltip">
-      <span>execute_webhook(webhook_id : UInt64, token : String, content : String? = <span class="n">nil</span>, file : String? = <span class="n">nil</span>, embeds : Array(Embed)? = <span class="n">nil</span>, tts : Bool? = <span class="n">nil</span>, avatar_url : String? = <span class="n">nil</span>, username : String? = <span class="n">nil</span>, wait : Bool? = <span class="n">false</span>)</span>
+    <a href="../Discord/REST.html#execute_webhook%28webhook_id%3AUInt64%7CSnowflake%2Ctoken%3AString%2Ccontent%3AString%3F%3Dnil%2Cfile%3AString%3F%3Dnil%2Cembeds%3AArray%28Embed%29%3F%3Dnil%2Ctts%3ABool%3F%3Dnil%2Cavatar_url%3AString%3F%3Dnil%2Cusername%3AString%3F%3Dnil%2Cwait%3ABool%3F%3Dfalse%29-instance-method" class="tooltip">
+      <span>execute_webhook(webhook_id : UInt64 | Snowflake, token : String, content : String? = <span class="n">nil</span>, file : String? = <span class="n">nil</span>, embeds : Array(Embed)? = <span class="n">nil</span>, tts : Bool? = <span class="n">nil</span>, avatar_url : String? = <span class="n">nil</span>, username : String? = <span class="n">nil</span>, wait : Bool? = <span class="n">false</span>)</span>
     execute_webhook</a>, 
     
   
-    <a href="../Discord/REST.html#get_channel%28channel_id%3AUInt64%29-instance-method" class="tooltip">
-      <span>get_channel(channel_id : UInt64)</span>
+    <a href="../Discord/REST.html#get_channel%28channel_id%3AUInt64%7CSnowflake%29-instance-method" class="tooltip">
+      <span>get_channel(channel_id : UInt64 | Snowflake)</span>
     get_channel</a>, 
     
   
-    <a href="../Discord/REST.html#get_channel_invites%28channel_id%3AUInt64%29-instance-method" class="tooltip">
-      <span>get_channel_invites(channel_id : UInt64)</span>
+    <a href="../Discord/REST.html#get_channel_invites%28channel_id%3AUInt64%7CSnowflake%29-instance-method" class="tooltip">
+      <span>get_channel_invites(channel_id : UInt64 | Snowflake)</span>
     get_channel_invites</a>, 
     
   
-    <a href="../Discord/REST.html#get_channel_message%28channel_id%3AUInt64%2Cmessage_id%3AUInt64%29-instance-method" class="tooltip">
-      <span>get_channel_message(channel_id : UInt64, message_id : UInt64)</span>
+    <a href="../Discord/REST.html#get_channel_message%28channel_id%3AUInt64%7CSnowflake%2Cmessage_id%3AUInt64%7CSnowflake%29-instance-method" class="tooltip">
+      <span>get_channel_message(channel_id : UInt64 | Snowflake, message_id : UInt64 | Snowflake)</span>
     get_channel_message</a>, 
     
   
-    <a href="../Discord/REST.html#get_channel_messages%28channel_id%3AUInt64%2Climit%3AUInt8%3D50%2Cbefore%3AUInt64%3F%3Dnil%2Cafter%3AUInt64%3F%3Dnil%2Caround%3AUInt64%3F%3Dnil%29-instance-method" class="tooltip">
-      <span>get_channel_messages(channel_id : UInt64, limit : UInt8 = <span class="n">50</span>, before : UInt64? = <span class="n">nil</span>, after : UInt64? = <span class="n">nil</span>, around : UInt64? = <span class="n">nil</span>)</span>
+    <a href="../Discord/REST.html#get_channel_messages%28channel_id%3AUInt64%7CSnowflake%2Climit%3AUInt8%3D50%2Cbefore%3AUInt64%7CSnowflake%7CNil%3Dnil%2Cafter%3AUInt64%7CSnowflak%7CNil%3Dnil%2Caround%3AUInt64%7CSnowflake%7CNil%3Dnil%29-instance-method" class="tooltip">
+      <span>get_channel_messages(channel_id : UInt64 | Snowflake, limit : UInt8 = <span class="n">50</span>, before : UInt64 | Snowflake | Nil = <span class="n">nil</span>, after : UInt64 | Snowflak | Nil = <span class="n">nil</span>, around : UInt64 | Snowflake | Nil = <span class="n">nil</span>)</span>
     get_channel_messages</a>, 
     
   
-    <a href="../Discord/REST.html#get_channel_webhooks%28channel_id%3AUInt64%29-instance-method" class="tooltip">
-      <span>get_channel_webhooks(channel_id : UInt64)</span>
+    <a href="../Discord/REST.html#get_channel_webhooks%28channel_id%3AUInt64%7CSnowflake%29-instance-method" class="tooltip">
+      <span>get_channel_webhooks(channel_id : UInt64 | Snowflake)</span>
     get_channel_webhooks</a>, 
     
   
@@ -1309,8 +1314,8 @@ module.) A gateway connection can also be started using the <code><a href="../Di
     get_current_user</a>, 
     
   
-    <a href="../Discord/REST.html#get_current_user_guilds%28limit%3AUInt8%3D100_u8%2Cbefore%3AUInt64%3D0_u64%2Cafter%3AUInt64%3D0_u64%29-instance-method" class="tooltip">
-      <span>get_current_user_guilds(limit : UInt8 = <span class="n">100_u8</span>, before : UInt64 = <span class="n">0_u64</span>, after : UInt64 = <span class="n">0_u64</span>)</span>
+    <a href="../Discord/REST.html#get_current_user_guilds%28limit%3AUInt8%3D100_u8%2Cbefore%3AUInt64%7CSnowflake%3D0_u64%2Cafter%3AUInt64%7CSnowflake%3D0_u64%29-instance-method" class="tooltip">
+      <span>get_current_user_guilds(limit : UInt8 = <span class="n">100_u8</span>, before : UInt64 | Snowflake = <span class="n">0_u64</span>, after : UInt64 | Snowflake = <span class="n">0_u64</span>)</span>
     get_current_user_guilds</a>, 
     
   
@@ -1324,63 +1329,63 @@ module.) A gateway connection can also be started using the <code><a href="../Di
     get_gateway_bot</a>, 
     
   
-    <a href="../Discord/REST.html#get_guild%28guild_id%3AUInt64%29-instance-method" class="tooltip">
-      <span>get_guild(guild_id : UInt64)</span>
+    <a href="../Discord/REST.html#get_guild%28guild_id%3AUInt64%7CSnowflake%29-instance-method" class="tooltip">
+      <span>get_guild(guild_id : UInt64 | Snowflake)</span>
     get_guild</a>, 
     
   
-    <a href="../Discord/REST.html#get_guild_bans%28guild_id%3AUInt64%29-instance-method" class="tooltip">
-      <span>get_guild_bans(guild_id : UInt64)</span>
+    <a href="../Discord/REST.html#get_guild_bans%28guild_id%3AUInt64%7CSnowflake%29-instance-method" class="tooltip">
+      <span>get_guild_bans(guild_id : UInt64 | Snowflake)</span>
     get_guild_bans</a>, 
     
   
-    <a href="../Discord/REST.html#get_guild_channels%28guild_id%3AUInt64%29-instance-method" class="tooltip">
-      <span>get_guild_channels(guild_id : UInt64)</span>
+    <a href="../Discord/REST.html#get_guild_channels%28guild_id%3AUInt64%7CSnowflake%29-instance-method" class="tooltip">
+      <span>get_guild_channels(guild_id : UInt64 | Snowflake)</span>
     get_guild_channels</a>, 
     
   
-    <a href="../Discord/REST.html#get_guild_embed%28guild_id%3AUInt64%29-instance-method" class="tooltip">
-      <span>get_guild_embed(guild_id : UInt64)</span>
+    <a href="../Discord/REST.html#get_guild_embed%28guild_id%3AUInt64%7CSnowflake%29-instance-method" class="tooltip">
+      <span>get_guild_embed(guild_id : UInt64 | Snowflake)</span>
     get_guild_embed</a>, 
     
   
-    <a href="../Discord/REST.html#get_guild_emojis%28guild_id%3AUInt64%29-instance-method" class="tooltip">
-      <span>get_guild_emojis(guild_id : UInt64)</span>
+    <a href="../Discord/REST.html#get_guild_emojis%28guild_id%3AUInt64%7CSnowflake%29-instance-method" class="tooltip">
+      <span>get_guild_emojis(guild_id : UInt64 | Snowflake)</span>
     get_guild_emojis</a>, 
     
   
-    <a href="../Discord/REST.html#get_guild_integrations%28guild_id%3AUInt64%29-instance-method" class="tooltip">
-      <span>get_guild_integrations(guild_id : UInt64)</span>
+    <a href="../Discord/REST.html#get_guild_integrations%28guild_id%3AUInt64%7CSnowflake%29-instance-method" class="tooltip">
+      <span>get_guild_integrations(guild_id : UInt64 | Snowflake)</span>
     get_guild_integrations</a>, 
     
   
-    <a href="../Discord/REST.html#get_guild_member%28guild_id%3AUInt64%2Cuser_id%3AUInt64%29-instance-method" class="tooltip">
-      <span>get_guild_member(guild_id : UInt64, user_id : UInt64)</span>
+    <a href="../Discord/REST.html#get_guild_member%28guild_id%3AUInt64%7CSnowflake%2Cuser_id%3AUInt64%7CSnowflake%29-instance-method" class="tooltip">
+      <span>get_guild_member(guild_id : UInt64 | Snowflake, user_id : UInt64 | Snowflake)</span>
     get_guild_member</a>, 
     
   
-    <a href="../Discord/REST.html#get_guild_prune_count%28guild_id%3AUInt64%2Cdays%3AUInt32%29-instance-method" class="tooltip">
-      <span>get_guild_prune_count(guild_id : UInt64, days : UInt32)</span>
+    <a href="../Discord/REST.html#get_guild_prune_count%28guild_id%3AUInt64%7CSnowflake%2Cdays%3AUInt32%29-instance-method" class="tooltip">
+      <span>get_guild_prune_count(guild_id : UInt64 | Snowflake, days : UInt32)</span>
     get_guild_prune_count</a>, 
     
   
-    <a href="../Discord/REST.html#get_guild_roles%28guild_id%3AUInt64%29-instance-method" class="tooltip">
-      <span>get_guild_roles(guild_id : UInt64)</span>
+    <a href="../Discord/REST.html#get_guild_roles%28guild_id%3AUInt64%7CSnowflake%29-instance-method" class="tooltip">
+      <span>get_guild_roles(guild_id : UInt64 | Snowflake)</span>
     get_guild_roles</a>, 
     
   
-    <a href="../Discord/REST.html#get_guild_vanity_url%28guild_id%3AUInt64%29-instance-method" class="tooltip">
-      <span>get_guild_vanity_url(guild_id : UInt64)</span>
+    <a href="../Discord/REST.html#get_guild_vanity_url%28guild_id%3AUInt64%7CSnowflake%29-instance-method" class="tooltip">
+      <span>get_guild_vanity_url(guild_id : UInt64 | Snowflake)</span>
     get_guild_vanity_url</a>, 
     
   
-    <a href="../Discord/REST.html#get_guild_voice_regions%28guild_id%3AUInt64%29-instance-method" class="tooltip">
-      <span>get_guild_voice_regions(guild_id : UInt64)</span>
+    <a href="../Discord/REST.html#get_guild_voice_regions%28guild_id%3AUInt64%7CSnowflake%29-instance-method" class="tooltip">
+      <span>get_guild_voice_regions(guild_id : UInt64 | Snowflake)</span>
     get_guild_voice_regions</a>, 
     
   
-    <a href="../Discord/REST.html#get_guild_webhooks%28guild_id%3AUInt64%29-instance-method" class="tooltip">
-      <span>get_guild_webhooks(guild_id : UInt64)</span>
+    <a href="../Discord/REST.html#get_guild_webhooks%28guild_id%3AUInt64%7CSnowflake%29-instance-method" class="tooltip">
+      <span>get_guild_webhooks(guild_id : UInt64 | Snowflake)</span>
     get_guild_webhooks</a>, 
     
   
@@ -1394,18 +1399,18 @@ module.) A gateway connection can also be started using the <code><a href="../Di
     get_oauth2_application</a>, 
     
   
-    <a href="../Discord/REST.html#get_pinned_messages%28channel_id%3AUInt64%29-instance-method" class="tooltip">
-      <span>get_pinned_messages(channel_id : UInt64)</span>
+    <a href="../Discord/REST.html#get_pinned_messages%28channel_id%3AUInt64%7CSnowflake%29-instance-method" class="tooltip">
+      <span>get_pinned_messages(channel_id : UInt64 | Snowflake)</span>
     get_pinned_messages</a>, 
     
   
-    <a href="../Discord/REST.html#get_reactions%28channel_id%3AUInt64%2Cmessage_id%3AUInt64%2Cemoji%3AString%29-instance-method" class="tooltip">
-      <span>get_reactions(channel_id : UInt64, message_id : UInt64, emoji : String)</span>
+    <a href="../Discord/REST.html#get_reactions%28channel_id%3AUInt64%7CSnowflake%2Cmessage_id%3AUInt64%7CSnowflake%2Cemoji%3AString%29-instance-method" class="tooltip">
+      <span>get_reactions(channel_id : UInt64 | Snowflake, message_id : UInt64 | Snowflake, emoji : String)</span>
     get_reactions</a>, 
     
   
-    <a href="../Discord/REST.html#get_user%28user_id%3AUInt64%29-instance-method" class="tooltip">
-      <span>get_user(user_id : UInt64)</span>
+    <a href="../Discord/REST.html#get_user%28user_id%3AUInt64%7CSnowflake%29-instance-method" class="tooltip">
+      <span>get_user(user_id : UInt64 | Snowflake)</span>
     get_user</a>, 
     
   
@@ -1419,18 +1424,18 @@ module.) A gateway connection can also be started using the <code><a href="../Di
     get_users_connections</a>, 
     
   
-    <a href="../Discord/REST.html#get_webhook%28webhook_id%3AUInt64%2Ctoken%3AString%29-instance-method" class="tooltip">
-      <span>get_webhook(webhook_id : UInt64, token : String)<br/>get_webhook(webhook_id : UInt64)</span>
+    <a href="../Discord/REST.html#get_webhook%28webhook_id%3AUInt64%7CSnowflake%2Ctoken%3AString%29-instance-method" class="tooltip">
+      <span>get_webhook(webhook_id : UInt64 | Snowflake, token : String)<br/>get_webhook(webhook_id : UInt64 | Snowflake)</span>
     get_webhook</a>, 
     
   
-    <a href="../Discord/REST.html#leave_guild%28guild_id%3AUInt64%29-instance-method" class="tooltip">
-      <span>leave_guild(guild_id : UInt64)</span>
+    <a href="../Discord/REST.html#leave_guild%28guild_id%3AUInt64%7CSnowflake%29-instance-method" class="tooltip">
+      <span>leave_guild(guild_id : UInt64 | Snowflake)</span>
     leave_guild</a>, 
     
   
-    <a href="../Discord/REST.html#list_guild_members%28guild_id%3AUInt64%2Climit%3AInt32%3D1000%2Cafter%3AUInt64%3D0_u64%29-instance-method" class="tooltip">
-      <span>list_guild_members(guild_id : UInt64, limit : Int32 = <span class="n">1000</span>, after : UInt64 = <span class="n">0_u64</span>)</span>
+    <a href="../Discord/REST.html#list_guild_members%28guild_id%3AUInt64%7CSnowflake%2Climit%3AInt32%3D1000%2Cafter%3AUInt64%7CSnowflake%3D0_u64%29-instance-method" class="tooltip">
+      <span>list_guild_members(guild_id : UInt64 | Snowflake, limit : Int32 = <span class="n">1000</span>, after : UInt64 | Snowflake = <span class="n">0_u64</span>)</span>
     list_guild_members</a>, 
     
   
@@ -1439,8 +1444,8 @@ module.) A gateway connection can also be started using the <code><a href="../Di
     list_voice_regions</a>, 
     
   
-    <a href="../Discord/REST.html#modify_channel%28channel_id%3AUInt64%2Cname%3AString%3F%3Dnil%2Cposition%3AUInt32%3F%3Dnil%2Ctopic%3AString%3F%3Dnil%2Cbitrate%3AUInt32%3F%3Dnil%2Cuser_limit%3AUInt32%3F%3Dnil%2Cnsfw%3ABool%3F%3Dnil%29-instance-method" class="tooltip">
-      <span>modify_channel(channel_id : UInt64, name : String? = <span class="n">nil</span>, position : UInt32? = <span class="n">nil</span>, topic : String? = <span class="n">nil</span>, bitrate : UInt32? = <span class="n">nil</span>, user_limit : UInt32? = <span class="n">nil</span>, nsfw : Bool? = <span class="n">nil</span>)</span>
+    <a href="../Discord/REST.html#modify_channel%28channel_id%3AUInt64%7CSnowflake%2Cname%3AString%3F%3Dnil%2Cposition%3AUInt32%3F%3Dnil%2Ctopic%3AString%3F%3Dnil%2Cbitrate%3AUInt32%3F%3Dnil%2Cuser_limit%3AUInt32%3F%3Dnil%2Cnsfw%3ABool%3F%3Dnil%29-instance-method" class="tooltip">
+      <span>modify_channel(channel_id : UInt64 | Snowflake, name : String? = <span class="n">nil</span>, position : UInt32? = <span class="n">nil</span>, topic : String? = <span class="n">nil</span>, bitrate : UInt32? = <span class="n">nil</span>, user_limit : UInt32? = <span class="n">nil</span>, nsfw : Bool? = <span class="n">nil</span>)</span>
     modify_channel</a>, 
     
   
@@ -1454,68 +1459,68 @@ module.) A gateway connection can also be started using the <code><a href="../Di
     modify_current_user_nick</a>, 
     
   
-    <a href="../Discord/REST.html#modify_guild%28guild_id%3AUInt64%2Cname%3AString%3F%3Dnil%2Cregion%3AString%3F%3Dnil%2Cverification_level%3AUInt8%3F%3Dnil%2Cafk_channel_id%3AUInt64%3F%3Dnil%2Cafk_timeout%3AInt32%3F%3Dnil%2Cicon%3AString%3F%3Dnil%2Cowner_id%3AUInt64%3F%3Dnil%2Csplash%3AString%3F%3Dnil%29-instance-method" class="tooltip">
-      <span>modify_guild(guild_id : UInt64, name : String? = <span class="n">nil</span>, region : String? = <span class="n">nil</span>, verification_level : UInt8? = <span class="n">nil</span>, afk_channel_id : UInt64? = <span class="n">nil</span>, afk_timeout : Int32? = <span class="n">nil</span>, icon : String? = <span class="n">nil</span>, owner_id : UInt64? = <span class="n">nil</span>, splash : String? = <span class="n">nil</span>)</span>
+    <a href="../Discord/REST.html#modify_guild%28guild_id%3AUInt64%7CSnowflake%2Cname%3AString%3F%3Dnil%2Cregion%3AString%3F%3Dnil%2Cverification_level%3AUInt8%3F%3Dnil%2Cafk_channel_id%3AUInt64%7CSnowflake%7CNil%3Dnil%2Cafk_timeout%3AInt32%3F%3Dnil%2Cicon%3AString%3F%3Dnil%2Cowner_id%3AUInt64%7CSnowflake%7CNil%3Dnil%2Csplash%3AString%3F%3Dnil%29-instance-method" class="tooltip">
+      <span>modify_guild(guild_id : UInt64 | Snowflake, name : String? = <span class="n">nil</span>, region : String? = <span class="n">nil</span>, verification_level : UInt8? = <span class="n">nil</span>, afk_channel_id : UInt64 | Snowflake | Nil = <span class="n">nil</span>, afk_timeout : Int32? = <span class="n">nil</span>, icon : String? = <span class="n">nil</span>, owner_id : UInt64 | Snowflake | Nil = <span class="n">nil</span>, splash : String? = <span class="n">nil</span>)</span>
     modify_guild</a>, 
     
   
-    <a href="../Discord/REST.html#modify_guild_channel_positions%28guild_id%3AUInt64%2Cpositions%3AArray%28ModifyChannelPositionPayload%29%29-instance-method" class="tooltip">
-      <span>modify_guild_channel_positions(guild_id : UInt64, positions : Array(ModifyChannelPositionPayload))</span>
+    <a href="../Discord/REST.html#modify_guild_channel_positions%28guild_id%3AUInt64%7CSnowflake%2Cpositions%3AArray%28ModifyChannelPositionPayload%29%29-instance-method" class="tooltip">
+      <span>modify_guild_channel_positions(guild_id : UInt64 | Snowflake, positions : Array(ModifyChannelPositionPayload))</span>
     modify_guild_channel_positions</a>, 
     
   
-    <a href="../Discord/REST.html#modify_guild_embed%28guild_id%3AUInt64%2Cenabled%3ABool%2Cchannel_id%3AUInt64%29-instance-method" class="tooltip">
-      <span>modify_guild_embed(guild_id : UInt64, enabled : Bool, channel_id : UInt64)</span>
+    <a href="../Discord/REST.html#modify_guild_embed%28guild_id%3AUInt64%7CSnowflake%2Cenabled%3ABool%2Cchannel_id%3AUInt64%7CSnowflake%29-instance-method" class="tooltip">
+      <span>modify_guild_embed(guild_id : UInt64 | Snowflake, enabled : Bool, channel_id : UInt64 | Snowflake)</span>
     modify_guild_embed</a>, 
     
   
-    <a href="../Discord/REST.html#modify_guild_emoji%28guild_id%3AUInt64%2Cemoji_id%3AUInt64%2Cname%3AString%29-instance-method" class="tooltip">
-      <span>modify_guild_emoji(guild_id : UInt64, emoji_id : UInt64, name : String)</span>
+    <a href="../Discord/REST.html#modify_guild_emoji%28guild_id%3AUInt64%7CSnowflake%2Cemoji_id%3AUInt64%7CSnowflake%2Cname%3AString%29-instance-method" class="tooltip">
+      <span>modify_guild_emoji(guild_id : UInt64 | Snowflake, emoji_id : UInt64 | Snowflake, name : String)</span>
     modify_guild_emoji</a>, 
     
   
-    <a href="../Discord/REST.html#modify_guild_integration%28guild_id%3AUInt64%2Cintegration_id%3AUInt64%2Cexpire_behaviour%3AUInt8%2Cexpire_grace_period%3AInt32%2Cenable_emoticons%3ABool%29-instance-method" class="tooltip">
-      <span>modify_guild_integration(guild_id : UInt64, integration_id : UInt64, expire_behaviour : UInt8, expire_grace_period : Int32, enable_emoticons : Bool)</span>
+    <a href="../Discord/REST.html#modify_guild_integration%28guild_id%3AUInt64%7CSnowflake%2Cintegration_id%3AUInt64%7CSnowflake%2Cexpire_behaviour%3AUInt8%2Cexpire_grace_period%3AInt32%2Cenable_emoticons%3ABool%29-instance-method" class="tooltip">
+      <span>modify_guild_integration(guild_id : UInt64 | Snowflake, integration_id : UInt64 | Snowflake, expire_behaviour : UInt8, expire_grace_period : Int32, enable_emoticons : Bool)</span>
     modify_guild_integration</a>, 
     
   
-    <a href="../Discord/REST.html#modify_guild_member%28guild_id%3AUInt64%2Cuser_id%3AUInt64%2Cnick%3AString%3F%3Dnil%2Croles%3AArray%28UInt64%29%3F%3Dnil%2Cmute%3ABool%3F%3Dnil%2Cdeaf%3ABool%3F%3Dnil%2Cchannel_id%3AUInt64%3F%3Dnil%29-instance-method" class="tooltip">
-      <span>modify_guild_member(guild_id : UInt64, user_id : UInt64, nick : String? = <span class="n">nil</span>, roles : Array(UInt64)? = <span class="n">nil</span>, mute : Bool? = <span class="n">nil</span>, deaf : Bool? = <span class="n">nil</span>, channel_id : UInt64? = <span class="n">nil</span>)</span>
+    <a href="../Discord/REST.html#modify_guild_member%28guild_id%3AUInt64%7CSnowflake%2Cuser_id%3AUInt64%7CSnowflake%2Cnick%3AString%3F%3Dnil%2Croles%3AArray%28UInt64%7CSnowflake%29%3F%3Dnil%2Cmute%3ABool%3F%3Dnil%2Cdeaf%3ABool%3F%3Dnil%2Cchannel_id%3AUInt64%7CSnowflake%7CNil%3Dnil%29-instance-method" class="tooltip">
+      <span>modify_guild_member(guild_id : UInt64 | Snowflake, user_id : UInt64 | Snowflake, nick : String? = <span class="n">nil</span>, roles : Array(UInt64 | Snowflake)? = <span class="n">nil</span>, mute : Bool? = <span class="n">nil</span>, deaf : Bool? = <span class="n">nil</span>, channel_id : UInt64 | Snowflake | Nil = <span class="n">nil</span>)</span>
     modify_guild_member</a>, 
     
   
-    <a href="../Discord/REST.html#modify_guild_role%28guild_id%3AUInt64%2Crole_id%3AUInt64%2Cname%3AString%3F%3Dnil%2Cpermissions%3APermissions%3F%3Dnil%2Ccolour%3AUInt32%3F%3Dnil%2Cposition%3AInt32%3F%3Dnil%2Choist%3ABool%3F%3Dnil%29-instance-method" class="tooltip">
-      <span>modify_guild_role(guild_id : UInt64, role_id : UInt64, name : String? = <span class="n">nil</span>, permissions : Permissions? = <span class="n">nil</span>, colour : UInt32? = <span class="n">nil</span>, position : Int32? = <span class="n">nil</span>, hoist : Bool? = <span class="n">nil</span>)</span>
+    <a href="../Discord/REST.html#modify_guild_role%28guild_id%3AUInt64%7CSnowflake%2Crole_id%3AUInt64%7CSnowflake%2Cname%3AString%3F%3Dnil%2Cpermissions%3APermissions%3F%3Dnil%2Ccolour%3AUInt32%3F%3Dnil%2Cposition%3AInt32%3F%3Dnil%2Choist%3ABool%3F%3Dnil%29-instance-method" class="tooltip">
+      <span>modify_guild_role(guild_id : UInt64 | Snowflake, role_id : UInt64 | Snowflake, name : String? = <span class="n">nil</span>, permissions : Permissions? = <span class="n">nil</span>, colour : UInt32? = <span class="n">nil</span>, position : Int32? = <span class="n">nil</span>, hoist : Bool? = <span class="n">nil</span>)</span>
     modify_guild_role</a>, 
     
   
-    <a href="../Discord/REST.html#modify_guild_vanity_url%28guild_id%3AUInt64%2Ccode%3AString%29-instance-method" class="tooltip">
-      <span>modify_guild_vanity_url(guild_id : UInt64, code : String)</span>
+    <a href="../Discord/REST.html#modify_guild_vanity_url%28guild_id%3AUInt64%7CSnowflake%2Ccode%3AString%29-instance-method" class="tooltip">
+      <span>modify_guild_vanity_url(guild_id : UInt64 | Snowflake, code : String)</span>
     modify_guild_vanity_url</a>, 
     
   
-    <a href="../Discord/REST.html#modify_webhook%28webhook_id%3AUInt64%2Cname%3AString%3F%3Dnil%2Cavatar%3AString%3F%3Dnil%2Cchannel_id%3AUInt64%3F%3Dnil%29-instance-method" class="tooltip">
-      <span>modify_webhook(webhook_id : UInt64, name : String? = <span class="n">nil</span>, avatar : String? = <span class="n">nil</span>, channel_id : UInt64? = <span class="n">nil</span>)</span>
+    <a href="../Discord/REST.html#modify_webhook%28webhook_id%3AUInt64%7CSnowflake%2Cname%3AString%3F%3Dnil%2Cavatar%3AString%3F%3Dnil%2Cchannel_id%3AUInt64%7CSnowflake%7CNil%3Dnil%29-instance-method" class="tooltip">
+      <span>modify_webhook(webhook_id : UInt64 | Snowflake, name : String? = <span class="n">nil</span>, avatar : String? = <span class="n">nil</span>, channel_id : UInt64 | Snowflake | Nil = <span class="n">nil</span>)</span>
     modify_webhook</a>, 
     
   
-    <a href="../Discord/REST.html#modify_webhook_with_token%28webhook_id%3AUInt64%2Ctoken%3AString%2Cname%3AString%3F%3Dnil%2Cavatar%3AString%3F%3Dnil%29-instance-method" class="tooltip">
-      <span>modify_webhook_with_token(webhook_id : UInt64, token : String, name : String? = <span class="n">nil</span>, avatar : String? = <span class="n">nil</span>)</span>
+    <a href="../Discord/REST.html#modify_webhook_with_token%28webhook_id%3AUInt64%7CSnowflake%2Ctoken%3AString%2Cname%3AString%3F%3Dnil%2Cavatar%3AString%3F%3Dnil%29-instance-method" class="tooltip">
+      <span>modify_webhook_with_token(webhook_id : UInt64 | Snowflake, token : String, name : String? = <span class="n">nil</span>, avatar : String? = <span class="n">nil</span>)</span>
     modify_webhook_with_token</a>, 
     
   
-    <a href="../Discord/REST.html#raw_request%28route_key%3ASymbol%2Cmajor_parameter%3AUInt64%3F%2Cmethod%3AString%2Cpath%3AString%2Cheaders%3AHTTP%3A%3AHeaders%2Cbody%3AString%3F%29-instance-method" class="tooltip">
-      <span>raw_request(route_key : Symbol, major_parameter : UInt64?, method : String, path : String, headers : HTTP::Headers, body : String?)</span>
+    <a href="../Discord/REST.html#raw_request%28route_key%3ASymbol%2Cmajor_parameter%3ASnowflake%7CUInt64%7CNil%2Cmethod%3AString%2Cpath%3AString%2Cheaders%3AHTTP%3A%3AHeaders%2Cbody%3AString%3F%29-instance-method" class="tooltip">
+      <span>raw_request(route_key : Symbol, major_parameter : Snowflake | UInt64 | Nil, method : String, path : String, headers : HTTP::Headers, body : String?)</span>
     raw_request</a>, 
     
   
-    <a href="../Discord/REST.html#remove_guild_ban%28guild_id%3AUInt64%2Cuser_id%3AUInt64%29-instance-method" class="tooltip">
-      <span>remove_guild_ban(guild_id : UInt64, user_id : UInt64)</span>
+    <a href="../Discord/REST.html#remove_guild_ban%28guild_id%3AUInt64%7CSnowflake%2Cuser_id%3AUInt64%7CSnowflake%29-instance-method" class="tooltip">
+      <span>remove_guild_ban(guild_id : UInt64 | Snowflake, user_id : UInt64 | Snowflake)</span>
     remove_guild_ban</a>, 
     
   
-    <a href="../Discord/REST.html#remove_guild_member%28guild_id%3AUInt64%2Cuser_id%3AUInt64%29-instance-method" class="tooltip">
-      <span>remove_guild_member(guild_id : UInt64, user_id : UInt64)</span>
+    <a href="../Discord/REST.html#remove_guild_member%28guild_id%3AUInt64%7CSnowflake%2Cuser_id%3AUInt64%7CSnowflake%29-instance-method" class="tooltip">
+      <span>remove_guild_member(guild_id : UInt64 | Snowflake, user_id : UInt64 | Snowflake)</span>
     remove_guild_member</a>, 
     
   
@@ -1524,23 +1529,23 @@ module.) A gateway connection can also be started using the <code><a href="../Di
     remove_guild_member_role</a>, 
     
   
-    <a href="../Discord/REST.html#request%28route_key%3ASymbol%2Cmajor_parameter%3AUInt64%3F%2Cmethod%3AString%2Cpath%3AString%2Cheaders%3AHTTP%3A%3AHeaders%2Cbody%3AString%3F%29-instance-method" class="tooltip">
-      <span>request(route_key : Symbol, major_parameter : UInt64?, method : String, path : String, headers : HTTP::Headers, body : String?)</span>
+    <a href="../Discord/REST.html#request%28route_key%3ASymbol%2Cmajor_parameter%3ASnowflake%7CUInt64%7CNil%2Cmethod%3AString%2Cpath%3AString%2Cheaders%3AHTTP%3A%3AHeaders%2Cbody%3AString%3F%29-instance-method" class="tooltip">
+      <span>request(route_key : Symbol, major_parameter : Snowflake | UInt64 | Nil, method : String, path : String, headers : HTTP::Headers, body : String?)</span>
     request</a>, 
     
   
-    <a href="../Discord/REST.html#sync_guild_integration%28guild_id%3AUInt64%2Cintegration_id%3AUInt64%29-instance-method" class="tooltip">
-      <span>sync_guild_integration(guild_id : UInt64, integration_id : UInt64)</span>
+    <a href="../Discord/REST.html#sync_guild_integration%28guild_id%3AUInt64%7CSnowflake%2Cintegration_id%3AUInt64%7CSnowflake%29-instance-method" class="tooltip">
+      <span>sync_guild_integration(guild_id : UInt64 | Snowflake, integration_id : UInt64 | Snowflake)</span>
     sync_guild_integration</a>, 
     
   
-    <a href="../Discord/REST.html#trigger_typing_indicator%28channel_id%3AUInt64%29-instance-method" class="tooltip">
-      <span>trigger_typing_indicator(channel_id : UInt64)</span>
+    <a href="../Discord/REST.html#trigger_typing_indicator%28channel_id%3AUInt64%7CSnowflake%29-instance-method" class="tooltip">
+      <span>trigger_typing_indicator(channel_id : UInt64 | Snowflake)</span>
     trigger_typing_indicator</a>, 
     
   
-    <a href="../Discord/REST.html#upload_file%28channel_id%3AUInt64%2Ccontent%3AString%3F%2Cfile%3AIO%2Cfilename%3AString%3F%3Dnil%29-instance-method" class="tooltip">
-      <span>upload_file(channel_id : UInt64, content : String?, file : IO, filename : String? = <span class="n">nil</span>)</span>
+    <a href="../Discord/REST.html#upload_file%28channel_id%3AUInt64%7CSnowflake%2Ccontent%3AString%3F%2Cfile%3AIO%2Cfilename%3AString%3F%3Dnil%29-instance-method" class="tooltip">
+      <span>upload_file(channel_id : UInt64 | Snowflake, content : String?, file : IO, filename : String? = <span class="n">nil</span>)</span>
     upload_file</a>
     
   
@@ -1615,7 +1620,7 @@ but if you desire to do so, you can.</p></div>
       <br/>
       <div>
         
-          [<a href="https://github.com/meew0/discordcr/blob/27e400cace78b2d70605c6784fa3630ac797a794/src/discordcr/client.cr#L71" target="_blank">View source</a>]
+          [<a href="https://github.com/meew0/discordcr/blob/0e38695de0247bf680adc45ad635490175a7197c/src/discordcr/client.cr#L71" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1641,7 +1646,7 @@ the client receives the corresponding gateway dispatches.</p></div>
       <br/>
       <div>
         
-          [<a href="https://github.com/meew0/discordcr/blob/27e400cace78b2d70605c6784fa3630ac797a794/src/discordcr/client.cr#L24" target="_blank">View source</a>]
+          [<a href="https://github.com/meew0/discordcr/blob/0e38695de0247bf680adc45ad635490175a7197c/src/discordcr/client.cr#L24" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1660,7 +1665,7 @@ the client receives the corresponding gateway dispatches.</p></div>
       <br/>
       <div>
         
-          [<a href="https://github.com/meew0/discordcr/blob/27e400cace78b2d70605c6784fa3630ac797a794/src/discordcr/client.cr#L24" target="_blank">View source</a>]
+          [<a href="https://github.com/meew0/discordcr/blob/0e38695de0247bf680adc45ad635490175a7197c/src/discordcr/client.cr#L24" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1680,7 +1685,7 @@ if it was not provided in the initializer.</p></div>
       <br/>
       <div>
         
-          [<a href="https://github.com/meew0/discordcr/blob/27e400cace78b2d70605c6784fa3630ac797a794/src/discordcr/client.cr#L97" target="_blank">View source</a>]
+          [<a href="https://github.com/meew0/discordcr/blob/0e38695de0247bf680adc45ad635490175a7197c/src/discordcr/client.cr#L97" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1698,7 +1703,7 @@ if it was not provided in the initializer.</p></div>
       <br/>
       <div>
         
-          [<a href="https://github.com/meew0/discordcr/blob/27e400cace78b2d70605c6784fa3630ac797a794/src/discordcr/client.cr#L229" target="_blank">View source</a>]
+          [<a href="https://github.com/meew0/discordcr/blob/0e38695de0247bf680adc45ad635490175a7197c/src/discordcr/client.cr#L229" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1719,7 +1724,7 @@ or when somebody has started a DM channel with the bot.</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/meew0/discordcr/blob/27e400cace78b2d70605c6784fa3630ac797a794/src/discordcr/client.cr#L637" target="_blank">View source</a>]
+          [<a href="https://github.com/meew0/discordcr/blob/0e38695de0247bf680adc45ad635490175a7197c/src/discordcr/client.cr#L637" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1741,7 +1746,7 @@ closing the DM channel with a user.</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/meew0/discordcr/blob/27e400cace78b2d70605c6784fa3630ac797a794/src/discordcr/client.cr#L650" target="_blank">View source</a>]
+          [<a href="https://github.com/meew0/discordcr/blob/0e38695de0247bf680adc45ad635490175a7197c/src/discordcr/client.cr#L650" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1762,7 +1767,7 @@ either added or removed.</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/meew0/discordcr/blob/27e400cace78b2d70605c6784fa3630ac797a794/src/discordcr/client.cr#L656" target="_blank">View source</a>]
+          [<a href="https://github.com/meew0/discordcr/blob/0e38695de0247bf680adc45ad635490175a7197c/src/discordcr/client.cr#L656" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1783,7 +1788,7 @@ permission overwrites.</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/meew0/discordcr/blob/27e400cace78b2d70605c6784fa3630ac797a794/src/discordcr/client.cr#L643" target="_blank">View source</a>]
+          [<a href="https://github.com/meew0/discordcr/blob/0e38695de0247bf680adc45ad635490175a7197c/src/discordcr/client.cr#L643" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1808,7 +1813,7 @@ unprocessed JSON event data.</p></div>
       <br/>
       <div>
         
-          [<a href="https://github.com/meew0/discordcr/blob/27e400cace78b2d70605c6784fa3630ac797a794/src/discordcr/client.cr#L615" target="_blank">View source</a>]
+          [<a href="https://github.com/meew0/discordcr/blob/0e38695de0247bf680adc45ad635490175a7197c/src/discordcr/client.cr#L615" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1829,7 +1834,7 @@ event is also called.</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/meew0/discordcr/blob/27e400cace78b2d70605c6784fa3630ac797a794/src/discordcr/client.cr#L683" target="_blank">View source</a>]
+          [<a href="https://github.com/meew0/discordcr/blob/0e38695de0247bf680adc45ad635490175a7197c/src/discordcr/client.cr#L683" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1849,7 +1854,7 @@ event is also called.</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/meew0/discordcr/blob/27e400cace78b2d70605c6784fa3630ac797a794/src/discordcr/client.cr#L688" target="_blank">View source</a>]
+          [<a href="https://github.com/meew0/discordcr/blob/0e38695de0247bf680adc45ad635490175a7197c/src/discordcr/client.cr#L688" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1872,7 +1877,7 @@ property in <code><a href="../Discord/Gateway/GuildCreatePayload.html">Gateway::
       <br/>
       <div>
         
-          [<a href="https://github.com/meew0/discordcr/blob/27e400cace78b2d70605c6784fa3630ac797a794/src/discordcr/client.cr#L664" target="_blank">View source</a>]
+          [<a href="https://github.com/meew0/discordcr/blob/0e38695de0247bf680adc45ad635490175a7197c/src/discordcr/client.cr#L664" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1894,7 +1899,7 @@ an outage. To verify that it is the former case, you can check the
       <br/>
       <div>
         
-          [<a href="https://github.com/meew0/discordcr/blob/27e400cace78b2d70605c6784fa3630ac797a794/src/discordcr/client.cr#L677" target="_blank">View source</a>]
+          [<a href="https://github.com/meew0/discordcr/blob/0e38695de0247bf680adc45ad635490175a7197c/src/discordcr/client.cr#L677" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1914,7 +1919,7 @@ an outage. To verify that it is the former case, you can check the
       <br/>
       <div>
         
-          [<a href="https://github.com/meew0/discordcr/blob/27e400cace78b2d70605c6784fa3630ac797a794/src/discordcr/client.cr#L693" target="_blank">View source</a>]
+          [<a href="https://github.com/meew0/discordcr/blob/0e38695de0247bf680adc45ad635490175a7197c/src/discordcr/client.cr#L693" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1934,7 +1939,7 @@ an outage. To verify that it is the former case, you can check the
       <br/>
       <div>
         
-          [<a href="https://github.com/meew0/discordcr/blob/27e400cace78b2d70605c6784fa3630ac797a794/src/discordcr/client.cr#L698" target="_blank">View source</a>]
+          [<a href="https://github.com/meew0/discordcr/blob/0e38695de0247bf680adc45ad635490175a7197c/src/discordcr/client.cr#L698" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1954,7 +1959,7 @@ an outage. To verify that it is the former case, you can check the
       <br/>
       <div>
         
-          [<a href="https://github.com/meew0/discordcr/blob/27e400cace78b2d70605c6784fa3630ac797a794/src/discordcr/client.cr#L703" target="_blank">View source</a>]
+          [<a href="https://github.com/meew0/discordcr/blob/0e38695de0247bf680adc45ad635490175a7197c/src/discordcr/client.cr#L703" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1974,7 +1979,7 @@ an outage. To verify that it is the former case, you can check the
       <br/>
       <div>
         
-          [<a href="https://github.com/meew0/discordcr/blob/27e400cace78b2d70605c6784fa3630ac797a794/src/discordcr/client.cr#L714" target="_blank">View source</a>]
+          [<a href="https://github.com/meew0/discordcr/blob/0e38695de0247bf680adc45ad635490175a7197c/src/discordcr/client.cr#L714" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1995,7 +2000,7 @@ changes their nickname or has their roles changed.</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/meew0/discordcr/blob/27e400cace78b2d70605c6784fa3630ac797a794/src/discordcr/client.cr#L709" target="_blank">View source</a>]
+          [<a href="https://github.com/meew0/discordcr/blob/0e38695de0247bf680adc45ad635490175a7197c/src/discordcr/client.cr#L709" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -2017,7 +2022,7 @@ automatically.</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/meew0/discordcr/blob/27e400cace78b2d70605c6784fa3630ac797a794/src/discordcr/client.cr#L721" target="_blank">View source</a>]
+          [<a href="https://github.com/meew0/discordcr/blob/0e38695de0247bf680adc45ad635490175a7197c/src/discordcr/client.cr#L721" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -2037,7 +2042,7 @@ automatically.</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/meew0/discordcr/blob/27e400cace78b2d70605c6784fa3630ac797a794/src/discordcr/client.cr#L726" target="_blank">View source</a>]
+          [<a href="https://github.com/meew0/discordcr/blob/0e38695de0247bf680adc45ad635490175a7197c/src/discordcr/client.cr#L726" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -2057,7 +2062,7 @@ automatically.</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/meew0/discordcr/blob/27e400cace78b2d70605c6784fa3630ac797a794/src/discordcr/client.cr#L736" target="_blank">View source</a>]
+          [<a href="https://github.com/meew0/discordcr/blob/0e38695de0247bf680adc45ad635490175a7197c/src/discordcr/client.cr#L736" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -2077,7 +2082,7 @@ automatically.</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/meew0/discordcr/blob/27e400cace78b2d70605c6784fa3630ac797a794/src/discordcr/client.cr#L731" target="_blank">View source</a>]
+          [<a href="https://github.com/meew0/discordcr/blob/0e38695de0247bf680adc45ad635490175a7197c/src/discordcr/client.cr#L731" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -2098,7 +2103,7 @@ updated.</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/meew0/discordcr/blob/27e400cace78b2d70605c6784fa3630ac797a794/src/discordcr/client.cr#L670" target="_blank">View source</a>]
+          [<a href="https://github.com/meew0/discordcr/blob/0e38695de0247bf680adc45ad635490175a7197c/src/discordcr/client.cr#L670" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -2119,7 +2124,7 @@ may be any sort of text channel, no matter private or guild.</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/meew0/discordcr/blob/27e400cace78b2d70605c6784fa3630ac797a794/src/discordcr/client.cr#L742" target="_blank">View source</a>]
+          [<a href="https://github.com/meew0/discordcr/blob/0e38695de0247bf680adc45ad635490175a7197c/src/discordcr/client.cr#L742" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -2139,7 +2144,7 @@ may be any sort of text channel, no matter private or guild.</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/meew0/discordcr/blob/27e400cace78b2d70605c6784fa3630ac797a794/src/discordcr/client.cr#L763" target="_blank">View source</a>]
+          [<a href="https://github.com/meew0/discordcr/blob/0e38695de0247bf680adc45ad635490175a7197c/src/discordcr/client.cr#L763" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -2160,7 +2165,7 @@ bulk_delete endpoint.</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/meew0/discordcr/blob/27e400cace78b2d70605c6784fa3630ac797a794/src/discordcr/client.cr#L769" target="_blank">View source</a>]
+          [<a href="https://github.com/meew0/discordcr/blob/0e38695de0247bf680adc45ad635490175a7197c/src/discordcr/client.cr#L769" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -2178,7 +2183,7 @@ bulk_delete endpoint.</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/meew0/discordcr/blob/27e400cace78b2d70605c6784fa3630ac797a794/src/discordcr/client.cr#L745" target="_blank">View source</a>]
+          [<a href="https://github.com/meew0/discordcr/blob/0e38695de0247bf680adc45ad635490175a7197c/src/discordcr/client.cr#L745" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -2196,7 +2201,7 @@ bulk_delete endpoint.</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/meew0/discordcr/blob/27e400cace78b2d70605c6784fa3630ac797a794/src/discordcr/client.cr#L748" target="_blank">View source</a>]
+          [<a href="https://github.com/meew0/discordcr/blob/0e38695de0247bf680adc45ad635490175a7197c/src/discordcr/client.cr#L748" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -2214,7 +2219,7 @@ bulk_delete endpoint.</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/meew0/discordcr/blob/27e400cace78b2d70605c6784fa3630ac797a794/src/discordcr/client.cr#L751" target="_blank">View source</a>]
+          [<a href="https://github.com/meew0/discordcr/blob/0e38695de0247bf680adc45ad635490175a7197c/src/discordcr/client.cr#L751" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -2236,7 +2241,7 @@ existing message is updated.</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/meew0/discordcr/blob/27e400cace78b2d70605c6784fa3630ac797a794/src/discordcr/client.cr#L758" target="_blank">View source</a>]
+          [<a href="https://github.com/meew0/discordcr/blob/0e38695de0247bf680adc45ad635490175a7197c/src/discordcr/client.cr#L758" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -2258,7 +2263,7 @@ properties (user/avatar/discriminator) are changed.</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/meew0/discordcr/blob/27e400cace78b2d70605c6784fa3630ac797a794/src/discordcr/client.cr#L776" target="_blank">View source</a>]
+          [<a href="https://github.com/meew0/discordcr/blob/0e38695de0247bf680adc45ad635490175a7197c/src/discordcr/client.cr#L776" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -2283,7 +2288,7 @@ session.</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/meew0/discordcr/blob/27e400cace78b2d70605c6784fa3630ac797a794/src/discordcr/client.cr#L625" target="_blank">View source</a>]
+          [<a href="https://github.com/meew0/discordcr/blob/0e38695de0247bf680adc45ad635490175a7197c/src/discordcr/client.cr#L625" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -2304,7 +2309,7 @@ after reconnecting.</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/meew0/discordcr/blob/27e400cace78b2d70605c6784fa3630ac797a794/src/discordcr/client.cr#L631" target="_blank">View source</a>]
+          [<a href="https://github.com/meew0/discordcr/blob/0e38695de0247bf680adc45ad635490175a7197c/src/discordcr/client.cr#L631" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -2324,7 +2329,7 @@ after reconnecting.</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/meew0/discordcr/blob/27e400cace78b2d70605c6784fa3630ac797a794/src/discordcr/client.cr#L781" target="_blank">View source</a>]
+          [<a href="https://github.com/meew0/discordcr/blob/0e38695de0247bf680adc45ad635490175a7197c/src/discordcr/client.cr#L781" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -2344,7 +2349,7 @@ after reconnecting.</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/meew0/discordcr/blob/27e400cace78b2d70605c6784fa3630ac797a794/src/discordcr/client.cr#L786" target="_blank">View source</a>]
+          [<a href="https://github.com/meew0/discordcr/blob/0e38695de0247bf680adc45ad635490175a7197c/src/discordcr/client.cr#L786" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -2367,7 +2372,7 @@ to a new one, or when the guild's voice region changes.</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/meew0/discordcr/blob/27e400cace78b2d70605c6784fa3630ac797a794/src/discordcr/client.cr#L800" target="_blank">View source</a>]
+          [<a href="https://github.com/meew0/discordcr/blob/0e38695de0247bf680adc45ad635490175a7197c/src/discordcr/client.cr#L800" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -2388,7 +2393,7 @@ one, or is muted/unmuted/deafened/undeafened.</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/meew0/discordcr/blob/27e400cace78b2d70605c6784fa3630ac797a794/src/discordcr/client.cr#L792" target="_blank">View source</a>]
+          [<a href="https://github.com/meew0/discordcr/blob/0e38695de0247bf680adc45ad635490175a7197c/src/discordcr/client.cr#L792" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -2408,7 +2413,7 @@ one, or is muted/unmuted/deafened/undeafened.</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/meew0/discordcr/blob/27e400cace78b2d70605c6784fa3630ac797a794/src/discordcr/client.cr#L805" target="_blank">View source</a>]
+          [<a href="https://github.com/meew0/discordcr/blob/0e38695de0247bf680adc45ad635490175a7197c/src/discordcr/client.cr#L805" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -2431,7 +2436,7 @@ provided; use <code>0.0</code> to skip waiting entirely.</p></div>
       <br/>
       <div>
         
-          [<a href="https://github.com/meew0/discordcr/blob/27e400cace78b2d70605c6784fa3630ac797a794/src/discordcr/client.cr#L307" target="_blank">View source</a>]
+          [<a href="https://github.com/meew0/discordcr/blob/0e38695de0247bf680adc45ad635490175a7197c/src/discordcr/client.cr#L307" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -2456,7 +2461,7 @@ is set up, arriving members will be cached automatically.</p></div>
       <br/>
       <div>
         
-          [<a href="https://github.com/meew0/discordcr/blob/27e400cace78b2d70605c6784fa3630ac797a794/src/discordcr/client.cr#L347" target="_blank">View source</a>]
+          [<a href="https://github.com/meew0/discordcr/blob/0e38695de0247bf680adc45ad635490175a7197c/src/discordcr/client.cr#L347" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -2476,7 +2481,7 @@ make Discord replay all events since that sequence.</p></div>
       <br/>
       <div>
         
-          [<a href="https://github.com/meew0/discordcr/blob/27e400cace78b2d70605c6784fa3630ac797a794/src/discordcr/client.cr#L293" target="_blank">View source</a>]
+          [<a href="https://github.com/meew0/discordcr/blob/0e38695de0247bf680adc45ad635490175a7197c/src/discordcr/client.cr#L293" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -2496,7 +2501,7 @@ execution until the bot is forcibly stopped.</p></div>
       <br/>
       <div>
         
-          [<a href="https://github.com/meew0/discordcr/blob/27e400cace78b2d70605c6784fa3630ac797a794/src/discordcr/client.cr#L104" target="_blank">View source</a>]
+          [<a href="https://github.com/meew0/discordcr/blob/0e38695de0247bf680adc45ad635490175a7197c/src/discordcr/client.cr#L104" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -2515,7 +2520,7 @@ a voice client, for example</p></div>
       <br/>
       <div>
         
-          [<a href="https://github.com/meew0/discordcr/blob/27e400cace78b2d70605c6784fa3630ac797a794/src/discordcr/client.cr#L28" target="_blank">View source</a>]
+          [<a href="https://github.com/meew0/discordcr/blob/0e38695de0247bf680adc45ad635490175a7197c/src/discordcr/client.cr#L28" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -2538,7 +2543,7 @@ purpose.</p></div>
       <br/>
       <div>
         
-          [<a href="https://github.com/meew0/discordcr/blob/27e400cace78b2d70605c6784fa3630ac797a794/src/discordcr/client.cr#L322" target="_blank">View source</a>]
+          [<a href="https://github.com/meew0/discordcr/blob/0e38695de0247bf680adc45ad635490175a7197c/src/discordcr/client.cr#L322" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -2556,7 +2561,7 @@ purpose.</p></div>
       <br/>
       <div>
         
-          [<a href="https://github.com/meew0/discordcr/blob/27e400cace78b2d70605c6784fa3630ac797a794/src/discordcr/client.cr#L128" target="_blank">View source</a>]
+          [<a href="https://github.com/meew0/discordcr/blob/0e38695de0247bf680adc45ad635490175a7197c/src/discordcr/client.cr#L128" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -2580,7 +2585,7 @@ connections yet - this will have to be done externally until that happens.</p></
       <br/>
       <div>
         
-          [<a href="https://github.com/meew0/discordcr/blob/27e400cace78b2d70605c6784fa3630ac797a794/src/discordcr/client.cr#L334" target="_blank">View source</a>]
+          [<a href="https://github.com/meew0/discordcr/blob/0e38695de0247bf680adc45ad635490175a7197c/src/discordcr/client.cr#L334" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -2599,7 +2604,7 @@ unexpected way</p></div>
       <br/>
       <div>
         
-          [<a href="https://github.com/meew0/discordcr/blob/27e400cace78b2d70605c6784fa3630ac797a794/src/discordcr/client.cr#L135" target="_blank">View source</a>]
+          [<a href="https://github.com/meew0/discordcr/blob/0e38695de0247bf680adc45ad635490175a7197c/src/discordcr/client.cr#L135" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -2617,7 +2622,7 @@ unexpected way</p></div>
       <br/>
       <div>
         
-          [<a href="https://github.com/meew0/discordcr/blob/27e400cace78b2d70605c6784fa3630ac797a794/src/discordcr/client.cr#L31" target="_blank">View source</a>]
+          [<a href="https://github.com/meew0/discordcr/blob/0e38695de0247bf680adc45ad635490175a7197c/src/discordcr/client.cr#L31" target="_blank">View source</a>]
         
       </div>
     </div>

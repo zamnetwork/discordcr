@@ -556,6 +556,11 @@
       
     </li>
   
+  <li class=" " data-id="github.com/meew0/discordcr/Discord/Snowflake" data-name="discord::snowflake">
+      <a href="../Discord/Snowflake.html">Snowflake</a>
+      
+    </li>
+  
   <li class=" " data-id="github.com/meew0/discordcr/Discord/StatusException" data-name="discord::statusexception">
       <a href="../Discord/StatusException.html">StatusException</a>
       
@@ -656,17 +661,17 @@
   <h2>Defined in:</h2>
   
     
-      <a href="https://github.com/meew0/discordcr/blob/27e400cace78b2d70605c6784fa3630ac797a794/src/discordcr/mappings/enums.cr#L1" target="_blank">discordcr/mappings/enums.cr</a>
+      <a href="https://github.com/meew0/discordcr/blob/0e38695de0247bf680adc45ad635490175a7197c/src/discordcr/mappings/enums.cr#L1" target="_blank">discordcr/mappings/enums.cr</a>
     
     <br/>
   
     
-      <a href="https://github.com/meew0/discordcr/blob/27e400cace78b2d70605c6784fa3630ac797a794/src/discordcr/mappings/rest.cr#L4" target="_blank">discordcr/mappings/rest.cr</a>
+      <a href="https://github.com/meew0/discordcr/blob/0e38695de0247bf680adc45ad635490175a7197c/src/discordcr/mappings/rest.cr#L4" target="_blank">discordcr/mappings/rest.cr</a>
     
     <br/>
   
     
-      <a href="https://github.com/meew0/discordcr/blob/27e400cace78b2d70605c6784fa3630ac797a794/src/discordcr/rest.cr#L11" target="_blank">discordcr/rest.cr</a>
+      <a href="https://github.com/meew0/discordcr/blob/0e38695de0247bf680adc45ad635490175a7197c/src/discordcr/rest.cr#L11" target="_blank">discordcr/rest.cr</a>
     
     <br/>
   
@@ -726,133 +731,133 @@
       </li>
     
       <li class="entry-summary">
-        <a href="#add_pinned_channel_message%28channel_id%3AUInt64%2Cmessage_id%3AUInt64%29-instance-method" class="signature"><strong>#add_pinned_channel_message</strong>(channel_id : UInt64, message_id : UInt64)</a>
+        <a href="#add_pinned_channel_message%28channel_id%3AUInt64%7CSnowflake%2Cmessage_id%3AUInt64%7CSnowflake%29-instance-method" class="signature"><strong>#add_pinned_channel_message</strong>(channel_id : UInt64 | Snowflake, message_id : UInt64 | Snowflake)</a>
         
           <div class="summary"><p>Pins a new message to this channel.</p></div>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#begin_guild_prune%28guild_id%3AUInt64%2Cdays%3AUInt32%29-instance-method" class="signature"><strong>#begin_guild_prune</strong>(guild_id : UInt64, days : UInt32)</a>
+        <a href="#begin_guild_prune%28guild_id%3AUInt64%7CSnowflake%2Cdays%3AUInt32%29-instance-method" class="signature"><strong>#begin_guild_prune</strong>(guild_id : UInt64 | Snowflake, days : UInt32)</a>
         
           <div class="summary"><p>Prunes all members from this guild which haven't been seen for more than <em>days</em> days.</p></div>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#bulk_delete_messages%28channel_id%3AUInt64%2Cmessage_ids%3AArray%28UInt64%29%29-instance-method" class="signature"><strong>#bulk_delete_messages</strong>(channel_id : UInt64, message_ids : Array(UInt64))</a>
+        <a href="#bulk_delete_messages%28channel_id%3AUInt64%7CSnowflake%2Cmessage_ids%3AArray%28UInt64%7CSnowflake%29%29-instance-method" class="signature"><strong>#bulk_delete_messages</strong>(channel_id : UInt64 | Snowflake, message_ids : Array(UInt64 | Snowflake))</a>
         
           <div class="summary"><p>Deletes multiple messages at once from the channel.</p></div>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#create_channel_invite%28channel_id%3AUInt64%2Cmax_age%3AUInt32%3D0_u32%2Cmax_uses%3AUInt32%3D0_u32%2Ctemporary%3ABool%3Dfalse%29-instance-method" class="signature"><strong>#create_channel_invite</strong>(channel_id : UInt64, max_age : UInt32 = <span class="n">0_u32</span>, max_uses : UInt32 = <span class="n">0_u32</span>, temporary : Bool = <span class="n">false</span>)</a>
+        <a href="#create_channel_invite%28channel_id%3AUInt64%7CSnowflake%2Cmax_age%3AUInt32%3D0_u32%2Cmax_uses%3AUInt32%3D0_u32%2Ctemporary%3ABool%3Dfalse%29-instance-method" class="signature"><strong>#create_channel_invite</strong>(channel_id : UInt64 | Snowflake, max_age : UInt32 = <span class="n">0_u32</span>, max_uses : UInt32 = <span class="n">0_u32</span>, temporary : Bool = <span class="n">false</span>)</a>
         
           <div class="summary"><p>Creates a new invite for the channel.</p></div>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#create_channel_webhook%28channel_id%3AUInt64%2Cname%3AString%2Cavatar%3AString%29-instance-method" class="signature"><strong>#create_channel_webhook</strong>(channel_id : UInt64, name : String, avatar : String)</a>
+        <a href="#create_channel_webhook%28channel_id%3AUInt64%7CSnowflake%2Cname%3AString%2Cavatar%3AString%29-instance-method" class="signature"><strong>#create_channel_webhook</strong>(channel_id : UInt64 | Snowflake, name : String, avatar : String)</a>
         
           <div class="summary"><p>Create a channel webhook.</p></div>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#create_dm%28recipient_id%3AUInt64%29-instance-method" class="signature"><strong>#create_dm</strong>(recipient_id : UInt64)</a>
+        <a href="#create_dm%28recipient_id%3AUInt64%7CSnowflake%29-instance-method" class="signature"><strong>#create_dm</strong>(recipient_id : UInt64 | Snowflake)</a>
         
           <div class="summary"><p>Creates a new DM channel with a given recipient.</p></div>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#create_guild_ban%28guild_id%3AUInt64%2Cuser_id%3AUInt64%29-instance-method" class="signature"><strong>#create_guild_ban</strong>(guild_id : UInt64, user_id : UInt64)</a>
+        <a href="#create_guild_ban%28guild_id%3AUInt64%7CSnowflake%2Cuser_id%3AUInt64%7CSnowflake%29-instance-method" class="signature"><strong>#create_guild_ban</strong>(guild_id : UInt64 | Snowflake, user_id : UInt64 | Snowflake)</a>
         
           <div class="summary"><p>Bans a member from the guild.</p></div>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#create_guild_channel%28guild_id%3AUInt64%2Cname%3AString%2Ctype%3AChannelType%2Cbitrate%3AUInt32%3F%2Cuser_limit%3AUInt32%3F%29-instance-method" class="signature"><strong>#create_guild_channel</strong>(guild_id : UInt64, name : String, type : ChannelType, bitrate : UInt32?, user_limit : UInt32?)</a>
+        <a href="#create_guild_channel%28guild_id%3AUInt64%7CSnowflake%2Cname%3AString%2Ctype%3AChannelType%2Cbitrate%3AUInt32%3F%2Cuser_limit%3AUInt32%3F%29-instance-method" class="signature"><strong>#create_guild_channel</strong>(guild_id : UInt64 | Snowflake, name : String, type : ChannelType, bitrate : UInt32?, user_limit : UInt32?)</a>
         
           <div class="summary"><p>Creates a new channel on this guild.</p></div>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#create_guild_emoji%28guild_id%3AUInt64%2Cname%3AString%2Cimage%3AString%29-instance-method" class="signature"><strong>#create_guild_emoji</strong>(guild_id : UInt64, name : String, image : String)</a>
+        <a href="#create_guild_emoji%28guild_id%3AUInt64%7CSnowflake%2Cname%3AString%2Cimage%3AString%29-instance-method" class="signature"><strong>#create_guild_emoji</strong>(guild_id : UInt64 | Snowflake, name : String, image : String)</a>
         
           <div class="summary"><p>Creates a guild emoji.</p></div>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#create_guild_integration%28guild_id%3AUInt64%2Ctype%3AString%2Cid%3AUInt64%29-instance-method" class="signature"><strong>#create_guild_integration</strong>(guild_id : UInt64, type : String, id : UInt64)</a>
+        <a href="#create_guild_integration%28guild_id%3AUInt64%7CSnowflake%2Ctype%3AString%2Cid%3AUInt64%7CSnowflake%29-instance-method" class="signature"><strong>#create_guild_integration</strong>(guild_id : UInt64 | Snowflake, type : String, id : UInt64 | Snowflake)</a>
         
           <div class="summary"><p>Creates a new integration for this guild.</p></div>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#create_guild_role%28guild_id%3AUInt64%2Cname%3AString%3F%3Dnil%2Cpermissions%3APermissions%3F%3Dnil%2Ccolour%3AUInt32%3D0_u32%2Choist%3ABool%3Dfalse%2Cmentionable%3ABool%3Dfalse%29-instance-method" class="signature"><strong>#create_guild_role</strong>(guild_id : UInt64, name : String? = <span class="n">nil</span>, permissions : Permissions? = <span class="n">nil</span>, colour : UInt32 = <span class="n">0_u32</span>, hoist : Bool = <span class="n">false</span>, mentionable : Bool = <span class="n">false</span>)</a>
+        <a href="#create_guild_role%28guild_id%3AUInt64%7CSnowflake%2Cname%3AString%3F%3Dnil%2Cpermissions%3APermissions%3F%3Dnil%2Ccolour%3AUInt32%3D0_u32%2Choist%3ABool%3Dfalse%2Cmentionable%3ABool%3Dfalse%29-instance-method" class="signature"><strong>#create_guild_role</strong>(guild_id : UInt64 | Snowflake, name : String? = <span class="n">nil</span>, permissions : Permissions? = <span class="n">nil</span>, colour : UInt32 = <span class="n">0_u32</span>, hoist : Bool = <span class="n">false</span>, mentionable : Bool = <span class="n">false</span>)</a>
         
           <div class="summary"><p>Creates a new role on the guild.</p></div>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#create_message%28channel_id%3AUInt64%2Ccontent%3AString%2Cembed%3AEmbed%3F%3Dnil%2Ctts%3ABool%3Dfalse%29-instance-method" class="signature"><strong>#create_message</strong>(channel_id : UInt64, content : String, embed : Embed? = <span class="n">nil</span>, tts : Bool = <span class="n">false</span>)</a>
+        <a href="#create_message%28channel_id%3AUInt64%7CSnowflake%2Ccontent%3AString%2Cembed%3AEmbed%3F%3Dnil%2Ctts%3ABool%3Dfalse%29-instance-method" class="signature"><strong>#create_message</strong>(channel_id : UInt64 | Snowflake, content : String, embed : Embed? = <span class="n">nil</span>, tts : Bool = <span class="n">false</span>)</a>
         
           <div class="summary"><p>Sends a message to the channel.</p></div>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#create_reaction%28channel_id%3AUInt64%2Cmessage_id%3AUInt64%2Cemoji%3AString%29-instance-method" class="signature"><strong>#create_reaction</strong>(channel_id : UInt64, message_id : UInt64, emoji : String)</a>
+        <a href="#create_reaction%28channel_id%3AUInt64%7CSnowflake%2Cmessage_id%3AUInt64%7CSnowflake%2Cemoji%3AString%29-instance-method" class="signature"><strong>#create_reaction</strong>(channel_id : UInt64 | Snowflake, message_id : UInt64 | Snowflake, emoji : String)</a>
         
           <div class="summary"><p>Adds a reaction to a message.</p></div>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#delete_all_reactions%28channel_id%3AUInt64%2Cmessage_id%3AUInt64%29-instance-method" class="signature"><strong>#delete_all_reactions</strong>(channel_id : UInt64, message_id : UInt64)</a>
+        <a href="#delete_all_reactions%28channel_id%3AUInt64%7CSnowflake%2Cmessage_id%3AUInt64%7CSnowflake%29-instance-method" class="signature"><strong>#delete_all_reactions</strong>(channel_id : UInt64 | Snowflake, message_id : UInt64 | Snowflake)</a>
         
           <div class="summary"><p>Removes all reactions from a message.</p></div>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#delete_channel%28channel_id%3AUInt64%29-instance-method" class="signature"><strong>#delete_channel</strong>(channel_id : UInt64)</a>
+        <a href="#delete_channel%28channel_id%3AUInt64%7CSnowflake%29-instance-method" class="signature"><strong>#delete_channel</strong>(channel_id : UInt64 | Snowflake)</a>
         
           <div class="summary"><p>Deletes a channel by ID.</p></div>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#delete_channel_permission%28channel_id%3AUInt64%2Coverwrite_id%3AUInt64%29-instance-method" class="signature"><strong>#delete_channel_permission</strong>(channel_id : UInt64, overwrite_id : UInt64)</a>
+        <a href="#delete_channel_permission%28channel_id%3AUInt64%7CSnowflake%2Coverwrite_id%3AUInt64%7CSnowflake%29-instance-method" class="signature"><strong>#delete_channel_permission</strong>(channel_id : UInt64 | Snowflake, overwrite_id : UInt64 | Snowflake)</a>
         
           <div class="summary"><p>Deletes a permission overwrite from a channel.</p></div>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#delete_guild%28guild_id%3AUInt64%29-instance-method" class="signature"><strong>#delete_guild</strong>(guild_id : UInt64)</a>
+        <a href="#delete_guild%28guild_id%3AUInt64%7CSnowflake%29-instance-method" class="signature"><strong>#delete_guild</strong>(guild_id : UInt64 | Snowflake)</a>
         
           <div class="summary"><p>Deletes a guild.</p></div>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#delete_guild_integration%28guild_id%3AUInt64%2Cintegration_id%3AUInt64%29-instance-method" class="signature"><strong>#delete_guild_integration</strong>(guild_id : UInt64, integration_id : UInt64)</a>
+        <a href="#delete_guild_integration%28guild_id%3AUInt64%7CSnowflake%2Cintegration_id%3AUInt64%7CSnowflake%29-instance-method" class="signature"><strong>#delete_guild_integration</strong>(guild_id : UInt64 | Snowflake, integration_id : UInt64 | Snowflake)</a>
         
           <div class="summary"><p>Deletes a guild integration.</p></div>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#delete_guild_role%28guild_id%3AUInt64%2Crole_id%3AUInt64%29-instance-method" class="signature"><strong>#delete_guild_role</strong>(guild_id : UInt64, role_id : UInt64)</a>
+        <a href="#delete_guild_role%28guild_id%3AUInt64%7CSnowflake%2Crole_id%3AUInt64%7CSnowflake%29-instance-method" class="signature"><strong>#delete_guild_role</strong>(guild_id : UInt64 | Snowflake, role_id : UInt64 | Snowflake)</a>
         
           <div class="summary"><p>Deletes a role.</p></div>
         
@@ -866,98 +871,98 @@
       </li>
     
       <li class="entry-summary">
-        <a href="#delete_message%28channel_id%3AUInt64%2Cmessage_id%3AUInt64%29-instance-method" class="signature"><strong>#delete_message</strong>(channel_id : UInt64, message_id : UInt64)</a>
+        <a href="#delete_message%28channel_id%3AUInt64%7CSnowflake%2Cmessage_id%3AUInt64%7CSnowflake%29-instance-method" class="signature"><strong>#delete_message</strong>(channel_id : UInt64 | Snowflake, message_id : UInt64 | Snowflake)</a>
         
           <div class="summary"><p>Deletes a message from the channel.</p></div>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#delete_own_reaction%28channel_id%3AUInt64%2Cmessage_id%3AUInt64%2Cemoji%3AString%29-instance-method" class="signature"><strong>#delete_own_reaction</strong>(channel_id : UInt64, message_id : UInt64, emoji : String)</a>
+        <a href="#delete_own_reaction%28channel_id%3AUInt64%7CSnowflake%2Cmessage_id%3AUInt64%7CSnowflake%2Cemoji%3AString%29-instance-method" class="signature"><strong>#delete_own_reaction</strong>(channel_id : UInt64 | Snowflake, message_id : UInt64 | Snowflake, emoji : String)</a>
         
           <div class="summary"><p>Removes the bot's own reaction from a message.</p></div>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#delete_pinned_channel_message%28channel_id%3AUInt64%2Cmessage_id%3AUInt64%29-instance-method" class="signature"><strong>#delete_pinned_channel_message</strong>(channel_id : UInt64, message_id : UInt64)</a>
+        <a href="#delete_pinned_channel_message%28channel_id%3AUInt64%7CSnowflake%2Cmessage_id%3AUInt64%7CSnowflake%29-instance-method" class="signature"><strong>#delete_pinned_channel_message</strong>(channel_id : UInt64 | Snowflake, message_id : UInt64 | Snowflake)</a>
         
           <div class="summary"><p>Unpins a message from this channel.</p></div>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#delete_user_reaction%28channel_id%3AUInt64%2Cmessage_id%3AUInt64%2Cemoji%3AString%2Cuser_id%3AUInt64%29-instance-method" class="signature"><strong>#delete_user_reaction</strong>(channel_id : UInt64, message_id : UInt64, emoji : String, user_id : UInt64)</a>
+        <a href="#delete_user_reaction%28channel_id%3AUInt64%7CSnowflake%2Cmessage_id%3AUInt64%7CSnowflake%2Cemoji%3AString%2Cuser_id%3AUInt64%7CSnowflake%29-instance-method" class="signature"><strong>#delete_user_reaction</strong>(channel_id : UInt64 | Snowflake, message_id : UInt64 | Snowflake, emoji : String, user_id : UInt64 | Snowflake)</a>
         
           <div class="summary"><p>Removes another user's reaction from a message.</p></div>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#delete_webhook%28webhook_id%3AUInt64%2Ctoken%3AString%29-instance-method" class="signature"><strong>#delete_webhook</strong>(webhook_id : UInt64, token : String)</a>
+        <a href="#delete_webhook%28webhook_id%3AUInt64%7CSnowflake%2Ctoken%3AString%29-instance-method" class="signature"><strong>#delete_webhook</strong>(webhook_id : UInt64 | Snowflake, token : String)</a>
         
           <div class="summary"><p>Deletes a webhook with a token.</p></div>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#delete_webhook%28webhook_id%3AUInt64%29-instance-method" class="signature"><strong>#delete_webhook</strong>(webhook_id : UInt64)</a>
+        <a href="#delete_webhook%28webhook_id%3AUInt64%7CSnowflake%29-instance-method" class="signature"><strong>#delete_webhook</strong>(webhook_id : UInt64 | Snowflake)</a>
         
           <div class="summary"><p>Deletes a webhook.</p></div>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#edit_channel_permissions%28channel_id%3AUInt64%2Coverwrite_id%3AUInt64%2Ctype%3AString%2Callow%3APermissions%2Cdeny%3APermissions%29-instance-method" class="signature"><strong>#edit_channel_permissions</strong>(channel_id : UInt64, overwrite_id : UInt64, type : String, allow : Permissions, deny : Permissions)</a>
+        <a href="#edit_channel_permissions%28channel_id%3AUInt64%7CSnowflake%2Coverwrite_id%3AUInt64%7CSnowflake%2Ctype%3AString%2Callow%3APermissions%2Cdeny%3APermissions%29-instance-method" class="signature"><strong>#edit_channel_permissions</strong>(channel_id : UInt64 | Snowflake, overwrite_id : UInt64 | Snowflake, type : String, allow : Permissions, deny : Permissions)</a>
         
           <div class="summary"><p>Edits an existing permission overwrite on a channel with new permissions, or creates a new one.</p></div>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#edit_message%28channel_id%3AUInt64%2Cmessage_id%3AUInt64%2Ccontent%3AString%2Cembed%3AEmbed%3F%3Dnil%29-instance-method" class="signature"><strong>#edit_message</strong>(channel_id : UInt64, message_id : UInt64, content : String, embed : Embed? = <span class="n">nil</span>)</a>
+        <a href="#edit_message%28channel_id%3AUInt64%7CSnowflake%2Cmessage_id%3AUInt64%7CSnowflake%2Ccontent%3AString%2Cembed%3AEmbed%3F%3Dnil%29-instance-method" class="signature"><strong>#edit_message</strong>(channel_id : UInt64 | Snowflake, message_id : UInt64 | Snowflake, content : String, embed : Embed? = <span class="n">nil</span>)</a>
         
           <div class="summary"><p>Edits an existing message on the channel.</p></div>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#execute_webhook%28webhook_id%3AUInt64%2Ctoken%3AString%2Ccontent%3AString%3F%3Dnil%2Cfile%3AString%3F%3Dnil%2Cembeds%3AArray%28Embed%29%3F%3Dnil%2Ctts%3ABool%3F%3Dnil%2Cavatar_url%3AString%3F%3Dnil%2Cusername%3AString%3F%3Dnil%2Cwait%3ABool%3F%3Dfalse%29-instance-method" class="signature"><strong>#execute_webhook</strong>(webhook_id : UInt64, token : String, content : String? = <span class="n">nil</span>, file : String? = <span class="n">nil</span>, embeds : Array(Embed)? = <span class="n">nil</span>, tts : Bool? = <span class="n">nil</span>, avatar_url : String? = <span class="n">nil</span>, username : String? = <span class="n">nil</span>, wait : Bool? = <span class="n">false</span>)</a>
+        <a href="#execute_webhook%28webhook_id%3AUInt64%7CSnowflake%2Ctoken%3AString%2Ccontent%3AString%3F%3Dnil%2Cfile%3AString%3F%3Dnil%2Cembeds%3AArray%28Embed%29%3F%3Dnil%2Ctts%3ABool%3F%3Dnil%2Cavatar_url%3AString%3F%3Dnil%2Cusername%3AString%3F%3Dnil%2Cwait%3ABool%3F%3Dfalse%29-instance-method" class="signature"><strong>#execute_webhook</strong>(webhook_id : UInt64 | Snowflake, token : String, content : String? = <span class="n">nil</span>, file : String? = <span class="n">nil</span>, embeds : Array(Embed)? = <span class="n">nil</span>, tts : Bool? = <span class="n">nil</span>, avatar_url : String? = <span class="n">nil</span>, username : String? = <span class="n">nil</span>, wait : Bool? = <span class="n">false</span>)</a>
         
           <div class="summary"><p>Executes a webhook, with a token.</p></div>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#get_channel%28channel_id%3AUInt64%29-instance-method" class="signature"><strong>#get_channel</strong>(channel_id : UInt64)</a>
+        <a href="#get_channel%28channel_id%3AUInt64%7CSnowflake%29-instance-method" class="signature"><strong>#get_channel</strong>(channel_id : UInt64 | Snowflake)</a>
         
           <div class="summary"><p>Gets a channel by ID.</p></div>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#get_channel_invites%28channel_id%3AUInt64%29-instance-method" class="signature"><strong>#get_channel_invites</strong>(channel_id : UInt64)</a>
+        <a href="#get_channel_invites%28channel_id%3AUInt64%7CSnowflake%29-instance-method" class="signature"><strong>#get_channel_invites</strong>(channel_id : UInt64 | Snowflake)</a>
         
           <div class="summary"><p>Gets a list of invites for this channel.</p></div>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#get_channel_message%28channel_id%3AUInt64%2Cmessage_id%3AUInt64%29-instance-method" class="signature"><strong>#get_channel_message</strong>(channel_id : UInt64, message_id : UInt64)</a>
+        <a href="#get_channel_message%28channel_id%3AUInt64%7CSnowflake%2Cmessage_id%3AUInt64%7CSnowflake%29-instance-method" class="signature"><strong>#get_channel_message</strong>(channel_id : UInt64 | Snowflake, message_id : UInt64 | Snowflake)</a>
         
           <div class="summary"><p>Gets a single message from the channel's history.</p></div>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#get_channel_messages%28channel_id%3AUInt64%2Climit%3AUInt8%3D50%2Cbefore%3AUInt64%3F%3Dnil%2Cafter%3AUInt64%3F%3Dnil%2Caround%3AUInt64%3F%3Dnil%29-instance-method" class="signature"><strong>#get_channel_messages</strong>(channel_id : UInt64, limit : UInt8 = <span class="n">50</span>, before : UInt64? = <span class="n">nil</span>, after : UInt64? = <span class="n">nil</span>, around : UInt64? = <span class="n">nil</span>)</a>
+        <a href="#get_channel_messages%28channel_id%3AUInt64%7CSnowflake%2Climit%3AUInt8%3D50%2Cbefore%3AUInt64%7CSnowflake%7CNil%3Dnil%2Cafter%3AUInt64%7CSnowflak%7CNil%3Dnil%2Caround%3AUInt64%7CSnowflake%7CNil%3Dnil%29-instance-method" class="signature"><strong>#get_channel_messages</strong>(channel_id : UInt64 | Snowflake, limit : UInt8 = <span class="n">50</span>, before : UInt64 | Snowflake | Nil = <span class="n">nil</span>, after : UInt64 | Snowflak | Nil = <span class="n">nil</span>, around : UInt64 | Snowflake | Nil = <span class="n">nil</span>)</a>
         
           <div class="summary"><p>Gets a list of messages from the channel's history.</p></div>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#get_channel_webhooks%28channel_id%3AUInt64%29-instance-method" class="signature"><strong>#get_channel_webhooks</strong>(channel_id : UInt64)</a>
+        <a href="#get_channel_webhooks%28channel_id%3AUInt64%7CSnowflake%29-instance-method" class="signature"><strong>#get_channel_webhooks</strong>(channel_id : UInt64 | Snowflake)</a>
         
           <div class="summary"><p>Get an array of channel webhooks.</p></div>
         
@@ -971,7 +976,7 @@
       </li>
     
       <li class="entry-summary">
-        <a href="#get_current_user_guilds%28limit%3AUInt8%3D100_u8%2Cbefore%3AUInt64%3D0_u64%2Cafter%3AUInt64%3D0_u64%29-instance-method" class="signature"><strong>#get_current_user_guilds</strong>(limit : UInt8 = <span class="n">100_u8</span>, before : UInt64 = <span class="n">0_u64</span>, after : UInt64 = <span class="n">0_u64</span>)</a>
+        <a href="#get_current_user_guilds%28limit%3AUInt8%3D100_u8%2Cbefore%3AUInt64%7CSnowflake%3D0_u64%2Cafter%3AUInt64%7CSnowflake%3D0_u64%29-instance-method" class="signature"><strong>#get_current_user_guilds</strong>(limit : UInt8 = <span class="n">100_u8</span>, before : UInt64 | Snowflake = <span class="n">0_u64</span>, after : UInt64 | Snowflake = <span class="n">0_u64</span>)</a>
         
           <div class="summary"><p>Gets a list of user guilds the current user is on.</p></div>
         
@@ -992,84 +997,84 @@
       </li>
     
       <li class="entry-summary">
-        <a href="#get_guild%28guild_id%3AUInt64%29-instance-method" class="signature"><strong>#get_guild</strong>(guild_id : UInt64)</a>
+        <a href="#get_guild%28guild_id%3AUInt64%7CSnowflake%29-instance-method" class="signature"><strong>#get_guild</strong>(guild_id : UInt64 | Snowflake)</a>
         
           <div class="summary"><p>Gets a guild by ID.</p></div>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#get_guild_bans%28guild_id%3AUInt64%29-instance-method" class="signature"><strong>#get_guild_bans</strong>(guild_id : UInt64)</a>
+        <a href="#get_guild_bans%28guild_id%3AUInt64%7CSnowflake%29-instance-method" class="signature"><strong>#get_guild_bans</strong>(guild_id : UInt64 | Snowflake)</a>
         
           <div class="summary"><p>Gets a list of members banned from this server.</p></div>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#get_guild_channels%28guild_id%3AUInt64%29-instance-method" class="signature"><strong>#get_guild_channels</strong>(guild_id : UInt64)</a>
+        <a href="#get_guild_channels%28guild_id%3AUInt64%7CSnowflake%29-instance-method" class="signature"><strong>#get_guild_channels</strong>(guild_id : UInt64 | Snowflake)</a>
         
           <div class="summary"><p>Gets a list of channels in a guild.</p></div>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#get_guild_embed%28guild_id%3AUInt64%29-instance-method" class="signature"><strong>#get_guild_embed</strong>(guild_id : UInt64)</a>
+        <a href="#get_guild_embed%28guild_id%3AUInt64%7CSnowflake%29-instance-method" class="signature"><strong>#get_guild_embed</strong>(guild_id : UInt64 | Snowflake)</a>
         
           <div class="summary"><p>Gets embed data for a guild.</p></div>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#get_guild_emojis%28guild_id%3AUInt64%29-instance-method" class="signature"><strong>#get_guild_emojis</strong>(guild_id : UInt64)</a>
+        <a href="#get_guild_emojis%28guild_id%3AUInt64%7CSnowflake%29-instance-method" class="signature"><strong>#get_guild_emojis</strong>(guild_id : UInt64 | Snowflake)</a>
         
           <div class="summary"><p>Gets a list of emoji on the guild.</p></div>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#get_guild_integrations%28guild_id%3AUInt64%29-instance-method" class="signature"><strong>#get_guild_integrations</strong>(guild_id : UInt64)</a>
+        <a href="#get_guild_integrations%28guild_id%3AUInt64%7CSnowflake%29-instance-method" class="signature"><strong>#get_guild_integrations</strong>(guild_id : UInt64 | Snowflake)</a>
         
           <div class="summary"><p>Gets a list of integrations (Twitch, YouTube, etc.) for this guild.</p></div>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#get_guild_member%28guild_id%3AUInt64%2Cuser_id%3AUInt64%29-instance-method" class="signature"><strong>#get_guild_member</strong>(guild_id : UInt64, user_id : UInt64)</a>
+        <a href="#get_guild_member%28guild_id%3AUInt64%7CSnowflake%2Cuser_id%3AUInt64%7CSnowflake%29-instance-method" class="signature"><strong>#get_guild_member</strong>(guild_id : UInt64 | Snowflake, user_id : UInt64 | Snowflake)</a>
         
           <div class="summary"><p>Gets a specific member by both IDs.</p></div>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#get_guild_prune_count%28guild_id%3AUInt64%2Cdays%3AUInt32%29-instance-method" class="signature"><strong>#get_guild_prune_count</strong>(guild_id : UInt64, days : UInt32)</a>
+        <a href="#get_guild_prune_count%28guild_id%3AUInt64%7CSnowflake%2Cdays%3AUInt32%29-instance-method" class="signature"><strong>#get_guild_prune_count</strong>(guild_id : UInt64 | Snowflake, days : UInt32)</a>
         
           <div class="summary"><p>Get a number of members that would be pruned with the given number of days.</p></div>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#get_guild_roles%28guild_id%3AUInt64%29-instance-method" class="signature"><strong>#get_guild_roles</strong>(guild_id : UInt64)</a>
+        <a href="#get_guild_roles%28guild_id%3AUInt64%7CSnowflake%29-instance-method" class="signature"><strong>#get_guild_roles</strong>(guild_id : UInt64 | Snowflake)</a>
         
           <div class="summary"><p>Get a list of roles on the guild.</p></div>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#get_guild_vanity_url%28guild_id%3AUInt64%29-instance-method" class="signature"><strong>#get_guild_vanity_url</strong>(guild_id : UInt64)</a>
+        <a href="#get_guild_vanity_url%28guild_id%3AUInt64%7CSnowflake%29-instance-method" class="signature"><strong>#get_guild_vanity_url</strong>(guild_id : UInt64 | Snowflake)</a>
         
           <div class="summary"><p>Gets the vanity URL of a guild.</p></div>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#get_guild_voice_regions%28guild_id%3AUInt64%29-instance-method" class="signature"><strong>#get_guild_voice_regions</strong>(guild_id : UInt64)</a>
+        <a href="#get_guild_voice_regions%28guild_id%3AUInt64%7CSnowflake%29-instance-method" class="signature"><strong>#get_guild_voice_regions</strong>(guild_id : UInt64 | Snowflake)</a>
         
           <div class="summary"><p>Gets a list of voice regions available for this guild.</p></div>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#get_guild_webhooks%28guild_id%3AUInt64%29-instance-method" class="signature"><strong>#get_guild_webhooks</strong>(guild_id : UInt64)</a>
+        <a href="#get_guild_webhooks%28guild_id%3AUInt64%7CSnowflake%29-instance-method" class="signature"><strong>#get_guild_webhooks</strong>(guild_id : UInt64 | Snowflake)</a>
         
           <div class="summary"><p>Get an array of guild webhooks.</p></div>
         
@@ -1090,21 +1095,21 @@
       </li>
     
       <li class="entry-summary">
-        <a href="#get_pinned_messages%28channel_id%3AUInt64%29-instance-method" class="signature"><strong>#get_pinned_messages</strong>(channel_id : UInt64)</a>
+        <a href="#get_pinned_messages%28channel_id%3AUInt64%7CSnowflake%29-instance-method" class="signature"><strong>#get_pinned_messages</strong>(channel_id : UInt64 | Snowflake)</a>
         
           <div class="summary"><p>Get a list of messages pinned to this channel.</p></div>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#get_reactions%28channel_id%3AUInt64%2Cmessage_id%3AUInt64%2Cemoji%3AString%29-instance-method" class="signature"><strong>#get_reactions</strong>(channel_id : UInt64, message_id : UInt64, emoji : String)</a>
+        <a href="#get_reactions%28channel_id%3AUInt64%7CSnowflake%2Cmessage_id%3AUInt64%7CSnowflake%2Cemoji%3AString%29-instance-method" class="signature"><strong>#get_reactions</strong>(channel_id : UInt64 | Snowflake, message_id : UInt64 | Snowflake, emoji : String)</a>
         
           <div class="summary"><p>Returns all users that have reacted with a specific emoji.</p></div>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#get_user%28user_id%3AUInt64%29-instance-method" class="signature"><strong>#get_user</strong>(user_id : UInt64)</a>
+        <a href="#get_user%28user_id%3AUInt64%7CSnowflake%29-instance-method" class="signature"><strong>#get_user</strong>(user_id : UInt64 | Snowflake)</a>
         
           <div class="summary"><p>Gets a specific user by ID.</p></div>
         
@@ -1125,28 +1130,28 @@
       </li>
     
       <li class="entry-summary">
-        <a href="#get_webhook%28webhook_id%3AUInt64%2Ctoken%3AString%29-instance-method" class="signature"><strong>#get_webhook</strong>(webhook_id : UInt64, token : String)</a>
+        <a href="#get_webhook%28webhook_id%3AUInt64%7CSnowflake%2Ctoken%3AString%29-instance-method" class="signature"><strong>#get_webhook</strong>(webhook_id : UInt64 | Snowflake, token : String)</a>
         
           <div class="summary"><p>Get a webhook, with a token.</p></div>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#get_webhook%28webhook_id%3AUInt64%29-instance-method" class="signature"><strong>#get_webhook</strong>(webhook_id : UInt64)</a>
+        <a href="#get_webhook%28webhook_id%3AUInt64%7CSnowflake%29-instance-method" class="signature"><strong>#get_webhook</strong>(webhook_id : UInt64 | Snowflake)</a>
         
           <div class="summary"><p>Get a webhook.</p></div>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#leave_guild%28guild_id%3AUInt64%29-instance-method" class="signature"><strong>#leave_guild</strong>(guild_id : UInt64)</a>
+        <a href="#leave_guild%28guild_id%3AUInt64%7CSnowflake%29-instance-method" class="signature"><strong>#leave_guild</strong>(guild_id : UInt64 | Snowflake)</a>
         
           <div class="summary"><p>Makes the bot leave a guild.</p></div>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#list_guild_members%28guild_id%3AUInt64%2Climit%3AInt32%3D1000%2Cafter%3AUInt64%3D0_u64%29-instance-method" class="signature"><strong>#list_guild_members</strong>(guild_id : UInt64, limit : Int32 = <span class="n">1000</span>, after : UInt64 = <span class="n">0_u64</span>)</a>
+        <a href="#list_guild_members%28guild_id%3AUInt64%7CSnowflake%2Climit%3AInt32%3D1000%2Cafter%3AUInt64%7CSnowflake%3D0_u64%29-instance-method" class="signature"><strong>#list_guild_members</strong>(guild_id : UInt64 | Snowflake, limit : Int32 = <span class="n">1000</span>, after : UInt64 | Snowflake = <span class="n">0_u64</span>)</a>
         
           <div class="summary"><p>Gets multiple guild members at once.</p></div>
         
@@ -1160,7 +1165,7 @@
       </li>
     
       <li class="entry-summary">
-        <a href="#modify_channel%28channel_id%3AUInt64%2Cname%3AString%3F%3Dnil%2Cposition%3AUInt32%3F%3Dnil%2Ctopic%3AString%3F%3Dnil%2Cbitrate%3AUInt32%3F%3Dnil%2Cuser_limit%3AUInt32%3F%3Dnil%2Cnsfw%3ABool%3F%3Dnil%29-instance-method" class="signature"><strong>#modify_channel</strong>(channel_id : UInt64, name : String? = <span class="n">nil</span>, position : UInt32? = <span class="n">nil</span>, topic : String? = <span class="n">nil</span>, bitrate : UInt32? = <span class="n">nil</span>, user_limit : UInt32? = <span class="n">nil</span>, nsfw : Bool? = <span class="n">nil</span>)</a>
+        <a href="#modify_channel%28channel_id%3AUInt64%7CSnowflake%2Cname%3AString%3F%3Dnil%2Cposition%3AUInt32%3F%3Dnil%2Ctopic%3AString%3F%3Dnil%2Cbitrate%3AUInt32%3F%3Dnil%2Cuser_limit%3AUInt32%3F%3Dnil%2Cnsfw%3ABool%3F%3Dnil%29-instance-method" class="signature"><strong>#modify_channel</strong>(channel_id : UInt64 | Snowflake, name : String? = <span class="n">nil</span>, position : UInt32? = <span class="n">nil</span>, topic : String? = <span class="n">nil</span>, bitrate : UInt32? = <span class="n">nil</span>, user_limit : UInt32? = <span class="n">nil</span>, nsfw : Bool? = <span class="n">nil</span>)</a>
         
           <div class="summary"><p>Modifies a channel with new properties.</p></div>
         
@@ -1181,91 +1186,91 @@
       </li>
     
       <li class="entry-summary">
-        <a href="#modify_guild%28guild_id%3AUInt64%2Cname%3AString%3F%3Dnil%2Cregion%3AString%3F%3Dnil%2Cverification_level%3AUInt8%3F%3Dnil%2Cafk_channel_id%3AUInt64%3F%3Dnil%2Cafk_timeout%3AInt32%3F%3Dnil%2Cicon%3AString%3F%3Dnil%2Cowner_id%3AUInt64%3F%3Dnil%2Csplash%3AString%3F%3Dnil%29-instance-method" class="signature"><strong>#modify_guild</strong>(guild_id : UInt64, name : String? = <span class="n">nil</span>, region : String? = <span class="n">nil</span>, verification_level : UInt8? = <span class="n">nil</span>, afk_channel_id : UInt64? = <span class="n">nil</span>, afk_timeout : Int32? = <span class="n">nil</span>, icon : String? = <span class="n">nil</span>, owner_id : UInt64? = <span class="n">nil</span>, splash : String? = <span class="n">nil</span>)</a>
+        <a href="#modify_guild%28guild_id%3AUInt64%7CSnowflake%2Cname%3AString%3F%3Dnil%2Cregion%3AString%3F%3Dnil%2Cverification_level%3AUInt8%3F%3Dnil%2Cafk_channel_id%3AUInt64%7CSnowflake%7CNil%3Dnil%2Cafk_timeout%3AInt32%3F%3Dnil%2Cicon%3AString%3F%3Dnil%2Cowner_id%3AUInt64%7CSnowflake%7CNil%3Dnil%2Csplash%3AString%3F%3Dnil%29-instance-method" class="signature"><strong>#modify_guild</strong>(guild_id : UInt64 | Snowflake, name : String? = <span class="n">nil</span>, region : String? = <span class="n">nil</span>, verification_level : UInt8? = <span class="n">nil</span>, afk_channel_id : UInt64 | Snowflake | Nil = <span class="n">nil</span>, afk_timeout : Int32? = <span class="n">nil</span>, icon : String? = <span class="n">nil</span>, owner_id : UInt64 | Snowflake | Nil = <span class="n">nil</span>, splash : String? = <span class="n">nil</span>)</a>
         
           <div class="summary"><p>Modifies an existing guild with new properties.</p></div>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#modify_guild_channel_positions%28guild_id%3AUInt64%2Cpositions%3AArray%28ModifyChannelPositionPayload%29%29-instance-method" class="signature"><strong>#modify_guild_channel_positions</strong>(guild_id : UInt64, positions : Array(ModifyChannelPositionPayload))</a>
+        <a href="#modify_guild_channel_positions%28guild_id%3AUInt64%7CSnowflake%2Cpositions%3AArray%28ModifyChannelPositionPayload%29%29-instance-method" class="signature"><strong>#modify_guild_channel_positions</strong>(guild_id : UInt64 | Snowflake, positions : Array(ModifyChannelPositionPayload))</a>
         
           <div class="summary"><p>Modifies the position of channels within a guild.</p></div>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#modify_guild_embed%28guild_id%3AUInt64%2Cenabled%3ABool%2Cchannel_id%3AUInt64%29-instance-method" class="signature"><strong>#modify_guild_embed</strong>(guild_id : UInt64, enabled : Bool, channel_id : UInt64)</a>
+        <a href="#modify_guild_embed%28guild_id%3AUInt64%7CSnowflake%2Cenabled%3ABool%2Cchannel_id%3AUInt64%7CSnowflake%29-instance-method" class="signature"><strong>#modify_guild_embed</strong>(guild_id : UInt64 | Snowflake, enabled : Bool, channel_id : UInt64 | Snowflake)</a>
         
           <div class="summary"><p>Modifies embed data for a guild.</p></div>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#modify_guild_emoji%28guild_id%3AUInt64%2Cemoji_id%3AUInt64%2Cname%3AString%29-instance-method" class="signature"><strong>#modify_guild_emoji</strong>(guild_id : UInt64, emoji_id : UInt64, name : String)</a>
+        <a href="#modify_guild_emoji%28guild_id%3AUInt64%7CSnowflake%2Cemoji_id%3AUInt64%7CSnowflake%2Cname%3AString%29-instance-method" class="signature"><strong>#modify_guild_emoji</strong>(guild_id : UInt64 | Snowflake, emoji_id : UInt64 | Snowflake, name : String)</a>
         
           <div class="summary"><p>Modifies a guild emoji.</p></div>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#modify_guild_integration%28guild_id%3AUInt64%2Cintegration_id%3AUInt64%2Cexpire_behaviour%3AUInt8%2Cexpire_grace_period%3AInt32%2Cenable_emoticons%3ABool%29-instance-method" class="signature"><strong>#modify_guild_integration</strong>(guild_id : UInt64, integration_id : UInt64, expire_behaviour : UInt8, expire_grace_period : Int32, enable_emoticons : Bool)</a>
+        <a href="#modify_guild_integration%28guild_id%3AUInt64%7CSnowflake%2Cintegration_id%3AUInt64%7CSnowflake%2Cexpire_behaviour%3AUInt8%2Cexpire_grace_period%3AInt32%2Cenable_emoticons%3ABool%29-instance-method" class="signature"><strong>#modify_guild_integration</strong>(guild_id : UInt64 | Snowflake, integration_id : UInt64 | Snowflake, expire_behaviour : UInt8, expire_grace_period : Int32, enable_emoticons : Bool)</a>
         
           <div class="summary"><p>Modifies an existing guild integration.</p></div>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#modify_guild_member%28guild_id%3AUInt64%2Cuser_id%3AUInt64%2Cnick%3AString%3F%3Dnil%2Croles%3AArray%28UInt64%29%3F%3Dnil%2Cmute%3ABool%3F%3Dnil%2Cdeaf%3ABool%3F%3Dnil%2Cchannel_id%3AUInt64%3F%3Dnil%29-instance-method" class="signature"><strong>#modify_guild_member</strong>(guild_id : UInt64, user_id : UInt64, nick : String? = <span class="n">nil</span>, roles : Array(UInt64)? = <span class="n">nil</span>, mute : Bool? = <span class="n">nil</span>, deaf : Bool? = <span class="n">nil</span>, channel_id : UInt64? = <span class="n">nil</span>)</a>
+        <a href="#modify_guild_member%28guild_id%3AUInt64%7CSnowflake%2Cuser_id%3AUInt64%7CSnowflake%2Cnick%3AString%3F%3Dnil%2Croles%3AArray%28UInt64%7CSnowflake%29%3F%3Dnil%2Cmute%3ABool%3F%3Dnil%2Cdeaf%3ABool%3F%3Dnil%2Cchannel_id%3AUInt64%7CSnowflake%7CNil%3Dnil%29-instance-method" class="signature"><strong>#modify_guild_member</strong>(guild_id : UInt64 | Snowflake, user_id : UInt64 | Snowflake, nick : String? = <span class="n">nil</span>, roles : Array(UInt64 | Snowflake)? = <span class="n">nil</span>, mute : Bool? = <span class="n">nil</span>, deaf : Bool? = <span class="n">nil</span>, channel_id : UInt64 | Snowflake | Nil = <span class="n">nil</span>)</a>
         
           <div class="summary"><p>Changes a specific member's properties.</p></div>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#modify_guild_role%28guild_id%3AUInt64%2Crole_id%3AUInt64%2Cname%3AString%3F%3Dnil%2Cpermissions%3APermissions%3F%3Dnil%2Ccolour%3AUInt32%3F%3Dnil%2Cposition%3AInt32%3F%3Dnil%2Choist%3ABool%3F%3Dnil%29-instance-method" class="signature"><strong>#modify_guild_role</strong>(guild_id : UInt64, role_id : UInt64, name : String? = <span class="n">nil</span>, permissions : Permissions? = <span class="n">nil</span>, colour : UInt32? = <span class="n">nil</span>, position : Int32? = <span class="n">nil</span>, hoist : Bool? = <span class="n">nil</span>)</a>
+        <a href="#modify_guild_role%28guild_id%3AUInt64%7CSnowflake%2Crole_id%3AUInt64%7CSnowflake%2Cname%3AString%3F%3Dnil%2Cpermissions%3APermissions%3F%3Dnil%2Ccolour%3AUInt32%3F%3Dnil%2Cposition%3AInt32%3F%3Dnil%2Choist%3ABool%3F%3Dnil%29-instance-method" class="signature"><strong>#modify_guild_role</strong>(guild_id : UInt64 | Snowflake, role_id : UInt64 | Snowflake, name : String? = <span class="n">nil</span>, permissions : Permissions? = <span class="n">nil</span>, colour : UInt32? = <span class="n">nil</span>, position : Int32? = <span class="n">nil</span>, hoist : Bool? = <span class="n">nil</span>)</a>
         
           <div class="summary"><p>Changes a role's properties.</p></div>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#modify_guild_vanity_url%28guild_id%3AUInt64%2Ccode%3AString%29-instance-method" class="signature"><strong>#modify_guild_vanity_url</strong>(guild_id : UInt64, code : String)</a>
+        <a href="#modify_guild_vanity_url%28guild_id%3AUInt64%7CSnowflake%2Ccode%3AString%29-instance-method" class="signature"><strong>#modify_guild_vanity_url</strong>(guild_id : UInt64 | Snowflake, code : String)</a>
         
           <div class="summary"><p>Sets the vanity URL on this guild.</p></div>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#modify_webhook%28webhook_id%3AUInt64%2Cname%3AString%3F%3Dnil%2Cavatar%3AString%3F%3Dnil%2Cchannel_id%3AUInt64%3F%3Dnil%29-instance-method" class="signature"><strong>#modify_webhook</strong>(webhook_id : UInt64, name : String? = <span class="n">nil</span>, avatar : String? = <span class="n">nil</span>, channel_id : UInt64? = <span class="n">nil</span>)</a>
+        <a href="#modify_webhook%28webhook_id%3AUInt64%7CSnowflake%2Cname%3AString%3F%3Dnil%2Cavatar%3AString%3F%3Dnil%2Cchannel_id%3AUInt64%7CSnowflake%7CNil%3Dnil%29-instance-method" class="signature"><strong>#modify_webhook</strong>(webhook_id : UInt64 | Snowflake, name : String? = <span class="n">nil</span>, avatar : String? = <span class="n">nil</span>, channel_id : UInt64 | Snowflake | Nil = <span class="n">nil</span>)</a>
         
           <div class="summary"><p>Modify a webhook.</p></div>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#modify_webhook_with_token%28webhook_id%3AUInt64%2Ctoken%3AString%2Cname%3AString%3F%3Dnil%2Cavatar%3AString%3F%3Dnil%29-instance-method" class="signature"><strong>#modify_webhook_with_token</strong>(webhook_id : UInt64, token : String, name : String? = <span class="n">nil</span>, avatar : String? = <span class="n">nil</span>)</a>
+        <a href="#modify_webhook_with_token%28webhook_id%3AUInt64%7CSnowflake%2Ctoken%3AString%2Cname%3AString%3F%3Dnil%2Cavatar%3AString%3F%3Dnil%29-instance-method" class="signature"><strong>#modify_webhook_with_token</strong>(webhook_id : UInt64 | Snowflake, token : String, name : String? = <span class="n">nil</span>, avatar : String? = <span class="n">nil</span>)</a>
         
           <div class="summary"><p>Modify a webhook, with a token.</p></div>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#raw_request%28route_key%3ASymbol%2Cmajor_parameter%3AUInt64%3F%2Cmethod%3AString%2Cpath%3AString%2Cheaders%3AHTTP%3A%3AHeaders%2Cbody%3AString%3F%29-instance-method" class="signature"><strong>#raw_request</strong>(route_key : Symbol, major_parameter : UInt64?, method : String, path : String, headers : HTTP::Headers, body : String?)</a>
+        <a href="#raw_request%28route_key%3ASymbol%2Cmajor_parameter%3ASnowflake%7CUInt64%7CNil%2Cmethod%3AString%2Cpath%3AString%2Cheaders%3AHTTP%3A%3AHeaders%2Cbody%3AString%3F%29-instance-method" class="signature"><strong>#raw_request</strong>(route_key : Symbol, major_parameter : Snowflake | UInt64 | Nil, method : String, path : String, headers : HTTP::Headers, body : String?)</a>
         
-          <div class="summary"><p>Like <code><a href="../Discord/REST.html#request%28route_key%3ASymbol%2Cmajor_parameter%3AUInt64%3F%2Cmethod%3AString%2Cpath%3AString%2Cheaders%3AHTTP%3A%3AHeaders%2Cbody%3AString%3F%29-instance-method">#request</a></code>, but does not do error checking beyond 429.</p></div>
+          <div class="summary"><p>Like <code><a href="../Discord/REST.html#request%28route_key%3ASymbol%2Cmajor_parameter%3ASnowflake%7CUInt64%7CNil%2Cmethod%3AString%2Cpath%3AString%2Cheaders%3AHTTP%3A%3AHeaders%2Cbody%3AString%3F%29-instance-method">#request</a></code>, but does not do error checking beyond 429.</p></div>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#remove_guild_ban%28guild_id%3AUInt64%2Cuser_id%3AUInt64%29-instance-method" class="signature"><strong>#remove_guild_ban</strong>(guild_id : UInt64, user_id : UInt64)</a>
+        <a href="#remove_guild_ban%28guild_id%3AUInt64%7CSnowflake%2Cuser_id%3AUInt64%7CSnowflake%29-instance-method" class="signature"><strong>#remove_guild_ban</strong>(guild_id : UInt64 | Snowflake, user_id : UInt64 | Snowflake)</a>
         
           <div class="summary"><p>Unbans a member from the guild.</p></div>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#remove_guild_member%28guild_id%3AUInt64%2Cuser_id%3AUInt64%29-instance-method" class="signature"><strong>#remove_guild_member</strong>(guild_id : UInt64, user_id : UInt64)</a>
+        <a href="#remove_guild_member%28guild_id%3AUInt64%7CSnowflake%2Cuser_id%3AUInt64%7CSnowflake%29-instance-method" class="signature"><strong>#remove_guild_member</strong>(guild_id : UInt64 | Snowflake, user_id : UInt64 | Snowflake)</a>
         
           <div class="summary"><p>Kicks a member from the server.</p></div>
         
@@ -1279,28 +1284,28 @@
       </li>
     
       <li class="entry-summary">
-        <a href="#request%28route_key%3ASymbol%2Cmajor_parameter%3AUInt64%3F%2Cmethod%3AString%2Cpath%3AString%2Cheaders%3AHTTP%3A%3AHeaders%2Cbody%3AString%3F%29-instance-method" class="signature"><strong>#request</strong>(route_key : Symbol, major_parameter : UInt64?, method : String, path : String, headers : HTTP::Headers, body : String?)</a>
+        <a href="#request%28route_key%3ASymbol%2Cmajor_parameter%3ASnowflake%7CUInt64%7CNil%2Cmethod%3AString%2Cpath%3AString%2Cheaders%3AHTTP%3A%3AHeaders%2Cbody%3AString%3F%29-instance-method" class="signature"><strong>#request</strong>(route_key : Symbol, major_parameter : Snowflake | UInt64 | Nil, method : String, path : String, headers : HTTP::Headers, body : String?)</a>
         
           <div class="summary"><p>Makes a REST request to Discord, with the given <em>method</em> to the given <em>path</em>, with the given <em>headers</em> set and with the given <em>body</em> being sent.</p></div>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#sync_guild_integration%28guild_id%3AUInt64%2Cintegration_id%3AUInt64%29-instance-method" class="signature"><strong>#sync_guild_integration</strong>(guild_id : UInt64, integration_id : UInt64)</a>
+        <a href="#sync_guild_integration%28guild_id%3AUInt64%7CSnowflake%2Cintegration_id%3AUInt64%7CSnowflake%29-instance-method" class="signature"><strong>#sync_guild_integration</strong>(guild_id : UInt64 | Snowflake, integration_id : UInt64 | Snowflake)</a>
         
           <div class="summary"><p>Syncs an integration.</p></div>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#trigger_typing_indicator%28channel_id%3AUInt64%29-instance-method" class="signature"><strong>#trigger_typing_indicator</strong>(channel_id : UInt64)</a>
+        <a href="#trigger_typing_indicator%28channel_id%3AUInt64%7CSnowflake%29-instance-method" class="signature"><strong>#trigger_typing_indicator</strong>(channel_id : UInt64 | Snowflake)</a>
         
           <div class="summary"><p>Causes the bot to appear as typing on the channel.</p></div>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#upload_file%28channel_id%3AUInt64%2Ccontent%3AString%3F%2Cfile%3AIO%2Cfilename%3AString%3F%3Dnil%29-instance-method" class="signature"><strong>#upload_file</strong>(channel_id : UInt64, content : String?, file : IO, filename : String? = <span class="n">nil</span>)</a>
+        <a href="#upload_file%28channel_id%3AUInt64%7CSnowflake%2Ccontent%3AString%3F%2Cfile%3AIO%2Cfilename%3AString%3F%3Dnil%29-instance-method" class="signature"><strong>#upload_file</strong>(channel_id : UInt64 | Snowflake, content : String?, file : IO, filename : String? = <span class="n">nil</span>)</a>
         
           <div class="summary"><p>Uploads a file to a channel.</p></div>
         
@@ -1343,7 +1348,7 @@ client.accept_invite(<span class="s">&quot;ABCdef&quot;</span>)</code></pre>
       <br/>
       <div>
         
-          [<a href="https://github.com/meew0/discordcr/blob/27e400cace78b2d70605c6784fa3630ac797a794/src/discordcr/rest.cr#L1466" target="_blank">View source</a>]
+          [<a href="https://github.com/meew0/discordcr/blob/0e38695de0247bf680adc45ad635490175a7197c/src/discordcr/rest.cr#L1466" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1367,7 +1372,7 @@ for the user with the <code>guilds.join</code> scope.</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/meew0/discordcr/blob/27e400cace78b2d70605c6784fa3630ac797a794/src/discordcr/rest.cr#L853" target="_blank">View source</a>]
+          [<a href="https://github.com/meew0/discordcr/blob/0e38695de0247bf680adc45ad635490175a7197c/src/discordcr/rest.cr#L853" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1387,17 +1392,17 @@ for the user with the <code>guilds.join</code> scope.</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/meew0/discordcr/blob/27e400cace78b2d70605c6784fa3630ac797a794/src/discordcr/rest.cr#L944" target="_blank">View source</a>]
+          [<a href="https://github.com/meew0/discordcr/blob/0e38695de0247bf680adc45ad635490175a7197c/src/discordcr/rest.cr#L944" target="_blank">View source</a>]
         
       </div>
     </div>
   
-    <div class="entry-detail" id="add_pinned_channel_message(channel_id:UInt64,message_id:UInt64)-instance-method">
+    <div class="entry-detail" id="add_pinned_channel_message(channel_id:UInt64|Snowflake,message_id:UInt64|Snowflake)-instance-method">
       <div class="signature">
         
-        def <strong>add_pinned_channel_message</strong>(channel_id : UInt64, message_id : UInt64)
+        def <strong>add_pinned_channel_message</strong>(channel_id : UInt64 | <a href="../Discord/Snowflake.html">Snowflake</a>, message_id : UInt64 | <a href="../Discord/Snowflake.html">Snowflake</a>)
 
-        <a class="method-permalink" href="#add_pinned_channel_message%28channel_id%3AUInt64%2Cmessage_id%3AUInt64%29-instance-method">#</a>
+        <a class="method-permalink" href="#add_pinned_channel_message%28channel_id%3AUInt64%7CSnowflake%2Cmessage_id%3AUInt64%7CSnowflake%29-instance-method">#</a>
       </div>
       
         <div class="doc"><p>Pins a new message to this channel. Requires the "Manage Messages"
@@ -1408,17 +1413,17 @@ permission.</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/meew0/discordcr/blob/27e400cace78b2d70605c6784fa3630ac797a794/src/discordcr/rest.cr#L579" target="_blank">View source</a>]
+          [<a href="https://github.com/meew0/discordcr/blob/0e38695de0247bf680adc45ad635490175a7197c/src/discordcr/rest.cr#L579" target="_blank">View source</a>]
         
       </div>
     </div>
   
-    <div class="entry-detail" id="begin_guild_prune(guild_id:UInt64,days:UInt32)-instance-method">
+    <div class="entry-detail" id="begin_guild_prune(guild_id:UInt64|Snowflake,days:UInt32)-instance-method">
       <div class="signature">
         
-        def <strong>begin_guild_prune</strong>(guild_id : UInt64, days : UInt32)
+        def <strong>begin_guild_prune</strong>(guild_id : UInt64 | <a href="../Discord/Snowflake.html">Snowflake</a>, days : UInt32)
 
-        <a class="method-permalink" href="#begin_guild_prune%28guild_id%3AUInt64%2Cdays%3AUInt32%29-instance-method">#</a>
+        <a class="method-permalink" href="#begin_guild_prune%28guild_id%3AUInt64%7CSnowflake%2Cdays%3AUInt32%29-instance-method">#</a>
       </div>
       
         <div class="doc"><p>Prunes all members from this guild which haven't been seen for more than
@@ -1429,17 +1434,17 @@ permission.</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/meew0/discordcr/blob/27e400cace78b2d70605c6784fa3630ac797a794/src/discordcr/rest.cr#L1121" target="_blank">View source</a>]
+          [<a href="https://github.com/meew0/discordcr/blob/0e38695de0247bf680adc45ad635490175a7197c/src/discordcr/rest.cr#L1121" target="_blank">View source</a>]
         
       </div>
     </div>
   
-    <div class="entry-detail" id="bulk_delete_messages(channel_id:UInt64,message_ids:Array(UInt64))-instance-method">
+    <div class="entry-detail" id="bulk_delete_messages(channel_id:UInt64|Snowflake,message_ids:Array(UInt64|Snowflake))-instance-method">
       <div class="signature">
         
-        def <strong>bulk_delete_messages</strong>(channel_id : UInt64, message_ids : Array(UInt64))
+        def <strong>bulk_delete_messages</strong>(channel_id : UInt64 | <a href="../Discord/Snowflake.html">Snowflake</a>, message_ids : Array(UInt64 | <a href="../Discord/Snowflake.html">Snowflake</a>))
 
-        <a class="method-permalink" href="#bulk_delete_messages%28channel_id%3AUInt64%2Cmessage_ids%3AArray%28UInt64%29%29-instance-method">#</a>
+        <a class="method-permalink" href="#bulk_delete_messages%28channel_id%3AUInt64%7CSnowflake%2Cmessage_ids%3AArray%28UInt64%7CSnowflake%29%29-instance-method">#</a>
       </div>
       
         <div class="doc"><p>Deletes multiple messages at once from the channel. The maximum amount is
@@ -1450,17 +1455,17 @@ permission.</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/meew0/discordcr/blob/27e400cace78b2d70605c6784fa3630ac797a794/src/discordcr/rest.cr#L453" target="_blank">View source</a>]
+          [<a href="https://github.com/meew0/discordcr/blob/0e38695de0247bf680adc45ad635490175a7197c/src/discordcr/rest.cr#L453" target="_blank">View source</a>]
         
       </div>
     </div>
   
-    <div class="entry-detail" id="create_channel_invite(channel_id:UInt64,max_age:UInt32=0_u32,max_uses:UInt32=0_u32,temporary:Bool=false)-instance-method">
+    <div class="entry-detail" id="create_channel_invite(channel_id:UInt64|Snowflake,max_age:UInt32=0_u32,max_uses:UInt32=0_u32,temporary:Bool=false)-instance-method">
       <div class="signature">
         
-        def <strong>create_channel_invite</strong>(channel_id : UInt64, max_age : UInt32 = <span class="n">0_u32</span>, max_uses : UInt32 = <span class="n">0_u32</span>, temporary : Bool = <span class="n">false</span>)
+        def <strong>create_channel_invite</strong>(channel_id : UInt64 | <a href="../Discord/Snowflake.html">Snowflake</a>, max_age : UInt32 = <span class="n">0_u32</span>, max_uses : UInt32 = <span class="n">0_u32</span>, temporary : Bool = <span class="n">false</span>)
 
-        <a class="method-permalink" href="#create_channel_invite%28channel_id%3AUInt64%2Cmax_age%3AUInt32%3D0_u32%2Cmax_uses%3AUInt32%3D0_u32%2Ctemporary%3ABool%3Dfalse%29-instance-method">#</a>
+        <a class="method-permalink" href="#create_channel_invite%28channel_id%3AUInt64%7CSnowflake%2Cmax_age%3AUInt32%3D0_u32%2Cmax_uses%3AUInt32%3D0_u32%2Ctemporary%3ABool%3Dfalse%29-instance-method">#</a>
       </div>
       
         <div class="doc"><p>Creates a new invite for the channel. Requires the "Create Instant Invite"
@@ -1471,17 +1476,17 @@ permission.</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/meew0/discordcr/blob/27e400cace78b2d70605c6784fa3630ac797a794/src/discordcr/rest.cr#L508" target="_blank">View source</a>]
+          [<a href="https://github.com/meew0/discordcr/blob/0e38695de0247bf680adc45ad635490175a7197c/src/discordcr/rest.cr#L508" target="_blank">View source</a>]
         
       </div>
     </div>
   
-    <div class="entry-detail" id="create_channel_webhook(channel_id:UInt64,name:String,avatar:String)-instance-method">
+    <div class="entry-detail" id="create_channel_webhook(channel_id:UInt64|Snowflake,name:String,avatar:String)-instance-method">
       <div class="signature">
         
-        def <strong>create_channel_webhook</strong>(channel_id : UInt64, name : String, avatar : String)
+        def <strong>create_channel_webhook</strong>(channel_id : UInt64 | <a href="../Discord/Snowflake.html">Snowflake</a>, name : String, avatar : String)
 
-        <a class="method-permalink" href="#create_channel_webhook%28channel_id%3AUInt64%2Cname%3AString%2Cavatar%3AString%29-instance-method">#</a>
+        <a class="method-permalink" href="#create_channel_webhook%28channel_id%3AUInt64%7CSnowflake%2Cname%3AString%2Cavatar%3AString%29-instance-method">#</a>
       </div>
       
         <div class="doc"><p>Create a channel webhook.</p>
@@ -1491,17 +1496,17 @@ permission.</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/meew0/discordcr/blob/27e400cace78b2d70605c6784fa3630ac797a794/src/discordcr/rest.cr#L1543" target="_blank">View source</a>]
+          [<a href="https://github.com/meew0/discordcr/blob/0e38695de0247bf680adc45ad635490175a7197c/src/discordcr/rest.cr#L1543" target="_blank">View source</a>]
         
       </div>
     </div>
   
-    <div class="entry-detail" id="create_dm(recipient_id:UInt64)-instance-method">
+    <div class="entry-detail" id="create_dm(recipient_id:UInt64|Snowflake)-instance-method">
       <div class="signature">
         
-        def <strong>create_dm</strong>(recipient_id : UInt64)
+        def <strong>create_dm</strong>(recipient_id : UInt64 | <a href="../Discord/Snowflake.html">Snowflake</a>)
 
-        <a class="method-permalink" href="#create_dm%28recipient_id%3AUInt64%29-instance-method">#</a>
+        <a class="method-permalink" href="#create_dm%28recipient_id%3AUInt64%7CSnowflake%29-instance-method">#</a>
       </div>
       
         <div class="doc"><p>Creates a new DM channel with a given recipient. If there was already one
@@ -1512,17 +1517,17 @@ before, it will be reopened.</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/meew0/discordcr/blob/27e400cace78b2d70605c6784fa3630ac797a794/src/discordcr/rest.cr#L1395" target="_blank">View source</a>]
+          [<a href="https://github.com/meew0/discordcr/blob/0e38695de0247bf680adc45ad635490175a7197c/src/discordcr/rest.cr#L1395" target="_blank">View source</a>]
         
       </div>
     </div>
   
-    <div class="entry-detail" id="create_guild_ban(guild_id:UInt64,user_id:UInt64)-instance-method">
+    <div class="entry-detail" id="create_guild_ban(guild_id:UInt64|Snowflake,user_id:UInt64|Snowflake)-instance-method">
       <div class="signature">
         
-        def <strong>create_guild_ban</strong>(guild_id : UInt64, user_id : UInt64)
+        def <strong>create_guild_ban</strong>(guild_id : UInt64 | <a href="../Discord/Snowflake.html">Snowflake</a>, user_id : UInt64 | <a href="../Discord/Snowflake.html">Snowflake</a>)
 
-        <a class="method-permalink" href="#create_guild_ban%28guild_id%3AUInt64%2Cuser_id%3AUInt64%29-instance-method">#</a>
+        <a class="method-permalink" href="#create_guild_ban%28guild_id%3AUInt64%7CSnowflake%2Cuser_id%3AUInt64%7CSnowflake%29-instance-method">#</a>
       </div>
       
         <div class="doc"><p>Bans a member from the guild. Requires the "Ban Members" permission.</p>
@@ -1532,17 +1537,17 @@ before, it will be reopened.</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/meew0/discordcr/blob/27e400cace78b2d70605c6784fa3630ac797a794/src/discordcr/rest.cr#L989" target="_blank">View source</a>]
+          [<a href="https://github.com/meew0/discordcr/blob/0e38695de0247bf680adc45ad635490175a7197c/src/discordcr/rest.cr#L989" target="_blank">View source</a>]
         
       </div>
     </div>
   
-    <div class="entry-detail" id="create_guild_channel(guild_id:UInt64,name:String,type:ChannelType,bitrate:UInt32?,user_limit:UInt32?)-instance-method">
+    <div class="entry-detail" id="create_guild_channel(guild_id:UInt64|Snowflake,name:String,type:ChannelType,bitrate:UInt32?,user_limit:UInt32?)-instance-method">
       <div class="signature">
         
-        def <strong>create_guild_channel</strong>(guild_id : UInt64, name : String, type : <a href="../Discord/ChannelType.html">ChannelType</a>, bitrate : UInt32?, user_limit : UInt32?)
+        def <strong>create_guild_channel</strong>(guild_id : UInt64 | <a href="../Discord/Snowflake.html">Snowflake</a>, name : String, type : <a href="../Discord/ChannelType.html">ChannelType</a>, bitrate : UInt32?, user_limit : UInt32?)
 
-        <a class="method-permalink" href="#create_guild_channel%28guild_id%3AUInt64%2Cname%3AString%2Ctype%3AChannelType%2Cbitrate%3AUInt32%3F%2Cuser_limit%3AUInt32%3F%29-instance-method">#</a>
+        <a class="method-permalink" href="#create_guild_channel%28guild_id%3AUInt64%7CSnowflake%2Cname%3AString%2Ctype%3AChannelType%2Cbitrate%3AUInt32%3F%2Cuser_limit%3AUInt32%3F%29-instance-method">#</a>
       </div>
       
         <div class="doc"><p>Creates a new channel on this guild. Requires the "Manage Channels"
@@ -1553,17 +1558,17 @@ permission.</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/meew0/discordcr/blob/27e400cace78b2d70605c6784fa3630ac797a794/src/discordcr/rest.cr#L742" target="_blank">View source</a>]
+          [<a href="https://github.com/meew0/discordcr/blob/0e38695de0247bf680adc45ad635490175a7197c/src/discordcr/rest.cr#L742" target="_blank">View source</a>]
         
       </div>
     </div>
   
-    <div class="entry-detail" id="create_guild_emoji(guild_id:UInt64,name:String,image:String)-instance-method">
+    <div class="entry-detail" id="create_guild_emoji(guild_id:UInt64|Snowflake,name:String,image:String)-instance-method">
       <div class="signature">
         
-        def <strong>create_guild_emoji</strong>(guild_id : UInt64, name : String, image : String)
+        def <strong>create_guild_emoji</strong>(guild_id : UInt64 | <a href="../Discord/Snowflake.html">Snowflake</a>, name : String, image : String)
 
-        <a class="method-permalink" href="#create_guild_emoji%28guild_id%3AUInt64%2Cname%3AString%2Cimage%3AString%29-instance-method">#</a>
+        <a class="method-permalink" href="#create_guild_emoji%28guild_id%3AUInt64%7CSnowflake%2Cname%3AString%2Cimage%3AString%29-instance-method">#</a>
       </div>
       
         <div class="doc"><p>Creates a guild emoji. Requires the "Manage Emojis" permission.</p>
@@ -1573,17 +1578,17 @@ permission.</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/meew0/discordcr/blob/27e400cace78b2d70605c6784fa3630ac797a794/src/discordcr/rest.cr#L704" target="_blank">View source</a>]
+          [<a href="https://github.com/meew0/discordcr/blob/0e38695de0247bf680adc45ad635490175a7197c/src/discordcr/rest.cr#L704" target="_blank">View source</a>]
         
       </div>
     </div>
   
-    <div class="entry-detail" id="create_guild_integration(guild_id:UInt64,type:String,id:UInt64)-instance-method">
+    <div class="entry-detail" id="create_guild_integration(guild_id:UInt64|Snowflake,type:String,id:UInt64|Snowflake)-instance-method">
       <div class="signature">
         
-        def <strong>create_guild_integration</strong>(guild_id : UInt64, type : String, id : UInt64)
+        def <strong>create_guild_integration</strong>(guild_id : UInt64 | <a href="../Discord/Snowflake.html">Snowflake</a>, type : String, id : UInt64 | <a href="../Discord/Snowflake.html">Snowflake</a>)
 
-        <a class="method-permalink" href="#create_guild_integration%28guild_id%3AUInt64%2Ctype%3AString%2Cid%3AUInt64%29-instance-method">#</a>
+        <a class="method-permalink" href="#create_guild_integration%28guild_id%3AUInt64%7CSnowflake%2Ctype%3AString%2Cid%3AUInt64%7CSnowflake%29-instance-method">#</a>
       </div>
       
         <div class="doc"><p>Creates a new integration for this guild. Requires the "Manage Guild"
@@ -1594,17 +1599,17 @@ permission.</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/meew0/discordcr/blob/27e400cace78b2d70605c6784fa3630ac797a794/src/discordcr/rest.cr#L1172" target="_blank">View source</a>]
+          [<a href="https://github.com/meew0/discordcr/blob/0e38695de0247bf680adc45ad635490175a7197c/src/discordcr/rest.cr#L1172" target="_blank">View source</a>]
         
       </div>
     </div>
   
-    <div class="entry-detail" id="create_guild_role(guild_id:UInt64,name:String?=nil,permissions:Permissions?=nil,colour:UInt32=0_u32,hoist:Bool=false,mentionable:Bool=false)-instance-method">
+    <div class="entry-detail" id="create_guild_role(guild_id:UInt64|Snowflake,name:String?=nil,permissions:Permissions?=nil,colour:UInt32=0_u32,hoist:Bool=false,mentionable:Bool=false)-instance-method">
       <div class="signature">
         
-        def <strong>create_guild_role</strong>(guild_id : UInt64, name : String? = <span class="n">nil</span>, permissions : <a href="../Discord/Permissions.html">Permissions</a>? = <span class="n">nil</span>, colour : UInt32 = <span class="n">0_u32</span>, hoist : Bool = <span class="n">false</span>, mentionable : Bool = <span class="n">false</span>)
+        def <strong>create_guild_role</strong>(guild_id : UInt64 | <a href="../Discord/Snowflake.html">Snowflake</a>, name : String? = <span class="n">nil</span>, permissions : <a href="../Discord/Permissions.html">Permissions</a>? = <span class="n">nil</span>, colour : UInt32 = <span class="n">0_u32</span>, hoist : Bool = <span class="n">false</span>, mentionable : Bool = <span class="n">false</span>)
 
-        <a class="method-permalink" href="#create_guild_role%28guild_id%3AUInt64%2Cname%3AString%3F%3Dnil%2Cpermissions%3APermissions%3F%3Dnil%2Ccolour%3AUInt32%3D0_u32%2Choist%3ABool%3Dfalse%2Cmentionable%3ABool%3Dfalse%29-instance-method">#</a>
+        <a class="method-permalink" href="#create_guild_role%28guild_id%3AUInt64%7CSnowflake%2Cname%3AString%3F%3Dnil%2Cpermissions%3APermissions%3F%3Dnil%2Ccolour%3AUInt32%3D0_u32%2Choist%3ABool%3Dfalse%2Cmentionable%3ABool%3Dfalse%29-instance-method">#</a>
       </div>
       
         <div class="doc"><p>Creates a new role on the guild. Requires the "Manage Roles" permission.</p>
@@ -1614,17 +1619,17 @@ permission.</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/meew0/discordcr/blob/27e400cace78b2d70605c6784fa3630ac797a794/src/discordcr/rest.cr#L1033" target="_blank">View source</a>]
+          [<a href="https://github.com/meew0/discordcr/blob/0e38695de0247bf680adc45ad635490175a7197c/src/discordcr/rest.cr#L1033" target="_blank">View source</a>]
         
       </div>
     </div>
   
-    <div class="entry-detail" id="create_message(channel_id:UInt64,content:String,embed:Embed?=nil,tts:Bool=false)-instance-method">
+    <div class="entry-detail" id="create_message(channel_id:UInt64|Snowflake,content:String,embed:Embed?=nil,tts:Bool=false)-instance-method">
       <div class="signature">
         
-        def <strong>create_message</strong>(channel_id : UInt64, content : String, embed : <a href="../Discord/Embed.html">Embed</a>? = <span class="n">nil</span>, tts : Bool = <span class="n">false</span>)
+        def <strong>create_message</strong>(channel_id : UInt64 | <a href="../Discord/Snowflake.html">Snowflake</a>, content : String, embed : <a href="../Discord/Embed.html">Embed</a>? = <span class="n">nil</span>, tts : Bool = <span class="n">false</span>)
 
-        <a class="method-permalink" href="#create_message%28channel_id%3AUInt64%2Ccontent%3AString%2Cembed%3AEmbed%3F%3Dnil%2Ctts%3ABool%3Dfalse%29-instance-method">#</a>
+        <a class="method-permalink" href="#create_message%28channel_id%3AUInt64%7CSnowflake%2Ccontent%3AString%2Cembed%3AEmbed%3F%3Dnil%2Ctts%3ABool%3Dfalse%29-instance-method">#</a>
       </div>
       
         <div class="doc"><p>Sends a message to the channel. Requires the "Send Messages" permission.</p>
@@ -1659,17 +1664,17 @@ client.create_message(channel_id, <span class="s">&quot;The content of the messa
       <br/>
       <div>
         
-          [<a href="https://github.com/meew0/discordcr/blob/27e400cace78b2d70605c6784fa3630ac797a794/src/discordcr/rest.cr#L285" target="_blank">View source</a>]
+          [<a href="https://github.com/meew0/discordcr/blob/0e38695de0247bf680adc45ad635490175a7197c/src/discordcr/rest.cr#L285" target="_blank">View source</a>]
         
       </div>
     </div>
   
-    <div class="entry-detail" id="create_reaction(channel_id:UInt64,message_id:UInt64,emoji:String)-instance-method">
+    <div class="entry-detail" id="create_reaction(channel_id:UInt64|Snowflake,message_id:UInt64|Snowflake,emoji:String)-instance-method">
       <div class="signature">
         
-        def <strong>create_reaction</strong>(channel_id : UInt64, message_id : UInt64, emoji : String)
+        def <strong>create_reaction</strong>(channel_id : UInt64 | <a href="../Discord/Snowflake.html">Snowflake</a>, message_id : UInt64 | <a href="../Discord/Snowflake.html">Snowflake</a>, emoji : String)
 
-        <a class="method-permalink" href="#create_reaction%28channel_id%3AUInt64%2Cmessage_id%3AUInt64%2Cemoji%3AString%29-instance-method">#</a>
+        <a class="method-permalink" href="#create_reaction%28channel_id%3AUInt64%7CSnowflake%2Cmessage_id%3AUInt64%7CSnowflake%2Cemoji%3AString%29-instance-method">#</a>
       </div>
       
         <div class="doc"><p>Adds a reaction to a message. The <code>emoji</code> property must be in the format
@@ -1681,17 +1686,17 @@ encoded characters.</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/meew0/discordcr/blob/27e400cace78b2d70605c6784fa3630ac797a794/src/discordcr/rest.cr#L303" target="_blank">View source</a>]
+          [<a href="https://github.com/meew0/discordcr/blob/0e38695de0247bf680adc45ad635490175a7197c/src/discordcr/rest.cr#L303" target="_blank">View source</a>]
         
       </div>
     </div>
   
-    <div class="entry-detail" id="delete_all_reactions(channel_id:UInt64,message_id:UInt64)-instance-method">
+    <div class="entry-detail" id="delete_all_reactions(channel_id:UInt64|Snowflake,message_id:UInt64|Snowflake)-instance-method">
       <div class="signature">
         
-        def <strong>delete_all_reactions</strong>(channel_id : UInt64, message_id : UInt64)
+        def <strong>delete_all_reactions</strong>(channel_id : UInt64 | <a href="../Discord/Snowflake.html">Snowflake</a>, message_id : UInt64 | <a href="../Discord/Snowflake.html">Snowflake</a>)
 
-        <a class="method-permalink" href="#delete_all_reactions%28channel_id%3AUInt64%2Cmessage_id%3AUInt64%29-instance-method">#</a>
+        <a class="method-permalink" href="#delete_all_reactions%28channel_id%3AUInt64%7CSnowflake%2Cmessage_id%3AUInt64%7CSnowflake%29-instance-method">#</a>
       </div>
       
         <div class="doc"><p>Removes all reactions from a message. Requires the "Manage Messages"
@@ -1702,17 +1707,17 @@ permission.</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/meew0/discordcr/blob/27e400cace78b2d70605c6784fa3630ac797a794/src/discordcr/rest.cr#L367" target="_blank">View source</a>]
+          [<a href="https://github.com/meew0/discordcr/blob/0e38695de0247bf680adc45ad635490175a7197c/src/discordcr/rest.cr#L367" target="_blank">View source</a>]
         
       </div>
     </div>
   
-    <div class="entry-detail" id="delete_channel(channel_id:UInt64)-instance-method">
+    <div class="entry-detail" id="delete_channel(channel_id:UInt64|Snowflake)-instance-method">
       <div class="signature">
         
-        def <strong>delete_channel</strong>(channel_id : UInt64)
+        def <strong>delete_channel</strong>(channel_id : UInt64 | <a href="../Discord/Snowflake.html">Snowflake</a>)
 
-        <a class="method-permalink" href="#delete_channel%28channel_id%3AUInt64%29-instance-method">#</a>
+        <a class="method-permalink" href="#delete_channel%28channel_id%3AUInt64%7CSnowflake%29-instance-method">#</a>
       </div>
       
         <div class="doc"><p>Deletes a channel by ID. Requires the "Manage Channel" permission.</p>
@@ -1722,17 +1727,17 @@ permission.</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/meew0/discordcr/blob/27e400cace78b2d70605c6784fa3630ac797a794/src/discordcr/rest.cr#L205" target="_blank">View source</a>]
+          [<a href="https://github.com/meew0/discordcr/blob/0e38695de0247bf680adc45ad635490175a7197c/src/discordcr/rest.cr#L205" target="_blank">View source</a>]
         
       </div>
     </div>
   
-    <div class="entry-detail" id="delete_channel_permission(channel_id:UInt64,overwrite_id:UInt64)-instance-method">
+    <div class="entry-detail" id="delete_channel_permission(channel_id:UInt64|Snowflake,overwrite_id:UInt64|Snowflake)-instance-method">
       <div class="signature">
         
-        def <strong>delete_channel_permission</strong>(channel_id : UInt64, overwrite_id : UInt64)
+        def <strong>delete_channel_permission</strong>(channel_id : UInt64 | <a href="../Discord/Snowflake.html">Snowflake</a>, overwrite_id : UInt64 | <a href="../Discord/Snowflake.html">Snowflake</a>)
 
-        <a class="method-permalink" href="#delete_channel_permission%28channel_id%3AUInt64%2Coverwrite_id%3AUInt64%29-instance-method">#</a>
+        <a class="method-permalink" href="#delete_channel_permission%28channel_id%3AUInt64%7CSnowflake%2Coverwrite_id%3AUInt64%7CSnowflake%29-instance-method">#</a>
       </div>
       
         <div class="doc"><p>Deletes a permission overwrite from a channel. Requires the "Manage
@@ -1743,17 +1748,17 @@ Permissions" permission.</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/meew0/discordcr/blob/27e400cace78b2d70605c6784fa3630ac797a794/src/discordcr/rest.cr#L532" target="_blank">View source</a>]
+          [<a href="https://github.com/meew0/discordcr/blob/0e38695de0247bf680adc45ad635490175a7197c/src/discordcr/rest.cr#L532" target="_blank">View source</a>]
         
       </div>
     </div>
   
-    <div class="entry-detail" id="delete_guild(guild_id:UInt64)-instance-method">
+    <div class="entry-detail" id="delete_guild(guild_id:UInt64|Snowflake)-instance-method">
       <div class="signature">
         
-        def <strong>delete_guild</strong>(guild_id : UInt64)
+        def <strong>delete_guild</strong>(guild_id : UInt64 | <a href="../Discord/Snowflake.html">Snowflake</a>)
 
-        <a class="method-permalink" href="#delete_guild%28guild_id%3AUInt64%29-instance-method">#</a>
+        <a class="method-permalink" href="#delete_guild%28guild_id%3AUInt64%7CSnowflake%29-instance-method">#</a>
       </div>
       
         <div class="doc"><p>Deletes a guild. Requires the bot to be the server owner.</p>
@@ -1763,17 +1768,17 @@ Permissions" permission.</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/meew0/discordcr/blob/27e400cace78b2d70605c6784fa3630ac797a794/src/discordcr/rest.cr#L656" target="_blank">View source</a>]
+          [<a href="https://github.com/meew0/discordcr/blob/0e38695de0247bf680adc45ad635490175a7197c/src/discordcr/rest.cr#L656" target="_blank">View source</a>]
         
       </div>
     </div>
   
-    <div class="entry-detail" id="delete_guild_integration(guild_id:UInt64,integration_id:UInt64)-instance-method">
+    <div class="entry-detail" id="delete_guild_integration(guild_id:UInt64|Snowflake,integration_id:UInt64|Snowflake)-instance-method">
       <div class="signature">
         
-        def <strong>delete_guild_integration</strong>(guild_id : UInt64, integration_id : UInt64)
+        def <strong>delete_guild_integration</strong>(guild_id : UInt64 | <a href="../Discord/Snowflake.html">Snowflake</a>, integration_id : UInt64 | <a href="../Discord/Snowflake.html">Snowflake</a>)
 
-        <a class="method-permalink" href="#delete_guild_integration%28guild_id%3AUInt64%2Cintegration_id%3AUInt64%29-instance-method">#</a>
+        <a class="method-permalink" href="#delete_guild_integration%28guild_id%3AUInt64%7CSnowflake%2Cintegration_id%3AUInt64%7CSnowflake%29-instance-method">#</a>
       </div>
       
         <div class="doc"><p>Deletes a guild integration. Requires the "Manage Guild" permission.</p>
@@ -1783,17 +1788,17 @@ Permissions" permission.</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/meew0/discordcr/blob/27e400cace78b2d70605c6784fa3630ac797a794/src/discordcr/rest.cr#L1215" target="_blank">View source</a>]
+          [<a href="https://github.com/meew0/discordcr/blob/0e38695de0247bf680adc45ad635490175a7197c/src/discordcr/rest.cr#L1215" target="_blank">View source</a>]
         
       </div>
     </div>
   
-    <div class="entry-detail" id="delete_guild_role(guild_id:UInt64,role_id:UInt64)-instance-method">
+    <div class="entry-detail" id="delete_guild_role(guild_id:UInt64|Snowflake,role_id:UInt64|Snowflake)-instance-method">
       <div class="signature">
         
-        def <strong>delete_guild_role</strong>(guild_id : UInt64, role_id : UInt64)
+        def <strong>delete_guild_role</strong>(guild_id : UInt64 | <a href="../Discord/Snowflake.html">Snowflake</a>, role_id : UInt64 | <a href="../Discord/Snowflake.html">Snowflake</a>)
 
-        <a class="method-permalink" href="#delete_guild_role%28guild_id%3AUInt64%2Crole_id%3AUInt64%29-instance-method">#</a>
+        <a class="method-permalink" href="#delete_guild_role%28guild_id%3AUInt64%7CSnowflake%2Crole_id%3AUInt64%7CSnowflake%29-instance-method">#</a>
       </div>
       
         <div class="doc"><p>Deletes a role. Requires the "Manage Roles" permission as well as the role
@@ -1804,7 +1809,7 @@ to be lower than the bot's highest role.</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/meew0/discordcr/blob/27e400cace78b2d70605c6784fa3630ac797a794/src/discordcr/rest.cr#L1087" target="_blank">View source</a>]
+          [<a href="https://github.com/meew0/discordcr/blob/0e38695de0247bf680adc45ad635490175a7197c/src/discordcr/rest.cr#L1087" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1826,17 +1831,17 @@ server.</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/meew0/discordcr/blob/27e400cace78b2d70605c6784fa3630ac797a794/src/discordcr/rest.cr#L1445" target="_blank">View source</a>]
+          [<a href="https://github.com/meew0/discordcr/blob/0e38695de0247bf680adc45ad635490175a7197c/src/discordcr/rest.cr#L1445" target="_blank">View source</a>]
         
       </div>
     </div>
   
-    <div class="entry-detail" id="delete_message(channel_id:UInt64,message_id:UInt64)-instance-method">
+    <div class="entry-detail" id="delete_message(channel_id:UInt64|Snowflake,message_id:UInt64|Snowflake)-instance-method">
       <div class="signature">
         
-        def <strong>delete_message</strong>(channel_id : UInt64, message_id : UInt64)
+        def <strong>delete_message</strong>(channel_id : UInt64 | <a href="../Discord/Snowflake.html">Snowflake</a>, message_id : UInt64 | <a href="../Discord/Snowflake.html">Snowflake</a>)
 
-        <a class="method-permalink" href="#delete_message%28channel_id%3AUInt64%2Cmessage_id%3AUInt64%29-instance-method">#</a>
+        <a class="method-permalink" href="#delete_message%28channel_id%3AUInt64%7CSnowflake%2Cmessage_id%3AUInt64%7CSnowflake%29-instance-method">#</a>
       </div>
       
         <div class="doc"><p>Deletes a message from the channel. Requires the message to either have
@@ -1848,17 +1853,17 @@ permission.</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/meew0/discordcr/blob/27e400cace78b2d70605c6784fa3630ac797a794/src/discordcr/rest.cr#L438" target="_blank">View source</a>]
+          [<a href="https://github.com/meew0/discordcr/blob/0e38695de0247bf680adc45ad635490175a7197c/src/discordcr/rest.cr#L438" target="_blank">View source</a>]
         
       </div>
     </div>
   
-    <div class="entry-detail" id="delete_own_reaction(channel_id:UInt64,message_id:UInt64,emoji:String)-instance-method">
+    <div class="entry-detail" id="delete_own_reaction(channel_id:UInt64|Snowflake,message_id:UInt64|Snowflake,emoji:String)-instance-method">
       <div class="signature">
         
-        def <strong>delete_own_reaction</strong>(channel_id : UInt64, message_id : UInt64, emoji : String)
+        def <strong>delete_own_reaction</strong>(channel_id : UInt64 | <a href="../Discord/Snowflake.html">Snowflake</a>, message_id : UInt64 | <a href="../Discord/Snowflake.html">Snowflake</a>, emoji : String)
 
-        <a class="method-permalink" href="#delete_own_reaction%28channel_id%3AUInt64%2Cmessage_id%3AUInt64%2Cemoji%3AString%29-instance-method">#</a>
+        <a class="method-permalink" href="#delete_own_reaction%28channel_id%3AUInt64%7CSnowflake%2Cmessage_id%3AUInt64%7CSnowflake%2Cemoji%3AString%29-instance-method">#</a>
       </div>
       
         <div class="doc"><p>Removes the bot's own reaction from a message. The <code>emoji</code> property must
@@ -1870,17 +1875,17 @@ simply be the UTF-8 encoded characters.</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/meew0/discordcr/blob/27e400cace78b2d70605c6784fa3630ac797a794/src/discordcr/rest.cr#L319" target="_blank">View source</a>]
+          [<a href="https://github.com/meew0/discordcr/blob/0e38695de0247bf680adc45ad635490175a7197c/src/discordcr/rest.cr#L319" target="_blank">View source</a>]
         
       </div>
     </div>
   
-    <div class="entry-detail" id="delete_pinned_channel_message(channel_id:UInt64,message_id:UInt64)-instance-method">
+    <div class="entry-detail" id="delete_pinned_channel_message(channel_id:UInt64|Snowflake,message_id:UInt64|Snowflake)-instance-method">
       <div class="signature">
         
-        def <strong>delete_pinned_channel_message</strong>(channel_id : UInt64, message_id : UInt64)
+        def <strong>delete_pinned_channel_message</strong>(channel_id : UInt64 | <a href="../Discord/Snowflake.html">Snowflake</a>, message_id : UInt64 | <a href="../Discord/Snowflake.html">Snowflake</a>)
 
-        <a class="method-permalink" href="#delete_pinned_channel_message%28channel_id%3AUInt64%2Cmessage_id%3AUInt64%29-instance-method">#</a>
+        <a class="method-permalink" href="#delete_pinned_channel_message%28channel_id%3AUInt64%7CSnowflake%2Cmessage_id%3AUInt64%7CSnowflake%29-instance-method">#</a>
       </div>
       
         <div class="doc"><p>Unpins a message from this channel. Requires the "Manage Messages"
@@ -1891,17 +1896,17 @@ permission.</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/meew0/discordcr/blob/27e400cace78b2d70605c6784fa3630ac797a794/src/discordcr/rest.cr#L594" target="_blank">View source</a>]
+          [<a href="https://github.com/meew0/discordcr/blob/0e38695de0247bf680adc45ad635490175a7197c/src/discordcr/rest.cr#L594" target="_blank">View source</a>]
         
       </div>
     </div>
   
-    <div class="entry-detail" id="delete_user_reaction(channel_id:UInt64,message_id:UInt64,emoji:String,user_id:UInt64)-instance-method">
+    <div class="entry-detail" id="delete_user_reaction(channel_id:UInt64|Snowflake,message_id:UInt64|Snowflake,emoji:String,user_id:UInt64|Snowflake)-instance-method">
       <div class="signature">
         
-        def <strong>delete_user_reaction</strong>(channel_id : UInt64, message_id : UInt64, emoji : String, user_id : UInt64)
+        def <strong>delete_user_reaction</strong>(channel_id : UInt64 | <a href="../Discord/Snowflake.html">Snowflake</a>, message_id : UInt64 | <a href="../Discord/Snowflake.html">Snowflake</a>, emoji : String, user_id : UInt64 | <a href="../Discord/Snowflake.html">Snowflake</a>)
 
-        <a class="method-permalink" href="#delete_user_reaction%28channel_id%3AUInt64%2Cmessage_id%3AUInt64%2Cemoji%3AString%2Cuser_id%3AUInt64%29-instance-method">#</a>
+        <a class="method-permalink" href="#delete_user_reaction%28channel_id%3AUInt64%7CSnowflake%2Cmessage_id%3AUInt64%7CSnowflake%2Cemoji%3AString%2Cuser_id%3AUInt64%7CSnowflake%29-instance-method">#</a>
       </div>
       
         <div class="doc"><p>Removes another user's reaction from a message. The <code>emoji</code> property must
@@ -1914,17 +1919,17 @@ permission.</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/meew0/discordcr/blob/27e400cace78b2d70605c6784fa3630ac797a794/src/discordcr/rest.cr#L336" target="_blank">View source</a>]
+          [<a href="https://github.com/meew0/discordcr/blob/0e38695de0247bf680adc45ad635490175a7197c/src/discordcr/rest.cr#L336" target="_blank">View source</a>]
         
       </div>
     </div>
   
-    <div class="entry-detail" id="delete_webhook(webhook_id:UInt64,token:String)-instance-method">
+    <div class="entry-detail" id="delete_webhook(webhook_id:UInt64|Snowflake,token:String)-instance-method">
       <div class="signature">
         
-        def <strong>delete_webhook</strong>(webhook_id : UInt64, token : String)
+        def <strong>delete_webhook</strong>(webhook_id : UInt64 | <a href="../Discord/Snowflake.html">Snowflake</a>, token : String)
 
-        <a class="method-permalink" href="#delete_webhook%28webhook_id%3AUInt64%2Ctoken%3AString%29-instance-method">#</a>
+        <a class="method-permalink" href="#delete_webhook%28webhook_id%3AUInt64%7CSnowflake%2Ctoken%3AString%29-instance-method">#</a>
       </div>
       
         <div class="doc"><p>Deletes a webhook with a token. Does not require authentication.</p>
@@ -1934,17 +1939,17 @@ permission.</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/meew0/discordcr/blob/27e400cace78b2d70605c6784fa3630ac797a794/src/discordcr/rest.cr#L1640" target="_blank">View source</a>]
+          [<a href="https://github.com/meew0/discordcr/blob/0e38695de0247bf680adc45ad635490175a7197c/src/discordcr/rest.cr#L1640" target="_blank">View source</a>]
         
       </div>
     </div>
   
-    <div class="entry-detail" id="delete_webhook(webhook_id:UInt64)-instance-method">
+    <div class="entry-detail" id="delete_webhook(webhook_id:UInt64|Snowflake)-instance-method">
       <div class="signature">
         
-        def <strong>delete_webhook</strong>(webhook_id : UInt64)
+        def <strong>delete_webhook</strong>(webhook_id : UInt64 | <a href="../Discord/Snowflake.html">Snowflake</a>)
 
-        <a class="method-permalink" href="#delete_webhook%28webhook_id%3AUInt64%29-instance-method">#</a>
+        <a class="method-permalink" href="#delete_webhook%28webhook_id%3AUInt64%7CSnowflake%29-instance-method">#</a>
       </div>
       
         <div class="doc"><p>Deletes a webhook. User must be owner.</p>
@@ -1954,17 +1959,17 @@ permission.</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/meew0/discordcr/blob/27e400cace78b2d70605c6784fa3630ac797a794/src/discordcr/rest.cr#L1626" target="_blank">View source</a>]
+          [<a href="https://github.com/meew0/discordcr/blob/0e38695de0247bf680adc45ad635490175a7197c/src/discordcr/rest.cr#L1626" target="_blank">View source</a>]
         
       </div>
     </div>
   
-    <div class="entry-detail" id="edit_channel_permissions(channel_id:UInt64,overwrite_id:UInt64,type:String,allow:Permissions,deny:Permissions)-instance-method">
+    <div class="entry-detail" id="edit_channel_permissions(channel_id:UInt64|Snowflake,overwrite_id:UInt64|Snowflake,type:String,allow:Permissions,deny:Permissions)-instance-method">
       <div class="signature">
         
-        def <strong>edit_channel_permissions</strong>(channel_id : UInt64, overwrite_id : UInt64, type : String, allow : <a href="../Discord/Permissions.html">Permissions</a>, deny : <a href="../Discord/Permissions.html">Permissions</a>)
+        def <strong>edit_channel_permissions</strong>(channel_id : UInt64 | <a href="../Discord/Snowflake.html">Snowflake</a>, overwrite_id : UInt64 | <a href="../Discord/Snowflake.html">Snowflake</a>, type : String, allow : <a href="../Discord/Permissions.html">Permissions</a>, deny : <a href="../Discord/Permissions.html">Permissions</a>)
 
-        <a class="method-permalink" href="#edit_channel_permissions%28channel_id%3AUInt64%2Coverwrite_id%3AUInt64%2Ctype%3AString%2Callow%3APermissions%2Cdeny%3APermissions%29-instance-method">#</a>
+        <a class="method-permalink" href="#edit_channel_permissions%28channel_id%3AUInt64%7CSnowflake%2Coverwrite_id%3AUInt64%7CSnowflake%2Ctype%3AString%2Callow%3APermissions%2Cdeny%3APermissions%29-instance-method">#</a>
       </div>
       
         <div class="doc"><p>Edits an existing permission overwrite on a channel with new permissions,
@@ -1976,17 +1981,17 @@ ID. Requires the "Manage Permissions" permission.</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/meew0/discordcr/blob/27e400cace78b2d70605c6784fa3630ac797a794/src/discordcr/rest.cr#L469" target="_blank">View source</a>]
+          [<a href="https://github.com/meew0/discordcr/blob/0e38695de0247bf680adc45ad635490175a7197c/src/discordcr/rest.cr#L469" target="_blank">View source</a>]
         
       </div>
     </div>
   
-    <div class="entry-detail" id="edit_message(channel_id:UInt64,message_id:UInt64,content:String,embed:Embed?=nil)-instance-method">
+    <div class="entry-detail" id="edit_message(channel_id:UInt64|Snowflake,message_id:UInt64|Snowflake,content:String,embed:Embed?=nil)-instance-method">
       <div class="signature">
         
-        def <strong>edit_message</strong>(channel_id : UInt64, message_id : UInt64, content : String, embed : <a href="../Discord/Embed.html">Embed</a>? = <span class="n">nil</span>)
+        def <strong>edit_message</strong>(channel_id : UInt64 | <a href="../Discord/Snowflake.html">Snowflake</a>, message_id : UInt64 | <a href="../Discord/Snowflake.html">Snowflake</a>, content : String, embed : <a href="../Discord/Embed.html">Embed</a>? = <span class="n">nil</span>)
 
-        <a class="method-permalink" href="#edit_message%28channel_id%3AUInt64%2Cmessage_id%3AUInt64%2Ccontent%3AString%2Cembed%3AEmbed%3F%3Dnil%29-instance-method">#</a>
+        <a class="method-permalink" href="#edit_message%28channel_id%3AUInt64%7CSnowflake%2Cmessage_id%3AUInt64%7CSnowflake%2Ccontent%3AString%2Cembed%3AEmbed%3F%3Dnil%29-instance-method">#</a>
       </div>
       
         <div class="doc"><p>Edits an existing message on the channel. This only works for messages
@@ -1997,17 +2002,17 @@ sent by the bot itself - you can't edit others' messages.</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/meew0/discordcr/blob/27e400cace78b2d70605c6784fa3630ac797a794/src/discordcr/rest.cr#L420" target="_blank">View source</a>]
+          [<a href="https://github.com/meew0/discordcr/blob/0e38695de0247bf680adc45ad635490175a7197c/src/discordcr/rest.cr#L420" target="_blank">View source</a>]
         
       </div>
     </div>
   
-    <div class="entry-detail" id="execute_webhook(webhook_id:UInt64,token:String,content:String?=nil,file:String?=nil,embeds:Array(Embed)?=nil,tts:Bool?=nil,avatar_url:String?=nil,username:String?=nil,wait:Bool?=false)-instance-method">
+    <div class="entry-detail" id="execute_webhook(webhook_id:UInt64|Snowflake,token:String,content:String?=nil,file:String?=nil,embeds:Array(Embed)?=nil,tts:Bool?=nil,avatar_url:String?=nil,username:String?=nil,wait:Bool?=false)-instance-method">
       <div class="signature">
         
-        def <strong>execute_webhook</strong>(webhook_id : UInt64, token : String, content : String? = <span class="n">nil</span>, file : String? = <span class="n">nil</span>, embeds : Array(<a href="../Discord/Embed.html">Embed</a>)? = <span class="n">nil</span>, tts : Bool? = <span class="n">nil</span>, avatar_url : String? = <span class="n">nil</span>, username : String? = <span class="n">nil</span>, wait : Bool? = <span class="n">false</span>)
+        def <strong>execute_webhook</strong>(webhook_id : UInt64 | <a href="../Discord/Snowflake.html">Snowflake</a>, token : String, content : String? = <span class="n">nil</span>, file : String? = <span class="n">nil</span>, embeds : Array(<a href="../Discord/Embed.html">Embed</a>)? = <span class="n">nil</span>, tts : Bool? = <span class="n">nil</span>, avatar_url : String? = <span class="n">nil</span>, username : String? = <span class="n">nil</span>, wait : Bool? = <span class="n">false</span>)
 
-        <a class="method-permalink" href="#execute_webhook%28webhook_id%3AUInt64%2Ctoken%3AString%2Ccontent%3AString%3F%3Dnil%2Cfile%3AString%3F%3Dnil%2Cembeds%3AArray%28Embed%29%3F%3Dnil%2Ctts%3ABool%3F%3Dnil%2Cavatar_url%3AString%3F%3Dnil%2Cusername%3AString%3F%3Dnil%2Cwait%3ABool%3F%3Dfalse%29-instance-method">#</a>
+        <a class="method-permalink" href="#execute_webhook%28webhook_id%3AUInt64%7CSnowflake%2Ctoken%3AString%2Ccontent%3AString%3F%3Dnil%2Cfile%3AString%3F%3Dnil%2Cembeds%3AArray%28Embed%29%3F%3Dnil%2Ctts%3ABool%3F%3Dnil%2Cavatar_url%3AString%3F%3Dnil%2Cusername%3AString%3F%3Dnil%2Cwait%3ABool%3F%3Dfalse%29-instance-method">#</a>
       </div>
       
         <div class="doc"><p>Executes a webhook, with a token.</p>
@@ -2017,17 +2022,17 @@ sent by the bot itself - you can't edit others' messages.</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/meew0/discordcr/blob/27e400cace78b2d70605c6784fa3630ac797a794/src/discordcr/rest.cr#L1654" target="_blank">View source</a>]
+          [<a href="https://github.com/meew0/discordcr/blob/0e38695de0247bf680adc45ad635490175a7197c/src/discordcr/rest.cr#L1654" target="_blank">View source</a>]
         
       </div>
     </div>
   
-    <div class="entry-detail" id="get_channel(channel_id:UInt64)-instance-method">
+    <div class="entry-detail" id="get_channel(channel_id:UInt64|Snowflake)-instance-method">
       <div class="signature">
         
-        def <strong>get_channel</strong>(channel_id : UInt64)
+        def <strong>get_channel</strong>(channel_id : UInt64 | <a href="../Discord/Snowflake.html">Snowflake</a>)
 
-        <a class="method-permalink" href="#get_channel%28channel_id%3AUInt64%29-instance-method">#</a>
+        <a class="method-permalink" href="#get_channel%28channel_id%3AUInt64%7CSnowflake%29-instance-method">#</a>
       </div>
       
         <div class="doc"><p>Gets a channel by ID.</p>
@@ -2037,17 +2042,17 @@ sent by the bot itself - you can't edit others' messages.</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/meew0/discordcr/blob/27e400cace78b2d70605c6784fa3630ac797a794/src/discordcr/rest.cr#L162" target="_blank">View source</a>]
+          [<a href="https://github.com/meew0/discordcr/blob/0e38695de0247bf680adc45ad635490175a7197c/src/discordcr/rest.cr#L162" target="_blank">View source</a>]
         
       </div>
     </div>
   
-    <div class="entry-detail" id="get_channel_invites(channel_id:UInt64)-instance-method">
+    <div class="entry-detail" id="get_channel_invites(channel_id:UInt64|Snowflake)-instance-method">
       <div class="signature">
         
-        def <strong>get_channel_invites</strong>(channel_id : UInt64)
+        def <strong>get_channel_invites</strong>(channel_id : UInt64 | <a href="../Discord/Snowflake.html">Snowflake</a>)
 
-        <a class="method-permalink" href="#get_channel_invites%28channel_id%3AUInt64%29-instance-method">#</a>
+        <a class="method-permalink" href="#get_channel_invites%28channel_id%3AUInt64%7CSnowflake%29-instance-method">#</a>
       </div>
       
         <div class="doc"><p>Gets a list of invites for this channel. Requires the "Manage Channel"
@@ -2058,17 +2063,17 @@ permission.</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/meew0/discordcr/blob/27e400cace78b2d70605c6784fa3630ac797a794/src/discordcr/rest.cr#L491" target="_blank">View source</a>]
+          [<a href="https://github.com/meew0/discordcr/blob/0e38695de0247bf680adc45ad635490175a7197c/src/discordcr/rest.cr#L491" target="_blank">View source</a>]
         
       </div>
     </div>
   
-    <div class="entry-detail" id="get_channel_message(channel_id:UInt64,message_id:UInt64)-instance-method">
+    <div class="entry-detail" id="get_channel_message(channel_id:UInt64|Snowflake,message_id:UInt64|Snowflake)-instance-method">
       <div class="signature">
         
-        def <strong>get_channel_message</strong>(channel_id : UInt64, message_id : UInt64)
+        def <strong>get_channel_message</strong>(channel_id : UInt64 | <a href="../Discord/Snowflake.html">Snowflake</a>, message_id : UInt64 | <a href="../Discord/Snowflake.html">Snowflake</a>)
 
-        <a class="method-permalink" href="#get_channel_message%28channel_id%3AUInt64%2Cmessage_id%3AUInt64%29-instance-method">#</a>
+        <a class="method-permalink" href="#get_channel_message%28channel_id%3AUInt64%7CSnowflake%2Cmessage_id%3AUInt64%7CSnowflake%29-instance-method">#</a>
       </div>
       
         <div class="doc"><p>Gets a single message from the channel's history. Requires the "Read
@@ -2079,17 +2084,17 @@ Message History" permission.</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/meew0/discordcr/blob/27e400cace78b2d70605c6784fa3630ac797a794/src/discordcr/rest.cr#L242" target="_blank">View source</a>]
+          [<a href="https://github.com/meew0/discordcr/blob/0e38695de0247bf680adc45ad635490175a7197c/src/discordcr/rest.cr#L242" target="_blank">View source</a>]
         
       </div>
     </div>
   
-    <div class="entry-detail" id="get_channel_messages(channel_id:UInt64,limit:UInt8=50,before:UInt64?=nil,after:UInt64?=nil,around:UInt64?=nil)-instance-method">
+    <div class="entry-detail" id="get_channel_messages(channel_id:UInt64|Snowflake,limit:UInt8=50,before:UInt64|Snowflake|Nil=nil,after:UInt64|Snowflak|Nil=nil,around:UInt64|Snowflake|Nil=nil)-instance-method">
       <div class="signature">
         
-        def <strong>get_channel_messages</strong>(channel_id : UInt64, limit : UInt8 = <span class="n">50</span>, before : UInt64? = <span class="n">nil</span>, after : UInt64? = <span class="n">nil</span>, around : UInt64? = <span class="n">nil</span>)
+        def <strong>get_channel_messages</strong>(channel_id : UInt64 | <a href="../Discord/Snowflake.html">Snowflake</a>, limit : UInt8 = <span class="n">50</span>, before : UInt64 | <a href="../Discord/Snowflake.html">Snowflake</a> | Nil = <span class="n">nil</span>, after : UInt64 | Snowflak | Nil = <span class="n">nil</span>, around : UInt64 | <a href="../Discord/Snowflake.html">Snowflake</a> | Nil = <span class="n">nil</span>)
 
-        <a class="method-permalink" href="#get_channel_messages%28channel_id%3AUInt64%2Climit%3AUInt8%3D50%2Cbefore%3AUInt64%3F%3Dnil%2Cafter%3AUInt64%3F%3Dnil%2Caround%3AUInt64%3F%3Dnil%29-instance-method">#</a>
+        <a class="method-permalink" href="#get_channel_messages%28channel_id%3AUInt64%7CSnowflake%2Climit%3AUInt8%3D50%2Cbefore%3AUInt64%7CSnowflake%7CNil%3Dnil%2Cafter%3AUInt64%7CSnowflak%7CNil%3Dnil%2Caround%3AUInt64%7CSnowflake%7CNil%3Dnil%29-instance-method">#</a>
       </div>
       
         <div class="doc"><p>Gets a list of messages from the channel's history. Requires the "Read
@@ -2100,17 +2105,17 @@ Message History" permission.</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/meew0/discordcr/blob/27e400cace78b2d70605c6784fa3630ac797a794/src/discordcr/rest.cr#L220" target="_blank">View source</a>]
+          [<a href="https://github.com/meew0/discordcr/blob/0e38695de0247bf680adc45ad635490175a7197c/src/discordcr/rest.cr#L220" target="_blank">View source</a>]
         
       </div>
     </div>
   
-    <div class="entry-detail" id="get_channel_webhooks(channel_id:UInt64)-instance-method">
+    <div class="entry-detail" id="get_channel_webhooks(channel_id:UInt64|Snowflake)-instance-method">
       <div class="signature">
         
-        def <strong>get_channel_webhooks</strong>(channel_id : UInt64)
+        def <strong>get_channel_webhooks</strong>(channel_id : UInt64 | <a href="../Discord/Snowflake.html">Snowflake</a>)
 
-        <a class="method-permalink" href="#get_channel_webhooks%28channel_id%3AUInt64%29-instance-method">#</a>
+        <a class="method-permalink" href="#get_channel_webhooks%28channel_id%3AUInt64%7CSnowflake%29-instance-method">#</a>
       </div>
       
         <div class="doc"><p>Get an array of channel webhooks.</p>
@@ -2120,7 +2125,7 @@ Message History" permission.</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/meew0/discordcr/blob/27e400cace78b2d70605c6784fa3630ac797a794/src/discordcr/rest.cr#L1565" target="_blank">View source</a>]
+          [<a href="https://github.com/meew0/discordcr/blob/0e38695de0247bf680adc45ad635490175a7197c/src/discordcr/rest.cr#L1565" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -2140,17 +2145,17 @@ Message History" permission.</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/meew0/discordcr/blob/27e400cace78b2d70605c6784fa3630ac797a794/src/discordcr/rest.cr#L1297" target="_blank">View source</a>]
+          [<a href="https://github.com/meew0/discordcr/blob/0e38695de0247bf680adc45ad635490175a7197c/src/discordcr/rest.cr#L1297" target="_blank">View source</a>]
         
       </div>
     </div>
   
-    <div class="entry-detail" id="get_current_user_guilds(limit:UInt8=100_u8,before:UInt64=0_u64,after:UInt64=0_u64)-instance-method">
+    <div class="entry-detail" id="get_current_user_guilds(limit:UInt8=100_u8,before:UInt64|Snowflake=0_u64,after:UInt64|Snowflake=0_u64)-instance-method">
       <div class="signature">
         
-        def <strong>get_current_user_guilds</strong>(limit : UInt8 = <span class="n">100_u8</span>, before : UInt64 = <span class="n">0_u64</span>, after : UInt64 = <span class="n">0_u64</span>)
+        def <strong>get_current_user_guilds</strong>(limit : UInt8 = <span class="n">100_u8</span>, before : UInt64 | <a href="../Discord/Snowflake.html">Snowflake</a> = <span class="n">0_u64</span>, after : UInt64 | <a href="../Discord/Snowflake.html">Snowflake</a> = <span class="n">0_u64</span>)
 
-        <a class="method-permalink" href="#get_current_user_guilds%28limit%3AUInt8%3D100_u8%2Cbefore%3AUInt64%3D0_u64%2Cafter%3AUInt64%3D0_u64%29-instance-method">#</a>
+        <a class="method-permalink" href="#get_current_user_guilds%28limit%3AUInt8%3D100_u8%2Cbefore%3AUInt64%7CSnowflake%3D0_u64%2Cafter%3AUInt64%7CSnowflake%3D0_u64%29-instance-method">#</a>
       </div>
       
         <div class="doc"><p>Gets a list of user guilds the current user is on.</p>
@@ -2160,7 +2165,7 @@ Message History" permission.</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/meew0/discordcr/blob/27e400cace78b2d70605c6784fa3630ac797a794/src/discordcr/rest.cr#L1335" target="_blank">View source</a>]
+          [<a href="https://github.com/meew0/discordcr/blob/0e38695de0247bf680adc45ad635490175a7197c/src/discordcr/rest.cr#L1335" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -2180,7 +2185,7 @@ Message History" permission.</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/meew0/discordcr/blob/27e400cace78b2d70605c6784fa3630ac797a794/src/discordcr/rest.cr#L114" target="_blank">View source</a>]
+          [<a href="https://github.com/meew0/discordcr/blob/0e38695de0247bf680adc45ad635490175a7197c/src/discordcr/rest.cr#L114" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -2200,17 +2205,17 @@ Message History" permission.</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/meew0/discordcr/blob/27e400cace78b2d70605c6784fa3630ac797a794/src/discordcr/rest.cr#L130" target="_blank">View source</a>]
+          [<a href="https://github.com/meew0/discordcr/blob/0e38695de0247bf680adc45ad635490175a7197c/src/discordcr/rest.cr#L130" target="_blank">View source</a>]
         
       </div>
     </div>
   
-    <div class="entry-detail" id="get_guild(guild_id:UInt64)-instance-method">
+    <div class="entry-detail" id="get_guild(guild_id:UInt64|Snowflake)-instance-method">
       <div class="signature">
         
-        def <strong>get_guild</strong>(guild_id : UInt64)
+        def <strong>get_guild</strong>(guild_id : UInt64 | <a href="../Discord/Snowflake.html">Snowflake</a>)
 
-        <a class="method-permalink" href="#get_guild%28guild_id%3AUInt64%29-instance-method">#</a>
+        <a class="method-permalink" href="#get_guild%28guild_id%3AUInt64%7CSnowflake%29-instance-method">#</a>
       </div>
       
         <div class="doc"><p>Gets a guild by ID.</p>
@@ -2220,17 +2225,17 @@ Message History" permission.</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/meew0/discordcr/blob/27e400cace78b2d70605c6784fa3630ac797a794/src/discordcr/rest.cr#L608" target="_blank">View source</a>]
+          [<a href="https://github.com/meew0/discordcr/blob/0e38695de0247bf680adc45ad635490175a7197c/src/discordcr/rest.cr#L608" target="_blank">View source</a>]
         
       </div>
     </div>
   
-    <div class="entry-detail" id="get_guild_bans(guild_id:UInt64)-instance-method">
+    <div class="entry-detail" id="get_guild_bans(guild_id:UInt64|Snowflake)-instance-method">
       <div class="signature">
         
-        def <strong>get_guild_bans</strong>(guild_id : UInt64)
+        def <strong>get_guild_bans</strong>(guild_id : UInt64 | <a href="../Discord/Snowflake.html">Snowflake</a>)
 
-        <a class="method-permalink" href="#get_guild_bans%28guild_id%3AUInt64%29-instance-method">#</a>
+        <a class="method-permalink" href="#get_guild_bans%28guild_id%3AUInt64%7CSnowflake%29-instance-method">#</a>
       </div>
       
         <div class="doc"><p>Gets a list of members banned from this server. Requires the "Ban Members"
@@ -2241,17 +2246,17 @@ permission.</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/meew0/discordcr/blob/27e400cace78b2d70605c6784fa3630ac797a794/src/discordcr/rest.cr#L973" target="_blank">View source</a>]
+          [<a href="https://github.com/meew0/discordcr/blob/0e38695de0247bf680adc45ad635490175a7197c/src/discordcr/rest.cr#L973" target="_blank">View source</a>]
         
       </div>
     </div>
   
-    <div class="entry-detail" id="get_guild_channels(guild_id:UInt64)-instance-method">
+    <div class="entry-detail" id="get_guild_channels(guild_id:UInt64|Snowflake)-instance-method">
       <div class="signature">
         
-        def <strong>get_guild_channels</strong>(guild_id : UInt64)
+        def <strong>get_guild_channels</strong>(guild_id : UInt64 | <a href="../Discord/Snowflake.html">Snowflake</a>)
 
-        <a class="method-permalink" href="#get_guild_channels%28guild_id%3AUInt64%29-instance-method">#</a>
+        <a class="method-permalink" href="#get_guild_channels%28guild_id%3AUInt64%7CSnowflake%29-instance-method">#</a>
       </div>
       
         <div class="doc"><p>Gets a list of channels in a guild.</p>
@@ -2261,17 +2266,17 @@ permission.</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/meew0/discordcr/blob/27e400cace78b2d70605c6784fa3630ac797a794/src/discordcr/rest.cr#L725" target="_blank">View source</a>]
+          [<a href="https://github.com/meew0/discordcr/blob/0e38695de0247bf680adc45ad635490175a7197c/src/discordcr/rest.cr#L725" target="_blank">View source</a>]
         
       </div>
     </div>
   
-    <div class="entry-detail" id="get_guild_embed(guild_id:UInt64)-instance-method">
+    <div class="entry-detail" id="get_guild_embed(guild_id:UInt64|Snowflake)-instance-method">
       <div class="signature">
         
-        def <strong>get_guild_embed</strong>(guild_id : UInt64)
+        def <strong>get_guild_embed</strong>(guild_id : UInt64 | <a href="../Discord/Snowflake.html">Snowflake</a>)
 
-        <a class="method-permalink" href="#get_guild_embed%28guild_id%3AUInt64%29-instance-method">#</a>
+        <a class="method-permalink" href="#get_guild_embed%28guild_id%3AUInt64%7CSnowflake%29-instance-method">#</a>
       </div>
       
         <div class="doc"><p>Gets embed data for a guild. Requires the "Manage Guild" permission.</p>
@@ -2281,17 +2286,17 @@ permission.</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/meew0/discordcr/blob/27e400cace78b2d70605c6784fa3630ac797a794/src/discordcr/rest.cr#L1243" target="_blank">View source</a>]
+          [<a href="https://github.com/meew0/discordcr/blob/0e38695de0247bf680adc45ad635490175a7197c/src/discordcr/rest.cr#L1243" target="_blank">View source</a>]
         
       </div>
     </div>
   
-    <div class="entry-detail" id="get_guild_emojis(guild_id:UInt64)-instance-method">
+    <div class="entry-detail" id="get_guild_emojis(guild_id:UInt64|Snowflake)-instance-method">
       <div class="signature">
         
-        def <strong>get_guild_emojis</strong>(guild_id : UInt64)
+        def <strong>get_guild_emojis</strong>(guild_id : UInt64 | <a href="../Discord/Snowflake.html">Snowflake</a>)
 
-        <a class="method-permalink" href="#get_guild_emojis%28guild_id%3AUInt64%29-instance-method">#</a>
+        <a class="method-permalink" href="#get_guild_emojis%28guild_id%3AUInt64%7CSnowflake%29-instance-method">#</a>
       </div>
       
         <div class="doc"><p>Gets a list of emoji on the guild.</p>
@@ -2301,17 +2306,17 @@ permission.</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/meew0/discordcr/blob/27e400cace78b2d70605c6784fa3630ac797a794/src/discordcr/rest.cr#L672" target="_blank">View source</a>]
+          [<a href="https://github.com/meew0/discordcr/blob/0e38695de0247bf680adc45ad635490175a7197c/src/discordcr/rest.cr#L672" target="_blank">View source</a>]
         
       </div>
     </div>
   
-    <div class="entry-detail" id="get_guild_integrations(guild_id:UInt64)-instance-method">
+    <div class="entry-detail" id="get_guild_integrations(guild_id:UInt64|Snowflake)-instance-method">
       <div class="signature">
         
-        def <strong>get_guild_integrations</strong>(guild_id : UInt64)
+        def <strong>get_guild_integrations</strong>(guild_id : UInt64 | <a href="../Discord/Snowflake.html">Snowflake</a>)
 
-        <a class="method-permalink" href="#get_guild_integrations%28guild_id%3AUInt64%29-instance-method">#</a>
+        <a class="method-permalink" href="#get_guild_integrations%28guild_id%3AUInt64%7CSnowflake%29-instance-method">#</a>
       </div>
       
         <div class="doc"><p>Gets a list of integrations (Twitch, YouTube, etc.) for this guild.
@@ -2322,17 +2327,17 @@ Requires the "Manage Guild" permission.</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/meew0/discordcr/blob/27e400cace78b2d70605c6784fa3630ac797a794/src/discordcr/rest.cr#L1155" target="_blank">View source</a>]
+          [<a href="https://github.com/meew0/discordcr/blob/0e38695de0247bf680adc45ad635490175a7197c/src/discordcr/rest.cr#L1155" target="_blank">View source</a>]
         
       </div>
     </div>
   
-    <div class="entry-detail" id="get_guild_member(guild_id:UInt64,user_id:UInt64)-instance-method">
+    <div class="entry-detail" id="get_guild_member(guild_id:UInt64|Snowflake,user_id:UInt64|Snowflake)-instance-method">
       <div class="signature">
         
-        def <strong>get_guild_member</strong>(guild_id : UInt64, user_id : UInt64)
+        def <strong>get_guild_member</strong>(guild_id : UInt64 | <a href="../Discord/Snowflake.html">Snowflake</a>, user_id : UInt64 | <a href="../Discord/Snowflake.html">Snowflake</a>)
 
-        <a class="method-permalink" href="#get_guild_member%28guild_id%3AUInt64%2Cuser_id%3AUInt64%29-instance-method">#</a>
+        <a class="method-permalink" href="#get_guild_member%28guild_id%3AUInt64%7CSnowflake%2Cuser_id%3AUInt64%7CSnowflake%29-instance-method">#</a>
       </div>
       
         <div class="doc"><p>Gets a specific member by both IDs.</p>
@@ -2342,17 +2347,17 @@ Requires the "Manage Guild" permission.</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/meew0/discordcr/blob/27e400cace78b2d70605c6784fa3630ac797a794/src/discordcr/rest.cr#L813" target="_blank">View source</a>]
+          [<a href="https://github.com/meew0/discordcr/blob/0e38695de0247bf680adc45ad635490175a7197c/src/discordcr/rest.cr#L813" target="_blank">View source</a>]
         
       </div>
     </div>
   
-    <div class="entry-detail" id="get_guild_prune_count(guild_id:UInt64,days:UInt32)-instance-method">
+    <div class="entry-detail" id="get_guild_prune_count(guild_id:UInt64|Snowflake,days:UInt32)-instance-method">
       <div class="signature">
         
-        def <strong>get_guild_prune_count</strong>(guild_id : UInt64, days : UInt32)
+        def <strong>get_guild_prune_count</strong>(guild_id : UInt64 | <a href="../Discord/Snowflake.html">Snowflake</a>, days : UInt32)
 
-        <a class="method-permalink" href="#get_guild_prune_count%28guild_id%3AUInt64%2Cdays%3AUInt32%29-instance-method">#</a>
+        <a class="method-permalink" href="#get_guild_prune_count%28guild_id%3AUInt64%7CSnowflake%2Cdays%3AUInt32%29-instance-method">#</a>
       </div>
       
         <div class="doc"><p>Get a number of members that would be pruned with the given number of
@@ -2363,17 +2368,17 @@ days. Requires the "Kick Members" permission.</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/meew0/discordcr/blob/27e400cace78b2d70605c6784fa3630ac797a794/src/discordcr/rest.cr#L1104" target="_blank">View source</a>]
+          [<a href="https://github.com/meew0/discordcr/blob/0e38695de0247bf680adc45ad635490175a7197c/src/discordcr/rest.cr#L1104" target="_blank">View source</a>]
         
       </div>
     </div>
   
-    <div class="entry-detail" id="get_guild_roles(guild_id:UInt64)-instance-method">
+    <div class="entry-detail" id="get_guild_roles(guild_id:UInt64|Snowflake)-instance-method">
       <div class="signature">
         
-        def <strong>get_guild_roles</strong>(guild_id : UInt64)
+        def <strong>get_guild_roles</strong>(guild_id : UInt64 | <a href="../Discord/Snowflake.html">Snowflake</a>)
 
-        <a class="method-permalink" href="#get_guild_roles%28guild_id%3AUInt64%29-instance-method">#</a>
+        <a class="method-permalink" href="#get_guild_roles%28guild_id%3AUInt64%7CSnowflake%29-instance-method">#</a>
       </div>
       
         <div class="doc"><p>Get a list of roles on the guild. Requires the "Manage Roles" permission.</p>
@@ -2383,17 +2388,17 @@ days. Requires the "Kick Members" permission.</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/meew0/discordcr/blob/27e400cace78b2d70605c6784fa3630ac797a794/src/discordcr/rest.cr#L1017" target="_blank">View source</a>]
+          [<a href="https://github.com/meew0/discordcr/blob/0e38695de0247bf680adc45ad635490175a7197c/src/discordcr/rest.cr#L1017" target="_blank">View source</a>]
         
       </div>
     </div>
   
-    <div class="entry-detail" id="get_guild_vanity_url(guild_id:UInt64)-instance-method">
+    <div class="entry-detail" id="get_guild_vanity_url(guild_id:UInt64|Snowflake)-instance-method">
       <div class="signature">
         
-        def <strong>get_guild_vanity_url</strong>(guild_id : UInt64)
+        def <strong>get_guild_vanity_url</strong>(guild_id : UInt64 | <a href="../Discord/Snowflake.html">Snowflake</a>)
 
-        <a class="method-permalink" href="#get_guild_vanity_url%28guild_id%3AUInt64%29-instance-method">#</a>
+        <a class="method-permalink" href="#get_guild_vanity_url%28guild_id%3AUInt64%7CSnowflake%29-instance-method">#</a>
       </div>
       
         <div class="doc"><p>Gets the vanity URL of a guild. Requires the guild to be partnered.</p>
@@ -2403,17 +2408,17 @@ days. Requires the "Kick Members" permission.</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/meew0/discordcr/blob/27e400cace78b2d70605c6784fa3630ac797a794/src/discordcr/rest.cr#L766" target="_blank">View source</a>]
+          [<a href="https://github.com/meew0/discordcr/blob/0e38695de0247bf680adc45ad635490175a7197c/src/discordcr/rest.cr#L766" target="_blank">View source</a>]
         
       </div>
     </div>
   
-    <div class="entry-detail" id="get_guild_voice_regions(guild_id:UInt64)-instance-method">
+    <div class="entry-detail" id="get_guild_voice_regions(guild_id:UInt64|Snowflake)-instance-method">
       <div class="signature">
         
-        def <strong>get_guild_voice_regions</strong>(guild_id : UInt64)
+        def <strong>get_guild_voice_regions</strong>(guild_id : UInt64 | <a href="../Discord/Snowflake.html">Snowflake</a>)
 
-        <a class="method-permalink" href="#get_guild_voice_regions%28guild_id%3AUInt64%29-instance-method">#</a>
+        <a class="method-permalink" href="#get_guild_voice_regions%28guild_id%3AUInt64%7CSnowflake%29-instance-method">#</a>
       </div>
       
         <div class="doc"><p>Gets a list of voice regions available for this guild. This may include
@@ -2424,17 +2429,17 @@ VIP regions for VIP servers.</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/meew0/discordcr/blob/27e400cace78b2d70605c6784fa3630ac797a794/src/discordcr/rest.cr#L1138" target="_blank">View source</a>]
+          [<a href="https://github.com/meew0/discordcr/blob/0e38695de0247bf680adc45ad635490175a7197c/src/discordcr/rest.cr#L1138" target="_blank">View source</a>]
         
       </div>
     </div>
   
-    <div class="entry-detail" id="get_guild_webhooks(guild_id:UInt64)-instance-method">
+    <div class="entry-detail" id="get_guild_webhooks(guild_id:UInt64|Snowflake)-instance-method">
       <div class="signature">
         
-        def <strong>get_guild_webhooks</strong>(guild_id : UInt64)
+        def <strong>get_guild_webhooks</strong>(guild_id : UInt64 | <a href="../Discord/Snowflake.html">Snowflake</a>)
 
-        <a class="method-permalink" href="#get_guild_webhooks%28guild_id%3AUInt64%29-instance-method">#</a>
+        <a class="method-permalink" href="#get_guild_webhooks%28guild_id%3AUInt64%7CSnowflake%29-instance-method">#</a>
       </div>
       
         <div class="doc"><p>Get an array of guild webhooks.</p>
@@ -2444,7 +2449,7 @@ VIP regions for VIP servers.</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/meew0/discordcr/blob/27e400cace78b2d70605c6784fa3630ac797a794/src/discordcr/rest.cr#L1528" target="_blank">View source</a>]
+          [<a href="https://github.com/meew0/discordcr/blob/0e38695de0247bf680adc45ad635490175a7197c/src/discordcr/rest.cr#L1528" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -2464,7 +2469,7 @@ VIP regions for VIP servers.</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/meew0/discordcr/blob/27e400cace78b2d70605c6784fa3630ac797a794/src/discordcr/rest.cr#L1427" target="_blank">View source</a>]
+          [<a href="https://github.com/meew0/discordcr/blob/0e38695de0247bf680adc45ad635490175a7197c/src/discordcr/rest.cr#L1427" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -2484,17 +2489,17 @@ VIP regions for VIP servers.</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/meew0/discordcr/blob/27e400cace78b2d70605c6784fa3630ac797a794/src/discordcr/rest.cr#L146" target="_blank">View source</a>]
+          [<a href="https://github.com/meew0/discordcr/blob/0e38695de0247bf680adc45ad635490175a7197c/src/discordcr/rest.cr#L146" target="_blank">View source</a>]
         
       </div>
     </div>
   
-    <div class="entry-detail" id="get_pinned_messages(channel_id:UInt64)-instance-method">
+    <div class="entry-detail" id="get_pinned_messages(channel_id:UInt64|Snowflake)-instance-method">
       <div class="signature">
         
-        def <strong>get_pinned_messages</strong>(channel_id : UInt64)
+        def <strong>get_pinned_messages</strong>(channel_id : UInt64 | <a href="../Discord/Snowflake.html">Snowflake</a>)
 
-        <a class="method-permalink" href="#get_pinned_messages%28channel_id%3AUInt64%29-instance-method">#</a>
+        <a class="method-permalink" href="#get_pinned_messages%28channel_id%3AUInt64%7CSnowflake%29-instance-method">#</a>
       </div>
       
         <div class="doc"><p>Get a list of messages pinned to this channel.</p>
@@ -2504,17 +2509,17 @@ VIP regions for VIP servers.</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/meew0/discordcr/blob/27e400cace78b2d70605c6784fa3630ac797a794/src/discordcr/rest.cr#L562" target="_blank">View source</a>]
+          [<a href="https://github.com/meew0/discordcr/blob/0e38695de0247bf680adc45ad635490175a7197c/src/discordcr/rest.cr#L562" target="_blank">View source</a>]
         
       </div>
     </div>
   
-    <div class="entry-detail" id="get_reactions(channel_id:UInt64,message_id:UInt64,emoji:String)-instance-method">
+    <div class="entry-detail" id="get_reactions(channel_id:UInt64|Snowflake,message_id:UInt64|Snowflake,emoji:String)-instance-method">
       <div class="signature">
         
-        def <strong>get_reactions</strong>(channel_id : UInt64, message_id : UInt64, emoji : String)
+        def <strong>get_reactions</strong>(channel_id : UInt64 | <a href="../Discord/Snowflake.html">Snowflake</a>, message_id : UInt64 | <a href="../Discord/Snowflake.html">Snowflake</a>, emoji : String)
 
-        <a class="method-permalink" href="#get_reactions%28channel_id%3AUInt64%2Cmessage_id%3AUInt64%2Cemoji%3AString%29-instance-method">#</a>
+        <a class="method-permalink" href="#get_reactions%28channel_id%3AUInt64%7CSnowflake%2Cmessage_id%3AUInt64%7CSnowflake%2Cemoji%3AString%29-instance-method">#</a>
       </div>
       
         <div class="doc"><p>Returns all users that have reacted with a specific emoji.</p>
@@ -2524,17 +2529,17 @@ VIP regions for VIP servers.</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/meew0/discordcr/blob/27e400cace78b2d70605c6784fa3630ac797a794/src/discordcr/rest.cr#L350" target="_blank">View source</a>]
+          [<a href="https://github.com/meew0/discordcr/blob/0e38695de0247bf680adc45ad635490175a7197c/src/discordcr/rest.cr#L350" target="_blank">View source</a>]
         
       </div>
     </div>
   
-    <div class="entry-detail" id="get_user(user_id:UInt64)-instance-method">
+    <div class="entry-detail" id="get_user(user_id:UInt64|Snowflake)-instance-method">
       <div class="signature">
         
-        def <strong>get_user</strong>(user_id : UInt64)
+        def <strong>get_user</strong>(user_id : UInt64 | <a href="../Discord/Snowflake.html">Snowflake</a>)
 
-        <a class="method-permalink" href="#get_user%28user_id%3AUInt64%29-instance-method">#</a>
+        <a class="method-permalink" href="#get_user%28user_id%3AUInt64%7CSnowflake%29-instance-method">#</a>
       </div>
       
         <div class="doc"><p>Gets a specific user by ID.</p>
@@ -2544,7 +2549,7 @@ VIP regions for VIP servers.</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/meew0/discordcr/blob/27e400cace78b2d70605c6784fa3630ac797a794/src/discordcr/rest.cr#L1281" target="_blank">View source</a>]
+          [<a href="https://github.com/meew0/discordcr/blob/0e38695de0247bf680adc45ad635490175a7197c/src/discordcr/rest.cr#L1281" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -2564,7 +2569,7 @@ VIP regions for VIP servers.</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/meew0/discordcr/blob/27e400cace78b2d70605c6784fa3630ac797a794/src/discordcr/rest.cr#L1378" target="_blank">View source</a>]
+          [<a href="https://github.com/meew0/discordcr/blob/0e38695de0247bf680adc45ad635490175a7197c/src/discordcr/rest.cr#L1378" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -2584,17 +2589,17 @@ VIP regions for VIP servers.</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/meew0/discordcr/blob/27e400cace78b2d70605c6784fa3630ac797a794/src/discordcr/rest.cr#L1411" target="_blank">View source</a>]
+          [<a href="https://github.com/meew0/discordcr/blob/0e38695de0247bf680adc45ad635490175a7197c/src/discordcr/rest.cr#L1411" target="_blank">View source</a>]
         
       </div>
     </div>
   
-    <div class="entry-detail" id="get_webhook(webhook_id:UInt64,token:String)-instance-method">
+    <div class="entry-detail" id="get_webhook(webhook_id:UInt64|Snowflake,token:String)-instance-method">
       <div class="signature">
         
-        def <strong>get_webhook</strong>(webhook_id : UInt64, token : String)
+        def <strong>get_webhook</strong>(webhook_id : UInt64 | <a href="../Discord/Snowflake.html">Snowflake</a>, token : String)
 
-        <a class="method-permalink" href="#get_webhook%28webhook_id%3AUInt64%2Ctoken%3AString%29-instance-method">#</a>
+        <a class="method-permalink" href="#get_webhook%28webhook_id%3AUInt64%7CSnowflake%2Ctoken%3AString%29-instance-method">#</a>
       </div>
       
         <div class="doc"><p>Get a webhook, with a token.</p>
@@ -2604,17 +2609,17 @@ VIP regions for VIP servers.</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/meew0/discordcr/blob/27e400cace78b2d70605c6784fa3630ac797a794/src/discordcr/rest.cr#L1513" target="_blank">View source</a>]
+          [<a href="https://github.com/meew0/discordcr/blob/0e38695de0247bf680adc45ad635490175a7197c/src/discordcr/rest.cr#L1513" target="_blank">View source</a>]
         
       </div>
     </div>
   
-    <div class="entry-detail" id="get_webhook(webhook_id:UInt64)-instance-method">
+    <div class="entry-detail" id="get_webhook(webhook_id:UInt64|Snowflake)-instance-method">
       <div class="signature">
         
-        def <strong>get_webhook</strong>(webhook_id : UInt64)
+        def <strong>get_webhook</strong>(webhook_id : UInt64 | <a href="../Discord/Snowflake.html">Snowflake</a>)
 
-        <a class="method-permalink" href="#get_webhook%28webhook_id%3AUInt64%29-instance-method">#</a>
+        <a class="method-permalink" href="#get_webhook%28webhook_id%3AUInt64%7CSnowflake%29-instance-method">#</a>
       </div>
       
         <div class="doc"><p>Get a webhook.</p>
@@ -2624,17 +2629,17 @@ VIP regions for VIP servers.</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/meew0/discordcr/blob/27e400cace78b2d70605c6784fa3630ac797a794/src/discordcr/rest.cr#L1498" target="_blank">View source</a>]
+          [<a href="https://github.com/meew0/discordcr/blob/0e38695de0247bf680adc45ad635490175a7197c/src/discordcr/rest.cr#L1498" target="_blank">View source</a>]
         
       </div>
     </div>
   
-    <div class="entry-detail" id="leave_guild(guild_id:UInt64)-instance-method">
+    <div class="entry-detail" id="leave_guild(guild_id:UInt64|Snowflake)-instance-method">
       <div class="signature">
         
-        def <strong>leave_guild</strong>(guild_id : UInt64)
+        def <strong>leave_guild</strong>(guild_id : UInt64 | <a href="../Discord/Snowflake.html">Snowflake</a>)
 
-        <a class="method-permalink" href="#leave_guild%28guild_id%3AUInt64%29-instance-method">#</a>
+        <a class="method-permalink" href="#leave_guild%28guild_id%3AUInt64%7CSnowflake%29-instance-method">#</a>
       </div>
       
         <div class="doc"><p>Makes the bot leave a guild.</p>
@@ -2644,17 +2649,17 @@ VIP regions for VIP servers.</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/meew0/discordcr/blob/27e400cace78b2d70605c6784fa3630ac797a794/src/discordcr/rest.cr#L1364" target="_blank">View source</a>]
+          [<a href="https://github.com/meew0/discordcr/blob/0e38695de0247bf680adc45ad635490175a7197c/src/discordcr/rest.cr#L1364" target="_blank">View source</a>]
         
       </div>
     </div>
   
-    <div class="entry-detail" id="list_guild_members(guild_id:UInt64,limit:Int32=1000,after:UInt64=0_u64)-instance-method">
+    <div class="entry-detail" id="list_guild_members(guild_id:UInt64|Snowflake,limit:Int32=1000,after:UInt64|Snowflake=0_u64)-instance-method">
       <div class="signature">
         
-        def <strong>list_guild_members</strong>(guild_id : UInt64, limit : Int32 = <span class="n">1000</span>, after : UInt64 = <span class="n">0_u64</span>)
+        def <strong>list_guild_members</strong>(guild_id : UInt64 | <a href="../Discord/Snowflake.html">Snowflake</a>, limit : Int32 = <span class="n">1000</span>, after : UInt64 | <a href="../Discord/Snowflake.html">Snowflake</a> = <span class="n">0_u64</span>)
 
-        <a class="method-permalink" href="#list_guild_members%28guild_id%3AUInt64%2Climit%3AInt32%3D1000%2Cafter%3AUInt64%3D0_u64%29-instance-method">#</a>
+        <a class="method-permalink" href="#list_guild_members%28guild_id%3AUInt64%7CSnowflake%2Climit%3AInt32%3D1000%2Cafter%3AUInt64%7CSnowflake%3D0_u64%29-instance-method">#</a>
       </div>
       
         <div class="doc"><p>Gets multiple guild members at once. The <em>limit</em> can be at most 1000.
@@ -2666,7 +2671,7 @@ to specify what ID to start at.</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/meew0/discordcr/blob/27e400cace78b2d70605c6784fa3630ac797a794/src/discordcr/rest.cr#L831" target="_blank">View source</a>]
+          [<a href="https://github.com/meew0/discordcr/blob/0e38695de0247bf680adc45ad635490175a7197c/src/discordcr/rest.cr#L831" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -2686,17 +2691,17 @@ to specify what ID to start at.</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/meew0/discordcr/blob/27e400cace78b2d70605c6784fa3630ac797a794/src/discordcr/rest.cr#L1482" target="_blank">View source</a>]
+          [<a href="https://github.com/meew0/discordcr/blob/0e38695de0247bf680adc45ad635490175a7197c/src/discordcr/rest.cr#L1482" target="_blank">View source</a>]
         
       </div>
     </div>
   
-    <div class="entry-detail" id="modify_channel(channel_id:UInt64,name:String?=nil,position:UInt32?=nil,topic:String?=nil,bitrate:UInt32?=nil,user_limit:UInt32?=nil,nsfw:Bool?=nil)-instance-method">
+    <div class="entry-detail" id="modify_channel(channel_id:UInt64|Snowflake,name:String?=nil,position:UInt32?=nil,topic:String?=nil,bitrate:UInt32?=nil,user_limit:UInt32?=nil,nsfw:Bool?=nil)-instance-method">
       <div class="signature">
         
-        def <strong>modify_channel</strong>(channel_id : UInt64, name : String? = <span class="n">nil</span>, position : UInt32? = <span class="n">nil</span>, topic : String? = <span class="n">nil</span>, bitrate : UInt32? = <span class="n">nil</span>, user_limit : UInt32? = <span class="n">nil</span>, nsfw : Bool? = <span class="n">nil</span>)
+        def <strong>modify_channel</strong>(channel_id : UInt64 | <a href="../Discord/Snowflake.html">Snowflake</a>, name : String? = <span class="n">nil</span>, position : UInt32? = <span class="n">nil</span>, topic : String? = <span class="n">nil</span>, bitrate : UInt32? = <span class="n">nil</span>, user_limit : UInt32? = <span class="n">nil</span>, nsfw : Bool? = <span class="n">nil</span>)
 
-        <a class="method-permalink" href="#modify_channel%28channel_id%3AUInt64%2Cname%3AString%3F%3Dnil%2Cposition%3AUInt32%3F%3Dnil%2Ctopic%3AString%3F%3Dnil%2Cbitrate%3AUInt32%3F%3Dnil%2Cuser_limit%3AUInt32%3F%3Dnil%2Cnsfw%3ABool%3F%3Dnil%29-instance-method">#</a>
+        <a class="method-permalink" href="#modify_channel%28channel_id%3AUInt64%7CSnowflake%2Cname%3AString%3F%3Dnil%2Cposition%3AUInt32%3F%3Dnil%2Ctopic%3AString%3F%3Dnil%2Cbitrate%3AUInt32%3F%3Dnil%2Cuser_limit%3AUInt32%3F%3Dnil%2Cnsfw%3ABool%3F%3Dnil%29-instance-method">#</a>
       </div>
       
         <div class="doc"><p>Modifies a channel with new properties. Requires the "Manage Channel"
@@ -2707,7 +2712,7 @@ permission.</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/meew0/discordcr/blob/27e400cace78b2d70605c6784fa3630ac797a794/src/discordcr/rest.cr#L179" target="_blank">View source</a>]
+          [<a href="https://github.com/meew0/discordcr/blob/0e38695de0247bf680adc45ad635490175a7197c/src/discordcr/rest.cr#L179" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -2729,7 +2734,7 @@ permission.</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/meew0/discordcr/blob/27e400cace78b2d70605c6784fa3630ac797a794/src/discordcr/rest.cr#L1314" target="_blank">View source</a>]
+          [<a href="https://github.com/meew0/discordcr/blob/0e38695de0247bf680adc45ad635490175a7197c/src/discordcr/rest.cr#L1314" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -2751,17 +2756,17 @@ permission.</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/meew0/discordcr/blob/27e400cace78b2d70605c6784fa3630ac797a794/src/discordcr/rest.cr#L916" target="_blank">View source</a>]
+          [<a href="https://github.com/meew0/discordcr/blob/0e38695de0247bf680adc45ad635490175a7197c/src/discordcr/rest.cr#L916" target="_blank">View source</a>]
         
       </div>
     </div>
   
-    <div class="entry-detail" id="modify_guild(guild_id:UInt64,name:String?=nil,region:String?=nil,verification_level:UInt8?=nil,afk_channel_id:UInt64?=nil,afk_timeout:Int32?=nil,icon:String?=nil,owner_id:UInt64?=nil,splash:String?=nil)-instance-method">
+    <div class="entry-detail" id="modify_guild(guild_id:UInt64|Snowflake,name:String?=nil,region:String?=nil,verification_level:UInt8?=nil,afk_channel_id:UInt64|Snowflake|Nil=nil,afk_timeout:Int32?=nil,icon:String?=nil,owner_id:UInt64|Snowflake|Nil=nil,splash:String?=nil)-instance-method">
       <div class="signature">
         
-        def <strong>modify_guild</strong>(guild_id : UInt64, name : String? = <span class="n">nil</span>, region : String? = <span class="n">nil</span>, verification_level : UInt8? = <span class="n">nil</span>, afk_channel_id : UInt64? = <span class="n">nil</span>, afk_timeout : Int32? = <span class="n">nil</span>, icon : String? = <span class="n">nil</span>, owner_id : UInt64? = <span class="n">nil</span>, splash : String? = <span class="n">nil</span>)
+        def <strong>modify_guild</strong>(guild_id : UInt64 | <a href="../Discord/Snowflake.html">Snowflake</a>, name : String? = <span class="n">nil</span>, region : String? = <span class="n">nil</span>, verification_level : UInt8? = <span class="n">nil</span>, afk_channel_id : UInt64 | <a href="../Discord/Snowflake.html">Snowflake</a> | Nil = <span class="n">nil</span>, afk_timeout : Int32? = <span class="n">nil</span>, icon : String? = <span class="n">nil</span>, owner_id : UInt64 | <a href="../Discord/Snowflake.html">Snowflake</a> | Nil = <span class="n">nil</span>, splash : String? = <span class="n">nil</span>)
 
-        <a class="method-permalink" href="#modify_guild%28guild_id%3AUInt64%2Cname%3AString%3F%3Dnil%2Cregion%3AString%3F%3Dnil%2Cverification_level%3AUInt8%3F%3Dnil%2Cafk_channel_id%3AUInt64%3F%3Dnil%2Cafk_timeout%3AInt32%3F%3Dnil%2Cicon%3AString%3F%3Dnil%2Cowner_id%3AUInt64%3F%3Dnil%2Csplash%3AString%3F%3Dnil%29-instance-method">#</a>
+        <a class="method-permalink" href="#modify_guild%28guild_id%3AUInt64%7CSnowflake%2Cname%3AString%3F%3Dnil%2Cregion%3AString%3F%3Dnil%2Cverification_level%3AUInt8%3F%3Dnil%2Cafk_channel_id%3AUInt64%7CSnowflake%7CNil%3Dnil%2Cafk_timeout%3AInt32%3F%3Dnil%2Cicon%3AString%3F%3Dnil%2Cowner_id%3AUInt64%7CSnowflake%7CNil%3Dnil%2Csplash%3AString%3F%3Dnil%29-instance-method">#</a>
       </div>
       
         <div class="doc"><p>Modifies an existing guild with new properties. Requires the "Manage
@@ -2774,17 +2779,17 @@ Server" permission.</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/meew0/discordcr/blob/27e400cace78b2d70605c6784fa3630ac797a794/src/discordcr/rest.cr#L626" target="_blank">View source</a>]
+          [<a href="https://github.com/meew0/discordcr/blob/0e38695de0247bf680adc45ad635490175a7197c/src/discordcr/rest.cr#L626" target="_blank">View source</a>]
         
       </div>
     </div>
   
-    <div class="entry-detail" id="modify_guild_channel_positions(guild_id:UInt64,positions:Array(ModifyChannelPositionPayload))-instance-method">
+    <div class="entry-detail" id="modify_guild_channel_positions(guild_id:UInt64|Snowflake,positions:Array(ModifyChannelPositionPayload))-instance-method">
       <div class="signature">
         
-        def <strong>modify_guild_channel_positions</strong>(guild_id : UInt64, positions : Array(<a href="../Discord/REST/ModifyChannelPositionPayload.html">ModifyChannelPositionPayload</a>))
+        def <strong>modify_guild_channel_positions</strong>(guild_id : UInt64 | <a href="../Discord/Snowflake.html">Snowflake</a>, positions : Array(<a href="../Discord/REST/ModifyChannelPositionPayload.html">ModifyChannelPositionPayload</a>))
 
-        <a class="method-permalink" href="#modify_guild_channel_positions%28guild_id%3AUInt64%2Cpositions%3AArray%28ModifyChannelPositionPayload%29%29-instance-method">#</a>
+        <a class="method-permalink" href="#modify_guild_channel_positions%28guild_id%3AUInt64%7CSnowflake%2Cpositions%3AArray%28ModifyChannelPositionPayload%29%29-instance-method">#</a>
       </div>
       
         <div class="doc"><p>Modifies the position of channels within a guild. Requires the
@@ -2795,17 +2800,17 @@ Server" permission.</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/meew0/discordcr/blob/27e400cace78b2d70605c6784fa3630ac797a794/src/discordcr/rest.cr#L798" target="_blank">View source</a>]
+          [<a href="https://github.com/meew0/discordcr/blob/0e38695de0247bf680adc45ad635490175a7197c/src/discordcr/rest.cr#L798" target="_blank">View source</a>]
         
       </div>
     </div>
   
-    <div class="entry-detail" id="modify_guild_embed(guild_id:UInt64,enabled:Bool,channel_id:UInt64)-instance-method">
+    <div class="entry-detail" id="modify_guild_embed(guild_id:UInt64|Snowflake,enabled:Bool,channel_id:UInt64|Snowflake)-instance-method">
       <div class="signature">
         
-        def <strong>modify_guild_embed</strong>(guild_id : UInt64, enabled : Bool, channel_id : UInt64)
+        def <strong>modify_guild_embed</strong>(guild_id : UInt64 | <a href="../Discord/Snowflake.html">Snowflake</a>, enabled : Bool, channel_id : UInt64 | <a href="../Discord/Snowflake.html">Snowflake</a>)
 
-        <a class="method-permalink" href="#modify_guild_embed%28guild_id%3AUInt64%2Cenabled%3ABool%2Cchannel_id%3AUInt64%29-instance-method">#</a>
+        <a class="method-permalink" href="#modify_guild_embed%28guild_id%3AUInt64%7CSnowflake%2Cenabled%3ABool%2Cchannel_id%3AUInt64%7CSnowflake%29-instance-method">#</a>
       </div>
       
         <div class="doc"><p>Modifies embed data for a guild. Requires the "Manage Guild" permission.</p>
@@ -2815,17 +2820,17 @@ Server" permission.</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/meew0/discordcr/blob/27e400cace78b2d70605c6784fa3630ac797a794/src/discordcr/rest.cr#L1259" target="_blank">View source</a>]
+          [<a href="https://github.com/meew0/discordcr/blob/0e38695de0247bf680adc45ad635490175a7197c/src/discordcr/rest.cr#L1259" target="_blank">View source</a>]
         
       </div>
     </div>
   
-    <div class="entry-detail" id="modify_guild_emoji(guild_id:UInt64,emoji_id:UInt64,name:String)-instance-method">
+    <div class="entry-detail" id="modify_guild_emoji(guild_id:UInt64|Snowflake,emoji_id:UInt64|Snowflake,name:String)-instance-method">
       <div class="signature">
         
-        def <strong>modify_guild_emoji</strong>(guild_id : UInt64, emoji_id : UInt64, name : String)
+        def <strong>modify_guild_emoji</strong>(guild_id : UInt64 | <a href="../Discord/Snowflake.html">Snowflake</a>, emoji_id : UInt64 | <a href="../Discord/Snowflake.html">Snowflake</a>, name : String)
 
-        <a class="method-permalink" href="#modify_guild_emoji%28guild_id%3AUInt64%2Cemoji_id%3AUInt64%2Cname%3AString%29-instance-method">#</a>
+        <a class="method-permalink" href="#modify_guild_emoji%28guild_id%3AUInt64%7CSnowflake%2Cemoji_id%3AUInt64%7CSnowflake%2Cname%3AString%29-instance-method">#</a>
       </div>
       
         <div class="doc"><p>Modifies a guild emoji. Requires the "Manage Emojis" permission.</p>
@@ -2835,17 +2840,17 @@ Server" permission.</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/meew0/discordcr/blob/27e400cace78b2d70605c6784fa3630ac797a794/src/discordcr/rest.cr#L688" target="_blank">View source</a>]
+          [<a href="https://github.com/meew0/discordcr/blob/0e38695de0247bf680adc45ad635490175a7197c/src/discordcr/rest.cr#L688" target="_blank">View source</a>]
         
       </div>
     </div>
   
-    <div class="entry-detail" id="modify_guild_integration(guild_id:UInt64,integration_id:UInt64,expire_behaviour:UInt8,expire_grace_period:Int32,enable_emoticons:Bool)-instance-method">
+    <div class="entry-detail" id="modify_guild_integration(guild_id:UInt64|Snowflake,integration_id:UInt64|Snowflake,expire_behaviour:UInt8,expire_grace_period:Int32,enable_emoticons:Bool)-instance-method">
       <div class="signature">
         
-        def <strong>modify_guild_integration</strong>(guild_id : UInt64, integration_id : UInt64, expire_behaviour : UInt8, expire_grace_period : Int32, enable_emoticons : Bool)
+        def <strong>modify_guild_integration</strong>(guild_id : UInt64 | <a href="../Discord/Snowflake.html">Snowflake</a>, integration_id : UInt64 | <a href="../Discord/Snowflake.html">Snowflake</a>, expire_behaviour : UInt8, expire_grace_period : Int32, enable_emoticons : Bool)
 
-        <a class="method-permalink" href="#modify_guild_integration%28guild_id%3AUInt64%2Cintegration_id%3AUInt64%2Cexpire_behaviour%3AUInt8%2Cexpire_grace_period%3AInt32%2Cenable_emoticons%3ABool%29-instance-method">#</a>
+        <a class="method-permalink" href="#modify_guild_integration%28guild_id%3AUInt64%7CSnowflake%2Cintegration_id%3AUInt64%7CSnowflake%2Cexpire_behaviour%3AUInt8%2Cexpire_grace_period%3AInt32%2Cenable_emoticons%3ABool%29-instance-method">#</a>
       </div>
       
         <div class="doc"><p>Modifies an existing guild integration. Requires the "Manage Guild"
@@ -2856,17 +2861,17 @@ permission.</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/meew0/discordcr/blob/27e400cace78b2d70605c6784fa3630ac797a794/src/discordcr/rest.cr#L1192" target="_blank">View source</a>]
+          [<a href="https://github.com/meew0/discordcr/blob/0e38695de0247bf680adc45ad635490175a7197c/src/discordcr/rest.cr#L1192" target="_blank">View source</a>]
         
       </div>
     </div>
   
-    <div class="entry-detail" id="modify_guild_member(guild_id:UInt64,user_id:UInt64,nick:String?=nil,roles:Array(UInt64)?=nil,mute:Bool?=nil,deaf:Bool?=nil,channel_id:UInt64?=nil)-instance-method">
+    <div class="entry-detail" id="modify_guild_member(guild_id:UInt64|Snowflake,user_id:UInt64|Snowflake,nick:String?=nil,roles:Array(UInt64|Snowflake)?=nil,mute:Bool?=nil,deaf:Bool?=nil,channel_id:UInt64|Snowflake|Nil=nil)-instance-method">
       <div class="signature">
         
-        def <strong>modify_guild_member</strong>(guild_id : UInt64, user_id : UInt64, nick : String? = <span class="n">nil</span>, roles : Array(UInt64)? = <span class="n">nil</span>, mute : Bool? = <span class="n">nil</span>, deaf : Bool? = <span class="n">nil</span>, channel_id : UInt64? = <span class="n">nil</span>)
+        def <strong>modify_guild_member</strong>(guild_id : UInt64 | <a href="../Discord/Snowflake.html">Snowflake</a>, user_id : UInt64 | <a href="../Discord/Snowflake.html">Snowflake</a>, nick : String? = <span class="n">nil</span>, roles : Array(UInt64 | <a href="../Discord/Snowflake.html">Snowflake</a>)? = <span class="n">nil</span>, mute : Bool? = <span class="n">nil</span>, deaf : Bool? = <span class="n">nil</span>, channel_id : UInt64 | <a href="../Discord/Snowflake.html">Snowflake</a> | Nil = <span class="n">nil</span>)
 
-        <a class="method-permalink" href="#modify_guild_member%28guild_id%3AUInt64%2Cuser_id%3AUInt64%2Cnick%3AString%3F%3Dnil%2Croles%3AArray%28UInt64%29%3F%3Dnil%2Cmute%3ABool%3F%3Dnil%2Cdeaf%3ABool%3F%3Dnil%2Cchannel_id%3AUInt64%3F%3Dnil%29-instance-method">#</a>
+        <a class="method-permalink" href="#modify_guild_member%28guild_id%3AUInt64%7CSnowflake%2Cuser_id%3AUInt64%7CSnowflake%2Cnick%3AString%3F%3Dnil%2Croles%3AArray%28UInt64%7CSnowflake%29%3F%3Dnil%2Cmute%3ABool%3F%3Dnil%2Cdeaf%3ABool%3F%3Dnil%2Cchannel_id%3AUInt64%7CSnowflake%7CNil%3Dnil%29-instance-method">#</a>
       </div>
       
         <div class="doc"><p>Changes a specific member's properties. Requires:</p>
@@ -2882,17 +2887,17 @@ permission.</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/meew0/discordcr/blob/27e400cace78b2d70605c6784fa3630ac797a794/src/discordcr/rest.cr#L890" target="_blank">View source</a>]
+          [<a href="https://github.com/meew0/discordcr/blob/0e38695de0247bf680adc45ad635490175a7197c/src/discordcr/rest.cr#L890" target="_blank">View source</a>]
         
       </div>
     </div>
   
-    <div class="entry-detail" id="modify_guild_role(guild_id:UInt64,role_id:UInt64,name:String?=nil,permissions:Permissions?=nil,colour:UInt32?=nil,position:Int32?=nil,hoist:Bool?=nil)-instance-method">
+    <div class="entry-detail" id="modify_guild_role(guild_id:UInt64|Snowflake,role_id:UInt64|Snowflake,name:String?=nil,permissions:Permissions?=nil,colour:UInt32?=nil,position:Int32?=nil,hoist:Bool?=nil)-instance-method">
       <div class="signature">
         
-        def <strong>modify_guild_role</strong>(guild_id : UInt64, role_id : UInt64, name : String? = <span class="n">nil</span>, permissions : <a href="../Discord/Permissions.html">Permissions</a>? = <span class="n">nil</span>, colour : UInt32? = <span class="n">nil</span>, position : Int32? = <span class="n">nil</span>, hoist : Bool? = <span class="n">nil</span>)
+        def <strong>modify_guild_role</strong>(guild_id : UInt64 | <a href="../Discord/Snowflake.html">Snowflake</a>, role_id : UInt64 | <a href="../Discord/Snowflake.html">Snowflake</a>, name : String? = <span class="n">nil</span>, permissions : <a href="../Discord/Permissions.html">Permissions</a>? = <span class="n">nil</span>, colour : UInt32? = <span class="n">nil</span>, position : Int32? = <span class="n">nil</span>, hoist : Bool? = <span class="n">nil</span>)
 
-        <a class="method-permalink" href="#modify_guild_role%28guild_id%3AUInt64%2Crole_id%3AUInt64%2Cname%3AString%3F%3Dnil%2Cpermissions%3APermissions%3F%3Dnil%2Ccolour%3AUInt32%3F%3Dnil%2Cposition%3AInt32%3F%3Dnil%2Choist%3ABool%3F%3Dnil%29-instance-method">#</a>
+        <a class="method-permalink" href="#modify_guild_role%28guild_id%3AUInt64%7CSnowflake%2Crole_id%3AUInt64%7CSnowflake%2Cname%3AString%3F%3Dnil%2Cpermissions%3APermissions%3F%3Dnil%2Ccolour%3AUInt32%3F%3Dnil%2Cposition%3AInt32%3F%3Dnil%2Choist%3ABool%3F%3Dnil%29-instance-method">#</a>
       </div>
       
         <div class="doc"><p>Changes a role's properties. Requires the "Manage Roles" permission as
@@ -2903,17 +2908,17 @@ well as the role to be lower than the bot's highest role.</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/meew0/discordcr/blob/27e400cace78b2d70605c6784fa3630ac797a794/src/discordcr/rest.cr#L1060" target="_blank">View source</a>]
+          [<a href="https://github.com/meew0/discordcr/blob/0e38695de0247bf680adc45ad635490175a7197c/src/discordcr/rest.cr#L1060" target="_blank">View source</a>]
         
       </div>
     </div>
   
-    <div class="entry-detail" id="modify_guild_vanity_url(guild_id:UInt64,code:String)-instance-method">
+    <div class="entry-detail" id="modify_guild_vanity_url(guild_id:UInt64|Snowflake,code:String)-instance-method">
       <div class="signature">
         
-        def <strong>modify_guild_vanity_url</strong>(guild_id : UInt64, code : String)
+        def <strong>modify_guild_vanity_url</strong>(guild_id : UInt64 | <a href="../Discord/Snowflake.html">Snowflake</a>, code : String)
 
-        <a class="method-permalink" href="#modify_guild_vanity_url%28guild_id%3AUInt64%2Ccode%3AString%29-instance-method">#</a>
+        <a class="method-permalink" href="#modify_guild_vanity_url%28guild_id%3AUInt64%7CSnowflake%2Ccode%3AString%29-instance-method">#</a>
       </div>
       
         <div class="doc"><p>Sets the vanity URL on this guild. Requires the guild to be
@@ -2924,17 +2929,17 @@ partnered.</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/meew0/discordcr/blob/27e400cace78b2d70605c6784fa3630ac797a794/src/discordcr/rest.cr#L783" target="_blank">View source</a>]
+          [<a href="https://github.com/meew0/discordcr/blob/0e38695de0247bf680adc45ad635490175a7197c/src/discordcr/rest.cr#L783" target="_blank">View source</a>]
         
       </div>
     </div>
   
-    <div class="entry-detail" id="modify_webhook(webhook_id:UInt64,name:String?=nil,avatar:String?=nil,channel_id:UInt64?=nil)-instance-method">
+    <div class="entry-detail" id="modify_webhook(webhook_id:UInt64|Snowflake,name:String?=nil,avatar:String?=nil,channel_id:UInt64|Snowflake|Nil=nil)-instance-method">
       <div class="signature">
         
-        def <strong>modify_webhook</strong>(webhook_id : UInt64, name : String? = <span class="n">nil</span>, avatar : String? = <span class="n">nil</span>, channel_id : UInt64? = <span class="n">nil</span>)
+        def <strong>modify_webhook</strong>(webhook_id : UInt64 | <a href="../Discord/Snowflake.html">Snowflake</a>, name : String? = <span class="n">nil</span>, avatar : String? = <span class="n">nil</span>, channel_id : UInt64 | <a href="../Discord/Snowflake.html">Snowflake</a> | Nil = <span class="n">nil</span>)
 
-        <a class="method-permalink" href="#modify_webhook%28webhook_id%3AUInt64%2Cname%3AString%3F%3Dnil%2Cavatar%3AString%3F%3Dnil%2Cchannel_id%3AUInt64%3F%3Dnil%29-instance-method">#</a>
+        <a class="method-permalink" href="#modify_webhook%28webhook_id%3AUInt64%7CSnowflake%2Cname%3AString%3F%3Dnil%2Cavatar%3AString%3F%3Dnil%2Cchannel_id%3AUInt64%7CSnowflake%7CNil%3Dnil%29-instance-method">#</a>
       </div>
       
         <div class="doc"><p>Modify a webhook. Accepts optional parameters <code>name</code>, <code>avatar</code>, and <code>channel_id</code>.</p>
@@ -2944,17 +2949,17 @@ partnered.</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/meew0/discordcr/blob/27e400cace78b2d70605c6784fa3630ac797a794/src/discordcr/rest.cr#L1581" target="_blank">View source</a>]
+          [<a href="https://github.com/meew0/discordcr/blob/0e38695de0247bf680adc45ad635490175a7197c/src/discordcr/rest.cr#L1581" target="_blank">View source</a>]
         
       </div>
     </div>
   
-    <div class="entry-detail" id="modify_webhook_with_token(webhook_id:UInt64,token:String,name:String?=nil,avatar:String?=nil)-instance-method">
+    <div class="entry-detail" id="modify_webhook_with_token(webhook_id:UInt64|Snowflake,token:String,name:String?=nil,avatar:String?=nil)-instance-method">
       <div class="signature">
         
-        def <strong>modify_webhook_with_token</strong>(webhook_id : UInt64, token : String, name : String? = <span class="n">nil</span>, avatar : String? = <span class="n">nil</span>)
+        def <strong>modify_webhook_with_token</strong>(webhook_id : UInt64 | <a href="../Discord/Snowflake.html">Snowflake</a>, token : String, name : String? = <span class="n">nil</span>, avatar : String? = <span class="n">nil</span>)
 
-        <a class="method-permalink" href="#modify_webhook_with_token%28webhook_id%3AUInt64%2Ctoken%3AString%2Cname%3AString%3F%3Dnil%2Cavatar%3AString%3F%3Dnil%29-instance-method">#</a>
+        <a class="method-permalink" href="#modify_webhook_with_token%28webhook_id%3AUInt64%7CSnowflake%2Ctoken%3AString%2Cname%3AString%3F%3Dnil%2Cavatar%3AString%3F%3Dnil%29-instance-method">#</a>
       </div>
       
         <div class="doc"><p>Modify a webhook, with a token. Accepts optional parameters <code>name</code>, <code>avatar</code>, and <code>channel_id</code>.</p>
@@ -2964,35 +2969,35 @@ partnered.</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/meew0/discordcr/blob/27e400cace78b2d70605c6784fa3630ac797a794/src/discordcr/rest.cr#L1604" target="_blank">View source</a>]
+          [<a href="https://github.com/meew0/discordcr/blob/0e38695de0247bf680adc45ad635490175a7197c/src/discordcr/rest.cr#L1604" target="_blank">View source</a>]
         
       </div>
     </div>
   
-    <div class="entry-detail" id="raw_request(route_key:Symbol,major_parameter:UInt64?,method:String,path:String,headers:HTTP::Headers,body:String?)-instance-method">
+    <div class="entry-detail" id="raw_request(route_key:Symbol,major_parameter:Snowflake|UInt64|Nil,method:String,path:String,headers:HTTP::Headers,body:String?)-instance-method">
       <div class="signature">
         
-        def <strong>raw_request</strong>(route_key : Symbol, major_parameter : UInt64?, method : String, path : String, headers : HTTP::Headers, body : String?)
+        def <strong>raw_request</strong>(route_key : Symbol, major_parameter : <a href="../Discord/Snowflake.html">Snowflake</a> | UInt64 | Nil, method : String, path : String, headers : HTTP::Headers, body : String?)
 
-        <a class="method-permalink" href="#raw_request%28route_key%3ASymbol%2Cmajor_parameter%3AUInt64%3F%2Cmethod%3AString%2Cpath%3AString%2Cheaders%3AHTTP%3A%3AHeaders%2Cbody%3AString%3F%29-instance-method">#</a>
+        <a class="method-permalink" href="#raw_request%28route_key%3ASymbol%2Cmajor_parameter%3ASnowflake%7CUInt64%7CNil%2Cmethod%3AString%2Cpath%3AString%2Cheaders%3AHTTP%3A%3AHeaders%2Cbody%3AString%3F%29-instance-method">#</a>
       </div>
       
-        <div class="doc"><p>Like <code><a href="../Discord/REST.html#request%28route_key%3ASymbol%2Cmajor_parameter%3AUInt64%3F%2Cmethod%3AString%2Cpath%3AString%2Cheaders%3AHTTP%3A%3AHeaders%2Cbody%3AString%3F%29-instance-method">#request</a></code>, but does not do error checking beyond 429.</p></div>
+        <div class="doc"><p>Like <code><a href="../Discord/REST.html#request%28route_key%3ASymbol%2Cmajor_parameter%3ASnowflake%7CUInt64%7CNil%2Cmethod%3AString%2Cpath%3AString%2Cheaders%3AHTTP%3A%3AHeaders%2Cbody%3AString%3F%29-instance-method">#request</a></code>, but does not do error checking beyond 429.</p></div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/meew0/discordcr/blob/27e400cace78b2d70605c6784fa3630ac797a794/src/discordcr/rest.cr#L19" target="_blank">View source</a>]
+          [<a href="https://github.com/meew0/discordcr/blob/0e38695de0247bf680adc45ad635490175a7197c/src/discordcr/rest.cr#L19" target="_blank">View source</a>]
         
       </div>
     </div>
   
-    <div class="entry-detail" id="remove_guild_ban(guild_id:UInt64,user_id:UInt64)-instance-method">
+    <div class="entry-detail" id="remove_guild_ban(guild_id:UInt64|Snowflake,user_id:UInt64|Snowflake)-instance-method">
       <div class="signature">
         
-        def <strong>remove_guild_ban</strong>(guild_id : UInt64, user_id : UInt64)
+        def <strong>remove_guild_ban</strong>(guild_id : UInt64 | <a href="../Discord/Snowflake.html">Snowflake</a>, user_id : UInt64 | <a href="../Discord/Snowflake.html">Snowflake</a>)
 
-        <a class="method-permalink" href="#remove_guild_ban%28guild_id%3AUInt64%2Cuser_id%3AUInt64%29-instance-method">#</a>
+        <a class="method-permalink" href="#remove_guild_ban%28guild_id%3AUInt64%7CSnowflake%2Cuser_id%3AUInt64%7CSnowflake%29-instance-method">#</a>
       </div>
       
         <div class="doc"><p>Unbans a member from the guild. Requires the "Ban Members" permission.</p>
@@ -3002,17 +3007,17 @@ partnered.</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/meew0/discordcr/blob/27e400cace78b2d70605c6784fa3630ac797a794/src/discordcr/rest.cr#L1003" target="_blank">View source</a>]
+          [<a href="https://github.com/meew0/discordcr/blob/0e38695de0247bf680adc45ad635490175a7197c/src/discordcr/rest.cr#L1003" target="_blank">View source</a>]
         
       </div>
     </div>
   
-    <div class="entry-detail" id="remove_guild_member(guild_id:UInt64,user_id:UInt64)-instance-method">
+    <div class="entry-detail" id="remove_guild_member(guild_id:UInt64|Snowflake,user_id:UInt64|Snowflake)-instance-method">
       <div class="signature">
         
-        def <strong>remove_guild_member</strong>(guild_id : UInt64, user_id : UInt64)
+        def <strong>remove_guild_member</strong>(guild_id : UInt64 | <a href="../Discord/Snowflake.html">Snowflake</a>, user_id : UInt64 | <a href="../Discord/Snowflake.html">Snowflake</a>)
 
-        <a class="method-permalink" href="#remove_guild_member%28guild_id%3AUInt64%2Cuser_id%3AUInt64%29-instance-method">#</a>
+        <a class="method-permalink" href="#remove_guild_member%28guild_id%3AUInt64%7CSnowflake%2Cuser_id%3AUInt64%7CSnowflake%29-instance-method">#</a>
       </div>
       
         <div class="doc"><p>Kicks a member from the server. Requires the "Kick Members" permission.</p>
@@ -3022,7 +3027,7 @@ partnered.</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/meew0/discordcr/blob/27e400cace78b2d70605c6784fa3630ac797a794/src/discordcr/rest.cr#L930" target="_blank">View source</a>]
+          [<a href="https://github.com/meew0/discordcr/blob/0e38695de0247bf680adc45ad635490175a7197c/src/discordcr/rest.cr#L930" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -3042,17 +3047,17 @@ partnered.</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/meew0/discordcr/blob/27e400cace78b2d70605c6784fa3630ac797a794/src/discordcr/rest.cr#L958" target="_blank">View source</a>]
+          [<a href="https://github.com/meew0/discordcr/blob/0e38695de0247bf680adc45ad635490175a7197c/src/discordcr/rest.cr#L958" target="_blank">View source</a>]
         
       </div>
     </div>
   
-    <div class="entry-detail" id="request(route_key:Symbol,major_parameter:UInt64?,method:String,path:String,headers:HTTP::Headers,body:String?)-instance-method">
+    <div class="entry-detail" id="request(route_key:Symbol,major_parameter:Snowflake|UInt64|Nil,method:String,path:String,headers:HTTP::Headers,body:String?)-instance-method">
       <div class="signature">
         
-        def <strong>request</strong>(route_key : Symbol, major_parameter : UInt64?, method : String, path : String, headers : HTTP::Headers, body : String?)
+        def <strong>request</strong>(route_key : Symbol, major_parameter : <a href="../Discord/Snowflake.html">Snowflake</a> | UInt64 | Nil, method : String, path : String, headers : HTTP::Headers, body : String?)
 
-        <a class="method-permalink" href="#request%28route_key%3ASymbol%2Cmajor_parameter%3AUInt64%3F%2Cmethod%3AString%2Cpath%3AString%2Cheaders%3AHTTP%3A%3AHeaders%2Cbody%3AString%3F%29-instance-method">#</a>
+        <a class="method-permalink" href="#request%28route_key%3ASymbol%2Cmajor_parameter%3ASnowflake%7CUInt64%7CNil%2Cmethod%3AString%2Cpath%3AString%2Cheaders%3AHTTP%3A%3AHeaders%2Cbody%3AString%3F%29-instance-method">#</a>
       </div>
       
         <div class="doc"><p>Makes a REST request to Discord, with the given <em>method</em> to the given
@@ -3070,17 +3075,17 @@ of error checking, so if a request fails (with a status code that is not
       <br/>
       <div>
         
-          [<a href="https://github.com/meew0/discordcr/blob/27e400cace78b2d70605c6784fa3630ac797a794/src/discordcr/rest.cr#L82" target="_blank">View source</a>]
+          [<a href="https://github.com/meew0/discordcr/blob/0e38695de0247bf680adc45ad635490175a7197c/src/discordcr/rest.cr#L82" target="_blank">View source</a>]
         
       </div>
     </div>
   
-    <div class="entry-detail" id="sync_guild_integration(guild_id:UInt64,integration_id:UInt64)-instance-method">
+    <div class="entry-detail" id="sync_guild_integration(guild_id:UInt64|Snowflake,integration_id:UInt64|Snowflake)-instance-method">
       <div class="signature">
         
-        def <strong>sync_guild_integration</strong>(guild_id : UInt64, integration_id : UInt64)
+        def <strong>sync_guild_integration</strong>(guild_id : UInt64 | <a href="../Discord/Snowflake.html">Snowflake</a>, integration_id : UInt64 | <a href="../Discord/Snowflake.html">Snowflake</a>)
 
-        <a class="method-permalink" href="#sync_guild_integration%28guild_id%3AUInt64%2Cintegration_id%3AUInt64%29-instance-method">#</a>
+        <a class="method-permalink" href="#sync_guild_integration%28guild_id%3AUInt64%7CSnowflake%2Cintegration_id%3AUInt64%7CSnowflake%29-instance-method">#</a>
       </div>
       
         <div class="doc"><p>Syncs an integration. Requires the "Manage Guild" permission.</p>
@@ -3090,17 +3095,17 @@ of error checking, so if a request fails (with a status code that is not
       <br/>
       <div>
         
-          [<a href="https://github.com/meew0/discordcr/blob/27e400cace78b2d70605c6784fa3630ac797a794/src/discordcr/rest.cr#L1229" target="_blank">View source</a>]
+          [<a href="https://github.com/meew0/discordcr/blob/0e38695de0247bf680adc45ad635490175a7197c/src/discordcr/rest.cr#L1229" target="_blank">View source</a>]
         
       </div>
     </div>
   
-    <div class="entry-detail" id="trigger_typing_indicator(channel_id:UInt64)-instance-method">
+    <div class="entry-detail" id="trigger_typing_indicator(channel_id:UInt64|Snowflake)-instance-method">
       <div class="signature">
         
-        def <strong>trigger_typing_indicator</strong>(channel_id : UInt64)
+        def <strong>trigger_typing_indicator</strong>(channel_id : UInt64 | <a href="../Discord/Snowflake.html">Snowflake</a>)
 
-        <a class="method-permalink" href="#trigger_typing_indicator%28channel_id%3AUInt64%29-instance-method">#</a>
+        <a class="method-permalink" href="#trigger_typing_indicator%28channel_id%3AUInt64%7CSnowflake%29-instance-method">#</a>
       </div>
       
         <div class="doc"><p>Causes the bot to appear as typing on the channel. This generally lasts
@@ -3112,17 +3117,17 @@ of error checking, so if a request fails (with a status code that is not
       <br/>
       <div>
         
-          [<a href="https://github.com/meew0/discordcr/blob/27e400cace78b2d70605c6784fa3630ac797a794/src/discordcr/rest.cr#L548" target="_blank">View source</a>]
+          [<a href="https://github.com/meew0/discordcr/blob/0e38695de0247bf680adc45ad635490175a7197c/src/discordcr/rest.cr#L548" target="_blank">View source</a>]
         
       </div>
     </div>
   
-    <div class="entry-detail" id="upload_file(channel_id:UInt64,content:String?,file:IO,filename:String?=nil)-instance-method">
+    <div class="entry-detail" id="upload_file(channel_id:UInt64|Snowflake,content:String?,file:IO,filename:String?=nil)-instance-method">
       <div class="signature">
         
-        def <strong>upload_file</strong>(channel_id : UInt64, content : String?, file : IO, filename : String? = <span class="n">nil</span>)
+        def <strong>upload_file</strong>(channel_id : UInt64 | <a href="../Discord/Snowflake.html">Snowflake</a>, content : String?, file : IO, filename : String? = <span class="n">nil</span>)
 
-        <a class="method-permalink" href="#upload_file%28channel_id%3AUInt64%2Ccontent%3AString%3F%2Cfile%3AIO%2Cfilename%3AString%3F%3Dnil%29-instance-method">#</a>
+        <a class="method-permalink" href="#upload_file%28channel_id%3AUInt64%7CSnowflake%2Ccontent%3AString%3F%2Cfile%3AIO%2Cfilename%3AString%3F%3Dnil%29-instance-method">#</a>
       </div>
       
         <div class="doc"><p>Uploads a file to a channel. Requires the "Send Messages" and "Attach
@@ -3133,13 +3138,13 @@ the file's filename will be used instead. If it is an <code>IO</code> without
 filename information, Discord will generate a placeholder filename.</p>
 
 <p><a href="https://discordapp.com/developers/docs/resources/channel#create-message" target="_blank">API docs for this method</a>
-(same as <code><a href="../Discord/REST.html#create_message%28channel_id%3AUInt64%2Ccontent%3AString%2Cembed%3AEmbed%3F%3Dnil%2Ctts%3ABool%3Dfalse%29-instance-method">#create_message</a></code> -- this method implements form data bodies
-while <code><a href="../Discord/REST.html#create_message%28channel_id%3AUInt64%2Ccontent%3AString%2Cembed%3AEmbed%3F%3Dnil%2Ctts%3ABool%3Dfalse%29-instance-method">#create_message</a></code> implements JSON bodies)</p></div>
+(same as <code><a href="../Discord/REST.html#create_message%28channel_id%3AUInt64%7CSnowflake%2Ccontent%3AString%2Cembed%3AEmbed%3F%3Dnil%2Ctts%3ABool%3Dfalse%29-instance-method">#create_message</a></code> -- this method implements form data bodies
+while <code><a href="../Discord/REST.html#create_message%28channel_id%3AUInt64%7CSnowflake%2Ccontent%3AString%2Cembed%3AEmbed%3F%3Dnil%2Ctts%3ABool%3Dfalse%29-instance-method">#create_message</a></code> implements JSON bodies)</p></div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/meew0/discordcr/blob/27e400cace78b2d70605c6784fa3630ac797a794/src/discordcr/rest.cr#L388" target="_blank">View source</a>]
+          [<a href="https://github.com/meew0/discordcr/blob/0e38695de0247bf680adc45ad635490175a7197c/src/discordcr/rest.cr#L388" target="_blank">View source</a>]
         
       </div>
     </div>
