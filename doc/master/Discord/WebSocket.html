@@ -616,11 +616,6 @@
       
     </li>
   
-  <li class=" " data-id="github.com/meew0/discordcr/Logger" data-name="logger">
-      <a href="../Logger.html">Logger</a>
-      
-    </li>
-  
 </ul>
 
   </div>
@@ -661,7 +656,7 @@ payload format used in the gateway and VWS.</p>
   <h2>Defined in:</h2>
   
     
-      <a href="https://github.com/meew0/discordcr/blob/0e38695de0247bf680adc45ad635490175a7197c/src/discordcr/websocket.cr#L6" target="_blank">discordcr/websocket.cr</a>
+      <a href="https://github.com/meew0/discordcr/blob/59418328ad217b4b39f77e914ca07e323f4d52e9/src/discordcr/websocket.cr#L6" target="_blank">discordcr/websocket.cr</a>
     
     <br/>
   
@@ -674,7 +669,7 @@ payload format used in the gateway and VWS.</p>
   <ul class="list-summary">
     
       <li class="entry-summary">
-        <a href="#new%28host%3AString%2Cpath%3AString%2Cport%3AInt32%2Ctls%3ABool%29-class-method" class="signature"><strong>.new</strong>(host : String, path : String, port : Int32, tls : Bool)</a>
+        <a href="#new%28host%3AString%2Cpath%3AString%2Cport%3AInt32%2Ctls%3ABool%2Clogger%3ALogger%29-class-method" class="signature"><strong>.new</strong>(host : String, path : String, port : Int32, tls : Bool, logger : Logger)</a>
         
       </li>
     
@@ -718,12 +713,7 @@ payload format used in the gateway and VWS.</p>
       </li>
     
       <li class="entry-summary">
-        <a href="#send%28%2Aargs%2C%2A%2Aoptions%29-instance-method" class="signature"><strong>#send</strong>(*args, **options)</a>
-        
-      </li>
-    
-      <li class="entry-summary">
-        <a href="#send%28%2Aargs%2C%2A%2Aoptions%2C%26block%29-instance-method" class="signature"><strong>#send</strong>(*args, **options, &block)</a>
+        <a href="#send%28message%29-instance-method" class="signature"><strong>#send</strong>(message)</a>
         
       </li>
     
@@ -760,18 +750,18 @@ payload format used in the gateway and VWS.</p>
 
   <h2>Constructor Detail</h2>
   
-    <div class="entry-detail" id="new(host:String,path:String,port:Int32,tls:Bool)-class-method">
+    <div class="entry-detail" id="new(host:String,path:String,port:Int32,tls:Bool,logger:Logger)-class-method">
       <div class="signature">
         
-        def self.<strong>new</strong>(host : String, path : String, port : Int32, tls : Bool)
+        def self.<strong>new</strong>(host : String, path : String, port : Int32, tls : Bool, logger : Logger)
 
-        <a class="method-permalink" href="#new%28host%3AString%2Cpath%3AString%2Cport%3AInt32%2Ctls%3ABool%29-class-method">#</a>
+        <a class="method-permalink" href="#new%28host%3AString%2Cpath%3AString%2Cport%3AInt32%2Ctls%3ABool%2Clogger%3ALogger%29-class-method">#</a>
       </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/meew0/discordcr/blob/0e38695de0247bf680adc45ad635490175a7197c/src/discordcr/websocket.cr#L27" target="_blank">View source</a>]
+          [<a href="https://github.com/meew0/discordcr/blob/59418328ad217b4b39f77e914ca07e323f4d52e9/src/discordcr/websocket.cr#L27" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -794,7 +784,7 @@ payload format used in the gateway and VWS.</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/meew0/discordcr/blob/0e38695de0247bf680adc45ad635490175a7197c/src/discordcr/websocket.cr#L47" target="_blank">View source</a>]
+          [<a href="https://github.com/meew0/discordcr/blob/59418328ad217b4b39f77e914ca07e323f4d52e9/src/discordcr/websocket.cr#L48" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -810,7 +800,7 @@ payload format used in the gateway and VWS.</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/meew0/discordcr/blob/0e38695de0247bf680adc45ad635490175a7197c/src/discordcr/websocket.cr#L47" target="_blank">View source</a>]
+          [<a href="https://github.com/meew0/discordcr/blob/59418328ad217b4b39f77e914ca07e323f4d52e9/src/discordcr/websocket.cr#L48" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -826,7 +816,7 @@ payload format used in the gateway and VWS.</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/meew0/discordcr/blob/0e38695de0247bf680adc45ad635490175a7197c/src/discordcr/websocket.cr#L43" target="_blank">View source</a>]
+          [<a href="https://github.com/meew0/discordcr/blob/59418328ad217b4b39f77e914ca07e323f4d52e9/src/discordcr/websocket.cr#L44" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -842,7 +832,7 @@ payload format used in the gateway and VWS.</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/meew0/discordcr/blob/0e38695de0247bf680adc45ad635490175a7197c/src/discordcr/websocket.cr#L36" target="_blank">View source</a>]
+          [<a href="https://github.com/meew0/discordcr/blob/59418328ad217b4b39f77e914ca07e323f4d52e9/src/discordcr/websocket.cr#L36" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -858,7 +848,7 @@ payload format used in the gateway and VWS.</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/meew0/discordcr/blob/0e38695de0247bf680adc45ad635490175a7197c/src/discordcr/websocket.cr#L47" target="_blank">View source</a>]
+          [<a href="https://github.com/meew0/discordcr/blob/59418328ad217b4b39f77e914ca07e323f4d52e9/src/discordcr/websocket.cr#L48" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -874,39 +864,23 @@ payload format used in the gateway and VWS.</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/meew0/discordcr/blob/0e38695de0247bf680adc45ad635490175a7197c/src/discordcr/websocket.cr#L47" target="_blank">View source</a>]
+          [<a href="https://github.com/meew0/discordcr/blob/59418328ad217b4b39f77e914ca07e323f4d52e9/src/discordcr/websocket.cr#L48" target="_blank">View source</a>]
         
       </div>
     </div>
   
-    <div class="entry-detail" id="send(*args,**options)-instance-method">
+    <div class="entry-detail" id="send(message)-instance-method">
       <div class="signature">
         
-        def <strong>send</strong>(*args, **options)
+        def <strong>send</strong>(message)
 
-        <a class="method-permalink" href="#send%28%2Aargs%2C%2A%2Aoptions%29-instance-method">#</a>
+        <a class="method-permalink" href="#send%28message%29-instance-method">#</a>
       </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/meew0/discordcr/blob/0e38695de0247bf680adc45ad635490175a7197c/src/discordcr/websocket.cr#L47" target="_blank">View source</a>]
-        
-      </div>
-    </div>
-  
-    <div class="entry-detail" id="send(*args,**options,&amp;block)-instance-method">
-      <div class="signature">
-        
-        def <strong>send</strong>(*args, **options, &block)
-
-        <a class="method-permalink" href="#send%28%2Aargs%2C%2A%2Aoptions%2C%26block%29-instance-method">#</a>
-      </div>
-      
-      <br/>
-      <div>
-        
-          [<a href="https://github.com/meew0/discordcr/blob/0e38695de0247bf680adc45ad635490175a7197c/src/discordcr/websocket.cr#L47" target="_blank">View source</a>]
+          [<a href="https://github.com/meew0/discordcr/blob/59418328ad217b4b39f77e914ca07e323f4d52e9/src/discordcr/websocket.cr#L50" target="_blank">View source</a>]
         
       </div>
     </div>

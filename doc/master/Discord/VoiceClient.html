@@ -616,11 +616,6 @@
       
     </li>
   
-  <li class=" " data-id="github.com/meew0/discordcr/Logger" data-name="logger">
-      <a href="../Logger.html">Logger</a>
-      
-    </li>
-  
 </ul>
 
   </div>
@@ -656,7 +651,7 @@
   <h2>Defined in:</h2>
   
     
-      <a href="https://github.com/meew0/discordcr/blob/0e38695de0247bf680adc45ad635490175a7197c/src/discordcr/voice.cr#L9" target="_blank">discordcr/voice.cr</a>
+      <a href="https://github.com/meew0/discordcr/blob/59418328ad217b4b39f77e914ca07e323f4d52e9/src/discordcr/voice.cr#L9" target="_blank">discordcr/voice.cr</a>
     
     <br/>
   
@@ -734,7 +729,7 @@
   <ul class="list-summary">
     
       <li class="entry-summary">
-        <a href="#new%28payload%3ADiscord%3A%3AGateway%3A%3AVoiceServerUpdatePayload%2Csession%3ADiscord%3A%3AGateway%3A%3ASession%2Cuser_id%3AUInt64%7CSnowflake%29-class-method" class="signature"><strong>.new</strong>(payload : Discord::Gateway::VoiceServerUpdatePayload, session : Discord::Gateway::Session, user_id : UInt64 | Snowflake)</a>
+        <a href="#new%28payload%3ADiscord%3A%3AGateway%3A%3AVoiceServerUpdatePayload%2Csession%3ADiscord%3A%3AGateway%3A%3ASession%2Cuser_id%3AUInt64%7CSnowflake%2Clogger%3DLogger.new%28STDOUT%29%29-class-method" class="signature"><strong>.new</strong>(payload : Discord::Gateway::VoiceServerUpdatePayload, session : Discord::Gateway::Session, user_id : UInt64 | Snowflake, logger = <span class="t">Logger</span>.<span class="k">new</span>(<span class="t">STDOUT</span>))</a>
         
           <div class="summary"><p>Creates a new voice client.</p></div>
         
@@ -824,12 +819,12 @@
 
   <h2>Constructor Detail</h2>
   
-    <div class="entry-detail" id="new(payload:Discord::Gateway::VoiceServerUpdatePayload,session:Discord::Gateway::Session,user_id:UInt64|Snowflake)-class-method">
+    <div class="entry-detail" id="new(payload:Discord::Gateway::VoiceServerUpdatePayload,session:Discord::Gateway::Session,user_id:UInt64|Snowflake,logger=Logger.new(STDOUT))-class-method">
       <div class="signature">
         
-        def self.<strong>new</strong>(payload : <a href="../Discord/Gateway/VoiceServerUpdatePayload.html">Discord::Gateway::VoiceServerUpdatePayload</a>, session : <a href="../Discord/Gateway/Session.html">Discord::Gateway::Session</a>, user_id : UInt64 | <a href="../Discord/Snowflake.html">Snowflake</a>)
+        def self.<strong>new</strong>(payload : <a href="../Discord/Gateway/VoiceServerUpdatePayload.html">Discord::Gateway::VoiceServerUpdatePayload</a>, session : <a href="../Discord/Gateway/Session.html">Discord::Gateway::Session</a>, user_id : UInt64 | <a href="../Discord/Snowflake.html">Snowflake</a>, logger = <span class="t">Logger</span>.<span class="k">new</span>(<span class="t">STDOUT</span>))
 
-        <a class="method-permalink" href="#new%28payload%3ADiscord%3A%3AGateway%3A%3AVoiceServerUpdatePayload%2Csession%3ADiscord%3A%3AGateway%3A%3ASession%2Cuser_id%3AUInt64%7CSnowflake%29-class-method">#</a>
+        <a class="method-permalink" href="#new%28payload%3ADiscord%3A%3AGateway%3A%3AVoiceServerUpdatePayload%2Csession%3ADiscord%3A%3AGateway%3A%3ASession%2Cuser_id%3AUInt64%7CSnowflake%2Clogger%3DLogger.new%28STDOUT%29%29-class-method">#</a>
       </div>
       
         <div class="doc"><p>Creates a new voice client. The <em>payload</em> should be a payload received
@@ -843,7 +838,7 @@ received as part of the gateway READY dispatch, for example)</p></div>
       <br/>
       <div>
         
-          [<a href="https://github.com/meew0/discordcr/blob/0e38695de0247bf680adc45ad635490175a7197c/src/discordcr/voice.cr#L46" target="_blank">View source</a>]
+          [<a href="https://github.com/meew0/discordcr/blob/59418328ad217b4b39f77e914ca07e323f4d52e9/src/discordcr/voice.cr#L46" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -868,7 +863,7 @@ received as part of the gateway READY dispatch, for example)</p></div>
       <br/>
       <div>
         
-          [<a href="https://github.com/meew0/discordcr/blob/0e38695de0247bf680adc45ad635490175a7197c/src/discordcr/voice.cr#L75" target="_blank">View source</a>]
+          [<a href="https://github.com/meew0/discordcr/blob/59418328ad217b4b39f77e914ca07e323f4d52e9/src/discordcr/voice.cr#L78" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -886,7 +881,7 @@ received as part of the gateway READY dispatch, for example)</p></div>
       <br/>
       <div>
         
-          [<a href="https://github.com/meew0/discordcr/blob/0e38695de0247bf680adc45ad635490175a7197c/src/discordcr/voice.cr#L75" target="_blank">View source</a>]
+          [<a href="https://github.com/meew0/discordcr/blob/59418328ad217b4b39f77e914ca07e323f4d52e9/src/discordcr/voice.cr#L78" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -905,7 +900,7 @@ successfully.</p></div>
       <br/>
       <div>
         
-          [<a href="https://github.com/meew0/discordcr/blob/0e38695de0247bf680adc45ad635490175a7197c/src/discordcr/voice.cr#L79" target="_blank">View source</a>]
+          [<a href="https://github.com/meew0/discordcr/blob/59418328ad217b4b39f77e914ca07e323f4d52e9/src/discordcr/voice.cr#L82" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -923,7 +918,7 @@ successfully.</p></div>
       <br/>
       <div>
         
-          [<a href="https://github.com/meew0/discordcr/blob/0e38695de0247bf680adc45ad635490175a7197c/src/discordcr/voice.cr#L90" target="_blank">View source</a>]
+          [<a href="https://github.com/meew0/discordcr/blob/59418328ad217b4b39f77e914ca07e323f4d52e9/src/discordcr/voice.cr#L93" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -941,7 +936,7 @@ successfully.</p></div>
       <br/>
       <div>
         
-          [<a href="https://github.com/meew0/discordcr/blob/0e38695de0247bf680adc45ad635490175a7197c/src/discordcr/voice.cr#L69" target="_blank">View source</a>]
+          [<a href="https://github.com/meew0/discordcr/blob/59418328ad217b4b39f77e914ca07e323f4d52e9/src/discordcr/voice.cr#L72" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -960,7 +955,7 @@ right now</p></div>
       <br/>
       <div>
         
-          [<a href="https://github.com/meew0/discordcr/blob/0e38695de0247bf680adc45ad635490175a7197c/src/discordcr/voice.cr#L84" target="_blank">View source</a>]
+          [<a href="https://github.com/meew0/discordcr/blob/59418328ad217b4b39f77e914ca07e323f4d52e9/src/discordcr/voice.cr#L87" target="_blank">View source</a>]
         
       </div>
     </div>
