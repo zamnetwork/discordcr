@@ -14,7 +14,7 @@
 </script>
 
   <meta id="repository-name" content="github.com/meew0/discordcr">
-  <title>Discord::EmbedProvider - github.com/meew0/discordcr</title>
+  <title>Discord::CDN - github.com/meew0/discordcr</title>
 </head>
 <body>
 
@@ -66,7 +66,7 @@
       
     </li>
   
-  <li class="parent " data-id="github.com/meew0/discordcr/Discord/CDN" data-name="discord::cdn">
+  <li class="parent open current" data-id="github.com/meew0/discordcr/Discord/CDN" data-name="discord::cdn">
       <a href="../Discord/CDN.html">CDN</a>
       
         <ul>
@@ -196,7 +196,7 @@
       
     </li>
   
-  <li class=" current" data-id="github.com/meew0/discordcr/Discord/EmbedProvider" data-name="discord::embedprovider">
+  <li class=" " data-id="github.com/meew0/discordcr/Discord/EmbedProvider" data-name="discord::embedprovider">
       <a href="../Discord/EmbedProvider.html">EmbedProvider</a>
       
     </li>
@@ -660,12 +660,23 @@
 <div class="main-content">
 <h1 class="type-name">
 
-  <span class="kind">struct</span> Discord::EmbedProvider
+  <span class="kind">module</span> Discord::CDN
 
 </h1>
 
 
-  <ul class="superclass-hierarchy"><li class="superclass"><a href="../Discord/EmbedProvider.html">Discord::EmbedProvider</a></li><li class="superclass">Struct</li><li class="superclass">Value</li><li class="superclass">Object</li></ul>
+
+
+
+  <h2>Overview</h2>
+
+  <p>This module contains methods for building URLs to resources on Discord's CDN
+for things like guild icons and avatars.</p>
+
+<p><span class="flag purple">NOTE</span>  All <code>size</code> arguments for CDN methods must be a power of 2 between 16
+and 2048. If an invalid size is given, <code>ArgumentError</code> will be raised.</p>
+
+<p><a href="https://discordapp.com/developers/docs/reference#image-formatting" target="_blank">API Documentation for image formatting</a></p>
 
 
 
@@ -673,8 +684,12 @@
 
 
 
-
-
+  <h2>Extended Modules</h2>
+  <ul class="other-types-list">
+  
+    <li class="other-type"><a href="../Discord/CDN.html">Discord::CDN</a></li>
+  
+  </ul>
 
 
 
@@ -686,24 +701,30 @@
   <h2>Defined in:</h2>
   
     
-      <a href="https://github.com/meew0/discordcr/blob/84c9f03f781a54b5097832f7687d087a67285268/src/discordcr/mappings/channel.cr#L182" target="_blank">discordcr/mappings/channel.cr</a>
+      <a href="https://github.com/meew0/discordcr/blob/84c9f03f781a54b5097832f7687d087a67285268/src/discordcr/cdn.cr#L8" target="_blank">discordcr/cdn.cr</a>
     
     <br/>
   
 
 
 
+  
+    <h2>Constant Summary</h2>
+  
+  <dl>
+    
+      <dt class="entry-const" id="BASE_URL">
+        <strong>BASE_URL</strong> = <code><span class="s">&quot;https://cdn.discordapp.com&quot;</span></code>
+      </dt>
+      
+      <dd class="entry-const-doc">
+        <p>Base CDN URL</p>
+      </dd>
+      
+    
+  </dl>
 
 
-  <h2>Constructors</h2>
-  <ul class="list-summary">
-    
-      <li class="entry-summary">
-        <a href="#new%28__temp_209%3AJSON%3A%3APullParser%29-class-method" class="signature"><strong>.new</strong>(__temp_209 : JSON::PullParser)</a>
-        
-      </li>
-    
-  </ul>
 
 
 
@@ -713,27 +734,51 @@
   <ul class="list-summary">
     
       <li class="entry-summary">
-        <a href="#name%3AString-instance-method" class="signature"><strong>#name</strong> : String</a>
+        <a href="#application_icon%28id%3AUInt64%7CSnowflake%2Cicon%3AString%2Cformat%3AApplicationIconFormat%3DApplicationIconFormat%3A%3AWebP%2Csize%3AInt32%3D128%29-instance-method" class="signature"><strong>#application_icon</strong>(id : UInt64 | Snowflake, icon : String, format : ApplicationIconFormat = <span class="t">ApplicationIconFormat</span><span class="t">::</span><span class="t">WebP</span>, size : Int32 = <span class="n">128</span>)</a>
+        
+          <div class="summary"><p>Produces a CDN URL for an application icon in the given <code>format</code> and <code>size</code></p></div>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#name%3D%28_name%3AString%29-instance-method" class="signature"><strong>#name=</strong>(_name : String)</a>
+        <a href="#custom_emoji%28id%3AUInt64%7CSnowflake%2Cformat%3ACustomEmojiFormat%3DCustomEmojiFormat%3A%3APNG%2Csize%3AInt32%3D128%29-instance-method" class="signature"><strong>#custom_emoji</strong>(id : UInt64 | Snowflake, format : CustomEmojiFormat = <span class="t">CustomEmojiFormat</span><span class="t">::</span><span class="t">PNG</span>, size : Int32 = <span class="n">128</span>)</a>
+        
+          <div class="summary"><p>Produces a CDN URL for a custom emoji in the given <code>format</code> and <code>size</code></p></div>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#to_json%28json%3AJSON%3A%3ABuilder%29-instance-method" class="signature"><strong>#to_json</strong>(json : JSON::Builder)</a>
+        <a href="#default_user_avatar%28user_discriminator%3AString%29-instance-method" class="signature"><strong>#default_user_avatar</strong>(user_discriminator : String)</a>
+        
+          <div class="summary"><p>Produces a CDN URL for a default user avatar, calculated from the given discriminator value.</p></div>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#url%3A%3A%3AUnion%28String%2CNil%29-instance-method" class="signature"><strong>#url</strong> : ::Union(String, Nil)</a>
+        <a href="#guild_icon%28id%3AUInt64%7CSnowflake%2Cicon%3AString%2Cformat%3AGuildIconFormat%3DGuildIconFormat%3A%3AWebP%2Csize%3AInt32%3D128%29-instance-method" class="signature"><strong>#guild_icon</strong>(id : UInt64 | Snowflake, icon : String, format : GuildIconFormat = <span class="t">GuildIconFormat</span><span class="t">::</span><span class="t">WebP</span>, size : Int32 = <span class="n">128</span>)</a>
+        
+          <div class="summary"><p>Produces a CDN URL for a guild icon in the given <code>format</code> and <code>size</code></p></div>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#url%3D%28_url%3A%3A%3AUnion%28String%2CNil%29%29-instance-method" class="signature"><strong>#url=</strong>(_url : ::Union(String, Nil))</a>
+        <a href="#guild_splash%28id%3AUInt64%7CSnowflake%2Csplash%3AString%2Cformat%3AGuildSplashFormat%3DGuildSplashFormat%3A%3AWebP%2Csize%3AInt32%3D128%29-instance-method" class="signature"><strong>#guild_splash</strong>(id : UInt64 | Snowflake, splash : String, format : GuildSplashFormat = <span class="t">GuildSplashFormat</span><span class="t">::</span><span class="t">WebP</span>, size : Int32 = <span class="n">128</span>)</a>
+        
+          <div class="summary"><p>Produces a CDN URL for a guild splash in the given <code>format</code> and <code>size</code></p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#user_avatar%28id%3AUInt64%7CSnowflake%2Cavatar%3AString%2Csize%3AInt32%3D128%29-instance-method" class="signature"><strong>#user_avatar</strong>(id : UInt64 | Snowflake, avatar : String, size : Int32 = <span class="n">128</span>)</a>
+        
+          <div class="summary"><p>Produces a CDN URL for a user avatar in the given <code>size</code>.</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#user_avatar%28id%3AUInt64%7CSnowflake%2Cavatar%3AString%2Cformat%3AUserAvatarFormat%2Csize%3AInt32%3D128%29-instance-method" class="signature"><strong>#user_avatar</strong>(id : UInt64 | Snowflake, avatar : String, format : UserAvatarFormat, size : Int32 = <span class="n">128</span>)</a>
+        
+          <div class="summary"><p>Produces a CDN URL for a user avatar in the given <code>format</code> and <code>size</code></p></div>
         
       </li>
     
@@ -745,55 +790,8 @@
 
 <div class="methods-inherited">
   
-    
-
-
-    
-
-
-    
-
-
-  
-    
-
-
-    
-
-
-    
-
-
-  
-    
-
-
-    
-
-
-    
-
-
-  
 </div>
 
-
-  <h2>Constructor Detail</h2>
-  
-    <div class="entry-detail" id="new(__temp_209:JSON::PullParser)-class-method">
-      <div class="signature">
-        
-        def self.<strong>new</strong>(__temp_209 : JSON::PullParser)
-
-        <a class="method-permalink" href="#new%28__temp_209%3AJSON%3A%3APullParser%29-class-method">#</a>
-      </div>
-      
-      <br/>
-      <div>
-        
-      </div>
-    </div>
-  
 
 
 
@@ -801,72 +799,130 @@
 
   <h2>Instance Method Detail</h2>
   
-    <div class="entry-detail" id="name:String-instance-method">
+    <div class="entry-detail" id="application_icon(id:UInt64|Snowflake,icon:String,format:ApplicationIconFormat=ApplicationIconFormat::WebP,size:Int32=128)-instance-method">
       <div class="signature">
         
-        def <strong>name</strong> : String
+        def <strong>application_icon</strong>(id : UInt64 | <a href="../Discord/Snowflake.html">Snowflake</a>, icon : String, format : <a href="../Discord/CDN/ApplicationIconFormat.html">ApplicationIconFormat</a> = <span class="t">ApplicationIconFormat</span><span class="t">::</span><span class="t">WebP</span>, size : Int32 = <span class="n">128</span>)
 
-        <a class="method-permalink" href="#name%3AString-instance-method">#</a>
+        <a class="method-permalink" href="#application_icon%28id%3AUInt64%7CSnowflake%2Cicon%3AString%2Cformat%3AApplicationIconFormat%3DApplicationIconFormat%3A%3AWebP%2Csize%3AInt32%3D128%29-instance-method">#</a>
       </div>
+      
+        <div class="doc"><p>Produces a CDN URL for an application icon in the given <code>format</code> and <code>size</code></p></div>
       
       <br/>
       <div>
+        
+          [<a href="https://github.com/meew0/discordcr/blob/84c9f03f781a54b5097832f7687d087a67285268/src/discordcr/cdn.cr#L184" target="_blank">View source</a>]
         
       </div>
     </div>
   
-    <div class="entry-detail" id="name=(_name:String)-instance-method">
+    <div class="entry-detail" id="custom_emoji(id:UInt64|Snowflake,format:CustomEmojiFormat=CustomEmojiFormat::PNG,size:Int32=128)-instance-method">
       <div class="signature">
         
-        def <strong>name=</strong>(_name : String)
+        def <strong>custom_emoji</strong>(id : UInt64 | <a href="../Discord/Snowflake.html">Snowflake</a>, format : <a href="../Discord/CDN/CustomEmojiFormat.html">CustomEmojiFormat</a> = <span class="t">CustomEmojiFormat</span><span class="t">::</span><span class="t">PNG</span>, size : Int32 = <span class="n">128</span>)
 
-        <a class="method-permalink" href="#name%3D%28_name%3AString%29-instance-method">#</a>
+        <a class="method-permalink" href="#custom_emoji%28id%3AUInt64%7CSnowflake%2Cformat%3ACustomEmojiFormat%3DCustomEmojiFormat%3A%3APNG%2Csize%3AInt32%3D128%29-instance-method">#</a>
       </div>
+      
+        <div class="doc"><p>Produces a CDN URL for a custom emoji in the given <code>format</code> and <code>size</code></p></div>
       
       <br/>
       <div>
+        
+          [<a href="https://github.com/meew0/discordcr/blob/84c9f03f781a54b5097832f7687d087a67285268/src/discordcr/cdn.cr#L136" target="_blank">View source</a>]
         
       </div>
     </div>
   
-    <div class="entry-detail" id="to_json(json:JSON::Builder)-instance-method">
+    <div class="entry-detail" id="default_user_avatar(user_discriminator:String)-instance-method">
       <div class="signature">
         
-        def <strong>to_json</strong>(json : JSON::Builder)
+        def <strong>default_user_avatar</strong>(user_discriminator : String)
 
-        <a class="method-permalink" href="#to_json%28json%3AJSON%3A%3ABuilder%29-instance-method">#</a>
+        <a class="method-permalink" href="#default_user_avatar%28user_discriminator%3AString%29-instance-method">#</a>
       </div>
+      
+        <div class="doc"><p>Produces a CDN URL for a default user avatar, calculated from the given
+discriminator value.</p></div>
       
       <br/>
       <div>
+        
+          [<a href="https://github.com/meew0/discordcr/blob/84c9f03f781a54b5097832f7687d087a67285268/src/discordcr/cdn.cr#L161" target="_blank">View source</a>]
         
       </div>
     </div>
   
-    <div class="entry-detail" id="url:::Union(String,Nil)-instance-method">
+    <div class="entry-detail" id="guild_icon(id:UInt64|Snowflake,icon:String,format:GuildIconFormat=GuildIconFormat::WebP,size:Int32=128)-instance-method">
       <div class="signature">
         
-        def <strong>url</strong> : ::Union(String, Nil)
+        def <strong>guild_icon</strong>(id : UInt64 | <a href="../Discord/Snowflake.html">Snowflake</a>, icon : String, format : <a href="../Discord/CDN/GuildIconFormat.html">GuildIconFormat</a> = <span class="t">GuildIconFormat</span><span class="t">::</span><span class="t">WebP</span>, size : Int32 = <span class="n">128</span>)
 
-        <a class="method-permalink" href="#url%3A%3A%3AUnion%28String%2CNil%29-instance-method">#</a>
+        <a class="method-permalink" href="#guild_icon%28id%3AUInt64%7CSnowflake%2Cicon%3AString%2Cformat%3AGuildIconFormat%3DGuildIconFormat%3A%3AWebP%2Csize%3AInt32%3D128%29-instance-method">#</a>
       </div>
+      
+        <div class="doc"><p>Produces a CDN URL for a guild icon in the given <code>format</code> and <code>size</code></p></div>
       
       <br/>
       <div>
+        
+          [<a href="https://github.com/meew0/discordcr/blob/84c9f03f781a54b5097832f7687d087a67285268/src/discordcr/cdn.cr#L144" target="_blank">View source</a>]
         
       </div>
     </div>
   
-    <div class="entry-detail" id="url=(_url:::Union(String,Nil))-instance-method">
+    <div class="entry-detail" id="guild_splash(id:UInt64|Snowflake,splash:String,format:GuildSplashFormat=GuildSplashFormat::WebP,size:Int32=128)-instance-method">
       <div class="signature">
         
-        def <strong>url=</strong>(_url : ::Union(String, Nil))
+        def <strong>guild_splash</strong>(id : UInt64 | <a href="../Discord/Snowflake.html">Snowflake</a>, splash : String, format : <a href="../Discord/CDN/GuildSplashFormat.html">GuildSplashFormat</a> = <span class="t">GuildSplashFormat</span><span class="t">::</span><span class="t">WebP</span>, size : Int32 = <span class="n">128</span>)
 
-        <a class="method-permalink" href="#url%3D%28_url%3A%3A%3AUnion%28String%2CNil%29%29-instance-method">#</a>
+        <a class="method-permalink" href="#guild_splash%28id%3AUInt64%7CSnowflake%2Csplash%3AString%2Cformat%3AGuildSplashFormat%3DGuildSplashFormat%3A%3AWebP%2Csize%3AInt32%3D128%29-instance-method">#</a>
       </div>
+      
+        <div class="doc"><p>Produces a CDN URL for a guild splash in the given <code>format</code> and <code>size</code></p></div>
       
       <br/>
       <div>
+        
+          [<a href="https://github.com/meew0/discordcr/blob/84c9f03f781a54b5097832f7687d087a67285268/src/discordcr/cdn.cr#L152" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="user_avatar(id:UInt64|Snowflake,avatar:String,size:Int32=128)-instance-method">
+      <div class="signature">
+        
+        def <strong>user_avatar</strong>(id : UInt64 | <a href="../Discord/Snowflake.html">Snowflake</a>, avatar : String, size : Int32 = <span class="n">128</span>)
+
+        <a class="method-permalink" href="#user_avatar%28id%3AUInt64%7CSnowflake%2Cavatar%3AString%2Csize%3AInt32%3D128%29-instance-method">#</a>
+      </div>
+      
+        <div class="doc"><p>Produces a CDN URL for a user avatar in the given <code>size</code>. Given the <code>avatar</code>
+string, this will return a WebP or GIF based on the animated avatar hint.</p></div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/meew0/discordcr/blob/84c9f03f781a54b5097832f7687d087a67285268/src/discordcr/cdn.cr#L168" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="user_avatar(id:UInt64|Snowflake,avatar:String,format:UserAvatarFormat,size:Int32=128)-instance-method">
+      <div class="signature">
+        
+        def <strong>user_avatar</strong>(id : UInt64 | <a href="../Discord/Snowflake.html">Snowflake</a>, avatar : String, format : <a href="../Discord/CDN/UserAvatarFormat.html">UserAvatarFormat</a>, size : Int32 = <span class="n">128</span>)
+
+        <a class="method-permalink" href="#user_avatar%28id%3AUInt64%7CSnowflake%2Cavatar%3AString%2Cformat%3AUserAvatarFormat%2Csize%3AInt32%3D128%29-instance-method">#</a>
+      </div>
+      
+        <div class="doc"><p>Produces a CDN URL for a user avatar in the given <code>format</code> and <code>size</code></p></div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/meew0/discordcr/blob/84c9f03f781a54b5097832f7687d087a67285268/src/discordcr/cdn.cr#L177" target="_blank">View source</a>]
         
       </div>
     </div>
