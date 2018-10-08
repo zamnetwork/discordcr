@@ -711,21 +711,21 @@
   <h2>Defined in:</h2>
   
     
-      <a href="https://github.com/meew0/discordcr/blob/da6a60a0260897d92754671e0cbea359a9d1feec/src/discordcr/mappings/enums.cr#L1" target="_blank">
+      <a href="https://github.com/meew0/discordcr/blob/30784b7c902911dd4a32db5a005268ca94deadaf/src/discordcr/mappings/enums.cr#L1" target="_blank">
         discordcr/mappings/enums.cr
       </a>
     
     <br/>
   
     
-      <a href="https://github.com/meew0/discordcr/blob/da6a60a0260897d92754671e0cbea359a9d1feec/src/discordcr/mappings/rest.cr#L4" target="_blank">
+      <a href="https://github.com/meew0/discordcr/blob/30784b7c902911dd4a32db5a005268ca94deadaf/src/discordcr/mappings/rest.cr#L4" target="_blank">
         discordcr/mappings/rest.cr
       </a>
     
     <br/>
   
     
-      <a href="https://github.com/meew0/discordcr/blob/da6a60a0260897d92754671e0cbea359a9d1feec/src/discordcr/rest.cr#L11" target="_blank">
+      <a href="https://github.com/meew0/discordcr/blob/30784b7c902911dd4a32db5a005268ca94deadaf/src/discordcr/rest.cr#L11" target="_blank">
         discordcr/rest.cr
       </a>
     
@@ -829,7 +829,7 @@
       </li>
     
       <li class="entry-summary">
-        <a href="#create_guild_ban%28guild_id%3AUInt64%7CSnowflake%2Cuser_id%3AUInt64%7CSnowflake%29-instance-method" class="signature"><strong>#create_guild_ban</strong>(guild_id : UInt64 | Snowflake, user_id : UInt64 | Snowflake)</a>
+        <a href="#create_guild_ban%28guild_id%3AUInt64%7CSnowflake%2Cuser_id%3AUInt64%7CSnowflake%2Cdelete_message_days%3AInt32%3F%3Dnil%2Creason%3AString%3F%3Dnil%29-instance-method" class="signature"><strong>#create_guild_ban</strong>(guild_id : UInt64 | Snowflake, user_id : UInt64 | Snowflake, delete_message_days : Int32? = <span class="n">nil</span>, reason : String? = <span class="n">nil</span>)</a>
         
           <div class="summary"><p>Bans a member from the guild.</p></div>
         
@@ -1060,6 +1060,13 @@
       </li>
     
       <li class="entry-summary">
+        <a href="#get_guild_ban%28guild_id%3AUInt64%7CSnowflake%2Cuser_id%3AUInt64%7CSnowflake%29-instance-method" class="signature"><strong>#get_guild_ban</strong>(guild_id : UInt64 | Snowflake, user_id : UInt64 | Snowflake)</a>
+        
+          <div class="summary"><p>Returns information about a banned user in a guild.</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
         <a href="#get_guild_bans%28guild_id%3AUInt64%7CSnowflake%29-instance-method" class="signature"><strong>#get_guild_bans</strong>(guild_id : UInt64 | Snowflake)</a>
         
           <div class="summary"><p>Gets a list of members banned from this server.</p></div>
@@ -1186,16 +1193,16 @@
       </li>
     
       <li class="entry-summary">
-        <a href="#get_webhook%28webhook_id%3AUInt64%7CSnowflake%29-instance-method" class="signature"><strong>#get_webhook</strong>(webhook_id : UInt64 | Snowflake)</a>
+        <a href="#get_webhook%28webhook_id%3AUInt64%7CSnowflake%2Ctoken%3AString%29-instance-method" class="signature"><strong>#get_webhook</strong>(webhook_id : UInt64 | Snowflake, token : String)</a>
         
-          <div class="summary"><p>Get a webhook.</p></div>
+          <div class="summary"><p>Get a webhook, with a token.</p></div>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#get_webhook%28webhook_id%3AUInt64%7CSnowflake%2Ctoken%3AString%29-instance-method" class="signature"><strong>#get_webhook</strong>(webhook_id : UInt64 | Snowflake, token : String)</a>
+        <a href="#get_webhook%28webhook_id%3AUInt64%7CSnowflake%29-instance-method" class="signature"><strong>#get_webhook</strong>(webhook_id : UInt64 | Snowflake)</a>
         
-          <div class="summary"><p>Get a webhook, with a token.</p></div>
+          <div class="summary"><p>Get a webhook.</p></div>
         
       </li>
     
@@ -1425,7 +1432,7 @@ client.accept_invite(<span class="s">&quot;ABCdef&quot;</span>)</code></pre>
       <br/>
       <div>
         
-          [<a href="https://github.com/meew0/discordcr/blob/da6a60a0260897d92754671e0cbea359a9d1feec/src/discordcr/rest.cr#L1533" target="_blank">View source</a>]
+          [<a href="https://github.com/meew0/discordcr/blob/30784b7c902911dd4a32db5a005268ca94deadaf/src/discordcr/rest.cr#L1556" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1449,7 +1456,7 @@ for the user with the <code>guilds.join</code> scope.</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/meew0/discordcr/blob/da6a60a0260897d92754671e0cbea359a9d1feec/src/discordcr/rest.cr#L896" target="_blank">View source</a>]
+          [<a href="https://github.com/meew0/discordcr/blob/30784b7c902911dd4a32db5a005268ca94deadaf/src/discordcr/rest.cr#L896" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1469,7 +1476,7 @@ for the user with the <code>guilds.join</code> scope.</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/meew0/discordcr/blob/da6a60a0260897d92754671e0cbea359a9d1feec/src/discordcr/rest.cr#L991" target="_blank">View source</a>]
+          [<a href="https://github.com/meew0/discordcr/blob/30784b7c902911dd4a32db5a005268ca94deadaf/src/discordcr/rest.cr#L991" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1490,7 +1497,7 @@ permission.</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/meew0/discordcr/blob/da6a60a0260897d92754671e0cbea359a9d1feec/src/discordcr/rest.cr#L608" target="_blank">View source</a>]
+          [<a href="https://github.com/meew0/discordcr/blob/30784b7c902911dd4a32db5a005268ca94deadaf/src/discordcr/rest.cr#L608" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1511,7 +1518,7 @@ permission.</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/meew0/discordcr/blob/da6a60a0260897d92754671e0cbea359a9d1feec/src/discordcr/rest.cr#L1168" target="_blank">View source</a>]
+          [<a href="https://github.com/meew0/discordcr/blob/30784b7c902911dd4a32db5a005268ca94deadaf/src/discordcr/rest.cr#L1191" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1532,7 +1539,7 @@ permission.</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/meew0/discordcr/blob/da6a60a0260897d92754671e0cbea359a9d1feec/src/discordcr/rest.cr#L482" target="_blank">View source</a>]
+          [<a href="https://github.com/meew0/discordcr/blob/30784b7c902911dd4a32db5a005268ca94deadaf/src/discordcr/rest.cr#L482" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1553,7 +1560,7 @@ permission.</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/meew0/discordcr/blob/da6a60a0260897d92754671e0cbea359a9d1feec/src/discordcr/rest.cr#L537" target="_blank">View source</a>]
+          [<a href="https://github.com/meew0/discordcr/blob/30784b7c902911dd4a32db5a005268ca94deadaf/src/discordcr/rest.cr#L537" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1573,7 +1580,7 @@ permission.</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/meew0/discordcr/blob/da6a60a0260897d92754671e0cbea359a9d1feec/src/discordcr/rest.cr#L1610" target="_blank">View source</a>]
+          [<a href="https://github.com/meew0/discordcr/blob/30784b7c902911dd4a32db5a005268ca94deadaf/src/discordcr/rest.cr#L1633" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1594,17 +1601,17 @@ before, it will be reopened.</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/meew0/discordcr/blob/da6a60a0260897d92754671e0cbea359a9d1feec/src/discordcr/rest.cr#L1462" target="_blank">View source</a>]
+          [<a href="https://github.com/meew0/discordcr/blob/30784b7c902911dd4a32db5a005268ca94deadaf/src/discordcr/rest.cr#L1485" target="_blank">View source</a>]
         
       </div>
     </div>
   
-    <div class="entry-detail" id="create_guild_ban(guild_id:UInt64|Snowflake,user_id:UInt64|Snowflake)-instance-method">
+    <div class="entry-detail" id="create_guild_ban(guild_id:UInt64|Snowflake,user_id:UInt64|Snowflake,delete_message_days:Int32?=nil,reason:String?=nil)-instance-method">
       <div class="signature">
         
-        def <strong>create_guild_ban</strong>(guild_id : <a href="../UInt64.html">UInt64</a> | <a href="../Discord/Snowflake.html">Snowflake</a>, user_id : <a href="../UInt64.html">UInt64</a> | <a href="../Discord/Snowflake.html">Snowflake</a>)
+        def <strong>create_guild_ban</strong>(guild_id : <a href="../UInt64.html">UInt64</a> | <a href="../Discord/Snowflake.html">Snowflake</a>, user_id : <a href="../UInt64.html">UInt64</a> | <a href="../Discord/Snowflake.html">Snowflake</a>, delete_message_days : Int32? = <span class="n">nil</span>, reason : String? = <span class="n">nil</span>)
 
-        <a class="method-permalink" href="#create_guild_ban%28guild_id%3AUInt64%7CSnowflake%2Cuser_id%3AUInt64%7CSnowflake%29-instance-method">#</a>
+        <a class="method-permalink" href="#create_guild_ban%28guild_id%3AUInt64%7CSnowflake%2Cuser_id%3AUInt64%7CSnowflake%2Cdelete_message_days%3AInt32%3F%3Dnil%2Creason%3AString%3F%3Dnil%29-instance-method">#</a>
       </div>
       
         <div class="doc"><p>Bans a member from the guild. Requires the "Ban Members" permission.</p>
@@ -1614,7 +1621,7 @@ before, it will be reopened.</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/meew0/discordcr/blob/da6a60a0260897d92754671e0cbea359a9d1feec/src/discordcr/rest.cr#L1036" target="_blank">View source</a>]
+          [<a href="https://github.com/meew0/discordcr/blob/30784b7c902911dd4a32db5a005268ca94deadaf/src/discordcr/rest.cr#L1053" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1635,7 +1642,7 @@ permission.</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/meew0/discordcr/blob/da6a60a0260897d92754671e0cbea359a9d1feec/src/discordcr/rest.cr#L771" target="_blank">View source</a>]
+          [<a href="https://github.com/meew0/discordcr/blob/30784b7c902911dd4a32db5a005268ca94deadaf/src/discordcr/rest.cr#L771" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1655,7 +1662,7 @@ permission.</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/meew0/discordcr/blob/da6a60a0260897d92754671e0cbea359a9d1feec/src/discordcr/rest.cr#L733" target="_blank">View source</a>]
+          [<a href="https://github.com/meew0/discordcr/blob/30784b7c902911dd4a32db5a005268ca94deadaf/src/discordcr/rest.cr#L733" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1676,7 +1683,7 @@ permission.</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/meew0/discordcr/blob/da6a60a0260897d92754671e0cbea359a9d1feec/src/discordcr/rest.cr#L1219" target="_blank">View source</a>]
+          [<a href="https://github.com/meew0/discordcr/blob/30784b7c902911dd4a32db5a005268ca94deadaf/src/discordcr/rest.cr#L1242" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1696,7 +1703,7 @@ permission.</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/meew0/discordcr/blob/da6a60a0260897d92754671e0cbea359a9d1feec/src/discordcr/rest.cr#L1080" target="_blank">View source</a>]
+          [<a href="https://github.com/meew0/discordcr/blob/30784b7c902911dd4a32db5a005268ca94deadaf/src/discordcr/rest.cr#L1103" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1741,7 +1748,7 @@ client.create_message(channel_id, <span class="s">&quot;The content of the messa
       <br/>
       <div>
         
-          [<a href="https://github.com/meew0/discordcr/blob/da6a60a0260897d92754671e0cbea359a9d1feec/src/discordcr/rest.cr#L314" target="_blank">View source</a>]
+          [<a href="https://github.com/meew0/discordcr/blob/30784b7c902911dd4a32db5a005268ca94deadaf/src/discordcr/rest.cr#L314" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1763,7 +1770,7 @@ encoded characters.</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/meew0/discordcr/blob/da6a60a0260897d92754671e0cbea359a9d1feec/src/discordcr/rest.cr#L332" target="_blank">View source</a>]
+          [<a href="https://github.com/meew0/discordcr/blob/30784b7c902911dd4a32db5a005268ca94deadaf/src/discordcr/rest.cr#L332" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1784,7 +1791,7 @@ permission.</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/meew0/discordcr/blob/da6a60a0260897d92754671e0cbea359a9d1feec/src/discordcr/rest.cr#L396" target="_blank">View source</a>]
+          [<a href="https://github.com/meew0/discordcr/blob/30784b7c902911dd4a32db5a005268ca94deadaf/src/discordcr/rest.cr#L396" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1804,7 +1811,7 @@ permission.</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/meew0/discordcr/blob/da6a60a0260897d92754671e0cbea359a9d1feec/src/discordcr/rest.cr#L213" target="_blank">View source</a>]
+          [<a href="https://github.com/meew0/discordcr/blob/30784b7c902911dd4a32db5a005268ca94deadaf/src/discordcr/rest.cr#L213" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1825,7 +1832,7 @@ Permissions" permission.</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/meew0/discordcr/blob/da6a60a0260897d92754671e0cbea359a9d1feec/src/discordcr/rest.cr#L561" target="_blank">View source</a>]
+          [<a href="https://github.com/meew0/discordcr/blob/30784b7c902911dd4a32db5a005268ca94deadaf/src/discordcr/rest.cr#L561" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1845,7 +1852,7 @@ Permissions" permission.</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/meew0/discordcr/blob/da6a60a0260897d92754671e0cbea359a9d1feec/src/discordcr/rest.cr#L685" target="_blank">View source</a>]
+          [<a href="https://github.com/meew0/discordcr/blob/30784b7c902911dd4a32db5a005268ca94deadaf/src/discordcr/rest.cr#L685" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1865,7 +1872,7 @@ Permissions" permission.</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/meew0/discordcr/blob/da6a60a0260897d92754671e0cbea359a9d1feec/src/discordcr/rest.cr#L1262" target="_blank">View source</a>]
+          [<a href="https://github.com/meew0/discordcr/blob/30784b7c902911dd4a32db5a005268ca94deadaf/src/discordcr/rest.cr#L1285" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1886,7 +1893,7 @@ to be lower than the bot's highest role.</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/meew0/discordcr/blob/da6a60a0260897d92754671e0cbea359a9d1feec/src/discordcr/rest.cr#L1134" target="_blank">View source</a>]
+          [<a href="https://github.com/meew0/discordcr/blob/30784b7c902911dd4a32db5a005268ca94deadaf/src/discordcr/rest.cr#L1157" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1908,7 +1915,7 @@ server.</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/meew0/discordcr/blob/da6a60a0260897d92754671e0cbea359a9d1feec/src/discordcr/rest.cr#L1512" target="_blank">View source</a>]
+          [<a href="https://github.com/meew0/discordcr/blob/30784b7c902911dd4a32db5a005268ca94deadaf/src/discordcr/rest.cr#L1535" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1930,7 +1937,7 @@ permission.</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/meew0/discordcr/blob/da6a60a0260897d92754671e0cbea359a9d1feec/src/discordcr/rest.cr#L467" target="_blank">View source</a>]
+          [<a href="https://github.com/meew0/discordcr/blob/30784b7c902911dd4a32db5a005268ca94deadaf/src/discordcr/rest.cr#L467" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1952,7 +1959,7 @@ simply be the UTF-8 encoded characters.</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/meew0/discordcr/blob/da6a60a0260897d92754671e0cbea359a9d1feec/src/discordcr/rest.cr#L348" target="_blank">View source</a>]
+          [<a href="https://github.com/meew0/discordcr/blob/30784b7c902911dd4a32db5a005268ca94deadaf/src/discordcr/rest.cr#L348" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1973,7 +1980,7 @@ permission.</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/meew0/discordcr/blob/da6a60a0260897d92754671e0cbea359a9d1feec/src/discordcr/rest.cr#L623" target="_blank">View source</a>]
+          [<a href="https://github.com/meew0/discordcr/blob/30784b7c902911dd4a32db5a005268ca94deadaf/src/discordcr/rest.cr#L623" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1996,7 +2003,7 @@ permission.</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/meew0/discordcr/blob/da6a60a0260897d92754671e0cbea359a9d1feec/src/discordcr/rest.cr#L365" target="_blank">View source</a>]
+          [<a href="https://github.com/meew0/discordcr/blob/30784b7c902911dd4a32db5a005268ca94deadaf/src/discordcr/rest.cr#L365" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -2016,7 +2023,7 @@ permission.</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/meew0/discordcr/blob/da6a60a0260897d92754671e0cbea359a9d1feec/src/discordcr/rest.cr#L1707" target="_blank">View source</a>]
+          [<a href="https://github.com/meew0/discordcr/blob/30784b7c902911dd4a32db5a005268ca94deadaf/src/discordcr/rest.cr#L1730" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -2036,7 +2043,7 @@ permission.</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/meew0/discordcr/blob/da6a60a0260897d92754671e0cbea359a9d1feec/src/discordcr/rest.cr#L1693" target="_blank">View source</a>]
+          [<a href="https://github.com/meew0/discordcr/blob/30784b7c902911dd4a32db5a005268ca94deadaf/src/discordcr/rest.cr#L1716" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -2058,7 +2065,7 @@ ID. Requires the "Manage Permissions" permission.</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/meew0/discordcr/blob/da6a60a0260897d92754671e0cbea359a9d1feec/src/discordcr/rest.cr#L498" target="_blank">View source</a>]
+          [<a href="https://github.com/meew0/discordcr/blob/30784b7c902911dd4a32db5a005268ca94deadaf/src/discordcr/rest.cr#L498" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -2079,7 +2086,7 @@ sent by the bot itself - you can't edit others' messages.</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/meew0/discordcr/blob/da6a60a0260897d92754671e0cbea359a9d1feec/src/discordcr/rest.cr#L449" target="_blank">View source</a>]
+          [<a href="https://github.com/meew0/discordcr/blob/30784b7c902911dd4a32db5a005268ca94deadaf/src/discordcr/rest.cr#L449" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -2099,7 +2106,7 @@ sent by the bot itself - you can't edit others' messages.</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/meew0/discordcr/blob/da6a60a0260897d92754671e0cbea359a9d1feec/src/discordcr/rest.cr#L1721" target="_blank">View source</a>]
+          [<a href="https://github.com/meew0/discordcr/blob/30784b7c902911dd4a32db5a005268ca94deadaf/src/discordcr/rest.cr#L1744" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -2119,7 +2126,7 @@ sent by the bot itself - you can't edit others' messages.</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/meew0/discordcr/blob/da6a60a0260897d92754671e0cbea359a9d1feec/src/discordcr/rest.cr#L170" target="_blank">View source</a>]
+          [<a href="https://github.com/meew0/discordcr/blob/30784b7c902911dd4a32db5a005268ca94deadaf/src/discordcr/rest.cr#L170" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -2140,7 +2147,7 @@ permission.</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/meew0/discordcr/blob/da6a60a0260897d92754671e0cbea359a9d1feec/src/discordcr/rest.cr#L520" target="_blank">View source</a>]
+          [<a href="https://github.com/meew0/discordcr/blob/30784b7c902911dd4a32db5a005268ca94deadaf/src/discordcr/rest.cr#L520" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -2161,7 +2168,7 @@ Message History" permission.</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/meew0/discordcr/blob/da6a60a0260897d92754671e0cbea359a9d1feec/src/discordcr/rest.cr#L271" target="_blank">View source</a>]
+          [<a href="https://github.com/meew0/discordcr/blob/30784b7c902911dd4a32db5a005268ca94deadaf/src/discordcr/rest.cr#L271" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -2182,7 +2189,7 @@ Message History" permission.</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/meew0/discordcr/blob/da6a60a0260897d92754671e0cbea359a9d1feec/src/discordcr/rest.cr#L228" target="_blank">View source</a>]
+          [<a href="https://github.com/meew0/discordcr/blob/30784b7c902911dd4a32db5a005268ca94deadaf/src/discordcr/rest.cr#L228" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -2202,7 +2209,7 @@ Message History" permission.</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/meew0/discordcr/blob/da6a60a0260897d92754671e0cbea359a9d1feec/src/discordcr/rest.cr#L1632" target="_blank">View source</a>]
+          [<a href="https://github.com/meew0/discordcr/blob/30784b7c902911dd4a32db5a005268ca94deadaf/src/discordcr/rest.cr#L1655" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -2222,7 +2229,7 @@ Message History" permission.</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/meew0/discordcr/blob/da6a60a0260897d92754671e0cbea359a9d1feec/src/discordcr/rest.cr#L1344" target="_blank">View source</a>]
+          [<a href="https://github.com/meew0/discordcr/blob/30784b7c902911dd4a32db5a005268ca94deadaf/src/discordcr/rest.cr#L1367" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -2242,7 +2249,7 @@ Message History" permission.</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/meew0/discordcr/blob/da6a60a0260897d92754671e0cbea359a9d1feec/src/discordcr/rest.cr#L1382" target="_blank">View source</a>]
+          [<a href="https://github.com/meew0/discordcr/blob/30784b7c902911dd4a32db5a005268ca94deadaf/src/discordcr/rest.cr#L1405" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -2262,7 +2269,7 @@ Message History" permission.</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/meew0/discordcr/blob/da6a60a0260897d92754671e0cbea359a9d1feec/src/discordcr/rest.cr#L122" target="_blank">View source</a>]
+          [<a href="https://github.com/meew0/discordcr/blob/30784b7c902911dd4a32db5a005268ca94deadaf/src/discordcr/rest.cr#L122" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -2282,7 +2289,7 @@ Message History" permission.</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/meew0/discordcr/blob/da6a60a0260897d92754671e0cbea359a9d1feec/src/discordcr/rest.cr#L138" target="_blank">View source</a>]
+          [<a href="https://github.com/meew0/discordcr/blob/30784b7c902911dd4a32db5a005268ca94deadaf/src/discordcr/rest.cr#L138" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -2302,7 +2309,28 @@ Message History" permission.</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/meew0/discordcr/blob/da6a60a0260897d92754671e0cbea359a9d1feec/src/discordcr/rest.cr#L637" target="_blank">View source</a>]
+          [<a href="https://github.com/meew0/discordcr/blob/30784b7c902911dd4a32db5a005268ca94deadaf/src/discordcr/rest.cr#L637" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="get_guild_ban(guild_id:UInt64|Snowflake,user_id:UInt64|Snowflake)-instance-method">
+      <div class="signature">
+        
+        def <strong>get_guild_ban</strong>(guild_id : <a href="../UInt64.html">UInt64</a> | <a href="../Discord/Snowflake.html">Snowflake</a>, user_id : <a href="../UInt64.html">UInt64</a> | <a href="../Discord/Snowflake.html">Snowflake</a>)
+
+        <a class="method-permalink" href="#get_guild_ban%28guild_id%3AUInt64%7CSnowflake%2Cuser_id%3AUInt64%7CSnowflake%29-instance-method">#</a>
+      </div>
+      
+        <div class="doc"><p>Returns information about a banned user in a guild. Requires the "Ban Members"
+permission.</p>
+
+<p><a href="https://discordapp.com/developers/docs/resources/guild#get-guild-ban" target="_blank">API docs for this method</a></p></div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/meew0/discordcr/blob/30784b7c902911dd4a32db5a005268ca94deadaf/src/discordcr/rest.cr#L1037" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -2323,7 +2351,7 @@ permission.</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/meew0/discordcr/blob/da6a60a0260897d92754671e0cbea359a9d1feec/src/discordcr/rest.cr#L1020" target="_blank">View source</a>]
+          [<a href="https://github.com/meew0/discordcr/blob/30784b7c902911dd4a32db5a005268ca94deadaf/src/discordcr/rest.cr#L1020" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -2343,7 +2371,7 @@ permission.</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/meew0/discordcr/blob/da6a60a0260897d92754671e0cbea359a9d1feec/src/discordcr/rest.cr#L754" target="_blank">View source</a>]
+          [<a href="https://github.com/meew0/discordcr/blob/30784b7c902911dd4a32db5a005268ca94deadaf/src/discordcr/rest.cr#L754" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -2363,7 +2391,7 @@ permission.</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/meew0/discordcr/blob/da6a60a0260897d92754671e0cbea359a9d1feec/src/discordcr/rest.cr#L1290" target="_blank">View source</a>]
+          [<a href="https://github.com/meew0/discordcr/blob/30784b7c902911dd4a32db5a005268ca94deadaf/src/discordcr/rest.cr#L1313" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -2383,7 +2411,7 @@ permission.</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/meew0/discordcr/blob/da6a60a0260897d92754671e0cbea359a9d1feec/src/discordcr/rest.cr#L701" target="_blank">View source</a>]
+          [<a href="https://github.com/meew0/discordcr/blob/30784b7c902911dd4a32db5a005268ca94deadaf/src/discordcr/rest.cr#L701" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -2404,7 +2432,7 @@ Requires the "Manage Guild" permission.</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/meew0/discordcr/blob/da6a60a0260897d92754671e0cbea359a9d1feec/src/discordcr/rest.cr#L1202" target="_blank">View source</a>]
+          [<a href="https://github.com/meew0/discordcr/blob/30784b7c902911dd4a32db5a005268ca94deadaf/src/discordcr/rest.cr#L1225" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -2424,7 +2452,7 @@ Requires the "Manage Guild" permission.</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/meew0/discordcr/blob/da6a60a0260897d92754671e0cbea359a9d1feec/src/discordcr/rest.cr#L842" target="_blank">View source</a>]
+          [<a href="https://github.com/meew0/discordcr/blob/30784b7c902911dd4a32db5a005268ca94deadaf/src/discordcr/rest.cr#L842" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -2445,7 +2473,7 @@ days. Requires the "Kick Members" permission.</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/meew0/discordcr/blob/da6a60a0260897d92754671e0cbea359a9d1feec/src/discordcr/rest.cr#L1151" target="_blank">View source</a>]
+          [<a href="https://github.com/meew0/discordcr/blob/30784b7c902911dd4a32db5a005268ca94deadaf/src/discordcr/rest.cr#L1174" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -2465,7 +2493,7 @@ days. Requires the "Kick Members" permission.</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/meew0/discordcr/blob/da6a60a0260897d92754671e0cbea359a9d1feec/src/discordcr/rest.cr#L1064" target="_blank">View source</a>]
+          [<a href="https://github.com/meew0/discordcr/blob/30784b7c902911dd4a32db5a005268ca94deadaf/src/discordcr/rest.cr#L1087" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -2485,7 +2513,7 @@ days. Requires the "Kick Members" permission.</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/meew0/discordcr/blob/da6a60a0260897d92754671e0cbea359a9d1feec/src/discordcr/rest.cr#L795" target="_blank">View source</a>]
+          [<a href="https://github.com/meew0/discordcr/blob/30784b7c902911dd4a32db5a005268ca94deadaf/src/discordcr/rest.cr#L795" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -2506,7 +2534,7 @@ VIP regions for VIP servers.</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/meew0/discordcr/blob/da6a60a0260897d92754671e0cbea359a9d1feec/src/discordcr/rest.cr#L1185" target="_blank">View source</a>]
+          [<a href="https://github.com/meew0/discordcr/blob/30784b7c902911dd4a32db5a005268ca94deadaf/src/discordcr/rest.cr#L1208" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -2526,7 +2554,7 @@ VIP regions for VIP servers.</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/meew0/discordcr/blob/da6a60a0260897d92754671e0cbea359a9d1feec/src/discordcr/rest.cr#L1595" target="_blank">View source</a>]
+          [<a href="https://github.com/meew0/discordcr/blob/30784b7c902911dd4a32db5a005268ca94deadaf/src/discordcr/rest.cr#L1618" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -2546,7 +2574,7 @@ VIP regions for VIP servers.</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/meew0/discordcr/blob/da6a60a0260897d92754671e0cbea359a9d1feec/src/discordcr/rest.cr#L1494" target="_blank">View source</a>]
+          [<a href="https://github.com/meew0/discordcr/blob/30784b7c902911dd4a32db5a005268ca94deadaf/src/discordcr/rest.cr#L1517" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -2566,7 +2594,7 @@ VIP regions for VIP servers.</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/meew0/discordcr/blob/da6a60a0260897d92754671e0cbea359a9d1feec/src/discordcr/rest.cr#L154" target="_blank">View source</a>]
+          [<a href="https://github.com/meew0/discordcr/blob/30784b7c902911dd4a32db5a005268ca94deadaf/src/discordcr/rest.cr#L154" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -2586,7 +2614,7 @@ VIP regions for VIP servers.</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/meew0/discordcr/blob/da6a60a0260897d92754671e0cbea359a9d1feec/src/discordcr/rest.cr#L591" target="_blank">View source</a>]
+          [<a href="https://github.com/meew0/discordcr/blob/30784b7c902911dd4a32db5a005268ca94deadaf/src/discordcr/rest.cr#L591" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -2606,7 +2634,7 @@ VIP regions for VIP servers.</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/meew0/discordcr/blob/da6a60a0260897d92754671e0cbea359a9d1feec/src/discordcr/rest.cr#L379" target="_blank">View source</a>]
+          [<a href="https://github.com/meew0/discordcr/blob/30784b7c902911dd4a32db5a005268ca94deadaf/src/discordcr/rest.cr#L379" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -2626,7 +2654,7 @@ VIP regions for VIP servers.</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/meew0/discordcr/blob/da6a60a0260897d92754671e0cbea359a9d1feec/src/discordcr/rest.cr#L1328" target="_blank">View source</a>]
+          [<a href="https://github.com/meew0/discordcr/blob/30784b7c902911dd4a32db5a005268ca94deadaf/src/discordcr/rest.cr#L1351" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -2646,7 +2674,7 @@ VIP regions for VIP servers.</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/meew0/discordcr/blob/da6a60a0260897d92754671e0cbea359a9d1feec/src/discordcr/rest.cr#L1445" target="_blank">View source</a>]
+          [<a href="https://github.com/meew0/discordcr/blob/30784b7c902911dd4a32db5a005268ca94deadaf/src/discordcr/rest.cr#L1468" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -2666,27 +2694,7 @@ VIP regions for VIP servers.</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/meew0/discordcr/blob/da6a60a0260897d92754671e0cbea359a9d1feec/src/discordcr/rest.cr#L1478" target="_blank">View source</a>]
-        
-      </div>
-    </div>
-  
-    <div class="entry-detail" id="get_webhook(webhook_id:UInt64|Snowflake)-instance-method">
-      <div class="signature">
-        
-        def <strong>get_webhook</strong>(webhook_id : <a href="../UInt64.html">UInt64</a> | <a href="../Discord/Snowflake.html">Snowflake</a>)
-
-        <a class="method-permalink" href="#get_webhook%28webhook_id%3AUInt64%7CSnowflake%29-instance-method">#</a>
-      </div>
-      
-        <div class="doc"><p>Get a webhook.</p>
-
-<p><a href="https://discordapp.com/developers/docs/resources/webhook#get-webhook" target="_blank">API docs for this method</a>.</p></div>
-      
-      <br/>
-      <div>
-        
-          [<a href="https://github.com/meew0/discordcr/blob/da6a60a0260897d92754671e0cbea359a9d1feec/src/discordcr/rest.cr#L1565" target="_blank">View source</a>]
+          [<a href="https://github.com/meew0/discordcr/blob/30784b7c902911dd4a32db5a005268ca94deadaf/src/discordcr/rest.cr#L1501" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -2706,7 +2714,27 @@ VIP regions for VIP servers.</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/meew0/discordcr/blob/da6a60a0260897d92754671e0cbea359a9d1feec/src/discordcr/rest.cr#L1580" target="_blank">View source</a>]
+          [<a href="https://github.com/meew0/discordcr/blob/30784b7c902911dd4a32db5a005268ca94deadaf/src/discordcr/rest.cr#L1603" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="get_webhook(webhook_id:UInt64|Snowflake)-instance-method">
+      <div class="signature">
+        
+        def <strong>get_webhook</strong>(webhook_id : <a href="../UInt64.html">UInt64</a> | <a href="../Discord/Snowflake.html">Snowflake</a>)
+
+        <a class="method-permalink" href="#get_webhook%28webhook_id%3AUInt64%7CSnowflake%29-instance-method">#</a>
+      </div>
+      
+        <div class="doc"><p>Get a webhook.</p>
+
+<p><a href="https://discordapp.com/developers/docs/resources/webhook#get-webhook" target="_blank">API docs for this method</a>.</p></div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/meew0/discordcr/blob/30784b7c902911dd4a32db5a005268ca94deadaf/src/discordcr/rest.cr#L1588" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -2726,7 +2754,7 @@ VIP regions for VIP servers.</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/meew0/discordcr/blob/da6a60a0260897d92754671e0cbea359a9d1feec/src/discordcr/rest.cr#L1431" target="_blank">View source</a>]
+          [<a href="https://github.com/meew0/discordcr/blob/30784b7c902911dd4a32db5a005268ca94deadaf/src/discordcr/rest.cr#L1454" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -2748,7 +2776,7 @@ to specify what ID to start at.</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/meew0/discordcr/blob/da6a60a0260897d92754671e0cbea359a9d1feec/src/discordcr/rest.cr#L860" target="_blank">View source</a>]
+          [<a href="https://github.com/meew0/discordcr/blob/30784b7c902911dd4a32db5a005268ca94deadaf/src/discordcr/rest.cr#L860" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -2768,7 +2796,7 @@ to specify what ID to start at.</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/meew0/discordcr/blob/da6a60a0260897d92754671e0cbea359a9d1feec/src/discordcr/rest.cr#L1549" target="_blank">View source</a>]
+          [<a href="https://github.com/meew0/discordcr/blob/30784b7c902911dd4a32db5a005268ca94deadaf/src/discordcr/rest.cr#L1572" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -2789,7 +2817,7 @@ permission.</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/meew0/discordcr/blob/da6a60a0260897d92754671e0cbea359a9d1feec/src/discordcr/rest.cr#L187" target="_blank">View source</a>]
+          [<a href="https://github.com/meew0/discordcr/blob/30784b7c902911dd4a32db5a005268ca94deadaf/src/discordcr/rest.cr#L187" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -2811,7 +2839,7 @@ permission.</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/meew0/discordcr/blob/da6a60a0260897d92754671e0cbea359a9d1feec/src/discordcr/rest.cr#L1361" target="_blank">View source</a>]
+          [<a href="https://github.com/meew0/discordcr/blob/30784b7c902911dd4a32db5a005268ca94deadaf/src/discordcr/rest.cr#L1384" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -2833,7 +2861,7 @@ permission.</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/meew0/discordcr/blob/da6a60a0260897d92754671e0cbea359a9d1feec/src/discordcr/rest.cr#L963" target="_blank">View source</a>]
+          [<a href="https://github.com/meew0/discordcr/blob/30784b7c902911dd4a32db5a005268ca94deadaf/src/discordcr/rest.cr#L963" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -2856,7 +2884,7 @@ Server" permission.</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/meew0/discordcr/blob/da6a60a0260897d92754671e0cbea359a9d1feec/src/discordcr/rest.cr#L655" target="_blank">View source</a>]
+          [<a href="https://github.com/meew0/discordcr/blob/30784b7c902911dd4a32db5a005268ca94deadaf/src/discordcr/rest.cr#L655" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -2877,7 +2905,7 @@ Server" permission.</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/meew0/discordcr/blob/da6a60a0260897d92754671e0cbea359a9d1feec/src/discordcr/rest.cr#L827" target="_blank">View source</a>]
+          [<a href="https://github.com/meew0/discordcr/blob/30784b7c902911dd4a32db5a005268ca94deadaf/src/discordcr/rest.cr#L827" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -2897,7 +2925,7 @@ Server" permission.</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/meew0/discordcr/blob/da6a60a0260897d92754671e0cbea359a9d1feec/src/discordcr/rest.cr#L1306" target="_blank">View source</a>]
+          [<a href="https://github.com/meew0/discordcr/blob/30784b7c902911dd4a32db5a005268ca94deadaf/src/discordcr/rest.cr#L1329" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -2917,7 +2945,7 @@ Server" permission.</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/meew0/discordcr/blob/da6a60a0260897d92754671e0cbea359a9d1feec/src/discordcr/rest.cr#L717" target="_blank">View source</a>]
+          [<a href="https://github.com/meew0/discordcr/blob/30784b7c902911dd4a32db5a005268ca94deadaf/src/discordcr/rest.cr#L717" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -2938,7 +2966,7 @@ permission.</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/meew0/discordcr/blob/da6a60a0260897d92754671e0cbea359a9d1feec/src/discordcr/rest.cr#L1239" target="_blank">View source</a>]
+          [<a href="https://github.com/meew0/discordcr/blob/30784b7c902911dd4a32db5a005268ca94deadaf/src/discordcr/rest.cr#L1262" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -2964,7 +2992,7 @@ permission.</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/meew0/discordcr/blob/da6a60a0260897d92754671e0cbea359a9d1feec/src/discordcr/rest.cr#L937" target="_blank">View source</a>]
+          [<a href="https://github.com/meew0/discordcr/blob/30784b7c902911dd4a32db5a005268ca94deadaf/src/discordcr/rest.cr#L937" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -2985,7 +3013,7 @@ well as the role to be lower than the bot's highest role.</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/meew0/discordcr/blob/da6a60a0260897d92754671e0cbea359a9d1feec/src/discordcr/rest.cr#L1107" target="_blank">View source</a>]
+          [<a href="https://github.com/meew0/discordcr/blob/30784b7c902911dd4a32db5a005268ca94deadaf/src/discordcr/rest.cr#L1130" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -3006,7 +3034,7 @@ partnered.</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/meew0/discordcr/blob/da6a60a0260897d92754671e0cbea359a9d1feec/src/discordcr/rest.cr#L812" target="_blank">View source</a>]
+          [<a href="https://github.com/meew0/discordcr/blob/30784b7c902911dd4a32db5a005268ca94deadaf/src/discordcr/rest.cr#L812" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -3026,7 +3054,7 @@ partnered.</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/meew0/discordcr/blob/da6a60a0260897d92754671e0cbea359a9d1feec/src/discordcr/rest.cr#L1648" target="_blank">View source</a>]
+          [<a href="https://github.com/meew0/discordcr/blob/30784b7c902911dd4a32db5a005268ca94deadaf/src/discordcr/rest.cr#L1671" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -3046,7 +3074,7 @@ partnered.</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/meew0/discordcr/blob/da6a60a0260897d92754671e0cbea359a9d1feec/src/discordcr/rest.cr#L1671" target="_blank">View source</a>]
+          [<a href="https://github.com/meew0/discordcr/blob/30784b7c902911dd4a32db5a005268ca94deadaf/src/discordcr/rest.cr#L1694" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -3070,7 +3098,7 @@ to make requests until all messages are fetched in the given <code>direction</co
       <br/>
       <div>
         
-          [<a href="https://github.com/meew0/discordcr/blob/da6a60a0260897d92754671e0cbea359a9d1feec/src/discordcr/rest.cr#L253" target="_blank">View source</a>]
+          [<a href="https://github.com/meew0/discordcr/blob/30784b7c902911dd4a32db5a005268ca94deadaf/src/discordcr/rest.cr#L253" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -3093,7 +3121,7 @@ until all guilds are fetched in the given <code>direction</code>.</p></div>
       <br/>
       <div>
         
-          [<a href="https://github.com/meew0/discordcr/blob/da6a60a0260897d92754671e0cbea359a9d1feec/src/discordcr/rest.cr#L1414" target="_blank">View source</a>]
+          [<a href="https://github.com/meew0/discordcr/blob/30784b7c902911dd4a32db5a005268ca94deadaf/src/discordcr/rest.cr#L1437" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -3116,7 +3144,7 @@ are fetched.</p></div>
       <br/>
       <div>
         
-          [<a href="https://github.com/meew0/discordcr/blob/da6a60a0260897d92754671e0cbea359a9d1feec/src/discordcr/rest.cr#L881" target="_blank">View source</a>]
+          [<a href="https://github.com/meew0/discordcr/blob/30784b7c902911dd4a32db5a005268ca94deadaf/src/discordcr/rest.cr#L881" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -3134,7 +3162,7 @@ are fetched.</p></div>
       <br/>
       <div>
         
-          [<a href="https://github.com/meew0/discordcr/blob/da6a60a0260897d92754671e0cbea359a9d1feec/src/discordcr/rest.cr#L19" target="_blank">View source</a>]
+          [<a href="https://github.com/meew0/discordcr/blob/30784b7c902911dd4a32db5a005268ca94deadaf/src/discordcr/rest.cr#L19" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -3154,7 +3182,7 @@ are fetched.</p></div>
       <br/>
       <div>
         
-          [<a href="https://github.com/meew0/discordcr/blob/da6a60a0260897d92754671e0cbea359a9d1feec/src/discordcr/rest.cr#L1050" target="_blank">View source</a>]
+          [<a href="https://github.com/meew0/discordcr/blob/30784b7c902911dd4a32db5a005268ca94deadaf/src/discordcr/rest.cr#L1073" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -3174,7 +3202,7 @@ are fetched.</p></div>
       <br/>
       <div>
         
-          [<a href="https://github.com/meew0/discordcr/blob/da6a60a0260897d92754671e0cbea359a9d1feec/src/discordcr/rest.cr#L977" target="_blank">View source</a>]
+          [<a href="https://github.com/meew0/discordcr/blob/30784b7c902911dd4a32db5a005268ca94deadaf/src/discordcr/rest.cr#L977" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -3194,7 +3222,7 @@ are fetched.</p></div>
       <br/>
       <div>
         
-          [<a href="https://github.com/meew0/discordcr/blob/da6a60a0260897d92754671e0cbea359a9d1feec/src/discordcr/rest.cr#L1005" target="_blank">View source</a>]
+          [<a href="https://github.com/meew0/discordcr/blob/30784b7c902911dd4a32db5a005268ca94deadaf/src/discordcr/rest.cr#L1005" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -3222,7 +3250,7 @@ of error checking, so if a request fails (with a status code that is not
       <br/>
       <div>
         
-          [<a href="https://github.com/meew0/discordcr/blob/da6a60a0260897d92754671e0cbea359a9d1feec/src/discordcr/rest.cr#L90" target="_blank">View source</a>]
+          [<a href="https://github.com/meew0/discordcr/blob/30784b7c902911dd4a32db5a005268ca94deadaf/src/discordcr/rest.cr#L90" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -3242,7 +3270,7 @@ of error checking, so if a request fails (with a status code that is not
       <br/>
       <div>
         
-          [<a href="https://github.com/meew0/discordcr/blob/da6a60a0260897d92754671e0cbea359a9d1feec/src/discordcr/rest.cr#L1276" target="_blank">View source</a>]
+          [<a href="https://github.com/meew0/discordcr/blob/30784b7c902911dd4a32db5a005268ca94deadaf/src/discordcr/rest.cr#L1299" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -3264,7 +3292,7 @@ of error checking, so if a request fails (with a status code that is not
       <br/>
       <div>
         
-          [<a href="https://github.com/meew0/discordcr/blob/da6a60a0260897d92754671e0cbea359a9d1feec/src/discordcr/rest.cr#L577" target="_blank">View source</a>]
+          [<a href="https://github.com/meew0/discordcr/blob/30784b7c902911dd4a32db5a005268ca94deadaf/src/discordcr/rest.cr#L577" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -3291,7 +3319,7 @@ while <code><a href="../Discord/REST.html#create_message%28channel_id%3AUInt64%7
       <br/>
       <div>
         
-          [<a href="https://github.com/meew0/discordcr/blob/da6a60a0260897d92754671e0cbea359a9d1feec/src/discordcr/rest.cr#L417" target="_blank">View source</a>]
+          [<a href="https://github.com/meew0/discordcr/blob/30784b7c902911dd4a32db5a005268ca94deadaf/src/discordcr/rest.cr#L417" target="_blank">View source</a>]
         
       </div>
     </div>
