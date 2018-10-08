@@ -111,8 +111,18 @@
       
     </li>
   
-  <li class=" " data-id="github.com/meew0/discordcr/Discord/Client" data-name="discord::client">
+  <li class="parent " data-id="github.com/meew0/discordcr/Discord/Client" data-name="discord::client">
       <a href="../Discord/Client.html">Client</a>
+      
+        <ul>
+  
+  <li class=" " data-id="github.com/meew0/discordcr/Discord/Client/CompressMode" data-name="discord::client::compressmode">
+      <a href="../Discord/Client/CompressMode.html">CompressMode</a>
+      
+    </li>
+  
+</ul>
+
       
     </li>
   
@@ -711,7 +721,7 @@ payload format used in the gateway and VWS.</p>
   <h2>Defined in:</h2>
   
     
-      <a href="https://github.com/meew0/discordcr/blob/d7adf4f21bb1314af78ef1b051f575e6ee8b9810/src/discordcr/websocket.cr#L7" target="_blank">
+      <a href="https://github.com/meew0/discordcr/blob/a1325222e43b907e74920bb3ca2299ba27fef871/src/discordcr/websocket.cr#L7" target="_blank">
         discordcr/websocket.cr
       </a>
     
@@ -720,13 +730,25 @@ payload format used in the gateway and VWS.</p>
 
 
 
+  
+    <h2>Constant Summary</h2>
+  
+  <dl>
+    
+      <dt class="entry-const" id="ZLIB_SUFFIX">
+        <strong>ZLIB_SUFFIX</strong> = <code><span class="t">Bytes</span>[<span class="n">0</span>, <span class="n">0</span>, <span class="n">255</span>, <span class="n">255</span>]</code>
+      </dt>
+      
+    
+  </dl>
+
 
 
   <h2>Constructors</h2>
   <ul class="list-summary">
     
       <li class="entry-summary">
-        <a href="#new%28host%3AString%2Cpath%3AString%2Cport%3AInt32%2Ctls%3ABool%2Clogger%3ALogger%29-class-method" class="signature"><strong>.new</strong>(host : String, path : String, port : Int32, tls : Bool, logger : Logger)</a>
+        <a href="#new%28host%3AString%2Cpath%3AString%2Cport%3AInt32%2Ctls%3ABool%2Clogger%3ALogger%2Czlib_buffer_size%3AInt32%3D%2810%2A1024%29%2A1024%29-class-method" class="signature"><strong>.new</strong>(host : String, path : String, port : Int32, tls : Bool, logger : Logger, zlib_buffer_size : Int32 = (<span class="n">10</span> <span class="o">*</span> <span class="n">1024</span>) <span class="o">*</span> <span class="n">1024</span>)</a>
         
       </li>
     
@@ -750,12 +772,17 @@ payload format used in the gateway and VWS.</p>
       </li>
     
       <li class="entry-summary">
-        <a href="#on_binary%28%26handler%3APacket-%3E%29-instance-method" class="signature"><strong>#on_binary</strong>(&handler : Packet -> )</a>
+        <a href="#on_close%28%26handler%3AString-%3E%29-instance-method" class="signature"><strong>#on_close</strong>(&handler : String -> )</a>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#on_close%28%26handler%3AString-%3E%29-instance-method" class="signature"><strong>#on_close</strong>(&handler : String -> )</a>
+        <a href="#on_compressed%28%26handler%3APacket-%3E%29-instance-method" class="signature"><strong>#on_compressed</strong>(&handler : Packet -> )</a>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#on_compressed_stream%28%26handler%3APacket-%3E%29-instance-method" class="signature"><strong>#on_compressed_stream</strong>(&handler : Packet -> )</a>
         
       </li>
     
@@ -812,18 +839,18 @@ payload format used in the gateway and VWS.</p>
 
   <h2>Constructor Detail</h2>
   
-    <div class="entry-detail" id="new(host:String,path:String,port:Int32,tls:Bool,logger:Logger)-class-method">
+    <div class="entry-detail" id="new(host:String,path:String,port:Int32,tls:Bool,logger:Logger,zlib_buffer_size:Int32=(10*1024)*1024)-class-method">
       <div class="signature">
         
-        def self.<strong>new</strong>(host : String, path : String, port : Int32, tls : Bool, logger : Logger)
+        def self.<strong>new</strong>(host : String, path : String, port : Int32, tls : Bool, logger : Logger, zlib_buffer_size : Int32 = (<span class="n">10</span> <span class="o">*</span> <span class="n">1024</span>) <span class="o">*</span> <span class="n">1024</span>)
 
-        <a class="method-permalink" href="#new%28host%3AString%2Cpath%3AString%2Cport%3AInt32%2Ctls%3ABool%2Clogger%3ALogger%29-class-method">#</a>
+        <a class="method-permalink" href="#new%28host%3AString%2Cpath%3AString%2Cport%3AInt32%2Ctls%3ABool%2Clogger%3ALogger%2Czlib_buffer_size%3AInt32%3D%2810%2A1024%29%2A1024%29-class-method">#</a>
       </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/meew0/discordcr/blob/d7adf4f21bb1314af78ef1b051f575e6ee8b9810/src/discordcr/websocket.cr#L54" target="_blank">View source</a>]
+          [<a href="https://github.com/meew0/discordcr/blob/a1325222e43b907e74920bb3ca2299ba27fef871/src/discordcr/websocket.cr#L59" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -846,7 +873,7 @@ payload format used in the gateway and VWS.</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/meew0/discordcr/blob/d7adf4f21bb1314af78ef1b051f575e6ee8b9810/src/discordcr/websocket.cr#L86" target="_blank">View source</a>]
+          [<a href="https://github.com/meew0/discordcr/blob/a1325222e43b907e74920bb3ca2299ba27fef871/src/discordcr/websocket.cr#L118" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -862,23 +889,7 @@ payload format used in the gateway and VWS.</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/meew0/discordcr/blob/d7adf4f21bb1314af78ef1b051f575e6ee8b9810/src/discordcr/websocket.cr#L86" target="_blank">View source</a>]
-        
-      </div>
-    </div>
-  
-    <div class="entry-detail" id="on_binary(&amp;handler:Packet-&gt;)-instance-method">
-      <div class="signature">
-        
-        def <strong>on_binary</strong>(&handler : Packet -> )
-
-        <a class="method-permalink" href="#on_binary%28%26handler%3APacket-%3E%29-instance-method">#</a>
-      </div>
-      
-      <br/>
-      <div>
-        
-          [<a href="https://github.com/meew0/discordcr/blob/d7adf4f21bb1314af78ef1b051f575e6ee8b9810/src/discordcr/websocket.cr#L63" target="_blank">View source</a>]
+          [<a href="https://github.com/meew0/discordcr/blob/a1325222e43b907e74920bb3ca2299ba27fef871/src/discordcr/websocket.cr#L118" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -894,7 +905,39 @@ payload format used in the gateway and VWS.</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/meew0/discordcr/blob/d7adf4f21bb1314af78ef1b051f575e6ee8b9810/src/discordcr/websocket.cr#L82" target="_blank">View source</a>]
+          [<a href="https://github.com/meew0/discordcr/blob/a1325222e43b907e74920bb3ca2299ba27fef871/src/discordcr/websocket.cr#L114" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="on_compressed(&amp;handler:Packet-&gt;)-instance-method">
+      <div class="signature">
+        
+        def <strong>on_compressed</strong>(&handler : Packet -> )
+
+        <a class="method-permalink" href="#on_compressed%28%26handler%3APacket-%3E%29-instance-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/meew0/discordcr/blob/a1325222e43b907e74920bb3ca2299ba27fef871/src/discordcr/websocket.cr#L75" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="on_compressed_stream(&amp;handler:Packet-&gt;)-instance-method">
+      <div class="signature">
+        
+        def <strong>on_compressed_stream</strong>(&handler : Packet -> )
+
+        <a class="method-permalink" href="#on_compressed_stream%28%26handler%3APacket-%3E%29-instance-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/meew0/discordcr/blob/a1325222e43b907e74920bb3ca2299ba27fef871/src/discordcr/websocket.cr#L86" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -910,7 +953,7 @@ payload format used in the gateway and VWS.</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/meew0/discordcr/blob/d7adf4f21bb1314af78ef1b051f575e6ee8b9810/src/discordcr/websocket.cr#L74" target="_blank">View source</a>]
+          [<a href="https://github.com/meew0/discordcr/blob/a1325222e43b907e74920bb3ca2299ba27fef871/src/discordcr/websocket.cr#L106" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -926,7 +969,7 @@ payload format used in the gateway and VWS.</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/meew0/discordcr/blob/d7adf4f21bb1314af78ef1b051f575e6ee8b9810/src/discordcr/websocket.cr#L86" target="_blank">View source</a>]
+          [<a href="https://github.com/meew0/discordcr/blob/a1325222e43b907e74920bb3ca2299ba27fef871/src/discordcr/websocket.cr#L118" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -942,7 +985,7 @@ payload format used in the gateway and VWS.</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/meew0/discordcr/blob/d7adf4f21bb1314af78ef1b051f575e6ee8b9810/src/discordcr/websocket.cr#L86" target="_blank">View source</a>]
+          [<a href="https://github.com/meew0/discordcr/blob/a1325222e43b907e74920bb3ca2299ba27fef871/src/discordcr/websocket.cr#L118" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -958,7 +1001,7 @@ payload format used in the gateway and VWS.</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/meew0/discordcr/blob/d7adf4f21bb1314af78ef1b051f575e6ee8b9810/src/discordcr/websocket.cr#L88" target="_blank">View source</a>]
+          [<a href="https://github.com/meew0/discordcr/blob/a1325222e43b907e74920bb3ca2299ba27fef871/src/discordcr/websocket.cr#L120" target="_blank">View source</a>]
         
       </div>
     </div>
