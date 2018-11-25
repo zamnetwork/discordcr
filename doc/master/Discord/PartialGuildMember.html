@@ -14,7 +14,7 @@
 </script>
 
   <meta id="repository-name" content="github.com/meew0/discordcr">
-  <title>Discord::VoiceState - github.com/meew0/discordcr</title>
+  <title>Discord::PartialGuildMember - github.com/meew0/discordcr</title>
 </head>
 <body>
 
@@ -536,7 +536,7 @@
       
     </li>
   
-  <li class=" " data-id="github.com/meew0/discordcr/Discord/PartialGuildMember" data-name="discord::partialguildmember">
+  <li class=" current" data-id="github.com/meew0/discordcr/Discord/PartialGuildMember" data-name="discord::partialguildmember">
       <a href="../Discord/PartialGuildMember.html">PartialGuildMember</a>
       
     </li>
@@ -656,7 +656,7 @@
       
     </li>
   
-  <li class=" current" data-id="github.com/meew0/discordcr/Discord/VoiceState" data-name="discord::voicestate">
+  <li class=" " data-id="github.com/meew0/discordcr/Discord/VoiceState" data-name="discord::voicestate">
       <a href="../Discord/VoiceState.html">VoiceState</a>
       
     </li>
@@ -695,12 +695,12 @@
 <div class="main-content">
 <h1 class="type-name">
 
-  <span class="kind">struct</span> Discord::VoiceState
+  <span class="kind">struct</span> Discord::PartialGuildMember
 
 </h1>
 
 
-  <ul class="superclass-hierarchy"><li class="superclass"><a href="../Discord/VoiceState.html">Discord::VoiceState</a></li><li class="superclass">Struct</li><li class="superclass">Value</li><li class="superclass">Object</li></ul>
+  <ul class="superclass-hierarchy"><li class="superclass"><a href="../Discord/PartialGuildMember.html">Discord::PartialGuildMember</a></li><li class="superclass">Struct</li><li class="superclass">Value</li><li class="superclass">Object</li></ul>
 
 
 
@@ -721,8 +721,8 @@
   <h2>Defined in:</h2>
   
     
-      <a href="https://github.com/meew0/discordcr/blob/05b19d3cf4754172bddb8c5b8cd201bf7077a31a/src/discordcr/mappings/voice.cr#L4" target="_blank">
-        discordcr/mappings/voice.cr
+      <a href="https://github.com/meew0/discordcr/blob/05b19d3cf4754172bddb8c5b8cd201bf7077a31a/src/discordcr/mappings/guild.cr#L142" target="_blank">
+        discordcr/mappings/guild.cr
       </a>
     
     <br/>
@@ -736,7 +736,7 @@
   <ul class="list-summary">
     
       <li class="entry-summary">
-        <a href="#new%28__temp_328%3AJSON%3A%3APullParser%29-class-method" class="signature"><strong>.new</strong>(__temp_328 : JSON::PullParser)</a>
+        <a href="#new%28__temp_438%3AJSON%3A%3APullParser%29-class-method" class="signature"><strong>.new</strong>(__temp_438 : JSON::PullParser)</a>
         
       </li>
     
@@ -750,16 +750,6 @@
   <ul class="list-summary">
     
       <li class="entry-summary">
-        <a href="#channel_id%3A%3A%3AUnion%28Snowflake%2CNil%29-instance-method" class="signature"><strong>#channel_id</strong> : ::Union(Snowflake, Nil)</a>
-        
-      </li>
-    
-      <li class="entry-summary">
-        <a href="#channel_id%3D%28_channel_id%3A%3A%3AUnion%28Snowflake%2CNil%29%29-instance-method" class="signature"><strong>#channel_id=</strong>(_channel_id : ::Union(Snowflake, Nil))</a>
-        
-      </li>
-    
-      <li class="entry-summary">
         <a href="#deaf%3ABool-instance-method" class="signature"><strong>#deaf</strong> : Bool</a>
         
       </li>
@@ -770,22 +760,12 @@
       </li>
     
       <li class="entry-summary">
-        <a href="#guild_id%3A%3A%3AUnion%28Snowflake%2CNil%29-instance-method" class="signature"><strong>#guild_id</strong> : ::Union(Snowflake, Nil)</a>
+        <a href="#joined_at%3ATime-instance-method" class="signature"><strong>#joined_at</strong> : Time</a>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#guild_id%3D%28_guild_id%3A%3A%3AUnion%28Snowflake%2CNil%29%29-instance-method" class="signature"><strong>#guild_id=</strong>(_guild_id : ::Union(Snowflake, Nil))</a>
-        
-      </li>
-    
-      <li class="entry-summary">
-        <a href="#member%3A%3A%3AUnion%28GuildMember%2CNil%29-instance-method" class="signature"><strong>#member</strong> : ::Union(GuildMember, Nil)</a>
-        
-      </li>
-    
-      <li class="entry-summary">
-        <a href="#member%3D%28_member%3A%3A%3AUnion%28GuildMember%2CNil%29%29-instance-method" class="signature"><strong>#member=</strong>(_member : ::Union(GuildMember, Nil))</a>
+        <a href="#joined_at%3D%28_joined_at%3ATime%29-instance-method" class="signature"><strong>#joined_at=</strong>(_joined_at : Time)</a>
         
       </li>
     
@@ -800,57 +780,27 @@
       </li>
     
       <li class="entry-summary">
-        <a href="#self_deaf%3ABool-instance-method" class="signature"><strong>#self_deaf</strong> : Bool</a>
+        <a href="#nick%3A%3A%3AUnion%28String%2CNil%29-instance-method" class="signature"><strong>#nick</strong> : ::Union(String, Nil)</a>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#self_deaf%3D%28_self_deaf%3ABool%29-instance-method" class="signature"><strong>#self_deaf=</strong>(_self_deaf : Bool)</a>
+        <a href="#nick%3D%28_nick%3A%3A%3AUnion%28String%2CNil%29%29-instance-method" class="signature"><strong>#nick=</strong>(_nick : ::Union(String, Nil))</a>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#self_mute%3ABool-instance-method" class="signature"><strong>#self_mute</strong> : Bool</a>
+        <a href="#roles%3AArray%28Snowflake%29-instance-method" class="signature"><strong>#roles</strong> : Array(Snowflake)</a>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#self_mute%3D%28_self_mute%3ABool%29-instance-method" class="signature"><strong>#self_mute=</strong>(_self_mute : Bool)</a>
-        
-      </li>
-    
-      <li class="entry-summary">
-        <a href="#session_id%3AString-instance-method" class="signature"><strong>#session_id</strong> : String</a>
-        
-      </li>
-    
-      <li class="entry-summary">
-        <a href="#session_id%3D%28_session_id%3AString%29-instance-method" class="signature"><strong>#session_id=</strong>(_session_id : String)</a>
-        
-      </li>
-    
-      <li class="entry-summary">
-        <a href="#suppress%3ABool-instance-method" class="signature"><strong>#suppress</strong> : Bool</a>
-        
-      </li>
-    
-      <li class="entry-summary">
-        <a href="#suppress%3D%28_suppress%3ABool%29-instance-method" class="signature"><strong>#suppress=</strong>(_suppress : Bool)</a>
+        <a href="#roles%3D%28_roles%3AArray%28Snowflake%29%29-instance-method" class="signature"><strong>#roles=</strong>(_roles : Array(Snowflake))</a>
         
       </li>
     
       <li class="entry-summary">
         <a href="#to_json%28json%3AJSON%3A%3ABuilder%29-instance-method" class="signature"><strong>#to_json</strong>(json : JSON::Builder)</a>
-        
-      </li>
-    
-      <li class="entry-summary">
-        <a href="#user_id%3ASnowflake-instance-method" class="signature"><strong>#user_id</strong> : Snowflake</a>
-        
-      </li>
-    
-      <li class="entry-summary">
-        <a href="#user_id%3D%28_user_id%3ASnowflake%29-instance-method" class="signature"><strong>#user_id=</strong>(_user_id : Snowflake)</a>
         
       </li>
     
@@ -897,12 +847,12 @@
 
   <h2>Constructor Detail</h2>
   
-    <div class="entry-detail" id="new(__temp_328:JSON::PullParser)-class-method">
+    <div class="entry-detail" id="new(__temp_438:JSON::PullParser)-class-method">
       <div class="signature">
         
-        def self.<strong>new</strong>(__temp_328 : JSON::PullParser)
+        def self.<strong>new</strong>(__temp_438 : JSON::PullParser)
 
-        <a class="method-permalink" href="#new%28__temp_328%3AJSON%3A%3APullParser%29-class-method">#</a>
+        <a class="method-permalink" href="#new%28__temp_438%3AJSON%3A%3APullParser%29-class-method">#</a>
       </div>
       
       <br/>
@@ -917,34 +867,6 @@
 
 
   <h2>Instance Method Detail</h2>
-  
-    <div class="entry-detail" id="channel_id:::Union(Snowflake,Nil)-instance-method">
-      <div class="signature">
-        
-        def <strong>channel_id</strong> : ::Union(<a href="../Discord/Snowflake.html">Snowflake</a>, Nil)
-
-        <a class="method-permalink" href="#channel_id%3A%3A%3AUnion%28Snowflake%2CNil%29-instance-method">#</a>
-      </div>
-      
-      <br/>
-      <div>
-        
-      </div>
-    </div>
-  
-    <div class="entry-detail" id="channel_id=(_channel_id:::Union(Snowflake,Nil))-instance-method">
-      <div class="signature">
-        
-        def <strong>channel_id=</strong>(_channel_id : ::Union(<a href="../Discord/Snowflake.html">Snowflake</a>, Nil))
-
-        <a class="method-permalink" href="#channel_id%3D%28_channel_id%3A%3A%3AUnion%28Snowflake%2CNil%29%29-instance-method">#</a>
-      </div>
-      
-      <br/>
-      <div>
-        
-      </div>
-    </div>
   
     <div class="entry-detail" id="deaf:Bool-instance-method">
       <div class="signature">
@@ -974,12 +896,12 @@
       </div>
     </div>
   
-    <div class="entry-detail" id="guild_id:::Union(Snowflake,Nil)-instance-method">
+    <div class="entry-detail" id="joined_at:Time-instance-method">
       <div class="signature">
         
-        def <strong>guild_id</strong> : ::Union(<a href="../Discord/Snowflake.html">Snowflake</a>, Nil)
+        def <strong>joined_at</strong> : Time
 
-        <a class="method-permalink" href="#guild_id%3A%3A%3AUnion%28Snowflake%2CNil%29-instance-method">#</a>
+        <a class="method-permalink" href="#joined_at%3ATime-instance-method">#</a>
       </div>
       
       <br/>
@@ -988,40 +910,12 @@
       </div>
     </div>
   
-    <div class="entry-detail" id="guild_id=(_guild_id:::Union(Snowflake,Nil))-instance-method">
+    <div class="entry-detail" id="joined_at=(_joined_at:Time)-instance-method">
       <div class="signature">
         
-        def <strong>guild_id=</strong>(_guild_id : ::Union(<a href="../Discord/Snowflake.html">Snowflake</a>, Nil))
+        def <strong>joined_at=</strong>(_joined_at : Time)
 
-        <a class="method-permalink" href="#guild_id%3D%28_guild_id%3A%3A%3AUnion%28Snowflake%2CNil%29%29-instance-method">#</a>
-      </div>
-      
-      <br/>
-      <div>
-        
-      </div>
-    </div>
-  
-    <div class="entry-detail" id="member:::Union(GuildMember,Nil)-instance-method">
-      <div class="signature">
-        
-        def <strong>member</strong> : ::Union(<a href="../Discord/GuildMember.html">GuildMember</a>, Nil)
-
-        <a class="method-permalink" href="#member%3A%3A%3AUnion%28GuildMember%2CNil%29-instance-method">#</a>
-      </div>
-      
-      <br/>
-      <div>
-        
-      </div>
-    </div>
-  
-    <div class="entry-detail" id="member=(_member:::Union(GuildMember,Nil))-instance-method">
-      <div class="signature">
-        
-        def <strong>member=</strong>(_member : ::Union(<a href="../Discord/GuildMember.html">GuildMember</a>, Nil))
-
-        <a class="method-permalink" href="#member%3D%28_member%3A%3A%3AUnion%28GuildMember%2CNil%29%29-instance-method">#</a>
+        <a class="method-permalink" href="#joined_at%3D%28_joined_at%3ATime%29-instance-method">#</a>
       </div>
       
       <br/>
@@ -1058,12 +952,12 @@
       </div>
     </div>
   
-    <div class="entry-detail" id="self_deaf:Bool-instance-method">
+    <div class="entry-detail" id="nick:::Union(String,Nil)-instance-method">
       <div class="signature">
         
-        def <strong>self_deaf</strong> : Bool
+        def <strong>nick</strong> : ::Union(String, Nil)
 
-        <a class="method-permalink" href="#self_deaf%3ABool-instance-method">#</a>
+        <a class="method-permalink" href="#nick%3A%3A%3AUnion%28String%2CNil%29-instance-method">#</a>
       </div>
       
       <br/>
@@ -1072,12 +966,12 @@
       </div>
     </div>
   
-    <div class="entry-detail" id="self_deaf=(_self_deaf:Bool)-instance-method">
+    <div class="entry-detail" id="nick=(_nick:::Union(String,Nil))-instance-method">
       <div class="signature">
         
-        def <strong>self_deaf=</strong>(_self_deaf : Bool)
+        def <strong>nick=</strong>(_nick : ::Union(String, Nil))
 
-        <a class="method-permalink" href="#self_deaf%3D%28_self_deaf%3ABool%29-instance-method">#</a>
+        <a class="method-permalink" href="#nick%3D%28_nick%3A%3A%3AUnion%28String%2CNil%29%29-instance-method">#</a>
       </div>
       
       <br/>
@@ -1086,12 +980,12 @@
       </div>
     </div>
   
-    <div class="entry-detail" id="self_mute:Bool-instance-method">
+    <div class="entry-detail" id="roles:Array(Snowflake)-instance-method">
       <div class="signature">
         
-        def <strong>self_mute</strong> : Bool
+        def <strong>roles</strong> : Array(<a href="../Discord/Snowflake.html">Snowflake</a>)
 
-        <a class="method-permalink" href="#self_mute%3ABool-instance-method">#</a>
+        <a class="method-permalink" href="#roles%3AArray%28Snowflake%29-instance-method">#</a>
       </div>
       
       <br/>
@@ -1100,68 +994,12 @@
       </div>
     </div>
   
-    <div class="entry-detail" id="self_mute=(_self_mute:Bool)-instance-method">
+    <div class="entry-detail" id="roles=(_roles:Array(Snowflake))-instance-method">
       <div class="signature">
         
-        def <strong>self_mute=</strong>(_self_mute : Bool)
+        def <strong>roles=</strong>(_roles : Array(<a href="../Discord/Snowflake.html">Snowflake</a>))
 
-        <a class="method-permalink" href="#self_mute%3D%28_self_mute%3ABool%29-instance-method">#</a>
-      </div>
-      
-      <br/>
-      <div>
-        
-      </div>
-    </div>
-  
-    <div class="entry-detail" id="session_id:String-instance-method">
-      <div class="signature">
-        
-        def <strong>session_id</strong> : String
-
-        <a class="method-permalink" href="#session_id%3AString-instance-method">#</a>
-      </div>
-      
-      <br/>
-      <div>
-        
-      </div>
-    </div>
-  
-    <div class="entry-detail" id="session_id=(_session_id:String)-instance-method">
-      <div class="signature">
-        
-        def <strong>session_id=</strong>(_session_id : String)
-
-        <a class="method-permalink" href="#session_id%3D%28_session_id%3AString%29-instance-method">#</a>
-      </div>
-      
-      <br/>
-      <div>
-        
-      </div>
-    </div>
-  
-    <div class="entry-detail" id="suppress:Bool-instance-method">
-      <div class="signature">
-        
-        def <strong>suppress</strong> : Bool
-
-        <a class="method-permalink" href="#suppress%3ABool-instance-method">#</a>
-      </div>
-      
-      <br/>
-      <div>
-        
-      </div>
-    </div>
-  
-    <div class="entry-detail" id="suppress=(_suppress:Bool)-instance-method">
-      <div class="signature">
-        
-        def <strong>suppress=</strong>(_suppress : Bool)
-
-        <a class="method-permalink" href="#suppress%3D%28_suppress%3ABool%29-instance-method">#</a>
+        <a class="method-permalink" href="#roles%3D%28_roles%3AArray%28Snowflake%29%29-instance-method">#</a>
       </div>
       
       <br/>
@@ -1176,34 +1014,6 @@
         def <strong>to_json</strong>(json : JSON::Builder)
 
         <a class="method-permalink" href="#to_json%28json%3AJSON%3A%3ABuilder%29-instance-method">#</a>
-      </div>
-      
-      <br/>
-      <div>
-        
-      </div>
-    </div>
-  
-    <div class="entry-detail" id="user_id:Snowflake-instance-method">
-      <div class="signature">
-        
-        def <strong>user_id</strong> : <a href="../Discord/Snowflake.html">Snowflake</a>
-
-        <a class="method-permalink" href="#user_id%3ASnowflake-instance-method">#</a>
-      </div>
-      
-      <br/>
-      <div>
-        
-      </div>
-    </div>
-  
-    <div class="entry-detail" id="user_id=(_user_id:Snowflake)-instance-method">
-      <div class="signature">
-        
-        def <strong>user_id=</strong>(_user_id : <a href="../Discord/Snowflake.html">Snowflake</a>)
-
-        <a class="method-permalink" href="#user_id%3D%28_user_id%3ASnowflake%29-instance-method">#</a>
       </div>
       
       <br/>
