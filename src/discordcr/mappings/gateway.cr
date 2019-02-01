@@ -312,7 +312,6 @@ module Discord
         tts: Bool?,
         mention_everyone: Bool?,
         mentions: Array(User)?,
-        mention_roles: Array(Snowflake)?,
         attachments: Array(Attachment)?,
         embeds: Array(Embed)?,
         pinned: Bool?
