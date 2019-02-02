@@ -19,7 +19,7 @@ module Discord
 
     # Creates a `Snowflake` embedded with the given timestamp
     def self.new(time : Time)
-      ms = time.epoch_ms.to_u64
+      ms = time.to_unix_ms.to_u64
       value = (ms - DISCORD_EPOCH) << 22
       new(value)
     end
@@ -39,7 +39,7 @@ module Discord
     # The time at which this snowflake was created
     def creation_time
       ms = (value >> 22) + DISCORD_EPOCH
-      Time.epoch_ms(ms)
+      Time.unix_ms(ms)
     end
 
     def to_json(builder : JSON::Builder)
@@ -53,5 +53,13 @@ module Discord
     def <=>(int : UInt64)
       value <=> int
     end
+  end
+end
+
+struct UInt64
+  include Comparable(Discord::Snowflake)
+
+  def <=>(snowflake : Discord::Snowflake)
+    self <=> snowflake.value
   end
 end

@@ -4,7 +4,7 @@ describe Discord::Snowflake do
   describe Discord::DISCORD_EPOCH do
     it "is 2015-01-01" do
       expected = Time.new(2015, 1, 1, location: Time::Location::UTC)
-      Discord::DISCORD_EPOCH.should eq expected.epoch_ms
+      Discord::DISCORD_EPOCH.should eq expected.to_unix_ms
     end
   end
 
@@ -45,5 +45,13 @@ describe Discord::Snowflake do
     snowflake = Discord::Snowflake.new(1_u64)
     (snowflake == 1_u64).should be_true
     (snowflake == 0_u64).should be_false
+  end
+end
+
+describe UInt64 do
+  it "compares to snowflake" do
+    snowflake = Discord::Snowflake.new(1_u64)
+    (1_u64 == snowflake).should be_true
+    (0_u64 == snowflake).should be_false
   end
 end

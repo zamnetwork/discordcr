@@ -18,7 +18,9 @@ module Discord
       content: String,
       id: Snowflake,
       channel_id: Snowflake,
+      guild_id: Snowflake?,
       author: User,
+      member: PartialGuildMember?,
       timestamp: {type: Time, converter: TimestampConverter},
       tts: Bool,
       mention_everyone: Bool,
@@ -47,10 +49,11 @@ module Discord
   end
 
   enum ChannelType : UInt8
-    GuildText = 0
-    DM        = 1
-    Voice     = 2
-    GroupDM   = 3
+    GuildText     = 0
+    DM            = 1
+    GuildVoice    = 2
+    GroupDM       = 3
+    Other = 4
   end
 
   struct Channel
@@ -78,8 +81,14 @@ module Discord
       owner_id: Snowflake?,
       application_id: Snowflake?,
       position: Int32?,
-      parent_id: Snowflake?
+      parent_id: Snowflake?,
+      rate_limit_per_user: Int32?
     )
+
+    # Produces a string to mention this channel in a message
+    def mention
+      "<##{id}>"
+    end
   end
 
   struct PrivateChannel
