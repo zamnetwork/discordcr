@@ -50,24 +50,6 @@ module Discord
         emoji
       end
     {% end %}
-
-    # Produces a CDN URL to this guild's icon in the given `format` and `size`,
-    # or `nil` if no icon is set.
-    def icon_url(format : CDN::GuildIconFormat = CDN::GuildIconFormat::WebP,
-                 size : Int32 = 128)
-      if icon = @icon
-        CDN.guild_icon(id, icon, format, size)
-      end
-    end
-
-    # Produces a CDN URL to this guild's splash in the given `format` and `size`,
-    # or `nil` if no splash is set.
-    def splash_url(format : CDN::GuildSplashFormat = CDN::GuildSplashFormat::WebP,
-                   size : Int32 = 128)
-      if splash = @splash
-        CDN.guild_splash(id, splash, format, size)
-      end
-    end
   end
 
   struct UnavailableGuild
@@ -85,16 +67,6 @@ module Discord
   end
 
   struct GuildMember
-    # :nodoc:
-    def initialize(user : User, partial_member : PartialGuildMember)
-      @user = user
-      @roles = partial_member.roles
-      @nick = partial_member.nick
-      @joined_at = partial_member.joined_at
-      @mute = partial_member.mute
-      @deaf = partial_member.deaf
-    end
-
     # :nodoc:
     def initialize(payload : Gateway::GuildMemberAddPayload | GuildMember, roles : Array(Snowflake), nick : String?)
       initialize(payload)
@@ -127,25 +99,6 @@ module Discord
       joined_at: {type: Time?, converter: MaybeTimestampConverter},
       deaf: Bool?,
       mute: Bool?
-    )
-
-    # Produces a string to mention this member in a message
-    def mention
-      if nick
-        "<@!#{user.id}>"
-      else
-        "<@#{user.id}>"
-      end
-    end
-  end
-
-  struct PartialGuildMember
-    JSON.mapping(
-      nick: String?,
-      roles: Array(Snowflake),
-      joined_at: {type: Time, converter: TimestampConverter},
-      deaf: Bool,
-      mute: Bool
     )
   end
 
@@ -187,30 +140,6 @@ module Discord
       managed: Bool,
       animated: Bool
     )
-
-    # Produces a CDN URL to this emoji's image in the given `size`. Will return
-    # a PNG, or GIF if the emoji is animated.
-    def image_url(size : Int32 = 128)
-      if animated
-        image_url(:gif, size)
-      else
-        image_url(:png, size)
-      end
-    end
-
-    # Produces a CDN URL to this emoji's image in the given `format` and `size`
-    def image_url(format : CDN::CustomEmojiFormat, size : Int32 = 128)
-      CDN.custom_emoji(id, format, size)
-    end
-
-    # Produces a string to mention this emoji in a message
-    def mention
-      if animated
-        "<a:#{name}:#{id}>"
-      else
-        "<:#{name}:#{id}>"
-      end
-    end
   end
 
   struct Role
@@ -230,11 +159,6 @@ module Discord
         colour
       end
     {% end %}
-
-    # Produces a string to mention this role in a message
-    def mention
-      "<@&#{id}>"
-    end
   end
 
   struct GuildBan

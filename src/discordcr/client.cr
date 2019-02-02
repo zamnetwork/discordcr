@@ -5,12 +5,6 @@ require "./rest"
 require "./cache"
 
 module Discord
-  # Calculates the shard ID that would receive the gateway events from
-  # a guild with the given `guild_id`, based on the total number of shards.
-  def self.shard_id(guild_id : UInt64 | Snowflake, total_shards : Int32)
-    (guild_id.to_u64 >> 22) % total_shards
-  end
-
   # The basic client class that is used to connect to Discord, send REST
   # requests, or send or receive gateway messages. It is required for doing any
   # sort of interaction with Discord.
@@ -49,18 +43,6 @@ module Discord
       referring_domain: ""
     )
 
-    # Available gateway compression modes that can be requested
-    enum CompressMode
-      # Discord won't send any compressed data
-      None
-
-      # Large payloads (typically `GUILD_CREATE`) will be received compressed
-      Large
-
-      # All data will be received in a compressed stream
-      Stream
-    end
-
     # Creates a new bot with the given *token* and optionally the *client_id*.
     # Both of these things can be found on a bot's application page; the token
     # will need to be revealed using the "click to reveal" thing on the token
@@ -78,23 +60,18 @@ module Discord
     # uses; the maximum value is 250. To get a list of offline members as well,
     # the `#request_guild_members` method can be used.
     #
-    # `compress` can be set to any value of `CompressMode`. `CompressMode::Stream`
-    # is the default and will save the most bandwidth. You can optionally change
-    # this to `CompressMode::Large` to request that only large payloads be received
-    # compressed. Compression can be disabled with `CompressMode::None`, but this
-    # is not recommended for production bots.
-    #
-    # When using `Compress::Stream` compression, the buffer size can be configured
-    # by passing `zlib_buffer_size`.
+    # If *compress* is true, packets will be sent in a compressed manner.
+    # discordcr doesn't currently handle packet decompression, so until that is
+    # implemented, setting this to true will cause the client to fail to parse
+    # anything.
     #
     # The *properties* define what values are sent to Discord as analytics
     # properties. It's not recommended to change these from the default values,
     # but if you desire to do so, you can.
-    def initialize(@token : String, @client_id : UInt64 | Snowflake | Nil = nil,
+    def initialize(@token : String, @client_id : UInt64? = nil,
                    @shard : Gateway::ShardKey? = nil,
                    @large_threshold : Int32 = 100,
-                   @compress : CompressMode = CompressMode::Stream,
-                   @zlib_buffer_size : Int32 = 10 * 1024 * 1024,
+                   @compress : Bool = false,
                    @properties : Gateway::IdentifyProperties = DEFAULT_PROPERTIES,
                    @logger = Logger.new(STDOUT))
       @logger.progname = "discordcr"
@@ -171,31 +148,15 @@ module Discord
 
     private def initialize_websocket : Discord::WebSocket
       url = URI.parse(get_gateway.url)
-
-      if @compress.stream?
-        path = "#{url.path}/?encoding=json&v=6&compress=zlib-stream"
-      else
-        path = "#{url.path}/?encoding=json&v=6"
-      end
-
       websocket = Discord::WebSocket.new(
         host: url.host.not_nil!,
-        path: path,
+        path: "#{url.path}/?encoding=json&v=6",
         port: 443,
         tls: true,
-        logger: @logger,
-        zlib_buffer_size: @zlib_buffer_size
+        logger: @logger
       )
 
       websocket.on_message(&->on_message(Discord::WebSocket::Packet))
-
-      case @compress
-      when .large?
-        websocket.on_compressed(&->on_message(Discord::WebSocket::Packet))
-      when .stream?
-        websocket.on_compressed_stream(&->on_message(Discord::WebSocket::Packet))
-      end
-
       websocket.on_close(&->on_close(String))
 
       websocket
@@ -326,8 +287,7 @@ module Discord
         shard_tuple = shard.values
       end
 
-      compress = @compress.large?
-      packet = Gateway::IdentifyPacket.new(@token, @properties, compress, @large_threshold, shard_tuple)
+      packet = Gateway::IdentifyPacket.new(@token, @properties, @compress, @large_threshold, shard_tuple)
       websocket.send(packet.to_json)
     end
 
@@ -453,7 +413,7 @@ module Discord
         recipients = payload.recipients
         if guild_id
           @cache.try &.add_guild_channel(guild_id, payload.id)
-        elsif payload.type.dm? && recipients
+        elsif payload.type == 1 && recipients
           @cache.try &.cache_dm_channel(payload.id, recipients[0].id)
         end
 
@@ -576,15 +536,6 @@ module Discord
         call_event guild_role_delete, payload
       when "MESSAGE_CREATE"
         payload = Message.from_json(data)
-
-        cache payload.author
-        guild_id = payload.guild_id
-        partial_member = payload.member
-        if guild_id && partial_member
-          member = GuildMember.new(payload.author, partial_member)
-          @cache.try &.cache(member, guild_id)
-        end
-
         call_event message_create, payload
       when "MESSAGE_REACTION_ADD"
         payload = Gateway::MessageReactionPayload.from_json(data)
@@ -615,26 +566,12 @@ module Discord
         call_event presence_update, payload
       when "TYPING_START"
         payload = Gateway::TypingStartPayload.from_json(data)
-
-        guild_id = payload.guild_id
-        member = payload.member
-        if guild_id && member
-          @cache.try &.cache(member, guild_id)
-        end
-
         call_event typing_start, payload
       when "USER_UPDATE"
         payload = User.from_json(data)
         call_event user_update, payload
       when "VOICE_STATE_UPDATE"
         payload = VoiceState.from_json(data)
-
-        guild_id = payload.guild_id
-        member = payload.member
-        if guild_id && member
-          @cache.try &.cache(member, guild_id)
-        end
-
         call_event voice_state_update, payload
       when "VOICE_SERVER_UPDATE"
         payload = Gateway::VoiceServerUpdatePayload.from_json(data)

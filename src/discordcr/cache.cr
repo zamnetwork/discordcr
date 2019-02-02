@@ -129,7 +129,7 @@ module Discord
       @dm_channels.fetch(recipient_id) do
         channel = @client.create_dm(recipient_id)
         cache(Channel.new(channel))
-        @dm_channels[recipient_id] = channel.id.to_u64
+        channel.id
       end
     end
 

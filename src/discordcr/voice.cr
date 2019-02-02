@@ -35,7 +35,6 @@ module Discord
     @token : String
 
     @heartbeat_interval : Int32?
-    @send_heartbeats = false
 
     # Creates a new voice client. The *payload* should be a payload received
     # from Discord as part of a VOICE_SERVER_UPDATE dispatch, received after
@@ -71,16 +70,12 @@ module Discord
 
     # Initiates the connection process and blocks forever afterwards.
     def run
-      @send_heartbeats = true
       spawn { heartbeat_loop }
       @websocket.run
     end
 
     # Closes the VWS connection, in effect disconnecting from voice.
-    def close
-      @send_heartbeats = false
-      @websocket.close
-    end
+    delegate close, to: @websocket
 
     # Sets the handler that should be run once the voice client has connected
     # successfully.
@@ -107,7 +102,7 @@ module Discord
     end
 
     private def heartbeat_loop
-      while @send_heartbeats
+      loop do
         if @heartbeat_interval
           @websocket.send(HEARTBEAT_JSON)
           sleep @heartbeat_interval.not_nil!.milliseconds
@@ -139,7 +134,7 @@ module Discord
         return nil
       end
 
-      code = IO::ByteFormat::BigEndian.decode(UInt16, message.to_slice[0, 2])
+      code = IO::Memory.new(message.byte_slice(0, 2)).read_bytes(UInt16, IO::ByteFormat::BigEndian)
       reason = message.byte_slice(2, message.bytesize - 2)
       @logger.warn("VWS closed with code #{code}, reason: #{reason}")
       nil
@@ -189,7 +184,6 @@ module Discord
   class VoiceUDP
     @secret_key : Bytes?
     property secret_key
-    getter socket
 
     def initialize
       @socket = UDPSocket.new
@@ -203,9 +197,12 @@ module Discord
     # Sends a discovery packet to Discord, telling them that we want to know our
     # IP so we can select the protocol on the VWS
     def send_discovery
-      data = Bytes.new(70)
-      IO::ByteFormat::BigEndian.encode(@ssrc.not_nil!, data[0, 4])
-      @socket.write(data)
+      io = IO::Memory.new(70)
+
+      io.write_bytes(@ssrc.not_nil!, IO::ByteFormat::BigEndian)
+      io.write(Bytes.new(70 - sizeof(UInt32), 0_u8))
+
+      @socket.write(io.to_slice)
     end
 
     # Awaits a response to the discovery request and returns our local IP and
@@ -213,11 +210,11 @@ module Discord
     def receive_discovery_reply : {String, UInt16}
       buf = Bytes.new(70)
       @socket.receive(buf)
+      io = IO::Memory.new(buf)
 
-      # The first four bytes are just the SSRC again, we don't care about that
-      data = buf[4, buf.size - 4]
-      ip = String.new(data[0, 64]).delete("\0")
-      port = IO::ByteFormat::BigEndian.decode(UInt16, data[64, 2])
+      io.seek(4) # The first four bytes are just the SSRC again, we don't care about that
+      ip = io.read_string(64).delete("\0")
+      port = io.read_bytes(UInt16, IO::ByteFormat::BigEndian)
 
       {ip, port}
     end
@@ -236,19 +233,19 @@ module Discord
       @socket.write(new_buf)
     end
 
-    # :nodoc:
-    def create_header(sequence : UInt16, time : UInt32) : Bytes
-      bytes = Bytes.new(12)
+    private def create_header(sequence : UInt16, time : UInt32) : Bytes
+      io = IO::Memory.new(12)
 
       # Write the magic bytes required by Discord
-      bytes[0] = 0x80_u8
-      bytes[1] = 0x78_u8
+      io.write_byte(0x80_u8)
+      io.write_byte(0x78_u8)
 
-      IO::ByteFormat::BigEndian.encode(sequence, bytes[2, 2])
-      IO::ByteFormat::BigEndian.encode(time, bytes[4, 4])
-      IO::ByteFormat::BigEndian.encode(@ssrc.not_nil!, bytes[8, 4])
+      # Write the actual information in the header
+      io.write_bytes(sequence, IO::ByteFormat::BigEndian)
+      io.write_bytes(time, IO::ByteFormat::BigEndian)
+      io.write_bytes(@ssrc.not_nil!, IO::ByteFormat::BigEndian)
 
-      bytes
+      io.to_slice
     end
 
     private def encrypt_audio(header : Bytes, buf : Bytes) : Bytes
@@ -284,7 +281,9 @@ module Discord
   # one frame every 20 ms, and if the processing and sending takes a certain
   # amount of time, then noticeable choppiness can be heard.
   def self.timed_run(total_time : Time::Span)
-    delta = Time.measure { yield }
+    t1 = Time.now
+    yield
+    delta = Time.now - t1
 
     sleep_time = {total_time - delta, Time::Span.zero}.max
     sleep sleep_time

@@ -6,7 +6,6 @@ module Discord
       guild_id: Snowflake?,
       channel_id: Snowflake?,
       user_id: Snowflake,
-      member: GuildMember?,
       session_id: String,
       deaf: Bool,
       mute: Bool,

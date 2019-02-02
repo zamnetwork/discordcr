@@ -53,7 +53,7 @@ module Discord
             # the reset header which represents when the rate limit will get
             # reset.
             origin_time = HTTP.parse_time(response.headers["Date"]).not_nil!
-            reset_time = Time.unix(response.headers["X-RateLimit-Reset"].to_u64) # gotta prevent that Y2k38
+            reset_time = Time.epoch(response.headers["X-RateLimit-Reset"].to_u64) # gotta prevent that Y2k38
             retry_after = reset_time - origin_time
           end
 
@@ -186,14 +186,13 @@ module Discord
     # [API docs for this method](https://discordapp.com/developers/docs/resources/channel#modify-channel)
     def modify_channel(channel_id : UInt64 | Snowflake, name : String? = nil, position : UInt32? = nil,
                        topic : String? = nil, bitrate : UInt32? = nil, user_limit : UInt32? = nil,
-                       nsfw : Bool? = nil, rate_limit_per_user : Int32? = nil)
+                       nsfw : Bool? = nil)
       json = encode_tuple(
         name: name,
         position: position,
         topic: topic,
         bitrate: bitrate,
-        user_limit: user_limit,
-        rate_limit_per_user: rate_limit_per_user
+        user_limit: user_limit
       )
 
       response = request(
@@ -226,7 +225,7 @@ module Discord
     # Message History" permission.
     #
     # [API docs for this method](https://discordapp.com/developers/docs/resources/channel#get-channel-messages)
-    def get_channel_messages(channel_id : UInt64 | Snowflake, limit : Int32 = 50, before : UInt64 | Snowflake | Nil = nil, after : UInt64 | Snowflake | Nil = nil, around : UInt64 | Snowflake | Nil = nil)
+    def get_channel_messages(channel_id : UInt64 | Snowflake, limit : UInt8 = 50, before : UInt64 | Snowflake | Nil = nil, after : UInt64 | Snowflake | Nil = nil, around : UInt64 | Snowflake | Nil = nil)
       path = "/channels/#{channel_id}/messages?limit=#{limit}"
       path += "&before=#{before}" if before
       path += "&after=#{after}" if after
@@ -242,27 +241,6 @@ module Discord
       )
 
       Array(Message).from_json(response.body)
-    end
-
-    # Returns a `Paginator` over a channel's message history. Requires the
-    # "Read Message History" permission. See `get_channel_messages`.
-    #
-    # Will yield a channels message history in the given `direction` starting at
-    # `start_id` until `limit` number of messages are observed, or the channel has
-    # no further history. Setting `limit` to `nil` will have the paginator continue
-    # to make requests until all messages are fetched in the given `direction`.
-    def page_channel_messages(channel_id : UInt64 | Snowflake, start_id : UInt64 | Snowflake = 0_u64,
-                              limit : Int32? = 100, direction : Paginator::Direction = Paginator::Direction::Down,
-                              page_size : Int32 = 100)
-      Paginator(Message).new(limit, direction ^ Paginator::Direction::Down) do |last_page|
-        if direction.up?
-          next_id = last_page.try &.last.id || start_id
-          get_channel_messages(channel_id, page_size, before: next_id)
-        else
-          next_id = last_page.try &.first.id || start_id
-          get_channel_messages(channel_id, page_size, after: next_id)
-        end
-      end
     end
 
     # Gets a single message from the channel's history. Requires the "Read
@@ -493,7 +471,7 @@ module Discord
 
     # Edits an existing permission overwrite on a channel with new permissions,
     # or creates a new one. The *overwrite_id* should be either a user or a role
-    # ID. Requires the "Manage Roles" permission.
+    # ID. Requires the "Manage Permissions" permission.
     #
     # [API docs for this method](https://discordapp.com/developers/docs/resources/channel#edit-channel-permissions)
     def edit_channel_permissions(channel_id : UInt64 | Snowflake, overwrite_id : UInt64 | Snowflake,
@@ -873,20 +851,6 @@ module Discord
       Array(GuildMember).from_json(response.body)
     end
 
-    # Returns a `Paginator` over the given guilds members.
-    #
-    # Will yield members starting at `start_id` until  `limit` number of members
-    # guilds are observed, or the user has no further guilds. Setting `limit`
-    # to `nil` will have the paginator continue to make requests until all members
-    # are fetched.
-    def page_guild_members(guild_id : UInt64 | Snowflake, start_id : UInt64 | Snowflake = 0_u64,
-                           limit : Int32? = 1000, page_size : Int32 = 1000)
-      Paginator(GuildMember).new(limit, Paginator::Direction::Down) do |last_page|
-        next_id = last_page.try &.last.user.id || start_id
-        list_guild_members(guild_id, page_size, next_id)
-      end
-    end
-
     # Adds a user to the guild, provided you have a valid OAuth2 access token
     # for the user with the `guilds.join` scope.
     #
@@ -1031,38 +995,15 @@ module Discord
       Array(GuildBan).from_json(response.body)
     end
 
-    # Returns information about a banned user in a guild. Requires the "Ban Members"
-    # permission.
-    #
-    # [API docs for this method](https://discordapp.com/developers/docs/resources/guild#get-guild-ban)
-    def get_guild_ban(guild_id : UInt64 | Snowflake, user_id : UInt64 | Snowflake)
-      response = request(
-        :guilds_gid_bans_uid,
-        guild_id,
-        "GET",
-        "/guilds/#{guild_id}/bans/#{user_id}",
-        HTTP::Headers.new,
-        nil
-      )
-
-      GuildBan.from_json(response.body)
-    end
-
     # Bans a member from the guild. Requires the "Ban Members" permission.
     #
     # [API docs for this method](https://discordapp.com/developers/docs/resources/guild#create-guild-ban)
-    def create_guild_ban(guild_id : UInt64 | Snowflake, user_id : UInt64 | Snowflake,
-                         delete_message_days : Int32? = nil, reason : String? = nil)
-      params = HTTP::Params.build do |form|
-        form.add("delete-message-days", delete_message_days.to_s) if delete_message_days
-        form.add("reason", reason) if reason
-      end
-
+    def create_guild_ban(guild_id : UInt64 | Snowflake, user_id : UInt64 | Snowflake)
       request(
         :guilds_gid_bans_uid,
         guild_id,
         "PUT",
-        "/guilds/#{guild_id}/bans/#{user_id}?#{params}",
+        "/guilds/#{guild_id}/bans/#{user_id}",
         HTTP::Headers.new,
         nil
       )
@@ -1156,7 +1097,7 @@ module Discord
     #
     # [API docs for this method](https://discordapp.com/developers/docs/resources/guild#delete-guild-role)
     def delete_guild_role(guild_id : UInt64 | Snowflake, role_id : UInt64 | Snowflake)
-      request(
+      response = request(
         :guilds_gid_roles_rid,
         guild_id,
         "DELETE",
@@ -1164,6 +1105,8 @@ module Discord
         HTTP::Headers.new,
         nil
       )
+
+      Role.from_json(response.body)
     end
 
     # Get a number of members that would be pruned with the given number of
@@ -1180,7 +1123,7 @@ module Discord
         nil
       )
 
-      PruneCountResponse.from_json(response.body)
+      PruneCountResponse.new(response.body)
     end
 
     # Prunes all members from this guild which haven't been seen for more than
@@ -1197,7 +1140,7 @@ module Discord
         nil
       )
 
-      PruneCountResponse.from_json(response.body)
+      PruneCountResponse.new(response.body)
     end
 
     # Gets a list of voice regions available for this guild. This may include
@@ -1401,15 +1344,15 @@ module Discord
     # Gets a list of user guilds the current user is on.
     #
     # [API docs for this method](https://discordapp.com/developers/docs/resources/user#get-current-user-guilds)
-    def get_current_user_guilds(limit : Int32 = 100, before : UInt64 | Snowflake = 0_u64, after : UInt64 | Snowflake = 0_u64)
+    def get_current_user_guilds(limit : UInt8 = 100_u8, before : UInt64 | Snowflake = 0_u64, after : UInt64 | Snowflake = 0_u64)
       params = HTTP::Params.build do |form|
         form.add "limit", limit.to_s
 
-        if before > 0_u64
+        if before > 0
           form.add "before", before.to_s
         end
 
-        if after > 0_u64
+        if after > 0
           form.add "after", after.to_s
         end
       end
@@ -1425,26 +1368,6 @@ module Discord
       )
 
       Array(UserGuild).from_json(response.body)
-    end
-
-    # Returns a `Paginator` over the current users guilds.
-    #
-    # Will yield guilds in the given `direction` starting at `start_id` until
-    # `limit` number of guilds are observed, or the user has no further guilds.
-    # Setting `limit` to `nil` will have the paginator continue to make requests
-    # until all guilds are fetched in the given `direction`.
-    def page_current_user_guilds(start_id : UInt64 | Snowflake = 0_u64, limit : Int32? = 100,
-                                 direction : Paginator::Direction = Paginator::Direction::Down,
-                                 page_size : Int32 = 100)
-      Paginator(UserGuild).new(limit, direction) do |last_page|
-        if direction.up?
-          next_id = last_page.try &.first.id || start_id
-          get_current_user_guilds(page_size, before: next_id)
-        else
-          next_id = last_page.try &.last.id || start_id
-          get_current_user_guilds(page_size, after: next_id)
-        end
-      end
     end
 
     # Makes the bot leave a guild.
